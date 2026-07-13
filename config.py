@@ -1,15 +1,16 @@
 # ---- Job search keywords ----
 # Add/remove phrases to tune what job postings count as a "lead signal"
 JOB_KEYWORDS = [
-    "shopify developer",
-    "website automation",
-    "zapier integration",
-    "hubspot integration",
-    "crm automation",
-    "ai chatbot",
-    "web developer contract",
-    "small business website",
-    "pos integration",
+    "QA developer",
+    "QA automation engineer",
+    "software developer in test",
+    "backend developer",
+    "Java developer",
+    "C# developer",
+    "ASP.NET developer",
+    "Spring Boot developer",
+    "test automation engineer",
+    "Selenium automation",
 ]
 
 # Adzuna location filter — change to a city, region, or "remote"
