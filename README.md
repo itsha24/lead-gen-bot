@@ -2,11 +2,13 @@
 
 Finds two kinds of leads automatically and writes them into a Google Sheet:
 
-1. **Job Leads** — job postings (via Adzuna) where a business is asking for
-   help with automation, integrations, or web dev.
+1. **Job Leads** — job postings (via Adzuna) matching your own resume/skills
+   (QA, backend, Java, C#/ASP.NET, Spring Boot, test automation) — this is
+   for *your* job search, not client leads.
 2. **Tech Signals** — businesses (auto-discovered via Google Places, plus any
-   you add manually) whose sites show signs worth pitching: slow load times,
-   a CRM with no visible automation, or no modern tooling at all.
+   you add manually) whose sites show signs worth pitching for freelance
+   web dev/automation work: slow load times, a CRM with no visible
+   automation, or no modern tooling at all.
 
 Business discovery, checking, and logging all run automatically — no manual
 URL collecting required. Runs on a schedule via GitHub Actions, no server or

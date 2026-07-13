@@ -2,9 +2,12 @@ name: Lead Gen Automation
 
 on:
   schedule:
-    # Every Monday at 9:00am Eastern (13:00 UTC) — adjust as you like
-    - cron: "0 13 * * 1"
-  workflow_dispatch: # lets you trigger it manually from the Actions tab too
+    # Daily at 9:00am Eastern (13:00 UTC) — job search only
+    - cron: "0 13 * * *"
+    # Extra weekly run at 11:00am Eastern (15:00 UTC) Monday — full run,
+    # includes business discovery + tech checks
+    - cron: "0 15 * * 1"
+  workflow_dispatch: # manual trigger from the Actions tab — always runs "full"
 
 jobs:
   run-lead-gen:
@@ -22,8 +25,18 @@ jobs:
       - name: Write Google service account credentials
         run: echo '${{ secrets.GOOGLE_SHEETS_CREDS_JSON }}' > service_account.json
 
+      - name: Determine run mode
+        id: mode
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 13 * * *" ]; then
+            echo "mode=jobs_only" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=full" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run lead gen script
         env:
+          MODE: ${{ steps.mode.outputs.mode }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}

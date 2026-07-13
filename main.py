@@ -1,6 +1,6 @@
 import os
 
-from config import JOB_KEYWORDS, JOB_SEARCH_LOCATION
+from config import JOB_KEYWORDS, JOB_SEARCH_LOCATIONS
 from job_search import search_jobs
 from business_discovery import find_business_urls
 from tech_checker import check_business_list
@@ -8,6 +8,10 @@ from sheets_writer import append_job_leads, append_tech_leads, get_existing_tech
 
 SHEET_ID = os.environ.get("LEAD_SHEET_ID")
 URLS_FILE = "businesses.txt"  # optional manual add-ons (referrals, etc.)
+
+# "jobs_only" = just search job postings (fast, run daily)
+# "full" = job postings + business discovery + tech checks (run weekly)
+MODE = os.environ.get("MODE", "full")
 
 
 def load_manual_urls():
@@ -17,11 +21,19 @@ def load_manual_urls():
         return [line.strip() for line in f if line.strip() and not line.strip().startswith("#")]
 
 
-def main():
+def run_job_search():
     print("Searching job postings...")
-    jobs = search_jobs(JOB_KEYWORDS, JOB_SEARCH_LOCATION)
+    jobs = search_jobs(JOB_KEYWORDS, JOB_SEARCH_LOCATIONS)
     print(f"Found {len(jobs)} job leads.")
+    if SHEET_ID:
+        append_job_leads(SHEET_ID, jobs)
+    else:
+        print("LEAD_SHEET_ID not set — printing instead:")
+        for j in jobs:
+            print(j)
 
+
+def run_business_discovery():
     print("Discovering businesses via Google Places...")
     discovered = find_business_urls()
     discovered_urls = [d["website"] for d in discovered]
@@ -32,7 +44,6 @@ def main():
 
     all_candidate_urls = list(dict.fromkeys(discovered_urls + manual_urls))  # dedupe, keep order
 
-    # Skip anything already logged in a previous run
     already_checked = get_existing_tech_urls(SHEET_ID) if SHEET_ID else set()
     new_urls = [u for u in all_candidate_urls if u not in already_checked]
     print(f"{len(new_urls)} new businesses to check (skipped {len(all_candidate_urls) - len(new_urls)} already logged).")
@@ -41,16 +52,20 @@ def main():
     print(f"Checked {len(tech_results)} businesses.")
 
     if SHEET_ID:
-        print("Writing results to Google Sheet...")
-        append_job_leads(SHEET_ID, jobs)
         append_tech_leads(SHEET_ID, tech_results)
-        print("Done.")
     else:
-        print("LEAD_SHEET_ID not set — printing results instead of writing to a sheet:\n")
-        for j in jobs:
-            print(j)
         for t in tech_results:
             print(t)
+
+
+def main():
+    print(f"Running in MODE={MODE}")
+    run_job_search()
+    if MODE == "full":
+        run_business_discovery()
+    else:
+        print("Skipping business discovery (jobs_only mode).")
+    print("Done.")
 
 
 if __name__ == "__main__":

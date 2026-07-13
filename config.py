@@ -1,5 +1,7 @@
 # ---- Job search keywords ----
-# Add/remove phrases to tune what job postings count as a "lead signal"
+# These drive the "Job Leads" tab — this is YOUR personal job search
+# (QA / backend developer roles), matched to your resume skills.
+# Add/remove phrases to tune what counts as a relevant posting.
 JOB_KEYWORDS = [
     "QA developer",
     "QA automation engineer",
@@ -13,8 +15,10 @@ JOB_KEYWORDS = [
     "Selenium automation",
 ]
 
-# Adzuna location filter — change to a city, region, or "remote"
-JOB_SEARCH_LOCATION = "Montreal"
+# Adzuna location filter(s) — searched separately and combined.
+# "" (empty string) = no location filter, i.e. Canada-wide, which also
+# surfaces most remote-tagged postings.
+JOB_SEARCH_LOCATIONS = ["Montreal", ""]
 
 # Adzuna country code (ca = Canada, us = United States, gb = UK, etc.)
 ADZUNA_COUNTRY = "ca"
