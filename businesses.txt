@@ -1,0 +1,3 @@
+# Add one business website URL per line. Lines starting with # are ignored.
+# https://example-restaurant.com
+# https://example-retail-shop.com

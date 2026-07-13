@@ -1,0 +1,32 @@
+name: Lead Gen Automation
+
+on:
+  schedule:
+    # Every Monday at 9:00am Eastern (13:00 UTC) — adjust as you like
+    - cron: "0 13 * * 1"
+  workflow_dispatch: # lets you trigger it manually from the Actions tab too
+
+jobs:
+  run-lead-gen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write Google service account credentials
+        run: echo '${{ secrets.GOOGLE_SHEETS_CREDS_JSON }}' > service_account.json
+
+      - name: Run lead gen script
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          LEAD_SHEET_ID: ${{ secrets.LEAD_SHEET_ID }}
+          GOOGLE_SHEETS_CREDS_PATH: service_account.json
+        run: python main.py
