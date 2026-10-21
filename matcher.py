@@ -5,8 +5,11 @@ Two stages:
   1. prefilter() — free regex checks that drop obvious senior roles
   2. score_posting() — an LLM reads the posting and returns a structured fit score
 
-Requires the ANTHROPIC_API_KEY env var. Without it, scoring is skipped and jobs
-pass through unscored (so the rest of the pipeline still runs).
+Works with either provider (whichever key is set; Gemini wins if both are):
+  - GEMINI_API_KEY    -> Google Gemini (free tier, key from aistudio.google.com)
+  - ANTHROPIC_API_KEY -> Claude (paid, key from platform.claude.com)
+Force one with MATCHER_PROVIDER=gemini or MATCHER_PROVIDER=claude.
+With no key, scoring is skipped and jobs pass through unscored.
 
 Try it on its own:
     python matcher.py sample_postings.json
@@ -16,10 +19,15 @@ import json
 import os
 import re
 import sys
+import time
 
+import requests
 import yaml
 
-MODEL = os.environ.get("MATCHER_MODEL", "claude-haiku-5-5")
+DEFAULT_MODELS = {
+    "gemini": "gemini-3.8-flash",   # free tier; gemini-3.5-flash-lite if you hit limits
+    "claude": "claude-haiku-5-5",
+}
 PROFILE_PATH = "profile.yaml"
 
 # ---------------------------------------------------------------------------
@@ -136,9 +144,83 @@ def build_user_prompt(profile: dict, posting: dict) -> str:
     )
 
 
-def score_posting(client, profile: dict, posting: dict) -> dict:
+def pick_provider() -> str | None:
+    forced = os.environ.get("MATCHER_PROVIDER", "").lower()
+    if forced in DEFAULT_MODELS:
+        return forced
+    if os.environ.get("GEMINI_API_KEY"):
+        return "gemini"
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return "claude"
+    return None
+
+
+def _model(provider: str) -> str:
+    return os.environ.get("MATCHER_MODEL") or DEFAULT_MODELS[provider]
+
+
+def _clean(result: dict) -> dict:
+    """Guard against slightly-off model output so one bad row can't break the sheet."""
+    score = int(round(float(result.get("fit_score", 0))))
+    result["fit_score"] = max(0, min(100, score))
+    for key in ("matched_skills", "missing_required", "dealbreakers_hit"):
+        result[key] = list(result.get(key) or [])
+    result.setdefault("seniority", "unclear")
+    result.setdefault("years_required", None)
+    result["reason"] = str(result.get("reason", "")).strip()
+    return result
+
+
+def _gemini_schema(schema: dict) -> dict:
+    """Convert our JSON Schema to Gemini's responseSchema dialect
+    (["integer","null"] -> nullable, no min/max)."""
+    out = {}
+    for k, v in schema.items():
+        if k in ("minimum", "maximum"):
+            continue
+        if k == "type" and isinstance(v, list):
+            out["type"] = next(t for t in v if t != "null")
+            out["nullable"] = "null" in v
+        elif k == "properties":
+            out[k] = {name: _gemini_schema(sub) for name, sub in v.items()}
+        elif k == "items":
+            out[k] = _gemini_schema(v)
+        else:
+            out[k] = v
+    return out
+
+
+def score_with_gemini(profile: dict, posting: dict) -> dict:
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{_model('gemini')}:generateContent"
+    body = {
+        "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
+        "contents": [{"role": "user", "parts": [{"text": build_user_prompt(profile, posting)}]}],
+        "generationConfig": {
+            "temperature": 0,
+            "responseMimeType": "application/json",
+            "responseSchema": _gemini_schema(SCORE_TOOL["input_schema"]),
+        },
+    }
+    for attempt in range(3):
+        resp = requests.post(
+            url, json=body, timeout=60,
+            headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+        )
+        if resp.status_code not in (429, 503):
+            break
+        wait = 30 * (attempt + 1)  # free tier is rate-limited per minute
+        print(f"[matcher] Gemini busy (HTTP {resp.status_code}), retrying in {wait}s...")
+        time.sleep(wait)
+    if resp.status_code != 200:
+        raise RuntimeError(f"Gemini HTTP {resp.status_code}: {resp.text[:300]}")
+    data = resp.json()
+    parts = data["candidates"][0]["content"]["parts"]
+    return json.loads("".join(p.get("text", "") for p in parts))
+
+
+def score_with_claude(client, profile: dict, posting: dict) -> dict:
     response = client.messages.create(
-        model=MODEL,
+        model=_model("claude"),
         max_tokens=1024,
         system=SYSTEM_PROMPT,
         tools=[SCORE_TOOL],
@@ -151,6 +233,12 @@ def score_posting(client, profile: dict, posting: dict) -> dict:
     raise RuntimeError("Model did not return a record_fit call")
 
 
+def score_posting(provider: str, client, profile: dict, posting: dict) -> dict:
+    if provider == "gemini":
+        return _clean(score_with_gemini(profile, posting))
+    return _clean(score_with_claude(client, profile, posting))
+
+
 # ---------------------------------------------------------------------------
 # 3. Pipeline entry point — used by main.py
 # ---------------------------------------------------------------------------
@@ -158,7 +246,7 @@ def score_posting(client, profile: dict, posting: dict) -> dict:
 def score_jobs(jobs: list[dict], min_score: int = 0) -> list[dict]:
     """Prefilter, score, and sort jobs. Returns only jobs with fit_score >= min_score.
 
-    If ANTHROPIC_API_KEY is missing, prefiltered jobs are returned unscored.
+    If no API key is set, prefiltered jobs are returned unscored.
     """
     kept = []
     for job in jobs:
@@ -169,19 +257,22 @@ def score_jobs(jobs: list[dict], min_score: int = 0) -> list[dict]:
             kept.append(job)
     print(f"[matcher] {len(kept)} of {len(jobs)} jobs passed the prefilter.")
 
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("[matcher] ANTHROPIC_API_KEY not set — skipping AI scoring.")
+    provider = pick_provider()
+    if not provider:
+        print("[matcher] No GEMINI_API_KEY or ANTHROPIC_API_KEY set — skipping AI scoring.")
         return kept
+    print(f"[matcher] Scoring with {provider} ({_model(provider)}).")
 
-    import anthropic  # imported here so the prefilter works without the SDK installed
-
-    client = anthropic.Anthropic()
+    client = None
+    if provider == "claude":
+        import anthropic  # only needed for Claude
+        client = anthropic.Anthropic()
     profile = load_profile()
     scored = []
     for job in kept:
         label = f"{job.get('title')} @ {job.get('company')}"
         try:
-            result = score_posting(client, profile, job)
+            result = score_posting(provider, client, profile, job)
         except Exception as e:  # one bad call shouldn't kill the whole run
             print(f"[matcher] ERROR scoring {label}: {e}")
             continue
