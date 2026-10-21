@@ -41,7 +41,7 @@ def _search_one(keyword, location, results_per_keyword, seen_urls):
                 "company": (job.get("company") or {}).get("display_name"),
                 "location": (job.get("location") or {}).get("display_name") or "Not specified",
                 "url": job_url,
-                "description": (job.get("description") or "")[:300],
+                "description": job.get("description") or "",
                 "posted": job.get("created"),
             })
     except requests.RequestException as e:

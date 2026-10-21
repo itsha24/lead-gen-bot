@@ -17,6 +17,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 JOB_LEADS_HEADER = [
     "Date Found", "Keyword Matched", "Title", "Company",
     "Location", "URL", "Description", "Posted", "Status",
+    "Fit Score", "Seniority", "Matched Skills", "Missing Skills", "Reason",
 ]
 
 TECH_SIGNALS_HEADER = [
@@ -50,6 +51,19 @@ def get_existing_tech_urls(sheet_id):
         return set()
 
 
+def get_existing_job_urls(sheet_id):
+    """Returns the set of job URLs already in the Job Leads tab, so the same
+    posting isn't re-scored (and re-added) every day."""
+    try:
+        client = get_client()
+        sheet = client.open_by_key(sheet_id).worksheet("Job Leads")
+        urls = sheet.col_values(6)  # column F = URL
+        return set(urls[1:])  # skip header row
+    except Exception as e:
+        print(f"[sheets_writer] Could not read existing job URLs (first run is normal): {e}")
+        return set()
+
+
 def append_job_leads(sheet_id, leads):
     if not leads:
         print("[sheets_writer] No job leads to write.")
@@ -62,8 +76,12 @@ def append_job_leads(sheet_id, leads):
     rows = [
         [
             today, l["keyword_matched"], l["title"], l["company"],
-            l["location"], l["url"], l["description"], l["posted"],
+            l["location"], l["url"], (l["description"] or "")[:300], l["posted"],
             "New",
+            l.get("fit_score", ""), l.get("seniority", ""),
+            ", ".join(l.get("matched_skills", [])),
+            ", ".join(l.get("missing_required", [])),
+            l.get("reason", ""),
         ]
         for l in leads
     ]

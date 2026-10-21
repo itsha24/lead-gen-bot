@@ -274,8 +274,8 @@ const SCHEMAS = {
     sortDefault: "Date Found",
   },
   "Job Leads": {
-    columns: ["Date Found", "Keyword Matched", "Title", "Company", "Location", "URL", "Description", "Posted", "Status"],
-    sortDefault: "Date Found",
+    columns: ["Fit Score", "Title", "Company", "Location", "Reason", "Matched Skills", "Missing Skills", "URL", "Date Found", "Status"],
+    sortDefault: "Fit Score",
   }
 };
 
@@ -372,6 +372,8 @@ function render() {
   }
 
   rows.sort((a, b) => {
+    const an = parseFloat(a[state.sortCol]), bn = parseFloat(b[state.sortCol]);
+    if (!isNaN(an) || !isNaN(bn)) return ((isNaN(an) ? -1 : an) - (isNaN(bn) ? -1 : bn)) * state.sortDir;
     const av = String(a[state.sortCol] || '');
     const bv = String(b[state.sortCol] || '');
     return av.localeCompare(bv) * state.sortDir;
@@ -404,6 +406,10 @@ function render() {
         html += `<td><a href="${val}" target="_blank">${short.length > 45 ? short.slice(0,45)+'…' : short}</a></td>`;
       } else if (col === 'Date Found' || col === 'Posted') {
         html += `<td class="mono">${String(val).slice(0,10)}</td>`;
+      } else if (col === 'Fit Score') {
+        const n = parseFloat(val);
+        const tone = isNaN(n) ? 'muted' : n >= 85 ? 'interested' : n >= 65 ? 'contacted' : 'new';
+        html += `<td><span class="badge ${tone}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span></td>`;
       } else if (col === 'Description') {
         html += `<td class="muted">${String(val).slice(0,120)}${val.length > 120 ? '…' : ''}</td>`;
       } else {

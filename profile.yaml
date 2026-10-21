@@ -1,0 +1,57 @@
+# Hassan's job-matching profile
+# This is what the model scores every posting against.
+# Fill in the TODOs — the more honest this is, the better the matching.
+
+name: Hassan Awan
+
+experience:
+  level: junior            # junior | intermediate
+  years_professional: TODO # e.g. 1.5 — count internships + contracts
+  summary: >
+    Software developer with internship and contract experience (UKG, Oshara,
+    Lowkler/Zako) plus freelance client work. Strongest in QA automation and
+    Java/Spring Boot backend; comfortable across the full stack.
+
+target_roles:
+  - Junior / Intermediate Software Developer
+  - Junior Backend Developer (Java, C#)
+  - QA Automation / SDET
+  - Junior Full-Stack Developer
+  - Integration / Automation Developer
+
+avoid_roles:
+  - Senior, Staff, Principal, Lead, Manager, Architect
+  - Pure sales, IT support, or helpdesk roles
+  - Data scientist / ML research roles requiring a graduate degree
+
+skills:
+  strong:        # used professionally, would be confident in an interview
+    - Java
+    - Spring Boot
+    - QA test automation
+    - REST APIs
+    - SQL / PostgreSQL
+  working:       # used in projects, could ramp up quickly
+    - C# / ASP.NET
+    - React / React Native
+    - PHP / Laravel
+    - AWS (S3)
+    - Python
+    - Zapier / HubSpot / API integrations
+    - Shopify
+  learning:      # don't treat these as matches for "required" skills
+    - LLM APIs / AI automation
+
+location:
+  based_in: Montreal, QC
+  accepts: [Montreal on-site, hybrid, remote (Canada)]
+  rejects: [relocation outside Quebec]   # TODO: adjust if open to relocating
+
+languages:
+  english: fluent
+  french: TODO   # fluent | professional | basic — matters a lot in Montreal
+
+dealbreakers:
+  - Requires 5+ years of experience
+  - Requires security clearance
+  # TODO: add your own (e.g. unpaid, commission-only, contract under 3 months)

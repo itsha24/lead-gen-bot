@@ -15,6 +15,11 @@ JOB_KEYWORDS = [
     "Selenium automation",
 ]
 
+# ---- AI job matcher ----
+# Jobs scoring below this (0-100) are not written to the sheet.
+# 40 = keep "stretch" roles and up. Raise it once you trust the scores.
+MIN_FIT_SCORE = 40
+
 # Adzuna location filter(s) — searched separately and combined.
 # "" (empty string) = no location filter, i.e. Canada-wide, which also
 # surfaces most remote-tagged postings.

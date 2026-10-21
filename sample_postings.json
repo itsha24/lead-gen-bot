@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Junior QA Automation Developer",
+    "company": "Example Fintech",
+    "location": "Montreal, QC (Hybrid)",
+    "description": "We're looking for a junior QA automation developer to grow our test coverage. Requirements: 1+ years with Java, experience with Selenium or REST Assured, familiarity with CI/CD (GitHub Actions or Jenkins), understanding of REST APIs. Nice to have: Spring Boot, AWS. Bilingual English/French an asset."
+  },
+  {
+    "title": "Software Developer",
+    "company": "Example Logistics",
+    "location": "Remote (Canada)",
+    "description": "You will own the architecture of our routing platform and mentor a team of four developers. Requirements: 7 years of backend experience in Go or Rust, Kubernetes in production, distributed systems design."
+  },
+  {
+    "title": "Senior Backend Engineer",
+    "company": "Example SaaS",
+    "location": "Montreal, QC",
+    "description": "Java, Spring Boot, PostgreSQL. 6+ years of experience required."
+  },
+  {
+    "title": "Full-Stack Developer (React / C#)",
+    "company": "Example Agency",
+    "location": "Laval, QC (On-site)",
+    "description": "Build client web apps with React on the front end and ASP.NET Core on the back end. Requirements: 2 years of experience, C#, React, SQL Server. French required for client communication."
+  }
+]
