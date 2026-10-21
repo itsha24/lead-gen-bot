@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+service_account.json
+scored_postings.json
+.env
