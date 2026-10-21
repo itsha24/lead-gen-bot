@@ -44,14 +44,14 @@ skills:
 
 location:
   based_in: Montreal, QC
-  accepts: [Montreal on-site, hybrid, remote (Canada)]
-  rejects: [relocation outside Quebec]   # TODO: adjust if open to relocating
+  accepts: [Montreal on-site, hybrid, remote (Canada), Toronto, Vancouver, Ottawa, Calgary, Edmonton, USA, USA remote]
+  rejects: []  
 
 languages:
   english: fluent
-  french: TODO   # fluent | professional | basic — matters a lot in Montreal
+  french: professional  
 
 dealbreakers:
   - Requires 5+ years of experience
   - Requires security clearance
-  # TODO: add your own (e.g. unpaid, commission-only, contract under 3 months)
+  - Unpaid or volunteer-only roles
