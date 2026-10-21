@@ -20,6 +20,10 @@ JOB_KEYWORDS = [
 # 40 = keep "stretch" roles and up. Raise it once you trust the scores.
 MIN_FIT_SCORE = 40
 
+# Jobs scoring at or above this get emailed to you (if email is set up).
+# 85 = "apply today" only. Lower to 75 if you go days without an email.
+EMAIL_MIN_SCORE = 85
+
 # Adzuna location filter(s) — searched separately and combined.
 # "" (empty string) = no location filter, i.e. Canada-wide, which also
 # surfaces most remote-tagged postings.
