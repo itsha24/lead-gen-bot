@@ -12,6 +12,8 @@ from datetime import datetime, timezone
 import gspread
 from google.oauth2.service_account import Credentials
 
+from config import MIN_FIT_SCORE
+
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 JOB_LEADS_HEADER = [
@@ -77,7 +79,7 @@ def append_job_leads(sheet_id, leads):
         [
             today, l["keyword_matched"], l["title"], l["company"],
             l["location"], l["url"], (l["description"] or "")[:300], l["posted"],
-            "New",
+            "Low fit" if isinstance(l.get("fit_score"), int) and l["fit_score"] < MIN_FIT_SCORE else "New",
             l.get("fit_score", ""), l.get("seniority", ""),
             ", ".join(l.get("matched_skills", [])),
             ", ".join(l.get("missing_required", [])),

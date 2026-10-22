@@ -1,4 +1,4 @@
-name: Lead Gen Automation
+name: Daily Job Matcher
 
 on:
   schedule:
@@ -7,11 +7,18 @@ on:
     # Extra weekly run at 11:00am Eastern (15:00 UTC) Monday — full run,
     # includes business discovery + tech checks
     - cron: "0 15 * * 1"
-  workflow_dispatch: # manual trigger from the Actions tab — always runs "full"
+  workflow_dispatch: # manual "Run workflow" button in the Actions tab
+    inputs:
+      mode:
+        description: "jobs_only = job matching only · full = also business discovery (uses Places credits)"
+        type: choice
+        options: [jobs_only, full]
+        default: jobs_only
 
 jobs:
   run-lead-gen:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # never let a run crawl for hours
     steps:
       - uses: actions/checkout@v4
 
@@ -28,10 +35,12 @@ jobs:
       - name: Determine run mode
         id: mode
         run: |
-          if [ "${{ github.event.schedule }}" = "0 13 * * *" ]; then
-            echo "mode=jobs_only" >> "$GITHUB_OUTPUT"
-          else
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 15 * * 1" ]; then
             echo "mode=full" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=jobs_only" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run lead gen script

@@ -24,6 +24,14 @@ import time
 import requests
 import yaml
 
+GEMINI_DELAY_SECONDS = 5   # pacing between calls to stay under free-tier per-minute limits
+MAX_CONSECUTIVE_ERRORS = 3  # stop scoring if the API keeps failing instead of crawling on
+
+
+class QuotaExhausted(Exception):
+    """The provider's daily quota is used up — no point trying more jobs today."""
+
+
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",   # free tier; gemini-3.5-flash-lite if you hit limits
     "claude": "claude-haiku-5-5",
@@ -208,7 +216,11 @@ def score_with_gemini(profile: dict, posting: dict) -> dict:
         )
         if resp.status_code not in (429, 503):
             break
-        wait = 30 * (attempt + 1)  # free tier is rate-limited per minute
+        if resp.status_code == 429 and "perday" in resp.text.lower().replace(" ", "").replace("_", ""):
+            raise QuotaExhausted(f"Gemini daily quota used up: {resp.text[:200]}")
+        if attempt == 2:
+            break
+        wait = 20 * (attempt + 1)  # per-minute limit: a short wait is enough
         print(f"[matcher] Gemini busy (HTTP {resp.status_code}), retrying in {wait}s...")
         time.sleep(wait)
     if resp.status_code != 200:
@@ -243,9 +255,12 @@ def score_posting(provider: str, client, profile: dict, posting: dict) -> dict:
 # 3. Pipeline entry point — used by main.py
 # ---------------------------------------------------------------------------
 
-def score_jobs(jobs: list[dict], min_score: int = 0) -> list[dict]:
-    """Prefilter, score, and sort jobs. Returns only jobs with fit_score >= min_score.
+def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
+    """Prefilter, score, and sort jobs (best first).
 
+    Returns every job that was successfully scored, whatever its score, so the
+    sheet records it and it isn't re-scored tomorrow. Jobs that couldn't be scored
+    (quota, errors, over max_jobs) are left out so the next run picks them up.
     If no API key is set, prefiltered jobs are returned unscored.
     """
     kept = []
@@ -267,21 +282,37 @@ def score_jobs(jobs: list[dict], min_score: int = 0) -> list[dict]:
     if provider == "claude":
         import anthropic  # only needed for Claude
         client = anthropic.Anthropic()
+    if max_jobs is not None and len(kept) > max_jobs:
+        kept.sort(key=lambda j: j.get("posted") or "", reverse=True)  # newest first
+        print(f"[matcher] Scoring the newest {max_jobs}; the other {len(kept) - max_jobs} wait for the next run.")
+        kept = kept[:max_jobs]
+
     profile = load_profile()
     scored = []
-    for job in kept:
+    errors_in_a_row = 0
+    for i, job in enumerate(kept):
         label = f"{job.get('title')} @ {job.get('company')}"
+        if provider == "gemini" and i > 0:
+            time.sleep(GEMINI_DELAY_SECONDS)
         try:
             result = score_posting(provider, client, profile, job)
+        except QuotaExhausted as e:
+            print(f"[matcher] STOPPING: {e}")
+            break
         except Exception as e:  # one bad call shouldn't kill the whole run
+            errors_in_a_row += 1
             print(f"[matcher] ERROR scoring {label}: {e}")
+            if errors_in_a_row >= MAX_CONSECUTIVE_ERRORS:
+                print(f"[matcher] STOPPING: {errors_in_a_row} errors in a row.")
+                break
             continue
+        errors_in_a_row = 0
         print(f"[matcher] [{result['fit_score']:>3}] {label} — {result['reason']}")
-        if result["fit_score"] >= min_score:
-            scored.append({**job, **result})
+        scored.append({**job, **result})
 
     scored.sort(key=lambda j: j["fit_score"], reverse=True)
-    print(f"[matcher] {len(scored)} jobs scored {min_score}+.")
+    unscored = len(kept) - len(scored)
+    print(f"[matcher] Scored {len(scored)} jobs" + (f"; {unscored} left for the next run." if unscored else "."))
     return scored
 
 

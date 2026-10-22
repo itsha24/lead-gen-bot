@@ -290,7 +290,7 @@ let state = {
 
 function statusClass(status) {
   const s = (status || "").toLowerCase().replace(/\s+/g, "-");
-  if (s.includes("not")) return "not-interested";
+  if (s.includes("not") || s.includes("low")) return "not-interested";
   if (s.includes("interested")) return "interested";
   if (s.includes("contact")) return "contacted";
   if (s.includes("repl")) return "replied";

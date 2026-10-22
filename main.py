@@ -1,6 +1,6 @@
 import os
 
-from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MIN_FIT_SCORE
+from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN
 from job_search import search_jobs
 from business_discovery import find_business_urls
 from tech_checker import check_business_list
@@ -34,7 +34,7 @@ def run_job_search():
     jobs = [j for j in jobs if j["url"] not in already_logged]
     print(f"{len(jobs)} are new (skipped {len(already_logged)} already in the sheet).")
 
-    jobs = score_jobs(jobs, min_score=MIN_FIT_SCORE)
+    jobs = score_jobs(jobs, max_jobs=MAX_JOBS_PER_RUN)
     send_job_digest(jobs, min_score=EMAIL_MIN_SCORE)
 
     if SHEET_ID:

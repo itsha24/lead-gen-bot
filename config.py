@@ -16,9 +16,13 @@ JOB_KEYWORDS = [
 ]
 
 # ---- AI job matcher ----
-# Jobs scoring below this (0-100) are not written to the sheet.
-# 40 = keep "stretch" roles and up. Raise it once you trust the scores.
+# Jobs scoring below this (0-100) are still saved (so they're never re-scored)
+# but get Status "Low fit" so you can hide them with the dashboard's status filter.
 MIN_FIT_SCORE = 40
+
+# Max jobs sent to the AI per run (newest first). Keeps runs short and inside the
+# free Gemini quota; anything left over is scored on the next run.
+MAX_JOBS_PER_RUN = 40
 
 # Jobs scoring at or above this get emailed to you (if email is set up).
 # 85 = "apply today" only. Lower to 75 if you go days without an email.
