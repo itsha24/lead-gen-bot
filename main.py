@@ -1,10 +1,11 @@
 import os
 
-from config import JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MIN_FIT_SCORE
+from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MIN_FIT_SCORE
 from job_search import search_jobs
 from business_discovery import find_business_urls
 from tech_checker import check_business_list
 from matcher import score_jobs
+from notifier import send_job_digest
 from sheets_writer import (
     append_job_leads, append_tech_leads, get_existing_job_urls, get_existing_tech_urls,
 )
@@ -34,6 +35,7 @@ def run_job_search():
     print(f"{len(jobs)} are new (skipped {len(already_logged)} already in the sheet).")
 
     jobs = score_jobs(jobs, min_score=MIN_FIT_SCORE)
+    send_job_digest(jobs, min_score=EMAIL_MIN_SCORE)
 
     if SHEET_ID:
         append_job_leads(SHEET_ID, jobs)
