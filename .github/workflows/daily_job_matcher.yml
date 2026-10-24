@@ -6,7 +6,7 @@ on:
     # The Saturday 9:00am run is "full" (jobs + client leads); every other run is jobs only.
     - cron: "0 9 * * *"
       timezone: "America/Toronto"
-    - cron: "1 18 * * *"
+    - cron: "0 18 * * *"
       timezone: "America/Toronto"
   workflow_dispatch: # manual "Run workflow" button in the Actions tab
     inputs:
