@@ -1,10 +1,14 @@
 """
 Pulls jobs straight from company career pages listed in companies.yaml.
 
-Supports the three hiring systems with free, public job feeds:
-  Greenhouse  https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true
-  Lever       https://api.lever.co/v0/postings/{slug}?mode=json
-  Ashby       https://api.ashbyhq.com/posting-api/job-board/{slug}
+Supported hiring systems:
+  Greenhouse       https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true
+  Lever            https://api.lever.co/v0/postings/{slug}?mode=json
+  Ashby            https://api.ashbyhq.com/posting-api/job-board/{slug}
+  SmartRecruiters  https://api.smartrecruiters.com/v1/companies/{id}/postings  (public Posting API)
+  Workday          https://{tenant}.wdN.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs
+                   — unofficial: the JSON every Workday careers site loads its jobs from.
+                     Stable in practice, but Workday doesn't guarantee it.
 
 Each feed includes the full job description, so these jobs skip the
 full-posting fetch and are scored on complete text.
@@ -57,14 +61,20 @@ ELSEWHERE = re.compile(
 def parse_board(entry: str) -> tuple[str, str] | None:
     """Turn a careers link (or 'greenhouse:slug') into (system, slug)."""
     entry = (entry or "").strip()
-    m = re.match(r"^(greenhouse|lever|ashby)\s*:\s*([\w.-]+)$", entry, re.IGNORECASE)
+    m = re.match(r"^(greenhouse|lever|ashby|smartrecruiters)\s*:\s*([\w.-]+)$", entry, re.IGNORECASE)
     if m:
         return m.group(1).lower(), m.group(2)
+    # Workday: https://TENANT.wd3.myworkdayjobs.com/en-US/SITE/...  ->  "host|tenant|site"
+    m = re.search(r"https?://(([\w-]+)\.wd\d+\.myworkdayjobs\.com)/(?:[a-z]{2}-[A-Z]{2}/)?([\w-]+)", entry)
+    if m and m.group(3).lower() not in ("wday", "job"):
+        return "workday", f"{m.group(1)}|{m.group(2)}|{m.group(3)}"
     patterns = [
         ("greenhouse", r"greenhouse\.io/v1/boards/([\w.-]+)"),
         ("greenhouse", r"greenhouse\.io/(?:embed/job_board\?for=)?([\w.-]+)"),
         ("lever", r"jobs\.lever\.co/([\w.-]+)"),
         ("ashby", r"jobs\.ashbyhq\.com/([\w.-]+)"),
+        ("smartrecruiters", r"(?:jobs|careers)\.smartrecruiters\.com/([\w.-]+)"),
+        ("smartrecruiters", r"api\.smartrecruiters\.com/v1/companies/([\w.-]+)"),
     ]
     for system, pat in patterns:
         m = re.search(pat, entry, re.IGNORECASE)
@@ -85,7 +95,7 @@ def load_companies(path: str | None = None) -> list[tuple[str, str]]:
         if parsed:
             boards.append(parsed)
         else:
-            print(f"[company_boards] Skipping '{e}': not a Greenhouse, Lever or Ashby link.")
+            print(f"[company_boards] Skipping '{e}': not a Greenhouse, Lever, Ashby, SmartRecruiters or Workday link.")
     return list(dict.fromkeys(boards))
 
 
@@ -161,15 +171,117 @@ def _ashby(slug):
         }
 
 
-FETCHERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby}
+def _smartrecruiters(slug, cutoff):
+    base = f"https://api.smartrecruiters.com/v1/companies/{slug}/postings"
+    items, offset = [], 0
+    while offset < 500:  # a few pages is plenty for one week of postings
+        r = requests.get(base, params={"limit": 100, "offset": offset, "destination": "PUBLIC",
+                                       "releasedAfter": cutoff.strftime("%Y-%m-%dT%H:%M:%S.000Z")},
+                         timeout=TIMEOUT_SECONDS)
+        r.raise_for_status()
+        page = r.json()
+        items += page.get("content") or []
+        offset += 100
+        if offset >= (page.get("totalFound") or 0):
+            break
+    for it in items:
+        loc = it.get("location") or {}
+        location = ", ".join(x for x in (loc.get("city"), loc.get("region"), loc.get("country", "").upper()) if x)
+        if loc.get("remote"):
+            location += " (remote)"
+        job = {
+            "title": (it.get("name") or "").strip(),
+            "company": (it.get("company") or {}).get("name") or slug,
+            "location": location,
+            "url": f"https://jobs.smartrecruiters.com/{slug}/{it.get('id')}",
+            "description": "",
+            "posted": _iso(it.get("releasedDate")),
+            "_detail": f"{base}/{it.get('id')}",
+        }
+        yield job
+
+
+def _smartrecruiters_detail(job):
+    r = requests.get(job.pop("_detail"), timeout=TIMEOUT_SECONDS)
+    r.raise_for_status()
+    d = r.json()
+    sections = (d.get("jobAd") or {}).get("sections") or {}
+    job["description"] = " ".join(
+        _text((sections.get(k) or {}).get("text")) for k in ("jobDescription", "qualifications", "additionalInformation"))
+    job["url"] = d.get("postingUrl") or job["url"]
+
+
+_WD_AGE = re.compile(r"(\d+)\+?\s*day", re.IGNORECASE)
+
+
+def _workday_age_days(posted_on: str) -> int | None:
+    """Workday says 'Posted Today', 'Posted Yesterday', 'Posted 3 Days Ago', 'Posted 30+ Days Ago'."""
+    t = (posted_on or "").lower()
+    if "today" in t or "aujourd" in t:
+        return 0
+    if "yesterday" in t or "hier" in t:
+        return 1
+    m = _WD_AGE.search(t) or re.search(r"(\d+)\+?\s*jour", t)
+    return int(m.group(1)) if m else None
+
+
+def _workday(slug, cutoff):
+    host, tenant, site = slug.split("|")
+    api = f"https://{host}/wday/cxs/{tenant}/{site}"
+    max_days = (datetime.now(timezone.utc) - cutoff).days
+    headers = {"Accept": "application/json", "Content-Type": "application/json"}
+    offset = 0
+    while offset < 200:  # newest jobs are usually first; 10 pages is plenty
+        r = requests.post(f"{api}/jobs", json={"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": ""},
+                          headers=headers, timeout=TIMEOUT_SECONDS)
+        r.raise_for_status()
+        page = r.json()
+        postings = page.get("jobPostings") or []
+        for p in postings:
+            age = _workday_age_days(p.get("postedOn"))
+            if age is None or age > max_days:
+                continue
+            yield {
+                "title": (p.get("title") or "").strip(),
+                "company": _pretty(tenant),
+                "location": p.get("locationsText") or "",
+                "url": f"https://{host}/{site}{p.get('externalPath', '')}",
+                "description": "",
+                "posted": (datetime.now(timezone.utc) - timedelta(days=age)).isoformat(),
+                "_detail": f"{api}{p.get('externalPath', '')}",
+            }
+        offset += 20
+        if not postings or offset >= (page.get("total") or 0):
+            break
+
+
+def _workday_detail(job):
+    r = requests.get(job.pop("_detail"), headers={"Accept": "application/json"}, timeout=TIMEOUT_SECONDS)
+    r.raise_for_status()
+    d = r.json()
+    info = d.get("jobPostingInfo") or {}
+    job["description"] = _text(info.get("jobDescription"))
+    job["url"] = info.get("externalUrl") or job["url"]
+    job["company"] = (d.get("hiringOrganization") or {}).get("name") or job["company"]
+    if info.get("startDate"):  # exact posting date, better than "Posted 3 Days Ago"
+        job["posted"] = _iso(info["startDate"] + "T12:00:00+00:00") or job["posted"]
+    if info.get("location") and not job["location"]:
+        job["location"] = info["location"]
+
+
+# Systems whose list doesn't include descriptions: fetch details only for relevant jobs.
+DETAILS = {"smartrecruiters": _smartrecruiters_detail, "workday": _workday_detail}
+FETCHERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby,
+            "smartrecruiters": _smartrecruiters, "workday": _workday}
+NEEDS_CUTOFF = {"smartrecruiters", "workday"}
 
 
 def _relevant(job: dict) -> bool:
     title, loc = job["title"], job["location"]
     if not ROLE_TITLE.search(title) or NOT_A_DEV_ROLE.search(title):
         return False
-    if not loc or NORTH_AMERICA.search(loc):
-        return True
+    if not loc or NORTH_AMERICA.search(loc) or re.fullmatch(r"\s*\d+\s+(locations?|emplacements?)\s*", loc, re.IGNORECASE):
+        return True  # "2 Locations" (Workday) doesn't say where — let the full posting decide
     return bool(REMOTE_ANYWHERE.search(loc)) and not ELSEWHERE.search(loc)
 
 
@@ -180,22 +292,31 @@ def fetch_company_jobs(max_days_old: int = COMPANY_MAX_DAYS_OLD) -> list[dict]:
     cutoff = datetime.now(timezone.utc) - timedelta(days=max_days_old)
     results, summary = [], []
     for system, slug in boards:
+        name = slug.split("|")[1] if system == "workday" else slug
         try:
-            jobs = list(FETCHERS[system](slug))
+            fetch = FETCHERS[system]
+            jobs = list(fetch(slug, cutoff) if system in NEEDS_CUTOFF else fetch(slug))
         except requests.HTTPError as e:
             code = e.response.status_code if e.response is not None else "?"
-            print(f"[company_boards] {slug} ({system}): board not found or unavailable (HTTP {code}) — check the link in companies.yaml.")
+            print(f"[company_boards] {name} ({system}): board not found or unavailable (HTTP {code}) — check the link in companies.yaml.")
             continue
         except Exception as e:  # one broken board shouldn't stop the others
-            print(f"[company_boards] {slug} ({system}): {type(e).__name__}: {e}")
+            print(f"[company_boards] {name} ({system}): {type(e).__name__}: {e}")
             continue
         recent = [j for j in jobs if j["posted"] and datetime.fromisoformat(j["posted"]) >= cutoff]
         relevant = [j for j in recent if _relevant(j)]
+        if system in DETAILS:
+            for j in relevant:
+                try:
+                    DETAILS[system](j)
+                except Exception as e:  # keep the job; it'll get its full posting fetched later
+                    j.pop("_detail", None)
+                    print(f"[company_boards] {name}: couldn't load details for '{j['title']}' ({type(e).__name__}).")
         for j in relevant:
             j.update(source=f"{j['company']} careers", keyword_matched="company board",
-                     description_source="full posting")
+                     description_source="full posting" if len(j.get("description") or "") > 200 else "snippet")
         results.extend(relevant)
-        summary.append(f"{slug} {len(relevant)}")
+        summary.append(f"{name} {len(relevant)}")
     print(f"[company_boards] {len(results)} relevant jobs posted in the last {max_days_old} days "
           f"from {len(summary)} companies ({', '.join(summary)}).")
     return results

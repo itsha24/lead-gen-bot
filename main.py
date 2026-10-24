@@ -1,6 +1,6 @@
 import os
 
-from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN
+from config import EMAIL_MIN_FIT, EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN
 from company_boards import fetch_company_jobs
 from job_search import search_jobs
 from business_discovery import find_business_urls
@@ -46,7 +46,7 @@ def run_job_search():
     scored = score_jobs(jobs, max_jobs=MAX_JOBS_PER_RUN)
     # Only AI-scored jobs are saved; unscored ones get another chance next run.
     scored = [j for j in scored if isinstance(j.get("fit_score"), int)]
-    send_job_digest(scored, min_score=EMAIL_MIN_SCORE)
+    send_job_digest(scored, min_score=EMAIL_MIN_SCORE, min_fit=EMAIL_MIN_FIT)
     save_jobs(stored, scored)
 
 

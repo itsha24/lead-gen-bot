@@ -24,9 +24,11 @@ MIN_FIT_SCORE = 40
 # free Gemini quota; anything left over is scored on the next run.
 MAX_JOBS_PER_RUN = 40
 
-# Jobs scoring at or above this get emailed to you (if email is set up).
-# 85 = "apply today" only. Lower to 75 if you go days without an email.
+# Emails go out for jobs whose PRIORITY (fit score + freshness bonus, see ranking.py)
+# is at least EMAIL_MIN_SCORE — so a strong fit posted today beats an old 85 —
+# and whose fit score alone is at least EMAIL_MIN_FIT, so freshness can't push a weak match in.
 EMAIL_MIN_SCORE = 85
+EMAIL_MIN_FIT = 70
 
 # Only fetch postings this many days old or newer. Applying in the first day or two
 # matters most, and the bot runs daily, so 3 days leaves margin for a missed run.

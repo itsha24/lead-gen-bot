@@ -153,6 +153,7 @@
   }
   .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(79,209,197,0.08); }
   .views { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  #job-controls { flex-wrap: wrap; gap: 10px; }
   .view-btn {
     background: var(--surface); color: var(--text-muted); border: 0; border-right: 1px solid var(--border);
     font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; padding: 9px 16px; cursor: pointer;
@@ -281,6 +282,7 @@
 
   <div class="controls" id="job-controls">
     <div class="views" id="view-chips"></div>
+    <div class="views" id="sort-chips" title="Best now = fit score plus a boost for postings from the last 1-3 days"></div>
   </div>
 
   <div class="controls">
@@ -319,7 +321,7 @@ const SCHEMAS = {
   },
   "Job Leads": {
     columns: ["Fit Score", "Status", "Title", "Company", "Location", "Reason", "Missing Skills", "Posted", "URL"],
-    sortDefault: "Fit Score",
+    sortDefault: "Priority",
   }
 };
 
@@ -338,6 +340,21 @@ function ageText(iso) {
   const d = Math.floor(h / 24);
   return d === 1 ? "1 day ago" : `${d} days ago`;
 }
+// Mirror of ranking.py: priority = fit score + freshness bonus. Keep in sync.
+function freshnessBonus(iso) {
+  const h = hoursAgo(iso);
+  if (h === null) return 0;
+  if (h < 24) return 12;
+  if (h < 48) return 8;
+  if (h < 72) return 4;
+  const d = h / 24;
+  return d <= 7 ? 0 : -Math.min(15, Math.floor(d - 7));
+}
+const SORTS = [
+  ["best", "Best now", "Priority"],
+  ["fit", "Fit score", "Fit Score"],
+  ["newest", "Newest", "PostedTs"],
+];
 function daysAgo(iso) {
   if (!iso) return null;
   const t = Date.parse(iso);
@@ -362,7 +379,7 @@ let state = {
   data: { "Tech Signals": [], "Job Leads": [] },
   search: "",
   statusFilter: null,
-  sortCol: "Fit Score",
+  sortCol: (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2],
   sortDir: -1,
 };
 
@@ -431,6 +448,8 @@ async function fetchJobs() {
         "Posted": j.posted,
         "Age": daysAgo(j.posted),
         "Hours": hoursAgo(j.posted),
+        "PostedTs": Date.parse(j.posted || "") || 0,
+        "Priority": (j.fit_score ?? 0) + freshnessBonus(j.posted),
         "Source": j.description_source || "snippet",
         "Direct": j.keyword_matched === "company board",
       }));
@@ -508,6 +527,18 @@ function renderViews() {
   });
 }
 
+function renderSorts() {
+  const box = document.getElementById('sort-chips');
+  box.innerHTML = '';
+  SORTS.forEach(([key, label, col]) => {
+    const b = document.createElement('button');
+    b.className = 'view-btn' + (state.sortCol === col && state.sortDir === -1 ? ' active' : '');
+    b.textContent = label;
+    b.onclick = () => { state.sortCol = col; state.sortDir = -1; savePref("jobSort", key); render(); };
+    box.appendChild(b);
+  });
+}
+
 function rowsForTab() {
   if (state.activeTab !== "Job Leads") return state.data[state.activeTab];
   let rows = jobsInView(state.view);
@@ -544,6 +575,7 @@ function renderChips() {
 
 function render() {
   renderViews();
+  if (state.activeTab === "Job Leads") renderSorts();
   renderChips();
   const schema = SCHEMAS[state.activeTab];
   let rows = [...rowsForTab()];
@@ -646,7 +678,9 @@ document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.add('active');
     state.activeTab = tab.dataset.tab;
     state.statusFilter = null;
-    state.sortCol = SCHEMAS[state.activeTab].sortDefault;
+    state.sortCol = state.activeTab === "Job Leads"
+      ? (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2]
+      : SCHEMAS[state.activeTab].sortDefault;
     state.sortDir = -1;
     render();
   };
