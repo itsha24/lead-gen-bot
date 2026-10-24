@@ -86,6 +86,21 @@
     transition: all 0.15s;
   }
   .refresh-btn:hover { color: var(--text); border-color: var(--accent-dim); }
+  .header-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  #sync-btn.synced { color: var(--status-replied); border-color: rgba(74,222,128,0.35); }
+  #sync-btn.error { color: #F87171; border-color: rgba(248,113,113,0.4); }
+  .sync-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px;
+    margin: 0 0 18px; font-size: 13.5px; line-height: 1.55; color: var(--text); }
+  .sync-panel p { margin: 0 0 8px; } .sync-panel ol { margin: 0 0 10px; padding-left: 20px; color: var(--text-muted); }
+  .sync-panel a { color: var(--accent); } .sync-panel code { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .sync-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sync-row input { flex: 1 1 220px; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; color: var(--text);
+    padding: 8px 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .sync-msg { margin-top: 8px; font-size: 12.5px; color: var(--text-muted); }
+  .job-track, .lead-status { border: 1px solid var(--border); cursor: pointer; font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; font-weight: 600; padding: 3px 6px; border-radius: 20px; max-width: 150px;
+    background: var(--surface-raised); color: var(--text-muted); }
+  .job-track option, .lead-status option { background: var(--surface); color: var(--text); }
   .refresh-btn:disabled { opacity: 0.5; cursor: default; }
 
   .tabs {
@@ -285,7 +300,28 @@
       <h1><span class="pulse-dot"></span>Lead Gen Dashboard</h1>
       <div class="sub" id="last-updated">connecting…</div>
     </div>
-    <button class="refresh-btn" id="refresh-btn">↻ refresh</button>
+    <div class="header-btns">
+      <button class="refresh-btn" id="sync-btn" title="Sync statuses across your devices">⇅ sync</button>
+      <button class="refresh-btn" id="refresh-btn">↻ refresh</button>
+    </div>
+  </div>
+
+  <div class="sync-panel" id="sync-panel" hidden>
+    <p><strong>Sync statuses across your devices.</strong> Applied, Contacted and the rest are saved to
+      <code>docs/data/status.json</code> in your repo, so your phone and laptop see the same thing.
+      It needs a GitHub token that can only edit this one repo. Create it once, then paste it on each device.</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new fine-grained token</a>. Expiration: up to a year.</li>
+      <li>Repository access: <strong>Only select repositories</strong> → <code>lead-gen-bot</code>.</li>
+      <li>Permissions → Repository permissions → <strong>Contents: Read and write</strong>.</li>
+      <li>Generate, copy it, and paste it here.</li>
+    </ol>
+    <div class="sync-row">
+      <input id="sync-token" type="password" autocomplete="off" placeholder="github_pat_…" />
+      <button class="lead-btn primary" id="sync-save" type="button">Save & sync</button>
+      <button class="lead-btn" id="sync-remove" type="button">Remove from this device</button>
+    </div>
+    <div class="sync-msg" id="sync-msg"></div>
   </div>
 
   <div class="tabs">
@@ -313,7 +349,7 @@
     Postings drop off after 30 days.
     <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read.
     <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. <br>Client leads: local businesses found weekly on Google Maps, websites audited, scored against services.yaml with a drafted first message.
-    Lead statuses are saved in this browser only.
+    Your statuses (Applied, Contacted…) sync across devices once you set up ⇅ sync.
   </div>
 </div>
 
@@ -334,7 +370,7 @@ const LEAD_STATUSES = ["New", "Contacted", "Replied", "Won", "Not interested"];
 const SCHEMAS = {
   "Leads": { columns: [], sortDefault: "Score" },
   "Job Leads": {
-    columns: ["Fit Score", "Status", "Title", "Company", "Location", "Reason", "Missing Skills", "Posted", "URL"],
+    columns: ["Fit Score", "Status", "Track", "Title", "Company", "Location", "Reason", "Missing Skills", "Posted", "URL"],
     sortDefault: "Priority",
   }
 };
@@ -407,7 +443,9 @@ function safeUrl(v) {
 
 function statusClass(status) {
   const s = (status || "").toLowerCase().replace(/\s+/g, "-");
-  if (s.includes("top") || s === "won") return "replied";
+  if (s.includes("top") || s === "won" || s === "applied") return "replied";
+  if (s.includes("interview")) return "interested";
+  if (s === "saved") return "contacted";
   if (s.includes("good")) return "interested";
   if (s.includes("stretch")) return "contacted";
   if (s.includes("not") || s.includes("low")) return "not-interested";
@@ -417,11 +455,119 @@ function statusClass(status) {
   return "new";
 }
 
-function leadStatus(key) {
-  try { return localStorage.getItem("lead:" + key) || "New"; } catch { return "New"; }
+// ---- Statuses (Applied, Contacted, …), synced through docs/data/status.json ----
+// Reads are public; writes use a repo-scoped GitHub token saved on each device.
+// Changes not yet saved to GitHub live in a local backup and are pushed on the next sync.
+const REPO = "itsha24/lead-gen-bot";
+const STATUS_PATH = "docs/data/status.json";
+const STATUS_URLS = [`https://raw.githubusercontent.com/${REPO}/main/${STATUS_PATH}`, "data/status.json"];
+const JOB_TRACK = ["—", "Saved", "Applied", "Interviewing", "Not interested"];
+const DEFAULTS = { jobs: "—", leads: "New" };
+const sync = { token: "", data: { jobs: {}, leads: {} }, timer: null, state: "local", error: "", saving: null };
+try { sync.token = localStorage.getItem("ghToken") || ""; } catch { /* no storage */ }
+
+function readBackup() {
+  let b = { jobs: {}, leads: {} };
+  try {
+    b = Object.assign(b, JSON.parse(localStorage.getItem("statusBackup") || "{}"));
+    for (let i = localStorage.length - 1; i >= 0; i--) {  // statuses saved by the older, device-only version
+      const k = localStorage.key(i);
+      if (k && k.startsWith("lead:")) { b.leads[k.slice(5)] = b.leads[k.slice(5)] ?? localStorage.getItem(k); localStorage.removeItem(k); }
+    }
+  } catch { /* no storage */ }
+  return b;
 }
-function setLeadStatus(key, value) {
-  try { localStorage.setItem("lead:" + key, value); } catch { /* private mode — status just won't stick */ }
+function writeBackup(b) { try { localStorage.setItem("statusBackup", JSON.stringify(b)); } catch { } }
+function applyChanges(base, changes) {
+  const out = { jobs: { ...(base.jobs || {}) }, leads: { ...(base.leads || {}) } };
+  for (const kind of ["jobs", "leads"]) for (const [k, v] of Object.entries(changes[kind] || {})) {
+    if (v === null || v === DEFAULTS[kind]) delete out[kind][k]; else out[kind][k] = v;
+  }
+  return out;
+}
+function b64encode(str) {
+  const bytes = new TextEncoder().encode(str); let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+function b64decode(b64) {
+  const bin = atob((b64 || "").replace(/\s/g, ""));
+  return new TextDecoder().decode(Uint8Array.from(bin, c => c.charCodeAt(0)));
+}
+async function ghGetStatus() {
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STATUS_PATH}?ref=main&t=${Date.now()}`, {
+    headers: { Authorization: `Bearer ${sync.token}`, Accept: "application/vnd.github+json" }, cache: "no-store" });
+  if (res.status === 404) return { data: { jobs: {}, leads: {} }, sha: null };
+  if (res.status === 401 || res.status === 403) throw new Error("GitHub rejected the token (expired, or missing Contents: Read and write on lead-gen-bot)");
+  if (!res.ok) throw new Error(`GitHub error ${res.status}`);
+  const j = await res.json();
+  return { data: JSON.parse(b64decode(j.content) || "{}"), sha: j.sha };
+}
+async function loadStatuses() {
+  let remote = { jobs: {}, leads: {} };
+  try {
+    if (sync.token) { remote = (await ghGetStatus()).data; sync.state = "synced"; sync.error = ""; }
+    else {
+      for (const url of STATUS_URLS) {
+        try { const r = await fetch(`${url}?t=${Date.now()}`, { cache: "no-store" }); if (r.ok) { remote = await r.json(); break; } } catch { }
+      }
+      sync.state = "local";
+    }
+  } catch (e) { sync.state = "error"; sync.error = e.message; }
+  const backup = readBackup();
+  sync.data = applyChanges(remote, backup);
+  if (sync.token && sync.state === "synced" && (Object.keys(backup.jobs).length || Object.keys(backup.leads).length)) saveStatuses();
+  updateSyncBtn();
+}
+function getStatus(kind, key) { return sync.data[kind][key] || DEFAULTS[kind]; }
+function setStatus(kind, key, value) {
+  sync.data = applyChanges(sync.data, { [kind]: { [key]: value } });
+  const backup = readBackup(); backup[kind][key] = value; writeBackup(backup);
+  if (sync.token) { clearTimeout(sync.timer); sync.timer = setTimeout(saveStatuses, 700); }
+  updateSyncBtn();
+}
+async function saveStatuses() {
+  if (!sync.token) return;
+  if (sync.saving) return sync.saving.then(saveStatuses);
+  sync.saving = (async () => {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const backup = readBackup();
+      try {
+        const { data, sha } = await ghGetStatus();
+        const merged = applyChanges(data, backup);
+        const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STATUS_PATH}`, {
+          method: "PUT",
+          headers: { Authorization: `Bearer ${sync.token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
+          body: JSON.stringify({ message: "Update job/lead statuses from dashboard", branch: "main",
+                                 content: b64encode(JSON.stringify(merged, null, 1) + "\n"), ...(sha ? { sha } : {}) }),
+        });
+        if (res.status === 409 || res.status === 422) continue;  // someone else saved first: re-read and retry
+        if (res.status === 401 || res.status === 403) throw new Error("GitHub rejected the token (expired, or missing Contents: Read and write on lead-gen-bot)");
+        if (!res.ok) throw new Error(`GitHub error ${res.status}`);
+        // Keep only changes made while this save was in flight.
+        const now = readBackup();
+        for (const kind of ["jobs", "leads"]) for (const k of Object.keys(backup[kind])) if (now[kind][k] === backup[kind][k]) delete now[kind][k];
+        writeBackup(now);
+        sync.data = applyChanges(merged, now);
+        sync.state = "synced"; sync.error = "";
+        break;
+      } catch (e) { sync.state = "error"; sync.error = e.message; break; }
+    }
+    updateSyncBtn();
+  })();
+  try { await sync.saving; } finally { sync.saving = null; }
+}
+function pendingCount() { const b = readBackup(); return Object.keys(b.jobs).length + Object.keys(b.leads).length; }
+function updateSyncBtn() {
+  const btn = document.getElementById("sync-btn"); if (!btn) return;
+  btn.classList.toggle("synced", sync.state === "synced" && !pendingCount());
+  btn.classList.toggle("error", sync.state === "error");
+  btn.textContent = sync.state === "error" ? "⇅ sync error"
+    : !sync.token ? "⇅ this device only"
+    : pendingCount() ? "⇅ saving…" : "⇅ synced";
+  const msg = document.getElementById("sync-msg");
+  if (msg) msg.textContent = sync.state === "error" ? `Couldn't sync: ${sync.error}. Your changes are kept on this device and will upload once it works.`
+    : sync.token ? "Synced. Changes save to GitHub a second after you make them." : "Not set up on this device yet. Statuses are saved here only.";
 }
 
 async function fetchLeads() {
@@ -437,7 +583,7 @@ async function fetchLeads() {
         return {
           key, raw: l,
           "Score": l.lead_score,
-          "Status": leadStatus(key),
+          "Status": "New",  // filled from synced statuses in loadAll
           "Offer": offers[l.best_offer] || l.best_offer || "",
           "Name": l.name, "Category": l.category, "Address": l.address,
           "Why": l.why, "Opportunities": (l.opportunities || []).join(" · "),
@@ -491,12 +637,14 @@ async function loadAll(showLoading = true) {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true;
   if (showLoading) wrap.innerHTML = '<div class="loading-state">loading…</div>';
-  const [jobsRes, techRes] = await Promise.allSettled([fetchJobs(), fetchLeads()]);
+  const [jobsRes, techRes] = await Promise.allSettled([fetchJobs(), fetchLeads(), loadStatuses()]);
   state.errors = {};
   if (jobsRes.status === "fulfilled") state.data["Job Leads"] = jobsRes.value;
   else state.errors["Job Leads"] = `Couldn't load job matches (${jobsRes.reason.message}).`;
   if (techRes.status === "fulfilled") state.data["Leads"] = techRes.value;
   else state.errors["Leads"] = `Couldn't load client leads (${techRes.reason.message}).`;
+  state.data["Leads"].forEach(r => { r.Status = getStatus("leads", r.key); });
+  state.data["Job Leads"].forEach(r => { r.Track = getStatus("jobs", r.URL); });
   document.getElementById('count-jobs').textContent = jobsRes.status === "fulfilled" ? jobsRes.value.length : "!";
   document.getElementById('count-leads').textContent = techRes.status === "fulfilled"
     ? techRes.value.filter(l => l.Status === "New").length || techRes.value.length : "!";
@@ -550,7 +698,7 @@ function wireLeadCards(wrap) {
     const key = card.dataset.key;
     const row = state.data["Leads"].find(r => r.key === key);
     card.querySelector('.lead-status').onchange = (e) => {
-      setLeadStatus(key, e.target.value);
+      setStatus("leads", key, e.target.value);
       if (row) row.Status = e.target.value;
       render();
     };
@@ -570,6 +718,22 @@ function postedText(iso) {
   return t ? `posted ${t}` : '';
 }
 
+function trackSelect(r) {
+  const opts = JOB_TRACK.map(t => `<option${t === r.Track ? " selected" : ""}>${t}</option>`).join("");
+  return `<select class="job-track badge ${r.Track === "—" ? "" : statusClass(r.Track)}" data-key="${esc(r.URL)}" aria-label="Your status for this job">${opts}</select>`;
+}
+
+function wireTrackSelects(wrap) {
+  wrap.querySelectorAll('.job-track').forEach(sel => {
+    sel.onchange = () => {
+      const row = state.data["Job Leads"].find(r => r.URL === sel.dataset.key);
+      setStatus("jobs", sel.dataset.key, sel.value);
+      if (row) row.Track = sel.value;
+      render();
+    };
+  });
+}
+
 function jobCard(r) {
   const n = parseFloat(r["Fit Score"]);
   const tone = statusClass(r.Status);
@@ -582,6 +746,7 @@ function jobCard(r) {
       <span class="badge ${tone}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span>
       <span class="badge ${tone}">${esc(r.Status)}</span>
       ${r.Direct ? '<span class="tag-direct">apply direct</span>' : ''}
+      <span style="margin-left:auto">${trackSelect(r)}</span>
     </div>
     <a class="card-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
     <div class="card-meta">${meta}</div>
@@ -625,6 +790,7 @@ function rowsForTab() {
   if (state.activeTab !== "Job Leads") return state.data[state.activeTab];
   let rows = jobsInView(state.view);
   if (!state.showLowFit && !state.statusFilter) rows = rows.filter(r => r.Status !== "Low fit");
+  if (!state.showDismissed) rows = rows.filter(r => r.Track !== "Not interested");
   return rows;
 }
 
@@ -651,6 +817,14 @@ function renderChips() {
       t.textContent = state.showLowFit ? `hide ${low} low fit` : `+ ${low} low fit hidden`;
       t.onclick = () => { state.showLowFit = !state.showLowFit; savePref("showLowFit", state.showLowFit ? "1" : "0"); render(); };
       container.appendChild(t);
+    }
+    const dismissed = jobsInView(state.view).filter(r => r.Track === "Not interested").length;
+    if (dismissed) {
+      const d = document.createElement('button');
+      d.className = 'chip' + (state.showDismissed ? ' active' : '');
+      d.textContent = state.showDismissed ? `hide ${dismissed} not interested` : `+ ${dismissed} not interested hidden`;
+      d.onclick = () => { state.showDismissed = !state.showDismissed; render(); };
+      container.appendChild(d);
     }
   }
 }
@@ -704,6 +878,7 @@ function render() {
   }
   if (state.activeTab === "Job Leads" && window.matchMedia("(max-width: 720px)").matches) {
     wrap.innerHTML = '<div class="cards">' + rows.map(jobCard).join('') + '</div>';
+    wireTrackSelects(wrap);
     return;
   }
 
@@ -721,7 +896,9 @@ function render() {
     html += `<tr class="${r.Age !== null && r.Age > 30 ? 'stale' : ''}">`;
     displayCols.forEach(col => {
       const val = r[col] ?? '';
-      if (col === 'Status') {
+      if (col === 'Track') {
+        html += `<td>${trackSelect(r)}</td>`;
+      } else if (col === 'Status') {
         html += `<td><span class="badge ${statusClass(val)}"><span class="dot"></span>${esc(val || 'New')}</span></td>`;
       } else if (col === 'URL') {
         const short = String(val).replace(/^https?:\/\//, '').replace(/\/$/, '');
@@ -751,6 +928,7 @@ function render() {
   });
   html += '</tbody></table>';
   wrap.innerHTML = html;
+  wireTrackSelects(wrap);
 
   wrap.querySelectorAll('th').forEach(th => {
     th.onclick = () => {
@@ -782,6 +960,26 @@ document.getElementById('search').oninput = (e) => {
 };
 
 document.getElementById('refresh-btn').onclick = () => loadAll(false);
+document.getElementById('sync-btn').onclick = () => {
+  const panel = document.getElementById('sync-panel');
+  panel.hidden = !panel.hidden;
+  document.getElementById('sync-token').value = "";
+  updateSyncBtn();
+};
+document.getElementById('sync-save').onclick = async () => {
+  const value = document.getElementById('sync-token').value.trim();
+  if (!value) return;
+  sync.token = value;
+  try { localStorage.setItem("ghToken", value); } catch { }
+  document.getElementById('sync-msg').textContent = "Checking the token…";
+  await loadStatuses();
+  if (sync.state === "synced") { await saveStatuses(); document.getElementById('sync-panel').hidden = true; await loadAll(false); }
+};
+document.getElementById('sync-remove').onclick = () => {
+  sync.token = ""; sync.state = "local";
+  try { localStorage.removeItem("ghToken"); } catch { }
+  updateSyncBtn();
+};
 window.matchMedia("(max-width: 720px)").addEventListener("change", () => render());
 
 loadAll();
