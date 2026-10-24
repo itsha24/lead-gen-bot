@@ -1,0 +1,73 @@
+# What you sell to local businesses. The AI reads this to decide what to pitch
+# each lead and to write the first message, so keep it true — it will only
+# mention proof projects listed here.
+
+name: Hassan Awan
+based_in: Châteauguay / Montréal, QC
+languages: [English, French]
+contact:
+  email: awan.hassan@outlook.com
+  website: https://itsha24.github.io/Portfolio/
+
+offers:
+  - id: website
+    name: New website or redesign
+    for: Businesses with no website, or one that's outdated, slow, not mobile-friendly or not secure (no HTTPS)
+    pitch: A fast, mobile-friendly site that shows up on Google and turns visitors into calls, bookings or orders
+
+  - id: online_store
+    name: Shopify / online store
+    for: Retail and boutiques with no online store, or a store that's hard to use
+    pitch: An online store set up end to end — layout, theme, product catalogue, payments
+    proof: cats_and_totes
+
+  - id: automation
+    name: Automation & integrations
+    for: Businesses juggling POS, booking, CRM or email by hand — especially multi-location
+    pitch: Connect the tools they already use (POS, HubSpot, Zapier, booking) so customer data and promotions flow automatically
+    proof: madame_poulet
+
+  - id: booking_ordering
+    name: Online booking or ordering
+    for: Restaurants, salons, gyms and clinics that only take orders or bookings by phone
+    pitch: Online booking or ordering on their own site, without giving a big cut to third-party apps
+
+  - id: custom_tool
+    name: Custom web app or internal tool
+    for: Businesses running on spreadsheets, paper forms or manual processes
+    pitch: A simple custom tool (intake forms, client portal, dashboard) built around how they already work
+
+proof_projects:
+  cats_and_totes:
+    summary: Designed and built the Shopify storefront for Cats and Totes from scratch — layout, theme and product catalogue
+    link: https://catsandtotes.com
+  madame_poulet:
+    summary: Connected Cluster POS, Zapier and HubSpot for Madame Poulet to track promotional redemptions across 7 locations automatically
+
+# Who to look for. Each run searches a rotating handful of these (different
+# ones each week) so you see new businesses instead of the same ones.
+search:
+  categories:
+    - restaurants
+    - cafés
+    - boutiques
+    - clothing stores
+    - hair salons
+    - beauty salons
+    - gyms
+    - yoga studios
+    - accounting firms
+    - law firms
+    - dental clinics
+    - contractors
+  areas:
+    - Châteauguay
+    - Plateau-Mont-Royal, Montréal
+    - Mile End, Montréal
+    - Verdun, Montréal
+    - Rosemont, Montréal
+    - Saint-Henri, Montréal
+    - Vieux-Montréal
+    - Longueuil
+    - Laval
+  queries_per_run: 8

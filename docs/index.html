@@ -169,6 +169,19 @@
     color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 4px; padding: 0 5px; white-space: nowrap; }
   .fresh::before { content: "● "; font-size: 9px; vertical-align: 1px; }
   .cards { display: flex; flex-direction: column; }
+  .lead-opps { margin: 8px 0 0; padding-left: 18px; color: var(--text-muted); font-size: 13px; line-height: 1.55; }
+  .lead-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .lead-btn { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 7px 12px; border-radius: 7px;
+    border: 1px solid var(--border); color: var(--text); background: var(--surface-raised); text-decoration: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lead-btn.primary { border-color: var(--accent-dim); color: var(--accent); }
+  .lead-msg { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
+  .lead-msg summary { cursor: pointer; color: var(--text-muted); font-size: 12.5px; font-weight: 600; }
+  .lead-msg pre { white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.55; color: var(--text);
+    background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 8px 0; }
+  .lead-subject { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; }
+  .card.lead .card-top { flex-wrap: wrap; }
+  .lead-status { margin-left: auto; max-width: 140px; border: 0; cursor: pointer; font-family: 'JetBrains Mono', monospace; appearance: auto; }
   .card { padding: 14px 16px; border-bottom: 1px solid var(--border); }
   .card:last-child { border-bottom: 0; }
   .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -277,7 +290,7 @@
 
   <div class="tabs">
     <button class="tab active" data-tab="Job Leads">Job Matches <span class="count" id="count-jobs">–</span></button>
-    <button class="tab" data-tab="Tech Signals">Tech Signals <span class="count" id="count-tech">–</span></button>
+    <button class="tab" data-tab="Leads">Client Leads <span class="count" id="count-leads">–</span></button>
   </div>
 
   <div class="controls" id="job-controls">
@@ -286,7 +299,7 @@
   </div>
 
   <div class="controls">
-    <input class="search-input" id="search" placeholder="Search jobs, companies, skills…" />
+    <input class="search-input" id="search" placeholder="Search…" />
     <div id="status-chips" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
   </div>
 
@@ -299,13 +312,12 @@
     Only postings from the last 3 days are fetched; <span class="fresh">green</span> = posted in the last 24 hours (apply first).
     Postings drop off after 30 days.
     <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read.
-    <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. Tech Signals come from
-    <a href="https://docs.google.com/spreadsheets/d/1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I/edit" target="_blank">the sheet</a>.
+    <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. <br>Client leads: local businesses found weekly on Google Maps, websites audited, scored against services.yaml with a drafted first message.
+    Lead statuses are saved in this browser only.
   </div>
 </div>
 
 <script>
-const SHEET_ID = "1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I";
 // Job matches are committed to the repo by the daily run. raw.githubusercontent.com
 // updates within minutes of each run; the relative path is a fallback via Pages.
 const JOBS_URLS = [
@@ -313,12 +325,14 @@ const JOBS_URLS = [
   "data/jobs.json",
 ];
 const TIERS = [[85, "Top match"], [65, "Good fit"], [40, "Stretch"], [0, "Low fit"]];
+const LEADS_URLS = [
+  "https://raw.githubusercontent.com/itsha24/lead-gen-bot/main/docs/data/leads.json",
+  "data/leads.json",
+];
+const LEAD_STATUSES = ["New", "Contacted", "Replied", "Won", "Not interested"];
 
 const SCHEMAS = {
-  "Tech Signals": {
-    columns: ["Date Found", "URL", "Tech Detected", "PageSpeed Score", "Flag", "Error", "Status"],
-    sortDefault: "Date Found",
-  },
+  "Leads": { columns: [], sortDefault: "Score" },
   "Job Leads": {
     columns: ["Fit Score", "Status", "Title", "Company", "Location", "Reason", "Missing Skills", "Posted", "URL"],
     sortDefault: "Priority",
@@ -376,7 +390,7 @@ let state = {
   view: savedPref("jobView", null),
   showLowFit: savedPref("showLowFit", "0") === "1",
   activeTab: "Job Leads",
-  data: { "Tech Signals": [], "Job Leads": [] },
+  data: { "Leads": [], "Job Leads": [] },
   search: "",
   statusFilter: null,
   sortCol: (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2],
@@ -393,7 +407,7 @@ function safeUrl(v) {
 
 function statusClass(status) {
   const s = (status || "").toLowerCase().replace(/\s+/g, "-");
-  if (s.includes("top")) return "replied";
+  if (s.includes("top") || s === "won") return "replied";
   if (s.includes("good")) return "interested";
   if (s.includes("stretch")) return "contacted";
   if (s.includes("not") || s.includes("low")) return "not-interested";
@@ -403,23 +417,36 @@ function statusClass(status) {
   return "new";
 }
 
-async function fetchSheet(tabName) {
-  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(tabName)}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const text = await res.text();
-  const jsonStr = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
-  const parsed = JSON.parse(jsonStr);
-  const cols = parsed.table.cols.map(c => c.label);
-  const rows = parsed.table.rows.map(r => {
-    const obj = {};
-    cols.forEach((col, i) => {
-      const cell = r.c[i];
-      obj[col || SCHEMAS[tabName].columns[i]] = cell ? (cell.f ?? cell.v ?? "") : "";
-    });
-    return obj;
-  });
-  return rows;
+function leadStatus(key) {
+  try { return localStorage.getItem("lead:" + key) || "New"; } catch { return "New"; }
+}
+function setLeadStatus(key, value) {
+  try { localStorage.setItem("lead:" + key, value); } catch { /* private mode — status just won't stick */ }
+}
+
+async function fetchLeads() {
+  for (const base of LEADS_URLS) {
+    try {
+      const res = await fetch(`${base}?t=${Date.now()}`, { cache: "no-store" });
+      if (res.status === 404) continue;
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const offers = data.offers || {};
+      return (data.leads || []).map(l => {
+        const key = l.place_id || l.website || l.name;
+        return {
+          key, raw: l,
+          "Score": l.lead_score,
+          "Status": leadStatus(key),
+          "Offer": offers[l.best_offer] || l.best_offer || "",
+          "Name": l.name, "Category": l.category, "Address": l.address,
+          "Why": l.why, "Opportunities": (l.opportunities || []).join(" · "),
+          "Date Found": l.date_found,
+        };
+      });
+    } catch (e) { /* try the next source */ }
+  }
+  return [];
 }
 
 async function fetchJobs() {
@@ -464,14 +491,15 @@ async function loadAll(showLoading = true) {
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true;
   if (showLoading) wrap.innerHTML = '<div class="loading-state">loading…</div>';
-  const [jobsRes, techRes] = await Promise.allSettled([fetchJobs(), fetchSheet("Tech Signals")]);
+  const [jobsRes, techRes] = await Promise.allSettled([fetchJobs(), fetchLeads()]);
   state.errors = {};
   if (jobsRes.status === "fulfilled") state.data["Job Leads"] = jobsRes.value;
   else state.errors["Job Leads"] = `Couldn't load job matches (${jobsRes.reason.message}).`;
-  if (techRes.status === "fulfilled") state.data["Tech Signals"] = techRes.value;
-  else state.errors["Tech Signals"] = `Couldn't load the Tech Signals sheet (${techRes.reason.message}). Make sure it's shared as "Anyone with the link can view".`;
+  if (techRes.status === "fulfilled") state.data["Leads"] = techRes.value;
+  else state.errors["Leads"] = `Couldn't load client leads (${techRes.reason.message}).`;
   document.getElementById('count-jobs').textContent = jobsRes.status === "fulfilled" ? jobsRes.value.length : "!";
-  document.getElementById('count-tech').textContent = techRes.status === "fulfilled" ? techRes.value.length : "!";
+  document.getElementById('count-leads').textContent = techRes.status === "fulfilled"
+    ? techRes.value.filter(l => l.Status === "New").length || techRes.value.length : "!";
   const updated = state.jobsUpdated ? `matches updated ${new Date(state.jobsUpdated).toLocaleString()}` : "no matches saved yet";
   document.getElementById('last-updated').textContent = `${updated} · refreshed ${new Date().toLocaleTimeString()}`;
   render();
@@ -481,6 +509,60 @@ async function loadAll(showLoading = true) {
 function jobsInView(view) {
   const def = VIEWS.find(v => v[0] === view) || VIEWS[2];
   return state.data["Job Leads"].filter(def[2]);
+}
+
+function leadCard(r) {
+  const l = r.raw, tone = statusClass(r.Status);
+  const n = r.Score;
+  const scoreTone = n >= 80 ? "replied" : n >= 60 ? "interested" : n >= 40 ? "contacted" : "not-interested";
+  const rating = l.rating ? `★ ${l.rating}${l.reviews ? ` (${l.reviews})` : ""}` : "";
+  const meta = [l.category, (l.address || "").split(",").slice(0, 2).join(","), rating].filter(Boolean).map(esc).join(" · ");
+  const email = (l.emails || [])[0];
+  const mailto = email ? `mailto:${email}?subject=${encodeURIComponent(l.email_subject || "")}&body=${encodeURIComponent(l.message || "")}` : "";
+  const btn = (href, label, primary) => href ? `<a class="lead-btn${primary ? " primary" : ""}" href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a>` : "";
+  const opps = (l.opportunities || []).map(o => `<li>${esc(o)}</li>`).join("");
+  const options = LEAD_STATUSES.map(s => `<option${s === r.Status ? " selected" : ""}>${s}</option>`).join("");
+  return `<div class="card lead ${r.Status === "Not interested" ? "stale" : ""}" data-key="${esc(r.key)}">
+    <div class="card-top">
+      <span class="badge ${scoreTone}"><span class="dot"></span>${n ?? "—"}</span>
+      <span class="tag-direct">${esc(r.Offer)}</span>
+      <select class="lead-status badge ${tone}" aria-label="Lead status">${options}</select>
+    </div>
+    <a class="card-title" href="${esc(safeUrl(l.maps_url || l.website))}" target="_blank" rel="noopener">${esc(l.name)}</a>
+    <div class="card-meta">${meta}</div>
+    <div class="card-reason">${esc(l.why)}</div>
+    ${opps ? `<ul class="lead-opps">${opps}</ul>` : ""}
+    <div class="lead-actions">
+      ${btn(mailto, "Email " + email, true)}
+      ${btn(l.phone ? "tel:" + l.phone.replace(/[^+\d]/g, "") : "", "Call " + (l.phone || ""), !email)}
+      ${btn(safeUrl(l.website) !== "#" ? l.website : "", "Website")}
+      ${btn(l.maps_url, "Maps")}
+    </div>
+    ${l.message ? `<details class="lead-msg"><summary>Draft message (${esc((l.language || "").toUpperCase())})</summary>
+      ${l.email_subject ? `<div class="lead-subject">Subject: ${esc(l.email_subject)}</div>` : ""}
+      <pre>${esc(l.message)}</pre>
+      <button class="lead-btn copy" type="button">Copy message</button></details>` : ""}
+  </div>`;
+}
+
+function wireLeadCards(wrap) {
+  wrap.querySelectorAll('.card.lead').forEach(card => {
+    const key = card.dataset.key;
+    const row = state.data["Leads"].find(r => r.key === key);
+    card.querySelector('.lead-status').onchange = (e) => {
+      setLeadStatus(key, e.target.value);
+      if (row) row.Status = e.target.value;
+      render();
+    };
+    const copy = card.querySelector('.copy');
+    if (copy) copy.onclick = async () => {
+      const text = (row.raw.email_subject ? `Subject: ${row.raw.email_subject}\n\n` : "") + row.raw.message;
+      try { await navigator.clipboard.writeText(text); copy.textContent = "Copied ✓"; }
+      catch { const r = document.createRange(); r.selectNodeContents(card.querySelector('pre'));
+              const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); copy.textContent = "Selected — press Ctrl+C"; }
+      setTimeout(() => { copy.textContent = "Copy message"; }, 2000);
+    };
+  });
 }
 
 function postedText(iso) {
@@ -603,6 +685,8 @@ function render() {
   }
   if (rows.length === 0) {
     let none = "Nothing matches this view.";
+    if (state.activeTab === "Leads" && !state.data["Leads"].length)
+      none = "No client leads yet — they're found by the weekly run (Mondays), or run the workflow with mode 'full'.";
     if (state.activeTab === "Job Leads") {
       if (!state.data["Job Leads"].length) none = "No job matches yet — they appear after the next daily run.";
       else if (state.view === "today" && !state.search && !state.statusFilter)
@@ -612,6 +696,12 @@ function render() {
     return;
   }
 
+  if (state.activeTab === "Leads") {
+    rows.sort((a, b) => (b.Status === "New") - (a.Status === "New") || (b.Score ?? 0) - (a.Score ?? 0));
+    wrap.innerHTML = '<div class="cards">' + rows.map(leadCard).join('') + '</div>';
+    wireLeadCards(wrap);
+    return;
+  }
   if (state.activeTab === "Job Leads" && window.matchMedia("(max-width: 720px)").matches) {
     wrap.innerHTML = '<div class="cards">' + rows.map(jobCard).join('') + '</div>';
     return;

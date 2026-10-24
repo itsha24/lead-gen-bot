@@ -62,22 +62,10 @@ TECH_SIGNATURES = {
     "Custom/Unknown": [],  # populated automatically if nothing else matches
 }
 
-# Optional: get a free key from Google Cloud Console to enable PageSpeed scoring.
-# Leave blank to skip speed checks.
-PAGESPEED_API_KEY = ""
+# Optional page-speed check in the site audit: add a free PageSpeed Insights key as
+# a PAGESPEED_API_KEY env var / secret. Without it the audit skips speed (faster).
 
-# ---- Business discovery (Google Places API) ----
-# Each entry is a natural-language search query, same as you'd type into
-# Google Maps. Mix categories + neighborhoods/cities to control volume.
-DISCOVERY_QUERIES = [
-    "restaurants in Montreal",
-    "boutique retail stores in Montreal",
-    "hair salons in Montreal",
-    "small law firms in Montreal",
-    "fitness studios in Montreal",
-]
-
-# Max businesses to pull per query, per run (keep this modest — costs and
-# PageSpeed/tech-check time scale with it). Places API free tier covers a
-# solid volume before any billing kicks in.
-DISCOVERY_MAX_RESULTS_PER_QUERY = 10
+# ---- Client leads (weekly "full" run) ----
+# What to search for and what you sell live in services.yaml.
+# Leads sent to the AI per run (most promising first); the rest wait a week.
+MAX_LEADS_PER_RUN = 25

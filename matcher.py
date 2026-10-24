@@ -277,16 +277,20 @@ def _call_gemini(model: str, body: dict, attempts: int) -> dict:
     raise ModelUnavailable(f"{model} {problem} after {attempts} tries")
 
 
-def score_with_gemini(profile: dict, posting: dict) -> dict:
+def gemini_structured(system_prompt: str, user_prompt: str, schema: dict, max_tokens: int | None = None) -> dict:
+    """Ask Gemini for JSON matching `schema`, with retries and the backup model.
+    Shared by job scoring and lead scoring."""
     body = {
-        "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
-        "contents": [{"role": "user", "parts": [{"text": build_user_prompt(profile, posting)}]}],
+        "systemInstruction": {"parts": [{"text": system_prompt}]},
+        "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
         "generationConfig": {
             "temperature": 0,
             "responseMimeType": "application/json",
-            "responseSchema": _gemini_schema(SCORE_TOOL["input_schema"]),
+            "responseSchema": _gemini_schema(schema),
         },
     }
+    if max_tokens:
+        body["generationConfig"]["maxOutputTokens"] = max_tokens
     last_error = None
     for model in gemini_models():
         try:
@@ -294,10 +298,10 @@ def score_with_gemini(profile: dict, posting: dict) -> dict:
         except QuotaExhausted as e:
             _gemini_exhausted.add(model)
             left = gemini_models()
-            print(f"[matcher] {e}" + (f" — using {left[0]} for the rest of this run." if left else "."))
+            print(f"[ai] {e}" + (f" — using {left[0]} for the rest of this run." if left else "."))
             last_error = e
         except ModelUnavailable as e:
-            print(f"[matcher] {e}.")
+            print(f"[ai] {e}.")
             if len(gemini_models()) > 1 and model == _gemini_order[0]:
                 _gemini_order.append(_gemini_order.pop(0))  # lead with the other model from now on
             last_error = e
@@ -306,19 +310,27 @@ def score_with_gemini(profile: dict, posting: dict) -> dict:
     raise RuntimeError(str(last_error))
 
 
-def score_with_claude(client, profile: dict, posting: dict) -> dict:
+def claude_structured(client, system_prompt: str, user_prompt: str, tool: dict, max_tokens: int = 1024) -> dict:
     response = client.messages.create(
         model=_model("claude"),
-        max_tokens=1024,
-        system=SYSTEM_PROMPT,
-        tools=[SCORE_TOOL],
-        tool_choice={"type": "tool", "name": "record_fit"},
-        messages=[{"role": "user", "content": build_user_prompt(profile, posting)}],
+        max_tokens=max_tokens,
+        system=system_prompt,
+        tools=[tool],
+        tool_choice={"type": "tool", "name": tool["name"]},
+        messages=[{"role": "user", "content": user_prompt}],
     )
     for block in response.content:
         if block.type == "tool_use":
             return block.input
-    raise RuntimeError("Model did not return a record_fit call")
+    raise RuntimeError(f"Model did not return a {tool['name']} call")
+
+
+def score_with_gemini(profile: dict, posting: dict) -> dict:
+    return gemini_structured(SYSTEM_PROMPT, build_user_prompt(profile, posting), SCORE_TOOL["input_schema"])
+
+
+def score_with_claude(client, profile: dict, posting: dict) -> dict:
+    return claude_structured(client, SYSTEM_PROMPT, build_user_prompt(profile, posting), SCORE_TOOL)
 
 
 def score_posting(provider: str, client, profile: dict, posting: dict) -> dict:

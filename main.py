@@ -1,20 +1,23 @@
 import os
+from urllib.parse import urlparse
 
-from config import EMAIL_MIN_FIT, EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN
+from business_discovery import find_businesses
 from company_boards import fetch_company_jobs
+from config import (
+    EMAIL_MIN_FIT, EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN, MAX_LEADS_PER_RUN,
+)
 from job_search import search_jobs
-from business_discovery import find_business_urls
-from tech_checker import check_business_list
 from jobs_store import is_known, job_key, known_urls, load_jobs, save_jobs
+from lead_scorer import score_leads
+from leads_store import known_keys, lead_key, load_leads, save_leads
 from matcher import score_jobs
 from notifier import send_job_digest
-from sheets_writer import append_tech_leads, get_existing_tech_urls
+from site_audit import audit_businesses
 
-SHEET_ID = os.environ.get("LEAD_SHEET_ID")
 URLS_FILE = "businesses.txt"  # optional manual add-ons (referrals, etc.)
 
-# "jobs_only" = just search job postings (fast, run daily)
-# "full" = job postings + business discovery + tech checks (run weekly)
+# "jobs_only" = job matching only (daily)
+# "full" = job matching + client leads: find businesses, audit their sites, score, draft outreach (weekly)
 MODE = os.environ.get("MODE", "full")
 
 
@@ -51,28 +54,23 @@ def run_job_search():
 
 
 def run_business_discovery():
-    print("Discovering businesses via Google Places...")
-    discovered = find_business_urls()
-    discovered_urls = [d["website"] for d in discovered]
-    print(f"Discovered {len(discovered_urls)} candidate businesses.")
+    print("Finding business leads...")
+    businesses = find_businesses()
+    manual = [{"name": urlparse(u).netloc.removeprefix("www.") or u, "website": u, "matched_query": "businesses.txt"}
+              for u in load_manual_urls()]
+    if manual:
+        print(f"Loaded {len(manual)} manually-added websites from {URLS_FILE}.")
 
-    manual_urls = load_manual_urls()
-    print(f"Loaded {len(manual_urls)} manually-added URLs from {URLS_FILE}.")
+    stored = load_leads()
+    known = known_keys(stored)
+    fresh = [b for b in businesses + manual if lead_key(b) not in known]
+    print(f"{len(fresh)} new businesses (skipped {len(businesses) + len(manual) - len(fresh)} already on the dashboard).")
+    if not fresh:
+        return
 
-    all_candidate_urls = list(dict.fromkeys(discovered_urls + manual_urls))  # dedupe, keep order
-
-    already_checked = get_existing_tech_urls(SHEET_ID) if SHEET_ID else set()
-    new_urls = [u for u in all_candidate_urls if u not in already_checked]
-    print(f"{len(new_urls)} new businesses to check (skipped {len(all_candidate_urls) - len(new_urls)} already logged).")
-
-    tech_results = check_business_list(new_urls) if new_urls else []
-    print(f"Checked {len(tech_results)} businesses.")
-
-    if SHEET_ID:
-        append_tech_leads(SHEET_ID, tech_results)
-    else:
-        for t in tech_results:
-            print(t)
+    audit_businesses(fresh)
+    scored = score_leads(fresh, max_leads=MAX_LEADS_PER_RUN)
+    save_leads(stored, scored)
 
 
 def main():
