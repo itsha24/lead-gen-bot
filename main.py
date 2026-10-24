@@ -4,7 +4,7 @@ from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS
 from job_search import search_jobs
 from business_discovery import find_business_urls
 from tech_checker import check_business_list
-from jobs_store import known_urls, load_jobs, save_jobs
+from jobs_store import is_known, job_key, known_urls, load_jobs, save_jobs
 from matcher import score_jobs
 from notifier import send_job_digest
 from sheets_writer import append_tech_leads, get_existing_tech_urls
@@ -30,9 +30,15 @@ def run_job_search():
     print(f"Found {len(jobs)} job leads.")
 
     stored = load_jobs()
-    already_scored = known_urls(stored)
-    jobs = [j for j in jobs if j["url"] not in already_scored]
-    print(f"{len(jobs)} are new (skipped {len(already_scored)} already on the dashboard).")
+    known = known_urls(stored)
+    fresh, seen_now = [], set()
+    for j in jobs:  # skip jobs already on the dashboard, and repeat postings within this run
+        if is_known(j, known) or job_key(j) in seen_now:
+            continue
+        seen_now.add(job_key(j))
+        fresh.append(j)
+    print(f"{len(fresh)} are new (skipped {len(jobs) - len(fresh)} already seen or duplicate postings).")
+    jobs = fresh
 
     scored = score_jobs(jobs, max_jobs=MAX_JOBS_PER_RUN)
     # Only AI-scored jobs are saved; unscored ones get another chance next run.

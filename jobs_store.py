@@ -7,6 +7,7 @@ always shows the latest matches without needing a Google Sheet.
 
 import json
 import os
+import re
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -37,8 +38,19 @@ def _is_internship(job: dict) -> bool:
     return job.get("seniority") == "intern" or bool(INTERNSHIP_TITLE.search(job.get("title") or ""))
 
 
+def job_key(job: dict) -> str:
+    """Same title at the same company = same job, even if posted under different links."""
+    norm = lambda v: " ".join(re.findall(r"\w+", (v or "").lower()))
+    return f"{norm(job.get('title'))}|{norm(job.get('company'))}"
+
+
 def known_urls(jobs: list[dict]) -> set[str]:
-    return {j["url"] for j in jobs if j.get("url")}
+    """URLs and title+company keys of jobs already stored."""
+    return {j["url"] for j in jobs if j.get("url")} | {job_key(j) for j in jobs}
+
+
+def is_known(job: dict, known: set[str]) -> bool:
+    return job.get("url") in known or job_key(job) in known
 
 
 def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> list[dict]:
@@ -50,16 +62,21 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
     seen = known_urls(existing)
     added = []
     for job in new:
-        if job.get("url") in seen:
+        if is_known(job, seen):
             continue
         record = {k: job.get(k) for k in FIELDS}
         record["date_found"] = today
         record["description"] = (record["description"] or "")[:300]
         added.append(record)
-        seen.add(job["url"])
+        seen |= {job["url"], job_key(job)}
 
     kept = [j for j in existing if (j.get("date_found") or today) >= cutoff]
-    jobs = [j for j in added + kept if not _is_internship(j)]  # never shown, so never stored
+    jobs, keys = [], set()
+    for j in sorted(added + kept, key=lambda j: j.get("fit_score") or 0, reverse=True):
+        if _is_internship(j) or job_key(j) in keys:  # internships are never shown; repeats add nothing
+            continue
+        keys.add(job_key(j))
+        jobs.append(j)
     jobs.sort(key=lambda j: (j.get("date_found") or "", j.get("fit_score") or 0), reverse=True)
 
     os.makedirs(os.path.dirname(path), exist_ok=True)

@@ -1,5 +1,10 @@
 """
-Emails a daily digest of the best new job matches via Gmail.
+Emails a daily digest of the best new job matches.
+
+Two ways to send (whichever EMAIL_APP_PASSWORD holds):
+  - a Resend API key (starts with "re_") -> sent over HTTPS via resend.com.
+    Free (100/day). Works from GitHub Actions, where Gmail SMTP is often blocked.
+  - a Gmail app password -> sent via Gmail SMTP.
 
 Requires (as env vars / GitHub secrets):
   EMAIL_ADDRESS       your Gmail address (the sender)
@@ -13,6 +18,8 @@ If they're missing, the email step is skipped and nothing else is affected.
 import html
 import os
 import smtplib
+
+import requests
 from datetime import datetime
 from email.message import EmailMessage
 
@@ -89,10 +96,15 @@ def send_job_digest(jobs, min_score):
       </div>
     </div>""", subtype="html")
 
+    if password.startswith("re_"):
+        _send_resend(password, msg, len(top))
+        return
+
     for name, send in (("SSL :465", _send_ssl), ("STARTTLS :587", _send_starttls)):
+        stage = ["connecting"]
         try:
-            send(sender, password, msg)
-            print(f"[notifier] Emailed {len(top)} jobs to {msg['To']} (via {name}).")
+            send(sender, password, msg, stage)
+            print(f"[notifier] Emailed {len(top)} jobs to {msg['To']} (via Gmail {name}).")
             return
         except smtplib.SMTPAuthenticationError as e:
             print(f"[notifier] Email failed: Gmail rejected the login ({e.smtp_code}). "
@@ -100,20 +112,48 @@ def send_job_digest(jobs, min_score):
                   "16-letter app password from myaccount.google.com/apppasswords, not your normal password.")
             return
         except Exception as e:  # never let email break the run
-            print(f"[notifier] Email via {name} failed: {type(e).__name__}: {e}")
-    print("[notifier] Email failed on both Gmail ports.")
+            print(f"[notifier] Gmail {name} failed while {stage[0]}: {type(e).__name__}: {e}")
+    print("[notifier] Email failed on both Gmail ports. Gmail often blocks GitHub's servers — "
+          "put a free Resend API key (resend.com) in the EMAIL_APP_PASSWORD secret instead.")
 
 
-def _send_ssl(sender, password, msg):
+def _send_resend(api_key, msg, count):
+    resp = requests.post(
+        "https://api.resend.com/emails",
+        headers={"Authorization": f"Bearer {api_key}"},
+        json={
+            "from": "Job Matcher <onboarding@resend.dev>",
+            "to": [msg["To"]],
+            "subject": msg["Subject"],
+            "html": msg.get_body(("html",)).get_content(),
+            "text": msg.get_body(("plain",)).get_content(),
+        },
+        timeout=30,
+    )
+    if resp.status_code in (200, 201):
+        print(f"[notifier] Emailed {count} jobs to {msg['To']} (via Resend).")
+    elif resp.status_code == 403:
+        print(f"[notifier] Resend refused (403): {resp.text[:200]}. Without your own domain, Resend only "
+              "sends to the address you signed up with — set EMAIL_ADDRESS (or EMAIL_TO) to that address.")
+    else:
+        print(f"[notifier] Resend failed (HTTP {resp.status_code}): {resp.text[:200]}")
+
+
+def _send_ssl(sender, password, msg, stage):
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as smtp:
+        stage[0] = "logging in"
         smtp.login(sender, password)
+        stage[0] = "sending"
         smtp.send_message(msg)
 
 
-def _send_starttls(sender, password, msg):
+def _send_starttls(sender, password, msg, stage):
     with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as smtp:
+        stage[0] = "starting encryption"
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
+        stage[0] = "logging in"
         smtp.login(sender, password)
+        stage[0] = "sending"
         smtp.send_message(msg)
