@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T03:05:01+00:00",
+ "updated": "2026-10-24T03:10:26+00:00",
  "jobs": [
   {
    "date_found": "2026-10-23",
@@ -353,6 +353,26 @@
   },
   {
    "date_found": "2026-10-23",
+   "title": "Java Developer",
+   "company": "Morgan Stanley E-TRADE",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5609224370?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-02-01T14:20:37Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 65,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java background is a good fit, but the short snippet lacks details on required experience and seniority level.",
+   "description": "Job Number: 4701 External Description: Java Developer Job Number: MOR1JP00094589 Community / Marketing Title: Java Developer Location_formattedLocationLong: Montreal, Quebec CA",
+   "description_source": "snippet"
+  },
+  {
+   "date_found": "2026-10-23",
    "title": "Java Backend developer - Java 17, DevSecOps, Kubernetes",
    "company": "Astra North Infoteck Inc.",
    "location": "Montréal, Québec",
@@ -510,6 +530,57 @@
    "dealbreakers_hit": [],
    "reason": "Good fit for a junior QA role in Montreal matching the candidate's QA automation skills, though the short description lacks detailed technical requirements.",
    "description": "About us Eli Health is making continuous hormone monitoring possible so users can support their daily and long-term health. No more waiting days to track key biomarkers—get results you can use within minutes. Eli’s flagship product, Hormometer®, is the first instant hormone monitoring platform to de"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Backend Developer",
+   "company": "Sapsol Technologies Inc",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5685954340?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-04-01T15:21:33Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Microservices architecture"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Spring Boot skills match well, but this is an intermediate role requiring microservices experience.",
+   "description": "Key Responsibilities Design, develop, and maintain backend services using Core Java and Spring Boot Build and manage Microservices-based architecture Develop and consume RESTful APIs Work with SQL and/or NoSQL databases for data storage and retrieval Collaborate with frontend developers, DevOps team",
+   "description_source": "full posting"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Share Point Engineer",
+   "company": "Jose Merciline",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5727087560?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-05-12T16:27:30Z",
+   "keyword_matched": "ASP.NET developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Office 365 migration experience",
+    "PowerShell scripting",
+    "Microsoft Graph API"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and API skills give you some relevant background, but this role is heavily focused on specialized SharePoint and Office 365 migration engineering which is outside your core expertise.",
+   "description": "Description: The company's SharePoint Engineering team is responsible for the build of the SharePoint platform On-prem and cloud for firmwide collaboration as well as application hosting & development. Besides providing platform expertise, we offer economies of scale and ease of management by creati",
+   "description_source": "full posting"
   },
   {
    "date_found": "2026-10-23",
@@ -857,6 +928,33 @@
   },
   {
    "date_found": "2026-10-23",
+   "title": "Java Developer",
+   "company": "Worldhire",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5120009728?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2025-03-31T13:19:11Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "SQL"
+   ],
+   "missing_required": [
+    "J2EE",
+    "Oracle",
+    "WAS"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and SQL match well, but the role requires 3 to 7 years of experience which stretches your junior profile.",
+   "description": "Role: Java Developer Location: Toronto, Canada Experience: 3-7 years of experience Candidates having PR/Citizenship status are eligible to apply Job Description We are looking for a Java developer responsible for building Java applications. This includes anything between complex groups of back-end s",
+   "description_source": "full posting"
+  },
+  {
+   "date_found": "2026-10-23",
    "title": "QA Automation Engineering",
    "company": "CGI",
    "location": "Toronto, Ontario",
@@ -943,6 +1041,33 @@
    "dealbreakers_hit": [],
    "reason": "This is a stretch role because it requires C++ and real-time financial systems experience which are outside the candidate's core profile, though the seniority may align.",
    "description": "C++ / C# Developer IT GMD Pricing Services Core is responsible for providing highly critical pricing and risk calculation facilities to a wide range of consumers within the bank ranging from the Front Office to a Regulatory Risk. Business users such as the risk quantitative analysts, FO and risk man"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Software Dev QA Developer",
+   "company": "Fortinet",
+   "location": "Burnaby, Greater Vancouver",
+   "url": "https://www.adzuna.ca/details/5682434329?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-03-29T16:37:05Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "QA test automation",
+    "Python"
+   ],
+   "missing_required": [
+    "Network protocols (TCP/IP, HTTPS/SSL)",
+    "Cybersecurity / Firewall knowledge",
+    "Perl/Ruby/Bash scripting"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation and Python match, but this role requires 5+ years of experience which triggers your dealbreaker.",
+   "description": "Description Join Fortinet, a cybersecurity pioneer with over two decades of excellence, as we continue to shape the future of cybersecurity and redefine the intersection of networking and security. At Fortinet, our mission is to safeguard people, devices, and data everywhere. Requirements: Run manua",
+   "description_source": "full posting"
   },
   {
    "date_found": "2026-10-23",
@@ -1234,6 +1359,42 @@
    ],
    "reason": "The role requires senior-level experience and data architecture expertise which exceeds the junior level of the candidate, hitting the seniority dealbreaker.",
    "description": "Job Description Job Description About the Job: Infoya is looking for an experienced Senior Automation Engineer with strong expertise in test automation , database testing, ETL validation, and data pipeline testing. The ideal candidate will have hands-on experience working with cloud-based data platf"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Business Analyst",
+   "company": "Jose Merciline",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5727114405?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-05-12T16:32:04Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Description: Job Title: LCG ICT Business Analyst Job Description: The candidate will join a team responsible for modernizing our technology solutions across the department that will also include aligning with Firm’s strategic priorities of cloud readiness, DevOps, platform reliability, and automatio",
+   "description_source": "full posting"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Software Developer in Test Automation",
+   "company": "Jose Merciline",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5727090446?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-05-12T16:27:58Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Role will involve: -Developing & configuring software, tools to deliver test automation -Onboarding various DevOps practices to software delivery -Designing, implementing and enhancing test automation solution and frameworks with focus on CICD -Updating existing automation suites to achieve higher c",
+   "description_source": "full posting"
   },
   {
    "date_found": "2026-10-23",
