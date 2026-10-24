@@ -1,6 +1,534 @@
 {
- "updated": "2026-10-24T02:38:02+00:00",
+ "updated": "2026-10-24T02:46:30+00:00",
  "jobs": [
+  {
+   "date_found": "2026-10-23",
+   "title": "Stagiaire, développement de logiciel (C#) | Intern, Software Development (C#)",
+   "company": "Grass Valley",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5929257715?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-15T12:49:25Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 90,
+   "seniority": "intern",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "Java"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is an intern software development role in Montreal focusing on C#, perfectly matching the candidate's junior level and location preferences.",
+   "description": "Pourquoi joindre les rangs de Grass Valley? Chez Grass Valley, nous donnons vie aux moments qui rassemblent le monde. Des plus grands événements sportifs en direct aux dernières nouvelles de l’actualité, en passant par les productions de divertissement haut de gamme, notre technologie et nos équipes"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Backend Developer",
+   "company": "CYNET SYSTEMS",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5920573309?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-09T08:28:48Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 85,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This posting is a strong match for the candidate's core backend skills in Java and Spring Boot with no years of experience required or dealbreakers triggered.",
+   "description": "Job Description Job Description Job Overview: We are seeking a Java Backend Developer to build and maintain scalable backend applications and APIs. Requirement/Must Have: Experience with Java and Spring Boot. Knowledge of REST APIs and SQL databases. Familiarity with Git and Agile practices. Strong "
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Stagiaire développeur infonuagique/ Cloud Developer Intern",
+   "company": "CM Labs",
+   "location": "Verdun, Montréal",
+   "url": "https://www.adzuna.ca/details/5920332216?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-09T04:41:26Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 85,
+   "seniority": "intern",
+   "years_required": 0,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is an internship position matching the candidate's location and professional goals, though specific technical requirements are not detailed in the snippet.",
+   "description": "Français Description de l’entreprise CM Labs développe des solutions de simulation de haute fidélité qui aident ses clients à concevoir des équipements avancés et à former des opérateurs qualifiés. Grâce à sa plateforme Vortex Studio , l’entreprise offre des solutions pour les simulateurs de formati"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Technical QA Specialist",
+   "company": "TTC Global",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5930288154?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T04:51:46Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 80,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a good fit for an intermediate technical QA role matching the candidate's QA automation background, though the exact years of experience and full technical requirements are not fully detailed in the short snippet.",
+   "description": "Spécialiste QA technique (Montréal, mode hybride ou télétravail) Lieu : Montréal en mode hybride; candidatures de l'extérieur du Québec acceptées si la personne maîtrise le français et travaille selon les heures d'affaires de Montréal À propos de TTC Global Depuis 2004, TTC Global aide des organisat"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "COMS QA Automation - Canada",
+   "company": "Saransh Inc",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5920534570?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-09T07:37:49Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 80,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Java",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a great match for a junior QA automation role in Montreal requiring Java and Python, which fit the candidate's strong skills.",
+   "description": "Job Description Job Description Role: COMS QA Automation Location: Montreal, QC, Canada (Onsite from Day 1) Focus areas: Develop / configure software & tools to deliver test automation Onboarding various DevOps practices to software delivery Design, implement and enhance test automation solution and"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Testeur · euse AQ Développement / Development QA Tester",
+   "company": "side",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5932097434?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-17T07:26:30Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a good fit for a junior QA automation role in Montreal matching the candidate's target roles and skills, though the exact years of experience and full technical stack details are not specified in the snippet.",
+   "description": "Job Description Job Description ~English version to follow~ Testeur·euse AQ Développement Side Montréal est à la recherche de deux Testeur·euse·s AQ Développement afin de soutenir la qualité et la fiabilité des outils et processus de développement de jeux vidéo. Dans ce rôle, vous contribuerez au dé"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Project Analyst",
+   "company": "TTC Global",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5930294845?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T04:54:09Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 75,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Good fit for a QA analyst role in Montreal matching the candidate's QA automation background, though the exact seniority and years of experience are not specified in the short snippet.",
+   "description": "Analyste QA, projets numériques (Montréal, mode hybride) Lieu : résidence au Québec requise; présence au siège social du client à Montréal 1 à 2 jours par semaine, télétravail les autres jours À propos de TTC Global Depuis 2004, TTC Global aide des organisations de premier plan à améliorer la qualit"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Engineer",
+   "company": "OTT Financial Group",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5925677723?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-13T07:30:45Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 75,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Good fit for a junior-to-intermediate QA automation role that matches the candidate's core strengths, though exact years of experience are not specified.",
+   "description": "Job Description Job Description Position Summary We are looking for a QA Automation Engineer to join our engineering team and help ensure the quality, reliability, and stability of our software products. The role includes both manual and automation. The successful candidate will be responsible for d"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Testeur·euse AQ Développement / Development QA Tester",
+   "company": "Side",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5931102693?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T16:28:38Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Good fit for a junior QA tester role matching the candidate's target areas and bilingual capability, though specific technical requirements are sparse in the snippet.",
+   "description": "~English version to follow~ Testeur·euse AQ Développement Side Montréal est à la recherche de deux Testeur·euse·s AQ Développement afin de soutenir la qualité et la fiabilité des outils et processus de développement de jeux vidéo. Dans ce rôle, vous contribuerez au développement, à la maintenance et"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Full Stack & IAM Developer",
+   "company": "CYNET SYSTEMS",
+   "location": "King and Spadina, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5931059141?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T14:23:34Z",
+   "keyword_matched": "Spring Boot developer",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Angular",
+    "IAM / Identity Access",
+    "OpenShift"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Good intermediate fit requiring Java and Spring Boot, though it lacks details on years required and introduces missing frontend and IAM requirements.",
+   "description": "Pay Range: $50.00hr - $55.00hr Job Overview: Our client is seeking a Java Full Stack & Identity Access Developer to design, build, deploy, and support secure enterprise applications within banking and capital-markets environments. The role combines Java and Spring Boot development, Angular user-inte"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Software Development Engineer in Test - AI",
+   "company": "Delos Data",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5930298081?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T04:56:56Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "It is a good fit for an SDET role aligning with the candidate's QA background, though the exact technical stack details are sparse in the snippet.",
+   "description": "Software Development Engineer in Test - AI About us: We are a startup building foundational technology to address performance, scalability, and resiliency challenges in large-scale AI data center clusters. We are backed by top-tier VC firms and notable angel investors. The company is led by experien"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Software QA",
+   "company": "Eli Health",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5911283327?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-04T04:42:23Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Good fit for a junior QA role in Montreal matching the candidate's QA automation skills, though the short description lacks detailed technical requirements.",
+   "description": "About us Eli Health is making continuous hormone monitoring possible so users can support their daily and long-term health. No more waiting days to track key biomarkers—get results you can use within minutes. Eli’s flagship product, Hormometer®, is the first instant hormone monitoring platform to de"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Computer Programmer/Programmer Analyst - TechSmash Inc.",
+   "company": null,
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5936624165?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-21T07:30:51Z",
+   "keyword_matched": "Spring Boot developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [
+    "distributed applications design"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch because the role involves designing and implementing multi-tier distributed applications, which leans a bit senior/intermediate for a junior candidate, though Java is a strong match.",
+   "description": "Job Details • Location: 62 Ranstone Gdns, Scarborough, Ontario, M1K 2T8 • Employment Type: Full-Time (40 hours per week) • Wage: $46.15 to $50 per hour (based on experience) • Start Date: ASAP • Vacancies: 1 • Language: English Position • Job Title: Computer Programmer/Programmer Analyst • Departmen"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java developer",
+   "company": "VDart Inc",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5935773087?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-20T15:02:58Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Spring WebFlux",
+    "IBM MQ",
+    "Apache Kafka"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch intermediate role requiring modern enterprise microservices tech like Kafka and WebFlux that go beyond the candidate's junior profile.",
+   "description": "Role: Java developer Location: Toronto, ON Mode: Full Time Job Description: Designing, developing, and maintaining high-performance, scalable microservices using Java 17 and Spring Boot framework Building reactive and non-blocking applications leveraging Spring WebFlux to handle high-concurrency wor"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Software Development Engineer in Test - AI",
+   "company": "Delos Data",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5932470354?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-17T12:52:46Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 60,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The job snippet is too short to fully determine requirements, but the SDET role aligns with the candidate's QA automation background although seniority and tech stack details are missing.",
+   "description": "About Us We are a startup building foundational technology to address performance, scalability, and resiliency challenges in large-scale AI data center clusters. We are backed by top-tier VC firms and notable angel investors. About Us We are a startup building foundational technology to address perf"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Software Development Engineer in Test - SDET",
+   "company": "Corning Incorporated",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5931984155?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-17T06:49:22Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 60,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The snippet lacks specific requirements and years of experience, but the SDET role aligns with the candidate's target roles and QA background.",
+   "description": "Requisition Number: 78600 The company built on breakthroughs. Join us. Corning is one of the world’s leading innovators in glass, ceramic, and materials science. From the depths of the ocean to the farthest reaches of space, our technologies push the boundaries of what’s possible. How do we do this?"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Developer",
+   "company": "CYNET SYSTEMS",
+   "location": "Westmount, Montréal",
+   "url": "https://www.adzuna.ca/details/5931059145?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T14:23:34Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "front-end technologies",
+    "multi-tiered Java EE"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch intermediate role requiring full-stack Java EE and front-end experience, which slightly exceeds the candidate's junior level and primary backend/QA focus.",
+   "description": "Pay Range: $45.00hr - $50.00hr Job Overview: Our client is seeking a Full Stack Developer with experience in multi-tiered Java EE-style applications and front-end technologies to join the Risk and Information Management team. The candidate will work within a multifaceted agile team on the developmen"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "API Automation Test Engineer",
+   "company": "VDart Inc",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5931059035?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T14:23:17Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Selenium"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch role because it asks for strong hands-on automation and framework building experience, but the candidate has the core Java and testing background to make it a reasonable stretch.",
+   "description": "Title: API Automation Test Engineer Mode: Contract Location: Scarborough, ON Kindly prioritize sharing relevant profiles at the earliest. We are specifically looking for candidates with: Strong experience in Automation Testing Hands-on expertise in Selenium Proficiency in Java as the primary program"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Developer",
+   "company": "Apptad Inc",
+   "location": "Ogden, Calgary",
+   "url": "https://www.adzuna.ca/details/5931059031?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T14:23:16Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch junior-to-intermediate role requiring on-site presence in Calgary and an in-person interview, while missing specific backend framework details in the snippet.",
+   "description": "Job Title: Java Developer Job Location: Calgary, AB (4 days in a week Onsite) Job Type: Full Time Note: In-Person interview required at Calgary, AB. Our challenge We are looking for a Java developer to join our team and help deliver key initiatives. The candidate should be a solid Java programmer, w"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Full Stack Developer - Applied AI",
+   "company": "Bell",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5928416543?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-14T23:08:44Z",
+   "keyword_matched": "ASP.NET developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The job snippet is too short to fully determine required skills or years of experience, but it aligns with the candidate's target role and location.",
+   "description": "Req Id: 432198 Connection is everything. It drives us to innovate, explore, and stay close to what matters to us most. At Bell, we’re building a more connected future through world-class networks, AI-powered solutions, and digital experiences that elevate how people live, work, and play every day. W"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Developer - 26-09272",
+   "company": "Compu-Vision Consulting Inc.",
+   "location": "Red Deer, Red Deer region",
+   "url": "https://www.adzuna.ca/details/5927483279?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-14T08:27:52Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 60,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch role because the posting explicitly seeks 'experienced QA Automation Developers', pushing into a more senior level than the candidate's junior profile, though remote work and general skill alignment make it a potential fit.",
+   "description": "Job Description Job Description Job Title: QA Automation Developer Location: Edmonton, Alberta, Canada (Primarily Remote) Contract Duration: 12 Months Work Arrangement: Remote within Canada, with occasional in-person meetings or work sessions in Edmonton Job Overview We are seeking experienced QA Au"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Developer - 26-09272",
+   "company": "Compu-Vision Consulting Inc.",
+   "location": "Edmonton, Edmonton region",
+   "url": "https://www.adzuna.ca/details/5927471710?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-14T08:19:16Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 60,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The snippet mentions seeking 'experienced' QA automation developers which trends senior, but since exact years are not stated and remote within Canada is accepted, it's a stretch fit.",
+   "description": "Job Description Job Description Job Title: QA Automation Developer Location: Edmonton, Alberta, Canada (Primarily Remote) Contract Duration: 12 Months Work Arrangement: Remote within Canada, with occasional in-person meetings or work sessions in Edmonton Job Overview We are seeking experienced QA Au"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Developer - 26-09272",
+   "company": "Compu-Vision Consulting Inc.",
+   "location": "Airdrie, Calgary region",
+   "url": "https://www.adzuna.ca/details/5927356630?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-14T07:15:41Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 60,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The posting seeks experienced QA automation developers, which is slightly above the candidate's junior level, but remote work location and general field match well.",
+   "description": "Job Description Job Description Job Title: QA Automation Developer Location: Edmonton, Alberta, Canada (Primarily Remote) Contract Duration: 12 Months Work Arrangement: Remote within Canada, with occasional in-person meetings or work sessions in Edmonton Job Overview We are seeking experienced QA Au"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Engineer",
+   "company": "Ampa",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5922440856?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-10T12:45:21Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 60,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch because the job description snippet is too short to determine exact requirements or seniority, though the role aligns with the candidate's QA automation target.",
+   "description": "Ampa is a pioneering neurotechnology startup developing brain stimulation technology to help eradicate depression . We will improve millions of lives by making this transformative treatment universally accessible. Joining us means you’ll be part of a rapidly growing startup with significant equity o"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Server Side/Backend Developer",
+   "company": "Saransh Inc",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5922073957?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-10T07:18:58Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [
+    "Data Structures and Algorithms depth",
+    "DevOps tools (Jenkins)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch because the backend developer role asks for deep computer science principles and DevOps tools, and seniority details are unclear from the snippet.",
+   "description": "Job Description Job Description Role: Server Side/Backend Developer Location: Montreal, QC, Canada (Onsite from Day 1) Job Type: Contract Core Technical Requirements and preferred skills for a candidate include : Common Requirements : Deep understanding of Computer Science related Principles, Data S"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "AI Augmented Quality Assurance Analyst I",
+   "company": "LGI Healthcare Solutions Santé Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5917680496?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-07T19:06:23Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch role calling for an experienced professional to transform testing practices, but matches the candidate's QA automation background well enough to be considered a reasonable junior-to-intermediate application.",
+   "description": "Job Description At LGI Healthcare Solutions, we believe the future of quality assurance lies in combining robust automation with artificial intelligence. We are looking for an experienced software quality professional who wants to help transform our testing practices by leveraging both automation be"
+  },
   {
    "date_found": "2026-10-23",
    "title": "Java Developer",
@@ -19,6 +547,306 @@
    "dealbreakers_hit": [],
    "reason": "The posting matches the candidate's target role and location, but is too heavily truncated to verify seniority or specific requirements.",
    "description": "About Us: Based in San Francisco, California, Turing is the world's leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems. Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, ad"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Python Backend Developer",
+   "company": "Orbiq",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5939164194?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-23T07:22:04Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 45,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Python"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch because the posting requires Python as the primary backend language, which is only a working skill for the candidate.",
+   "description": "Job Description Job Description We are a dynamic and innovative software development company working on high-profile projects in the automotive industry. Our current projects are closely related to MediaMarktSaturn’s digital platforms. We are looking for a skilled Python Backend Developer to join ou"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Developer - 26-09272",
+   "company": "Compu-Vision Consulting Inc.",
+   "location": "Lethbridge, Lethbridge region",
+   "url": "https://www.adzuna.ca/details/5927401408?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-14T07:28:59Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 45,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The posting asks for experienced QA Automation Developers, which leans slightly senior for a junior-level candidate, making it a stretch.",
+   "description": "Job Description Job Description Job Title: QA Automation Developer Location: Edmonton, Alberta, Canada (Primarily Remote) Contract Duration: 12 Months Work Arrangement: Remote within Canada, with occasional in-person meetings or work sessions in Edmonton Job Overview We are seeking experienced QA Au"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Automation Developer - 26-09272",
+   "company": "Compu-Vision Consulting Inc.",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5927377568?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-14T07:21:07Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 45,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The posting seeks experienced QA automation developers which leans slightly senior for the candidate, though it is remote in Canada and matches the target role.",
+   "description": "Job Description Job Description Job Title: QA Automation Developer Location: Edmonton, Alberta, Canada (Primarily Remote) Contract Duration: 12 Months Work Arrangement: Remote within Canada, with occasional in-person meetings or work sessions in Edmonton Job Overview We are seeking experienced QA Au"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QA Developer, AI Assistant",
+   "company": "Poka",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5933133805?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-18T04:58:36Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 40,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The job posting snippet contains no specific requirements or technical details to evaluate, making it a stretch due to lack of information.",
+   "description": "At Poka, we're changing how the world's industrial teams work — capturing the knowledge of their best people and putting it in every operator's hands. Our connected worker platform is purpose-built for manufacturing and the wider industrial world, with industrial AI inside the shift, not on top of i"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "QE Mobile Test Automation Engineer",
+   "company": "Princeton IT Services",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5929042456?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-15T08:45:30Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "mobile test automation"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch because the role requires a specialized focus on mobile test automation which is not a highlighted skill for the candidate.",
+   "description": "Job Description Job Description Job Title: QE Mobile Test Automation Engineer Location: Toronto, Canada / Remote Job Type: Contract About the Role : We are seeking a talented QE/Test Automation Engineer with a focus on mobile applications to join our dynamic team. The ideal candidate will have exten"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "C#/C++ Developer (Real Time)",
+   "company": "CGI",
+   "location": "Westmount, Montréal",
+   "url": "https://www.adzuna.ca/details/5917636116?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-07T17:45:57Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C#"
+   ],
+   "missing_required": [
+    "C++",
+    "Real-time systems experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch role because it requires C++ and real-time financial systems experience which are outside the candidate's core profile, though the seniority may align.",
+   "description": "C++ / C# Developer IT GMD Pricing Services Core is responsible for providing highly critical pricing and risk calculation facilities to a wide range of consumers within the bank ranging from the Front Office to a Regulatory Risk. Business users such as the risk quantitative analysts, FO and risk man"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Developer",
+   "company": "VIS IT Solutions Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5933241184?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-18T07:17:14Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [
+    "Senior role requested (candidate is junior)"
+   ],
+   "reason": "This is a senior-level position requiring architectural design and technical expertise, which conflicts with the candidate's junior seniority level and target roles.",
+   "description": "Job Description Job Description Hi, Please find the job description below Role: Java Developer Location: Toronto, ON - Hybrid - 4 Days onsite in a week Job Description We are seeking a Senior Java Developer to create and maintain our UI applications and supporting microservices. In this role, you wi"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Automation Developer",
+   "company": "Teckhorizon Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5930556602?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T07:34:57Z",
+   "keyword_matched": "Selenium automation",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "automation framework development",
+    "CI/CD integration"
+   ],
+   "dealbreakers_hit": [
+    "Requires senior-level experience"
+   ],
+   "reason": "This is a senior-level automation developer role requiring framework development and architecture, which violates the candidate's seniority level and triggers a dealbreaker.",
+   "description": "Job Description Job Description Our Client is seeking a Senior Automation Developer with strong hands-on experience designing, developing, and maintaining automated testing solutions for enterprise applications. The ideal candidate will have expertise in UI automation, API testing, performance testi"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "RQ09315 - Software Developer - ETL",
+   "company": "Zortech Solutions",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5930515687?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-16T07:22:42Z",
+   "keyword_matched": "Selenium automation",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [
+    "Role is explicitly labeled Senior"
+   ],
+   "reason": "This is a senior-level role which directly violates the candidate's avoid-roles policy for senior positions.",
+   "description": "Job Description Job Description RQ09315 - Software Developer - ETL – Senior Closing Date - 2025-05-30, 9:00 a.m. Hybrid - Candidate MUST work 3 days onsite and 2 days remote Start Date - 2025-06-23 to 2026-04-02 Office Location - Ministry of Public and Business Service Delivery and Procurement 5700 "
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "C++ Developer & Tester",
+   "company": "Aversan",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5918716164?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-08T05:00:34Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "C++"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role requires C++ development and testing expertise, which is outside the candidate's core technology stack of Java, Spring Boot, and QA automation.",
+   "description": "C++ Software Developer & Tester Aversan Inc. ( www.aversan.com ) is a trusted multi-service engineering and electronics manufacturing company. Aversan delivers leading-edge and reliable safety-critical electronics and software systems to the aerospace, defence, and space industries. We are currently"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Developer with DevOp",
+   "company": "CGI",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5916916446?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-07T07:17:49Z",
+   "keyword_matched": "Selenium automation",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "DevOps"
+   ],
+   "dealbreakers_hit": [
+    "Senior role requested (candidate is junior)"
+   ],
+   "reason": "This is a Senior Software Engineer role, which violates the candidate's seniority level and avoid_roles constraints.",
+   "description": "Job Description Job Description:\\n\\nSoftware Engineer – Java & DevOps About the Role: We are seeking a Senior Software Engineer – Java & DevOps to join the Information Technology team in the Americas.In this role, you will design, develop, enhance, deploy, and operate Java-based applications and bac"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Developer with DevOp",
+   "company": "CGI",
+   "location": "Westmount, Montréal",
+   "url": "https://www.adzuna.ca/details/5914176732?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-06T13:35:47Z",
+   "keyword_matched": "Selenium automation",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [
+    "Senior, Staff, Principal, Lead, Manager, Architect (target role avoidance)"
+   ],
+   "reason": "This is a senior-level role (\"Senior Software Engineer\"), which directly violates the candidate's target roles and seniority level.",
+   "description": "Software Engineer – Java & DevOps About the Role: We are seeking a Senior Software Engineer – Java & DevOps to join the Information Technology team in the Americas. In this role, you will design, develop, enhance, deploy, and operate Java-based applications and backend services , with a strong focus"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Database Automation Test Engineer",
+   "company": "Infoya",
+   "location": "East York, Toronto",
+   "url": "https://www.adzuna.ca/details/5922146531?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-10T08:34:34Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Senior test automation experience",
+    "database testing",
+    "ETL validation",
+    "data pipeline testing"
+   ],
+   "dealbreakers_hit": [
+    "Requires senior level / 5+ years of experience"
+   ],
+   "reason": "The role requires senior-level experience and data architecture expertise which exceeds the junior level of the candidate, hitting the seniority dealbreaker.",
+   "description": "Job Description Job Description About the Job: Infoya is looking for an experienced Senior Automation Engineer with strong expertise in test automation , database testing, ETL validation, and data pipeline testing. The ideal candidate will have hands-on experience working with cloud-based data platf"
+  },
+  {
+   "date_found": "2026-10-23",
+   "title": "Database Automation Test Engineer",
+   "company": "INFOYA",
+   "location": "East York, Toronto",
+   "url": "https://www.adzuna.ca/details/5921178251?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-09T17:13:58Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Database testing",
+    "ETL validation",
+    "Data pipeline testing"
+   ],
+   "dealbreakers_hit": [
+    "Requires senior experience"
+   ],
+   "reason": "This is a senior-level position requiring advanced database and ETL testing expertise, which does not match the candidate's junior background.",
+   "description": "About the Job: Infoya is looking for an experienced Senior Automation Engineer with strong expertise in test automation , database testing, ETL validation, and data pipeline testing. The ideal candidate will have hands-on experience working with cloud-based data platforms, complex data architectures"
   }
  ]
 }
