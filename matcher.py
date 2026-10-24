@@ -360,8 +360,10 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
         import anthropic  # only needed for Claude
         client = anthropic.Anthropic()
     if max_jobs is not None and len(kept) > max_jobs:
-        kept.sort(key=lambda j: j.get("posted") or "", reverse=True)  # newest first
-        print(f"[matcher] Scoring the newest {max_jobs}; the other {len(kept) - max_jobs} wait for the next run.")
+        # Companies you picked (companies.yaml) first, then newest first.
+        kept.sort(key=lambda j: (j.get("keyword_matched") == "company board", j.get("posted") or ""), reverse=True)
+        print(f"[matcher] Scoring {max_jobs} (your companies first, then newest); "
+              f"the other {len(kept) - max_jobs} wait for the next run.")
         kept = kept[:max_jobs]
 
     # Swap Adzuna's snippets for the full postings, then re-check the free filter:

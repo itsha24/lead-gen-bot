@@ -1075,30 +1075,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "Intermediate Fullstack Engineer (Ruby/Vue.js), Growth",
-   "company": "GitLab",
-   "location": "Remote, Poland",
-   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8911684002",
-   "posted": "2026-10-23T16:05:32+00:00",
-   "keyword_matched": "company board",
-   "fit_score": 35,
-   "seniority": "intermediate",
-   "years_required": null,
-   "matched_skills": [
-    "PostgreSQL"
-   ],
-   "missing_required": [
-    "Ruby on Rails",
-    "Vue.js"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your score is capped because this intermediate Ruby and Vue.js role is outside your target stack and you lack the required Ruby experience.",
-   "description": "GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the ",
-   "description_source": "full posting",
-   "source": "GitLab careers"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "RQ00813 - DevOPS/Cloud Engineer I Ontario Health I Hybrid",
    "company": "Analyst Technical Solutions",
    "location": "Toronto, Ontario",

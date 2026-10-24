@@ -38,12 +38,20 @@ NOT_A_DEV_ROLE = re.compile(
     re.IGNORECASE,
 )
 # Locations you'd accept (matches profile.yaml). Jobs elsewhere are dropped for free.
-LOCATION_OK = re.compile(
+NORTH_AMERICA = re.compile(
     r"montr[eé]al|qu[eé]bec|\bqc\b|canada|toronto|ottawa|vancouver|calgary|edmonton|waterloo|"
-    r"kitchener|remote|anywhere|united states|\busa?\b|north america|americas",
+    r"kitchener|united states|\busa?\b|\bu\.s\.|north america|americas|\b(ca|on|bc|ab)\b",
     re.IGNORECASE,
 )
-ONLY_ELSEWHERE = re.compile(r"\b(remote)\b.*\b(emea|europe|uk|apac|india|latam|germany|france|japan)\b", re.IGNORECASE)
+REMOTE_ANYWHERE = re.compile(r"\b(remote|anywhere|worldwide|global)\b", re.IGNORECASE)
+# "Remote, Poland" or "Remote - EMEA" means remote *in that country/region*, not for you.
+ELSEWHERE = re.compile(
+    r"\b(emea|europe|apac|latam|uk|united kingdom|ireland|germany|france|spain|portugal|italy|"
+    r"netherlands|poland|romania|sweden|denmark|norway|finland|switzerland|austria|belgium|"
+    r"czech|hungary|ukraine|israel|india|singapore|japan|korea|china|hong kong|australia|"
+    r"new zealand|brazil|mexico|argentina|colombia|chile|south africa|nigeria|kenya|philippines)\b",
+    re.IGNORECASE,
+)
 
 
 def parse_board(entry: str) -> tuple[str, str] | None:
@@ -160,9 +168,9 @@ def _relevant(job: dict) -> bool:
     title, loc = job["title"], job["location"]
     if not ROLE_TITLE.search(title) or NOT_A_DEV_ROLE.search(title):
         return False
-    if loc and (not LOCATION_OK.search(loc) or ONLY_ELSEWHERE.search(loc)):
-        return False
-    return True
+    if not loc or NORTH_AMERICA.search(loc):
+        return True
+    return bool(REMOTE_ANYWHERE.search(loc)) and not ELSEWHERE.search(loc)
 
 
 def fetch_company_jobs(max_days_old: int = COMPANY_MAX_DAYS_OLD) -> list[dict]:
