@@ -1,0 +1,24 @@
+{
+ "updated": "2026-10-24T02:38:02+00:00",
+ "jobs": [
+  {
+   "date_found": "2026-10-23",
+   "title": "Java Developer",
+   "company": "Turing",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5938356641?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-22T17:19:28Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 50,
+   "seniority": "unclear",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The posting matches the candidate's target role and location, but is too heavily truncated to verify seniority or specific requirements.",
+   "description": "About Us: Based in San Francisco, California, Turing is the world's leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems. Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, ad"
+  }
+ ]
+}
