@@ -56,7 +56,25 @@ SENIOR_TITLE = re.compile(
     r"\b(senior|sr\.?|staff|principal|lead|manager|director|architect|head of)\b",
     re.IGNORECASE,
 )
-YEARS_REQUIRED = re.compile(r"(\d+)\s*\+?\s*(?:years|yrs|ans)", re.IGNORECASE)
+# "5+ years", "3-5 years", "3 to 5 years", "5 ans" — for a range, the lower number counts.
+# Internships/co-ops are excluded entirely. French: "stagiaire", "stage en …", "Stage – …".
+INTERNSHIP_TITLE = re.compile(
+    r"\b(intern|interns|internship|co-?op|stagiaires?|student|étudiant(?:e)?)\b"
+    r"|^\s*stage\b|\bstage\s+(?:en|de|d'|-|–|:)",
+    re.IGNORECASE,
+)
+_YEARS = r"(?:(\d{1,2})\s*(?:-|–|to|à)\s*)?(\d{1,2})\s*\+?\s*(?:years?|yrs?|ans)"
+YEARS_REQUIRED = re.compile(_YEARS, re.IGNORECASE)
+# Full postings mention years in other ways ("30 years in business"), so there we
+# only count numbers tied to experience: "5+ years of relevant experience", "5 ans d'expérience".
+YEARS_OF_EXPERIENCE = re.compile(
+    _YEARS + r"\W+(?:\w+\W+){0,4}?(?:experience|expérience|exp\b)", re.IGNORECASE)
+
+
+def required_years(text: str, strict: bool = False) -> int | None:
+    pattern = YEARS_OF_EXPERIENCE if strict else YEARS_REQUIRED
+    found = [int(low or high) for low, high in pattern.findall(text or "")]
+    return min(found) if found else None
 
 
 def prefilter(posting: dict, max_years: int = 4) -> str | None:
@@ -64,9 +82,12 @@ def prefilter(posting: dict, max_years: int = 4) -> str | None:
     title = posting.get("title") or ""
     if SENIOR_TITLE.search(title):
         return f"senior title: {title}"
-    years = [int(y) for y in YEARS_REQUIRED.findall(posting.get("description") or "")]
-    if years and min(years) > max_years:
-        return f"requires {min(years)}+ years"
+    if INTERNSHIP_TITLE.search(title):
+        return f"internship: {title}"
+    strict = posting.get("description_source") == "full posting"
+    years = required_years(posting.get("description") or "", strict=strict)
+    if years is not None and years > max_years:
+        return f"requires {years}+ years"
     return None
 
 
@@ -112,7 +133,7 @@ SCORE_TOOL = {
             },
             "reason": {
                 "type": "string",
-                "description": "One sentence: the main reason for the score.",
+                "description": "One sentence on the main reason for the score, addressed to the candidate as 'you' (e.g. 'Your Java and QA automation match well, but it needs 3 years').",
             },
         },
         "required": [
@@ -138,6 +159,10 @@ Rules:
 - Missing REQUIRED skills matter far more than missing nice-to-haves.
 - If French is required, compare it against the candidate's French level.
 - Any dealbreaker caps the score at 30.
+- If the role is an internship, co-op, "stage" or student position, set seniority to "intern"
+  (it will be hidden from the candidate) and cap the score at 10.
+- A role matching anything else under "avoid_roles" caps the score at 35, even if the
+  skills match well. Say which avoid_roles entry it hit in the reason.
 - Job board descriptions are often short snippets. If key details are missing, score on what
   is there and say so in the reason rather than guessing."""
 
@@ -155,7 +180,8 @@ def build_user_prompt(profile: dict, posting: dict) -> str:
         "<job_posting>\n"
         f"Title: {posting.get('title', '')}\n"
         f"Company: {posting.get('company', '')}\n"
-        f"Location: {posting.get('location', '')}\n\n"
+        f"Location: {posting.get('location', '')}\n"
+        f"Text below is: {posting.get('description_source', 'a job board snippet')}\n\n"
         f"{posting.get('description', '')}\n"
         "</job_posting>\n\n"
         "Score this posting for the candidate using the record_fit tool."
@@ -338,9 +364,27 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
         print(f"[matcher] Scoring the newest {max_jobs}; the other {len(kept) - max_jobs} wait for the next run.")
         kept = kept[:max_jobs]
 
-    profile = load_profile()
+    # Swap Adzuna's snippets for the full postings, then re-check the free filter:
+    # full text often reveals "7+ years" the snippet cut off. Those are saved as
+    # low fits without an AI call, so they never come back to take a slot.
+    from posting_fetcher import enrich_jobs  # local import: only needed when scoring
+    enrich_jobs(kept)
     scored = []
+    to_score = []
+    for job in kept:
+        rejection = prefilter(job) if job.get("description_source") == "full posting" else None
+        if rejection:
+            print(f"[matcher] FILTERED after reading full posting: {job.get('title')} @ {job.get('company')} — {rejection}")
+            scored.append({**job, "fit_score": 15, "seniority": "senior", "years_required": None,
+                           "matched_skills": [], "missing_required": [], "dealbreakers_hit": [],
+                           "reason": f"Full posting {rejection} — filtered without AI."})
+        else:
+            to_score.append(job)
+    kept = to_score
+
+    profile = load_profile()
     errors_in_a_row = 0
+    ai_scored = 0
     for i, job in enumerate(kept):
         label = f"{job.get('title')} @ {job.get('company')}"
         if provider == "gemini" and i > 0:
@@ -358,11 +402,12 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
                 break
             continue
         errors_in_a_row = 0
+        ai_scored += 1
         print(f"[matcher] [{result['fit_score']:>3}] {label} — {result['reason']}")
         scored.append({**job, **result})
 
     scored.sort(key=lambda j: j["fit_score"], reverse=True)
-    unscored = len(kept) - len(scored)
+    unscored = len(kept) - ai_scored
     print(f"[matcher] Scored {len(scored)} jobs" + (f"; {unscored} left for the next run." if unscored else "."))
     return scored
 

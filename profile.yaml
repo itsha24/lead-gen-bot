@@ -23,6 +23,7 @@ avoid_roles:
   - Senior, Staff, Principal, Lead, Manager, Architect
   - Pure sales, IT support, or helpdesk roles
   - Data scientist / ML research roles requiring a graduate degree
+  - Internships, co-ops and stages (stagiaire) — already past that stage
 
 skills:
   strong:        # used professionally, would be confident in an interview

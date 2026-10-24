@@ -152,6 +152,31 @@
     white-space: nowrap;
   }
   .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(79,209,197,0.08); }
+  .views { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .view-btn {
+    background: var(--surface); color: var(--text-muted); border: 0; border-right: 1px solid var(--border);
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; padding: 9px 16px; cursor: pointer;
+  }
+  .view-btn:last-child { border-right: 0; }
+  .view-btn.active { background: var(--surface-raised); color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); }
+  .view-btn .n { color: var(--text-faint); font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-left: 6px; }
+  .tag-snippet { display: inline-block; margin-left: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--text-faint); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; }
+  .stale { opacity: 0.55; }
+  .cards { display: flex; flex-direction: column; }
+  .card { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+  .card:last-child { border-bottom: 0; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .card-title { font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; line-height: 1.35; display: block; }
+  .card-meta { color: var(--text-muted); font-size: 12.5px; margin-top: 3px; }
+  .card-reason { font-size: 13px; line-height: 1.5; margin-top: 8px; color: var(--text); }
+  .card-gaps { font-size: 12px; color: var(--status-contacted); margin-top: 6px; }
+  .card-link { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 13px; font-weight: 600; text-decoration: none; }
+  @media (max-width: 720px) {
+    .app { padding: 20px 16px 48px; }
+    .table-wrap { overflow-x: auto; }
+    .view-btn { padding: 8px 11px; font-size: 12px; }
+  }
   .chip:hover:not(.active) { color: var(--text); }
 
   .table-wrap {
@@ -250,6 +275,10 @@
     <button class="tab" data-tab="Tech Signals">Tech Signals <span class="count" id="count-tech">–</span></button>
   </div>
 
+  <div class="controls" id="job-controls">
+    <div class="views" id="view-chips"></div>
+  </div>
+
   <div class="controls">
     <input class="search-input" id="search" placeholder="Search jobs, companies, skills…" />
     <div id="status-chips" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
@@ -260,8 +289,9 @@
   </div>
 
   <div class="footer-note">
-    Job matches are scored by AI against my profile and updated by a daily GitHub Actions run.
-    Matches scoring 85+ are also emailed. Tech Signals come from
+    Job matches are scored by AI against my profile by a daily GitHub Actions run; 85+ matches are also emailed.
+    Jobs stay here for 60 days after they're found, and postings over 30 days old are dimmed.
+    <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read. Tech Signals come from
     <a href="https://docs.google.com/spreadsheets/d/1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I/edit" target="_blank">the sheet</a>.
   </div>
 </div>
@@ -282,12 +312,34 @@ const SCHEMAS = {
     sortDefault: "Date Found",
   },
   "Job Leads": {
-    columns: ["Fit Score", "Status", "Title", "Company", "Location", "Reason", "Missing Skills", "URL", "Date Found"],
+    columns: ["Fit Score", "Status", "Title", "Company", "Location", "Reason", "Missing Skills", "Posted", "URL"],
     sortDefault: "Fit Score",
   }
 };
 
+function localDay(d = new Date()) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+function daysAgo(iso) {
+  if (!iso) return null;
+  const t = Date.parse(iso);
+  return isNaN(t) ? null : Math.floor((Date.now() - t) / 86400000);
+}
+const VIEWS = [
+  ["today", "Today", r => r["Date Found"] === localDay()],
+  ["week", "This week", r => r["Date Found"] >= localDay(new Date(Date.now() - 6 * 86400000))],
+  ["all", "All (60 days)", () => true],
+];
+function savedPref(key, fallback) {
+  try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
+}
+function savePref(key, value) {
+  try { localStorage.setItem(key, value); } catch { /* private mode etc. — fine */ }
+}
+
 let state = {
+  view: savedPref("jobView", null),
+  showLowFit: savedPref("showLowFit", "0") === "1",
   activeTab: "Job Leads",
   data: { "Tech Signals": [], "Job Leads": [] },
   search: "",
@@ -344,7 +396,9 @@ async function fetchJobs() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       state.jobsUpdated = data.updated;
-      return (data.jobs || []).map(j => ({
+      const isIntern = j => j.seniority === "intern" ||
+        /\b(intern|interns|internship|co-?op|stagiaires?|student|étudiante?)\b|^\s*stage\b|\bstage\s+(en|de|d'|-|–|:)/i.test(j.title || "");
+      return (data.jobs || []).filter(j => !isIntern(j)).map(j => ({
         "Fit Score": j.fit_score,
         "Status": (TIERS.find(([min]) => (j.fit_score ?? 0) >= min) || TIERS[3])[1],
         "Title": j.title,
@@ -357,6 +411,8 @@ async function fetchJobs() {
         "URL": j.url,
         "Date Found": j.date_found,
         "Posted": j.posted,
+        "Age": daysAgo(j.posted),
+        "Source": j.description_source || "snippet",
       }));
     } catch (e) { lastErr = e; }
   }
@@ -383,8 +439,60 @@ async function loadAll(showLoading = true) {
   btn.disabled = false;
 }
 
+function jobsInView(view) {
+  const def = VIEWS.find(v => v[0] === view) || VIEWS[2];
+  return state.data["Job Leads"].filter(def[2]);
+}
+
+function postedText(a) {
+  return a === null || a === undefined ? '' : a <= 0 ? 'posted today' : a === 1 ? 'posted 1 day ago' : `posted ${a} days ago`;
+}
+
+function jobCard(r) {
+  const n = parseFloat(r["Fit Score"]);
+  const tone = statusClass(r.Status);
+  const meta = [r.Company, r.Location, postedText(r.Age)].filter(Boolean).map(esc).join(' · ');
+  const snip = r.Source === 'snippet' ? '<span class="tag-snippet">snippet</span>' : '';
+  return `<div class="card ${r.Age > 30 ? 'stale' : ''}">
+    <div class="card-top">
+      <span class="badge ${tone}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span>
+      <span class="badge ${tone}">${esc(r.Status)}</span>
+    </div>
+    <a class="card-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
+    <div class="card-meta">${meta}</div>
+    <div class="card-reason">${esc(r.Reason)}${snip}</div>
+    ${r["Missing Skills"] ? `<div class="card-gaps">Gaps: ${esc(r["Missing Skills"])}</div>` : ''}
+    <a class="card-link" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">View posting →</a>
+  </div>`;
+}
+
+function renderViews() {
+  const controls = document.getElementById('job-controls');
+  controls.style.display = state.activeTab === "Job Leads" ? "" : "none";
+  if (state.activeTab !== "Job Leads") return;
+  if (!state.view) {  // first visit: today if there's anything new, else this week
+    state.view = jobsInView("today").length ? "today" : jobsInView("week").length ? "week" : "all";
+  }
+  const box = document.getElementById('view-chips');
+  box.innerHTML = '';
+  VIEWS.forEach(([key, label]) => {
+    const b = document.createElement('button');
+    b.className = 'view-btn' + (state.view === key ? ' active' : '');
+    b.innerHTML = `${esc(label)}<span class="n">${jobsInView(key).length}</span>`;
+    b.onclick = () => { state.view = key; savePref("jobView", key); render(); };
+    box.appendChild(b);
+  });
+}
+
+function rowsForTab() {
+  if (state.activeTab !== "Job Leads") return state.data[state.activeTab];
+  let rows = jobsInView(state.view);
+  if (!state.showLowFit && !state.statusFilter) rows = rows.filter(r => r.Status !== "Low fit");
+  return rows;
+}
+
 function renderChips() {
-  const rows = state.data[state.activeTab];
+  const rows = state.activeTab === "Job Leads" ? jobsInView(state.view) : state.data[state.activeTab];
   const statuses = [...new Set(rows.map(r => r.Status).filter(Boolean))];
   const container = document.getElementById('status-chips');
   container.innerHTML = '';
@@ -398,12 +506,23 @@ function renderChips() {
     };
     container.appendChild(chip);
   });
+  if (state.activeTab === "Job Leads") {
+    const low = jobsInView(state.view).filter(r => r.Status === "Low fit").length;
+    if (low && !state.statusFilter) {
+      const t = document.createElement('button');
+      t.className = 'chip' + (state.showLowFit ? ' active' : '');
+      t.textContent = state.showLowFit ? `hide ${low} low fit` : `+ ${low} low fit hidden`;
+      t.onclick = () => { state.showLowFit = !state.showLowFit; savePref("showLowFit", state.showLowFit ? "1" : "0"); render(); };
+      container.appendChild(t);
+    }
+  }
 }
 
 function render() {
+  renderViews();
   renderChips();
   const schema = SCHEMAS[state.activeTab];
-  let rows = [...state.data[state.activeTab]];
+  let rows = [...rowsForTab()];
 
   if (state.statusFilter) {
     rows = rows.filter(r => r.Status === state.statusFilter);
@@ -427,10 +546,18 @@ function render() {
     return;
   }
   if (rows.length === 0) {
-    const none = state.activeTab === "Job Leads" && !state.data["Job Leads"].length
-      ? "No job matches yet — they appear after the next daily run."
-      : "Nothing matches this view.";
+    let none = "Nothing matches this view.";
+    if (state.activeTab === "Job Leads") {
+      if (!state.data["Job Leads"].length) none = "No job matches yet — they appear after the next daily run.";
+      else if (state.view === "today" && !state.search && !state.statusFilter)
+        none = "No new matches today yet — the daily run is at 9:08am. Check This week.";
+    }
     wrap.innerHTML = `<div class="empty-state">${none}</div>`;
+    return;
+  }
+
+  if (state.activeTab === "Job Leads" && window.matchMedia("(max-width: 720px)").matches) {
+    wrap.innerHTML = '<div class="cards">' + rows.map(jobCard).join('') + '</div>';
     return;
   }
 
@@ -445,7 +572,7 @@ function render() {
   html += '</tr></thead><tbody>';
 
   rows.forEach(r => {
-    html += '<tr>';
+    html += `<tr class="${r.Age !== null && r.Age > 30 ? 'stale' : ''}">`;
     displayCols.forEach(col => {
       const val = r[col] ?? '';
       if (col === 'Status') {
@@ -454,6 +581,13 @@ function render() {
         const short = String(val).replace(/^https?:\/\//, '').replace(/\/$/, '');
         const label = state.activeTab === 'Job Leads' ? 'View posting →' : (short.length > 45 ? short.slice(0,45)+'…' : short);
         html += `<td><a href="${esc(safeUrl(val))}" target="_blank" rel="noopener">${esc(label)}</a></td>`;
+      } else if (col === 'Posted' && state.activeTab === 'Job Leads') {
+        const a = r.Age;
+        const txt = a === null || a === undefined ? '—' : a <= 0 ? 'today' : a === 1 ? '1 day ago' : `${a} days ago`;
+        html += `<td class="mono" title="${esc(String(val).slice(0,10))}">${esc(txt)}</td>`;
+      } else if (col === 'Reason' && state.activeTab === 'Job Leads') {
+        const tag = r.Source === 'snippet' ? '<span class="tag-snippet" title="Scored from a short job-board snippet, not the full posting">snippet</span>' : '';
+        html += `<td>${esc(val)}${tag}</td>`;
       } else if (col === 'Date Found' || col === 'Posted') {
         html += `<td class="mono">${esc(String(val).slice(0,10))}</td>`;
       } else if (col === 'Fit Score') {
@@ -499,6 +633,7 @@ document.getElementById('search').oninput = (e) => {
 };
 
 document.getElementById('refresh-btn').onclick = () => loadAll(false);
+window.matchMedia("(max-width: 720px)").addEventListener("change", () => render());
 
 loadAll();
 </script>

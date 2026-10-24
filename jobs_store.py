@@ -17,7 +17,7 @@ LOCAL_TZ = ZoneInfo("America/Toronto")  # dates on the dashboard use your local 
 FIELDS = [
     "date_found", "title", "company", "location", "url", "posted", "keyword_matched",
     "fit_score", "seniority", "years_required", "matched_skills", "missing_required",
-    "dealbreakers_hit", "reason", "description",
+    "dealbreakers_hit", "reason", "description", "description_source",
 ]
 
 
@@ -30,6 +30,11 @@ def load_jobs(path: str = STORE_PATH) -> list[dict]:
     except (json.JSONDecodeError, OSError) as e:
         print(f"[jobs_store] Could not read {path} ({e}) — starting fresh.")
         return []
+
+
+def _is_internship(job: dict) -> bool:
+    from matcher import INTERNSHIP_TITLE
+    return job.get("seniority") == "intern" or bool(INTERNSHIP_TITLE.search(job.get("title") or ""))
 
 
 def known_urls(jobs: list[dict]) -> set[str]:
@@ -54,7 +59,7 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
         seen.add(job["url"])
 
     kept = [j for j in existing if (j.get("date_found") or today) >= cutoff]
-    jobs = added + kept
+    jobs = [j for j in added + kept if not _is_internship(j)]  # never shown, so never stored
     jobs.sort(key=lambda j: (j.get("date_found") or "", j.get("fit_score") or 0), reverse=True)
 
     os.makedirs(os.path.dirname(path), exist_ok=True)
