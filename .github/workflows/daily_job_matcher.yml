@@ -2,11 +2,9 @@ name: Daily Job Matcher
 
 on:
   schedule:
-    # Daily at 9:00am Eastern (13:00 UTC) — job search only
-    - cron: "8 13 * * *"
-    # Extra weekly run at 11:00am Eastern (15:00 UTC) Monday — full run,
-    # includes business discovery + tech checks
-    - cron: "0 15 * * 1"
+    # Every day at 13:00 UTC = 9:00am Eastern (8:00am after the November clock change).
+    # Saturdays are a "full" run (jobs + client leads); other days are jobs only.
+    - cron: "1 13 * * *"
   workflow_dispatch: # manual "Run workflow" button in the Actions tab
     inputs:
       mode:
@@ -15,7 +13,7 @@ on:
         options: [jobs_only, full]
         default: jobs_only
 
-# Lets the run save docs/data/jobs.json (the dashboard's data) back to the repo.
+# Lets the run save docs/data/jobs.json and leads.json (the dashboard's data) back to the repo.
 permissions:
   contents: write
 
@@ -48,7 +46,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "0 15 * * 1" ]; then
+          elif [ "$(TZ=America/Toronto date +%u)" = "6" ]; then  # Saturday
             echo "mode=full" >> "$GITHUB_OUTPUT"
           else
             echo "mode=jobs_only" >> "$GITHUB_OUTPUT"
@@ -72,7 +70,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/jobs.json 2>/dev/null || true
+          git add docs/data/jobs.json docs/data/leads.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No new job matches to save."
             exit 0
