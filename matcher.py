@@ -32,6 +32,16 @@ class QuotaExhausted(Exception):
     """The provider's daily quota is used up — no point trying more jobs today."""
 
 
+class ModelUnavailable(Exception):
+    """A model is overloaded, timing out, or missing — worth trying the backup model."""
+
+
+# Backup Gemini model: used when the main one is overloaded or out of free quota.
+# It has its own separate free quota, so it also stretches how many jobs get scored.
+GEMINI_FALLBACK_MODEL = "gemini-3.5-flash-lite"
+GEMINI_TIMEOUT_SECONDS = 45
+
+
 DEFAULT_MODELS = {
     "gemini": "gemini-3.8-flash",   # free tier; gemini-3.5-flash-lite if you hit limits
     "claude": "claude-haiku-5-5",
@@ -198,8 +208,50 @@ def _gemini_schema(schema: dict) -> dict:
     return out
 
 
+# Run-level state: models out of daily quota are skipped; overloaded ones are tried last.
+_gemini_exhausted: set[str] = set()
+_gemini_order: list[str] = []
+
+
+def gemini_models() -> list[str]:
+    if not _gemini_order:
+        primary = _model("gemini")
+        backup = os.environ.get("MATCHER_FALLBACK_MODEL", GEMINI_FALLBACK_MODEL)
+        _gemini_order.extend(dict.fromkeys(m for m in (primary, backup) if m))
+    return [m for m in _gemini_order if m not in _gemini_exhausted]
+
+
+def _call_gemini(model: str, body: dict, attempts: int) -> dict:
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    problem = ""
+    for attempt in range(attempts):
+        if attempt:
+            wait = 15 * attempt
+            print(f"[matcher] {model}: {problem}, retrying in {wait}s...")
+            time.sleep(wait)
+        try:
+            resp = requests.post(
+                url, json=body, timeout=GEMINI_TIMEOUT_SECONDS,
+                headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+            )
+        except (requests.Timeout, requests.ConnectionError) as e:
+            problem = "no response (timeout)" if isinstance(e, requests.Timeout) else "connection error"
+            continue
+        if resp.status_code == 200:
+            parts = resp.json()["candidates"][0]["content"]["parts"]
+            return json.loads("".join(p.get("text", "") for p in parts))
+        if resp.status_code == 429 and "perday" in resp.text.lower().replace(" ", "").replace("_", ""):
+            raise QuotaExhausted(f"{model} daily quota used up")
+        if resp.status_code in (429, 500, 503, 504):
+            problem = f"busy (HTTP {resp.status_code})"
+            continue
+        if resp.status_code == 404:
+            raise ModelUnavailable(f"{model} not found (HTTP 404)")
+        raise RuntimeError(f"Gemini HTTP {resp.status_code}: {resp.text[:300]}")
+    raise ModelUnavailable(f"{model} {problem} after {attempts} tries")
+
+
 def score_with_gemini(profile: dict, posting: dict) -> dict:
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{_model('gemini')}:generateContent"
     body = {
         "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "contents": [{"role": "user", "parts": [{"text": build_user_prompt(profile, posting)}]}],
@@ -209,25 +261,23 @@ def score_with_gemini(profile: dict, posting: dict) -> dict:
             "responseSchema": _gemini_schema(SCORE_TOOL["input_schema"]),
         },
     }
-    for attempt in range(3):
-        resp = requests.post(
-            url, json=body, timeout=60,
-            headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
-        )
-        if resp.status_code not in (429, 503):
-            break
-        if resp.status_code == 429 and "perday" in resp.text.lower().replace(" ", "").replace("_", ""):
-            raise QuotaExhausted(f"Gemini daily quota used up: {resp.text[:200]}")
-        if attempt == 2:
-            break
-        wait = 20 * (attempt + 1)  # per-minute limit: a short wait is enough
-        print(f"[matcher] Gemini busy (HTTP {resp.status_code}), retrying in {wait}s...")
-        time.sleep(wait)
-    if resp.status_code != 200:
-        raise RuntimeError(f"Gemini HTTP {resp.status_code}: {resp.text[:300]}")
-    data = resp.json()
-    parts = data["candidates"][0]["content"]["parts"]
-    return json.loads("".join(p.get("text", "") for p in parts))
+    last_error = None
+    for model in gemini_models():
+        try:
+            return _call_gemini(model, body, attempts=2)
+        except QuotaExhausted as e:
+            _gemini_exhausted.add(model)
+            left = gemini_models()
+            print(f"[matcher] {e}" + (f" — using {left[0]} for the rest of this run." if left else "."))
+            last_error = e
+        except ModelUnavailable as e:
+            print(f"[matcher] {e}.")
+            if len(gemini_models()) > 1 and model == _gemini_order[0]:
+                _gemini_order.append(_gemini_order.pop(0))  # lead with the other model from now on
+            last_error = e
+    if not gemini_models():
+        raise QuotaExhausted("all Gemini models are out of daily quota")
+    raise RuntimeError(str(last_error))
 
 
 def score_with_claude(client, profile: dict, posting: dict) -> dict:
@@ -276,7 +326,8 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
     if not provider:
         print("[matcher] No GEMINI_API_KEY or ANTHROPIC_API_KEY set — skipping AI scoring.")
         return kept
-    print(f"[matcher] Scoring with {provider} ({_model(provider)}).")
+    models = ", backup ".join(gemini_models()) if provider == "gemini" else _model(provider)
+    print(f"[matcher] Scoring with {provider} ({models}).")
 
     client = None
     if provider == "claude":
