@@ -4,7 +4,7 @@ on:
   schedule:
     # Every day at 13:00 UTC = 9:00am Eastern (8:00am after the November clock change).
     # Saturdays are a "full" run (jobs + client leads); other days are jobs only.
-    - cron: "1 13 * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch: # manual "Run workflow" button in the Actions tab
     inputs:
       mode:
