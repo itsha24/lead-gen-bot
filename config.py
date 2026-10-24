@@ -69,3 +69,7 @@ TECH_SIGNATURES = {
 # What to search for and what you sell live in services.yaml.
 # Leads sent to the AI per run (most promising first); the rest wait a week.
 MAX_LEADS_PER_RUN = 25
+
+# Stop scoring and save after this many minutes. The workflow kills runs at 30
+# and anything unsaved is lost, so this leaves margin for the save step.
+RUN_BUDGET_MINUTES = 24

@@ -50,6 +50,13 @@ JUNK_EMAIL = re.compile(r"\.(png|jpe?g|gif|svg|webp)$|sentry|wixpress|example\.|
 FRENCH_WORDS = re.compile(r"\b(nous|votre|accueil|rendez-vous|réservation|heures|ouvert|contactez|bienvenue|menu du jour)\b", re.IGNORECASE)
 
 
+def _is_bot_wall(resp) -> bool:
+    text = resp.text[:3000].lower()
+    cloudflare = "cf-ray" in {k.lower() for k in resp.headers} and ("just a moment" in text or "attention required" in text)
+    captcha_only = len(resp.text) < 5000 and "captcha" in text  # a tiny page that's just a challenge
+    return cloudflare or captcha_only
+
+
 def _find(signatures: dict, haystack: str) -> list[str]:
     return [name for name, sigs in signatures.items() if sigs and any(s.lower() in haystack for s in sigs)]
 
@@ -85,25 +92,52 @@ def _pagespeed(url: str) -> int | None:
 
 def audit_site(url: str | None) -> dict:
     """Return findings for one website (or for having none)."""
-    result = {"has_website": bool(url), "reachable": False, "https": None, "mobile_friendly": None,
+    result = {"has_website": bool(url), "reachable": False, "checked": False, "https": None, "mobile_friendly": None,
               "copyright_year": None, "platform": [], "ordering_booking": [], "emails": [],
               "socials": [], "language": None, "speed_score": None, "issues": [], "site_text": ""}
     if not url:
         result["issues"].append("no website")
         return result
     if any(s in url.lower() for s in SOCIAL_ONLY):
+        result["checked"] = True
         result["issues"].append("only a social media page, no real website")
         return result
     try:
         resp = _get(url)
-    except requests.RequestException:
-        result["issues"].append("website doesn't load")
+    except requests.exceptions.SSLError:
+        result["checked"] = True
+        result["issues"].append("security certificate error — browsers may show a warning")
         return result
+    except requests.exceptions.ConnectionError as e:
+        if re.search(r"Name or service not known|NameResolution|getaddrinfo|nodename nor servname|No address", str(e)):
+            result["checked"] = True
+            result["issues"].append("website domain doesn't work (the site doesn't exist anymore)")
+        else:
+            result["note"] = "couldn't check the website (connection refused or dropped)"
+        return result
+    except requests.RequestException:
+        result["note"] = "couldn't check the website (it didn't respond in time)"
+        return result
+
+    # Many sites block automated visits (Cloudflare etc.) with 403/429/503 — they work
+    # fine for people, so this is "couldn't check", never "broken".
+    if resp.status_code in (401, 403, 405, 406, 429, 503) or _is_bot_wall(resp):
+        result["note"] = f"couldn't check the website (it blocks automated visits, HTTP {resp.status_code})"
+        return result
+    if resp.status_code == 404 and urlparse(resp.url).path not in ("", "/"):
+        # Google listing points to a dead page; check the homepage instead.
+        root = f"{urlparse(resp.url).scheme}://{urlparse(resp.url).netloc}/"
+        sub_result = audit_site(root)
+        if sub_result["checked"]:
+            sub_result["issues"].insert(0, "the website link on their Google listing goes to a broken page")
+        return sub_result
     if resp.status_code >= 400:
-        result["issues"].append(f"website returns an error (HTTP {resp.status_code})")
+        result["checked"] = True
+        result["issues"].append(f"website shows an error page (HTTP {resp.status_code})")
         return result
 
     result["reachable"] = True
+    result["checked"] = True
     final = resp.url
     soup = BeautifulSoup(resp.text, "html.parser")
     raw = resp.text.lower()
@@ -162,5 +196,6 @@ def audit_businesses(businesses: list[dict], workers: int = 6) -> list[dict]:
         b["audit"] = a
     print(f"[site_audit] Audited {len(businesses)} businesses: "
           f"{sum(1 for a in audits if not a['has_website'])} without a website, "
-          f"{sum(1 for a in audits if a['has_website'] and not a['reachable'])} with a broken or social-only site.")
+          f"{sum(1 for a in audits if a['has_website'] and a['checked'] and not a['reachable'])} with a broken or social-only site, "
+          f"{sum(1 for a in audits if a['has_website'] and not a['checked'])} couldn't be checked (they block automated visits).")
     return businesses

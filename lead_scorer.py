@@ -45,13 +45,16 @@ Scoring rubric (lead_score):
 - 60-79: A real gap, but smaller or the business looks less established.
 - 40-59: Possible fit, nothing urgent.
 - 0-39: Already well served (modern site with booking/ordering/store), a large chain or franchise,
-  or not a fit for any offer.
+  a mall, market, institution or other place that isn't a single small business, or not a fit for any offer.
+- If website_checked is false, you know nothing about their website: never claim it is down, broken,
+  slow or outdated, and cap lead_score at 55 unless the Google listing itself shows a clear gap.
 
 Message rules:
 - Write in the business's language: French for French-language or Quebec businesses unless their site is
   clearly English. Natural Québécois-appropriate French, "vous".
 - Open with ONE specific, true observation from the findings (e.g. their site shows a security warning,
-  they take bookings only by phone). Never invent facts, numbers, results or compliments you can't see.
+  they only have an Instagram page). Never invent facts, numbers, results or compliments you can't see.
+  Never tell them their website is down or showing an error unless website_findings says exactly that.
 - Mention at most one proof project, only if it's relevant to the offer, using its summary as written.
 - Offer something small and concrete (a quick call, or a free mock-up / short audit). One question at the end.
 - Friendly and brief, not salesy. No "I hope this finds you well", no exclamation marks, no emoji.
@@ -69,7 +72,9 @@ def _lead_facts(b: dict) -> dict:
         "name": b.get("name"), "category": b.get("category"), "address": b.get("address"),
         "google_rating": b.get("rating"), "google_reviews": b.get("reviews"),
         "website": b.get("website") or "none",
-        "website_findings": a.get("issues") or ["no problems found"],
+        "website_checked": bool(a.get("checked")) or not b.get("website"),
+        "website_findings": a.get("issues") or ([a["note"] + " — do NOT say anything is wrong with their site"]
+                                                if a.get("note") else ["no problems found"]),
         "platform": a.get("platform"), "online_booking_or_ordering_tools": a.get("ordering_booking"),
         "site_language": a.get("language"), "has_contact_email": bool(a.get("emails")),
         "homepage_text_excerpt": (a.get("site_text") or "")[:800],
@@ -95,7 +100,7 @@ def _clean(r: dict, offer_ids: set[str]) -> dict:
     return r
 
 
-def score_leads(businesses: list[dict], max_leads: int = 25) -> list[dict]:
+def score_leads(businesses: list[dict], max_leads: int = 25, deadline: float | None = None) -> list[dict]:
     provider = matcher.pick_provider()
     if not provider:
         print("[lead_scorer] No AI key set — skipping lead scoring.")
@@ -107,16 +112,19 @@ def score_leads(businesses: list[dict], max_leads: int = 25) -> list[dict]:
         import anthropic
         client = anthropic.Anthropic()
 
-    # Audit-based order: no/broken website first, then most issues, then most reviews (established).
+    # Verified gaps first (no site / social-only / real problems), unchecked sites last.
     def promise(b):
         a = b.get("audit") or {}
-        return (not a.get("reachable"), len(a.get("issues") or []), b.get("reviews") or 0)
+        return (bool(a.get("checked")) or not b.get("website"), len(a.get("issues") or []), b.get("reviews") or 0)
     todo = sorted(businesses, key=promise, reverse=True)[:max_leads]
     if len(businesses) > max_leads:
         print(f"[lead_scorer] Scoring the {max_leads} most promising; the other {len(businesses) - max_leads} wait for the next run.")
 
     scored, errors = [], 0
     for i, b in enumerate(todo):
+        if deadline and time.monotonic() > deadline:
+            print(f"[lead_scorer] Out of time for this run — saving the {len(scored)} leads scored so far.")
+            break
         if provider == "gemini" and i:
             time.sleep(matcher.GEMINI_DELAY_SECONDS)
         prompt = build_prompt(services, b)

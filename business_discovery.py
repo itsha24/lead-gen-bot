@@ -47,16 +47,23 @@ def queries_for_this_week(config: dict, today: date | None = None) -> list[str]:
     return [combos[(start + i) % len(combos)] for i in range(min(per_run, len(combos)))]
 
 
+def _skipped(category: str | None, skip_types: list[str]) -> bool:
+    c = (category or "").lower()
+    return any(t.lower() == c or t.lower() in c.split(" ") or (len(t) > 6 and t.lower() in c) for t in skip_types)
+
+
 def find_businesses(queries: list[str] | None = None) -> list[dict]:
     key = os.environ.get("GOOGLE_PLACES_API_KEY")
     if not key:
         print("[business_discovery] GOOGLE_PLACES_API_KEY isn't set — skipping business discovery.")
         return []
-    queries = queries if queries is not None else queries_for_this_week(load_search_config())
+    config = load_search_config()
+    skip_types = config.get("skip_types") or []
+    queries = queries if queries is not None else queries_for_this_week(config)
     print(f"[business_discovery] This week's searches: {', '.join(queries)}")
     headers = {"Content-Type": "application/json", "X-Goog-Api-Key": key, "X-Goog-FieldMask": FIELDS}
 
-    found, seen, requests_made = [], set(), 0
+    found, seen, requests_made, skipped = [], set(), 0, 0
     for query in queries:
         token = None
         for _ in range(PAGES_PER_QUERY):
@@ -82,6 +89,10 @@ def find_businesses(queries: list[str] | None = None) -> list[dict]:
                 if p.get("id") in seen or p.get("businessStatus") not in (None, "OPERATIONAL"):
                     continue
                 seen.add(p.get("id"))
+                category = (p.get("primaryTypeDisplayName") or {}).get("text") or p.get("primaryType")
+                if _skipped(category, skip_types):
+                    skipped += 1
+                    continue
                 found.append({
                     "place_id": p.get("id"),
                     "name": (p.get("displayName") or {}).get("text"),
@@ -91,12 +102,13 @@ def find_businesses(queries: list[str] | None = None) -> list[dict]:
                     "rating": p.get("rating"),
                     "reviews": p.get("userRatingCount"),
                     "maps_url": p.get("googleMapsUri"),
-                    "category": (p.get("primaryTypeDisplayName") or {}).get("text") or p.get("primaryType"),
+                    "category": category,
                     "matched_query": query,
                 })
             token = data.get("nextPageToken")
             if not token:
                 break
     print(f"[business_discovery] Found {len(found)} businesses with {requests_made} Places requests "
-          f"({sum(1 for b in found if not b['website'])} have no website).")
+          f"({sum(1 for b in found if not b['website'])} have no website; skipped {skipped} malls, chains' "
+          "departments, markets and other non-clients).")
     return found

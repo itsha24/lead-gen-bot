@@ -39,7 +39,7 @@ class ModelUnavailable(Exception):
 # Backup Gemini model: used when the main one is overloaded or out of free quota.
 # It has its own separate free quota, so it also stretches how many jobs get scored.
 GEMINI_FALLBACK_MODEL = "gemini-3.5-flash-lite"
-GEMINI_TIMEOUT_SECONDS = 45
+GEMINI_TIMEOUT_SECONDS = 30
 
 
 DEFAULT_MODELS = {
@@ -343,7 +343,7 @@ def score_posting(provider: str, client, profile: dict, posting: dict) -> dict:
 # 3. Pipeline entry point — used by main.py
 # ---------------------------------------------------------------------------
 
-def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
+def score_jobs(jobs: list[dict], max_jobs: int | None = None, deadline: float | None = None) -> list[dict]:
     """Prefilter, score, and sort jobs (best first).
 
     Returns every job that was successfully scored, whatever its score, so the
@@ -400,6 +400,9 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
     errors_in_a_row = 0
     ai_scored = 0
     for i, job in enumerate(kept):
+        if deadline and time.monotonic() > deadline:
+            print("[matcher] Out of time for this run — saving what's scored; the rest wait for the next run.")
+            break
         label = f"{job.get('title')} @ {job.get('company')}"
         if provider == "gemini" and i > 0:
             time.sleep(GEMINI_DELAY_SECONDS)

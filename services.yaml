@@ -71,3 +71,23 @@ search:
     - Longueuil
     - Laval
   queries_per_run: 8
+
+  # Places that aren't a single small business you could pitch. Matched against the
+  # Google Maps category (e.g. "Shopping Mall") and skipped before any site visit or AI call.
+  skip_types:
+    - shopping mall
+    - department store
+    - supermarket
+    - grocery store
+    - farmers' market
+    - market
+    - bank
+    - atm
+    - gas station
+    - pharmacy
+    - hospital
+    - university
+    - city hall
+    - government office
+    - tourist attraction
+    - park
