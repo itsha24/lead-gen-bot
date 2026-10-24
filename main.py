@@ -4,11 +4,10 @@ from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS
 from job_search import search_jobs
 from business_discovery import find_business_urls
 from tech_checker import check_business_list
+from jobs_store import known_urls, load_jobs, save_jobs
 from matcher import score_jobs
 from notifier import send_job_digest
-from sheets_writer import (
-    append_job_leads, append_tech_leads, get_existing_job_urls, get_existing_tech_urls,
-)
+from sheets_writer import append_tech_leads, get_existing_tech_urls
 
 SHEET_ID = os.environ.get("LEAD_SHEET_ID")
 URLS_FILE = "businesses.txt"  # optional manual add-ons (referrals, etc.)
@@ -30,19 +29,16 @@ def run_job_search():
     jobs = search_jobs(JOB_KEYWORDS, JOB_SEARCH_LOCATIONS)
     print(f"Found {len(jobs)} job leads.")
 
-    already_logged = get_existing_job_urls(SHEET_ID) if SHEET_ID else set()
-    jobs = [j for j in jobs if j["url"] not in already_logged]
-    print(f"{len(jobs)} are new (skipped {len(already_logged)} already in the sheet).")
+    stored = load_jobs()
+    already_scored = known_urls(stored)
+    jobs = [j for j in jobs if j["url"] not in already_scored]
+    print(f"{len(jobs)} are new (skipped {len(already_scored)} already on the dashboard).")
 
-    jobs = score_jobs(jobs, max_jobs=MAX_JOBS_PER_RUN)
-    send_job_digest(jobs, min_score=EMAIL_MIN_SCORE)
-
-    if SHEET_ID:
-        append_job_leads(SHEET_ID, jobs)
-    else:
-        print("LEAD_SHEET_ID not set — printing instead:")
-        for j in jobs:
-            print(j)
+    scored = score_jobs(jobs, max_jobs=MAX_JOBS_PER_RUN)
+    # Only AI-scored jobs are saved; unscored ones get another chance next run.
+    scored = [j for j in scored if isinstance(j.get("fit_score"), int)]
+    send_job_digest(scored, min_score=EMAIL_MIN_SCORE)
+    save_jobs(stored, scored)
 
 
 def run_business_discovery():

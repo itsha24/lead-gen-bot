@@ -16,8 +16,8 @@ JOB_KEYWORDS = [
 ]
 
 # ---- AI job matcher ----
-# Jobs scoring below this (0-100) are still saved (so they're never re-scored)
-# but get Status "Low fit" so you can hide them with the dashboard's status filter.
+# Jobs below this score (0-100) are still saved, so they're never re-scored,
+# and show as "Low fit" on the dashboard (filter them out with the status chips).
 MIN_FIT_SCORE = 40
 
 # Max jobs sent to the AI per run (newest first). Keeps runs short and inside the

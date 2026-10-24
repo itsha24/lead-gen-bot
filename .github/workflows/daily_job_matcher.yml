@@ -15,12 +15,23 @@ on:
         options: [jobs_only, full]
         default: jobs_only
 
+# Lets the run save docs/data/jobs.json (the dashboard's data) back to the repo.
+permissions:
+  contents: write
+
+# Never run two at once, so they can't both write jobs.json.
+concurrency:
+  group: daily-job-matcher
+  cancel-in-progress: false
+
 jobs:
   run-lead-gen:
     runs-on: ubuntu-latest
     timeout-minutes: 30  # never let a run crawl for hours
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so the save step can rebase cleanly
 
       - uses: actions/setup-python@v5
         with:
@@ -56,3 +67,16 @@ jobs:
           LEAD_SHEET_ID: ${{ secrets.LEAD_SHEET_ID }}
           GOOGLE_SHEETS_CREDS_PATH: service_account.json
         run: python main.py
+
+      - name: Save job matches for the dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/jobs.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No new job matches to save."
+            exit 0
+          fi
+          git commit -m "Update job matches $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main

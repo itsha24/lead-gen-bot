@@ -246,27 +246,35 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" data-tab="Tech Signals">Tech Signals <span class="count" id="count-tech">–</span></button>
-    <button class="tab" data-tab="Job Leads">Job Leads <span class="count" id="count-jobs">–</span></button>
+    <button class="tab active" data-tab="Job Leads">Job Matches <span class="count" id="count-jobs">–</span></button>
+    <button class="tab" data-tab="Tech Signals">Tech Signals <span class="count" id="count-tech">–</span></button>
   </div>
 
   <div class="controls">
-    <input class="search-input" id="search" placeholder="Search leads…" />
+    <input class="search-input" id="search" placeholder="Search jobs, companies, skills…" />
     <div id="status-chips" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
   </div>
 
   <div class="table-wrap" id="table-wrap">
-    <div class="loading-state">loading sheet data…</div>
+    <div class="loading-state">loading…</div>
   </div>
 
   <div class="footer-note">
-    Data pulled live from your Google Sheet. To change a lead's status, edit it directly in
-    <a href="https://docs.google.com/spreadsheets/d/1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I/edit" target="_blank">the sheet</a> — this dashboard refreshes from there.
+    Job matches are scored by AI against my profile and updated by a daily GitHub Actions run.
+    Matches scoring 85+ are also emailed. Tech Signals come from
+    <a href="https://docs.google.com/spreadsheets/d/1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I/edit" target="_blank">the sheet</a>.
   </div>
 </div>
 
 <script>
 const SHEET_ID = "1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I";
+// Job matches are committed to the repo by the daily run. raw.githubusercontent.com
+// updates within minutes of each run; the relative path is a fallback via Pages.
+const JOBS_URLS = [
+  "https://raw.githubusercontent.com/itsha24/lead-gen-bot/main/docs/data/jobs.json",
+  "data/jobs.json",
+];
+const TIERS = [[85, "Top match"], [65, "Good fit"], [40, "Stretch"], [0, "Low fit"]];
 
 const SCHEMAS = {
   "Tech Signals": {
@@ -274,22 +282,33 @@ const SCHEMAS = {
     sortDefault: "Date Found",
   },
   "Job Leads": {
-    columns: ["Fit Score", "Title", "Company", "Location", "Reason", "Matched Skills", "Missing Skills", "URL", "Date Found", "Status"],
+    columns: ["Fit Score", "Status", "Title", "Company", "Location", "Reason", "Missing Skills", "URL", "Date Found"],
     sortDefault: "Fit Score",
   }
 };
 
 let state = {
-  activeTab: "Tech Signals",
+  activeTab: "Job Leads",
   data: { "Tech Signals": [], "Job Leads": [] },
   search: "",
   statusFilter: null,
-  sortCol: "Date Found",
+  sortCol: "Fit Score",
   sortDir: -1,
 };
 
+function esc(v) {
+  return String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function safeUrl(v) {
+  return /^https?:\/\//i.test(String(v || "")) ? v : "#";
+}
+
 function statusClass(status) {
   const s = (status || "").toLowerCase().replace(/\s+/g, "-");
+  if (s.includes("top")) return "replied";
+  if (s.includes("good")) return "interested";
+  if (s.includes("stretch")) return "contacted";
   if (s.includes("not") || s.includes("low")) return "not-interested";
   if (s.includes("interested")) return "interested";
   if (s.includes("contact")) return "contacted";
@@ -316,28 +335,51 @@ async function fetchSheet(tabName) {
   return rows;
 }
 
+async function fetchJobs() {
+  let lastErr;
+  for (const base of JOBS_URLS) {
+    try {
+      const res = await fetch(`${base}?t=${Date.now()}`, { cache: "no-store" });
+      if (res.status === 404) { lastErr = new Error("no matches saved yet"); continue; }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      state.jobsUpdated = data.updated;
+      return (data.jobs || []).map(j => ({
+        "Fit Score": j.fit_score,
+        "Status": (TIERS.find(([min]) => (j.fit_score ?? 0) >= min) || TIERS[3])[1],
+        "Title": j.title,
+        "Company": j.company,
+        "Location": j.location,
+        "Reason": j.reason,
+        "Matched Skills": (j.matched_skills || []).join(", "),
+        "Missing Skills": (j.missing_required || []).join(", "),
+        "Seniority": j.seniority,
+        "URL": j.url,
+        "Date Found": j.date_found,
+        "Posted": j.posted,
+      }));
+    } catch (e) { lastErr = e; }
+  }
+  if (lastErr && lastErr.message === "no matches saved yet") return [];
+  throw lastErr;
+}
+
 async function loadAll(showLoading = true) {
   const wrap = document.getElementById('table-wrap');
   const btn = document.getElementById('refresh-btn');
   btn.disabled = true;
-  if (showLoading) wrap.innerHTML = '<div class="loading-state">loading sheet data…</div>';
-  try {
-    const [tech, jobs] = await Promise.all([
-      fetchSheet("Tech Signals"),
-      fetchSheet("Job Leads"),
-    ]);
-    state.data["Tech Signals"] = tech;
-    state.data["Job Leads"] = jobs;
-    document.getElementById('count-tech').textContent = tech.length;
-    document.getElementById('count-jobs').textContent = jobs.length;
-    document.getElementById('last-updated').textContent = `synced ${new Date().toLocaleTimeString()}`;
-    render();
-  } catch (e) {
-    wrap.innerHTML = `<div class="error-state">Couldn't load sheet data (${e.message}).<br><br>
-      Make sure the sheet is shared as "Anyone with the link can view", and tab names are exactly
-      "Job Leads" and "Tech Signals".</div>`;
-    document.getElementById('last-updated').textContent = 'sync failed';
-  }
+  if (showLoading) wrap.innerHTML = '<div class="loading-state">loading…</div>';
+  const [jobsRes, techRes] = await Promise.allSettled([fetchJobs(), fetchSheet("Tech Signals")]);
+  state.errors = {};
+  if (jobsRes.status === "fulfilled") state.data["Job Leads"] = jobsRes.value;
+  else state.errors["Job Leads"] = `Couldn't load job matches (${jobsRes.reason.message}).`;
+  if (techRes.status === "fulfilled") state.data["Tech Signals"] = techRes.value;
+  else state.errors["Tech Signals"] = `Couldn't load the Tech Signals sheet (${techRes.reason.message}). Make sure it's shared as "Anyone with the link can view".`;
+  document.getElementById('count-jobs').textContent = jobsRes.status === "fulfilled" ? jobsRes.value.length : "!";
+  document.getElementById('count-tech').textContent = techRes.status === "fulfilled" ? techRes.value.length : "!";
+  const updated = state.jobsUpdated ? `matches updated ${new Date(state.jobsUpdated).toLocaleString()}` : "no matches saved yet";
+  document.getElementById('last-updated').textContent = `${updated} · refreshed ${new Date().toLocaleTimeString()}`;
+  render();
   btn.disabled = false;
 }
 
@@ -349,7 +391,7 @@ function renderChips() {
   statuses.forEach(s => {
     const chip = document.createElement('button');
     chip.className = 'chip' + (state.statusFilter === s ? ' active' : '');
-    chip.textContent = s;
+    chip.textContent = s;  // textContent is already safe
     chip.onclick = () => {
       state.statusFilter = state.statusFilter === s ? null : s;
       render();
@@ -380,8 +422,15 @@ function render() {
   });
 
   const wrap = document.getElementById('table-wrap');
+  if (state.errors && state.errors[state.activeTab]) {
+    wrap.innerHTML = `<div class="error-state">${esc(state.errors[state.activeTab])}</div>`;
+    return;
+  }
   if (rows.length === 0) {
-    wrap.innerHTML = '<div class="empty-state">No leads match this view.</div>';
+    const none = state.activeTab === "Job Leads" && !state.data["Job Leads"].length
+      ? "No job matches yet — they appear after the next daily run."
+      : "Nothing matches this view.";
+    wrap.innerHTML = `<div class="empty-state">${none}</div>`;
     return;
   }
 
@@ -391,7 +440,7 @@ function render() {
   displayCols.forEach(col => {
     const sorted = state.sortCol === col ? ' sorted' : '';
     const arrow = state.sortCol === col ? (state.sortDir === 1 ? ' ↑' : ' ↓') : '';
-    html += `<th class="${sorted.trim()}" data-col="${col}">${col}${arrow}</th>`;
+    html += `<th class="${sorted.trim()}" data-col="${esc(col)}">${esc(col)}${arrow}</th>`;
   });
   html += '</tr></thead><tbody>';
 
@@ -400,20 +449,21 @@ function render() {
     displayCols.forEach(col => {
       const val = r[col] ?? '';
       if (col === 'Status') {
-        html += `<td><span class="badge ${statusClass(val)}"><span class="dot"></span>${val || 'New'}</span></td>`;
+        html += `<td><span class="badge ${statusClass(val)}"><span class="dot"></span>${esc(val || 'New')}</span></td>`;
       } else if (col === 'URL') {
         const short = String(val).replace(/^https?:\/\//, '').replace(/\/$/, '');
-        html += `<td><a href="${val}" target="_blank">${short.length > 45 ? short.slice(0,45)+'…' : short}</a></td>`;
+        const label = state.activeTab === 'Job Leads' ? 'View posting →' : (short.length > 45 ? short.slice(0,45)+'…' : short);
+        html += `<td><a href="${esc(safeUrl(val))}" target="_blank" rel="noopener">${esc(label)}</a></td>`;
       } else if (col === 'Date Found' || col === 'Posted') {
-        html += `<td class="mono">${String(val).slice(0,10)}</td>`;
+        html += `<td class="mono">${esc(String(val).slice(0,10))}</td>`;
       } else if (col === 'Fit Score') {
         const n = parseFloat(val);
-        const tone = isNaN(n) ? 'muted' : n >= 85 ? 'interested' : n >= 65 ? 'contacted' : 'new';
+        const tone = isNaN(n) ? 'muted' : statusClass((TIERS.find(([min]) => n >= min) || TIERS[3])[1]);
         html += `<td><span class="badge ${tone}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span></td>`;
       } else if (col === 'Description') {
-        html += `<td class="muted">${String(val).slice(0,120)}${val.length > 120 ? '…' : ''}</td>`;
+        html += `<td class="muted">${esc(String(val).slice(0,120))}${String(val).length > 120 ? '…' : ''}</td>`;
       } else {
-        html += `<td>${val}</td>`;
+        html += `<td>${esc(val)}</td>`;
       }
     });
     html += '</tr>';
