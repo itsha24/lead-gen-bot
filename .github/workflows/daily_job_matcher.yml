@@ -2,9 +2,11 @@ name: Daily Job Matcher
 
 on:
   schedule:
-    # Every day at 13:00 UTC = 9:00am Eastern (8:00am after the November clock change).
-    # Saturdays are a "full" run (jobs + client leads); other days are jobs only.
+    # Twice a day, Toronto time: 9:00am and 6:00pm (catches morning and afternoon/West Coast postings).
+    # The Saturday 9:00am run is "full" (jobs + client leads); every other run is jobs only.
     - cron: "0 9 * * *"
+      timezone: "America/Toronto"
+    - cron: "1 18 * * *"
       timezone: "America/Toronto"
   workflow_dispatch: # manual "Run workflow" button in the Actions tab
     inputs:
@@ -47,7 +49,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
-          elif [ "$(TZ=America/Toronto date +%u)" = "6" ]; then  # Saturday
+          elif [ "$(TZ=America/Toronto date +%u)" = "6" ] && [ "$(TZ=America/Toronto date +%H)" -lt 15 ]; then  # Saturday morning
             echo "mode=full" >> "$GITHUB_OUTPUT"
           else
             echo "mode=jobs_only" >> "$GITHUB_OUTPUT"
