@@ -157,3 +157,14 @@ def _send_starttls(sender, password, msg, stage):
         smtp.login(sender, password)
         stage[0] = "sending"
         smtp.send_message(msg)
+
+
+if __name__ == "__main__":
+    # Send a test email with one sample job:  python notifier.py
+    # Uses the same EMAIL_ADDRESS / EMAIL_APP_PASSWORD env vars as the daily run.
+    send_job_digest([{
+        "fit_score": 99, "title": "Test email — your job matcher works", "company": "Job Matcher",
+        "location": "Montréal, QC", "seniority": "junior", "missing_required": [],
+        "reason": "If you can read this, daily emails for 85+ matches will arrive here.",
+        "url": DASHBOARD_URL,
+    }], min_score=85)
