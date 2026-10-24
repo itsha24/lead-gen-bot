@@ -1,6 +1,652 @@
 {
- "updated": "2026-10-24T03:45:27+00:00",
+ "updated": "2026-10-24T16:26:42+00:00",
  "jobs": [
+  {
+   "date_found": "2026-10-24",
+   "title": "Developer, Device Trust Reliability",
+   "company": "1Password",
+   "location": "Remote (United States | Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/1password/443f9ef6-13a7-4edb-ace5-16be7e630041",
+   "posted": "2026-10-20T15:19:30.487000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 68,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "REST APIs",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Ruby on Rails"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend experience and focus on reliability match well, but it asks for intermediate experience and Ruby on Rails which you will need to learn.",
+   "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
+   "description_source": "full posting",
+   "source": "1Password careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Web Developer",
+   "company": "Ubisoft",
+   "location": "Quebec City, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000157563150-web-developer",
+   "posted": "2026-10-23T20:24:37.498000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs",
+    "C# / ASP.NET",
+    "React / React Native"
+   ],
+   "missing_required": [
+    "TypeScript"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React and C# experience make this a good fit, though it asks for intermediate-to-senior full-stack scope and TypeScript which you can learn.",
+   "description": "Would you like to develop web applications used at scale across multiple Ubisoft studios? Join the team and contribute to the creation of strategic tools focused on resource management, project tracking, and data analytics. As a Web Fullstack Developer, you will contribute to the full software devel",
+   "description_source": "full posting",
+   "source": "Ubisoft careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Développeuse, développeur Web",
+   "company": "Ubisoft",
+   "location": "Quebec City, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000157563799-developpeuse-developpeur-web",
+   "posted": "2026-10-23T20:23:01.245000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs",
+    "C# / ASP.NET",
+    "React / React Native"
+   ],
+   "missing_required": [
+    "TypeScript"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React and C# experience make you a good fit for this intermediate web developer role, though TypeScript is missing as a required skill.",
+   "description": "Vous souhaitez développer des applications Web utilisées à grande échelle par plusieurs studios Ubisoft ? Rejoignez l'équipe et contribuez à la création d'outils stratégiques liés à la gestion des ressources, au suivi des projets et à l'analyse de données. Le ou la titulaire du poste participe à l'e",
+   "description_source": "full posting",
+   "source": "Ubisoft careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Java Fullstack",
+   "company": "Cloudious LLC",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5937871254?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-22T07:38:17Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "Spring Framework",
+    "RESTful WebServices"
+   ],
+   "missing_required": [
+    "Angular",
+    "MarkLogic",
+    "DevOps experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Spring skills fit well, but the role asks for 3 years of experience and Angular which are gaps for you.",
+   "description": "Job DescriptionJob Description Java Fullstack The opportunity: Code, debug, test, document and communicate product/component/feature development stages. Validate results with user representatives; integrates and commissions the overall solution. Select appropriate technical options for development s",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Junior Security Engineer",
+   "company": "1Password",
+   "location": "Remote (United States | Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/1password/49f0fe51-fcdc-46d8-a046-35f357b0cf6e",
+   "posted": "2026-10-20T15:33:39.663000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 60,
+   "seniority": "junior",
+   "years_required": 0,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "security engineering",
+    "agentic AI capabilities for security workflows",
+    "internal tool development"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your junior seniority matches well and the experience range fits, but you lack specific security engineering and agentic AI security workflow requirements.",
+   "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
+   "description_source": "full posting",
+   "source": "1Password careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Engineer",
+   "company": "Newfold Digital",
+   "location": "Halifax region, Nova Scotia",
+   "url": "https://www.adzuna.ca/details/5940266627?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T04:56:59Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Oracle",
+    "MySQL",
+    "JavaScript",
+    "Linux and shell scripting"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Spring Boot match well, but the role asks for 3 to 5 years of experience which is a stretch for your junior level.",
+   "description": "About Us: Newfold Digital is a leading web technology company serving millions of customers globally. Our customers know us through our robust portfolio of brands. We have some of the industry's most prominent and storied go-to-market brands, including Bluehost, HostGator, Network Solutions, Domain.",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Development Engineer in Test (Python)",
+   "company": "Jobgether",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940275707?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T05:01:02Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 45,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Python",
+    "Go",
+    "Linux systems engineering"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA test automation experience is a strong match, but this role requires Python and deep infrastructure/systems engineering skills that fall outside your primary stack.",
+   "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Software Development Engineer in Test (Python) based in Canada. Join a collaborative Platform Engineering team focused on building and scaling reliable, high-performance ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "AI Software Developer - Intermediate",
+   "company": "Delta Intelligent Building Technologies",
+   "location": "Langley, Greater Vancouver",
+   "url": "https://www.adzuna.ca/details/5940247363?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T04:49:57Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 45,
+   "seniority": "intermediate",
+   "years_required": 1,
+   "matched_skills": [
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Python",
+    "LLM APIs / AI automation"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your profile is a stretch for this intermediate AI role because it heavily emphasizes Python and LLM/Agent engineering, whereas your strongest backend skills are in Java and Spring Boot.",
+   "description": "About Delta Intelligent Building Technologies (Canada) Inc.(formerly known as Delta Controls). Delta Intelligent Building Technologies (Canada) Inc. (a subsidiary of Delta Electronics) is a leading building controls manufacturer with over 300 partners in more than 80 countries. For over three decade",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Engineer - Crypto Data Foundations",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8304038?gh_jid=8304038",
+   "posted": "2026-10-20T18:42:39+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "Python",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Go or production experience with distributed data systems"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch role for you because it requires building distributed systems with Go or Python, and your primary backend stack is Java/Spring Boot rather than systems engineering.",
+   "description": "Ready to do the most impactful work of your career? At Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it’s a place to be pushed past your perceived limits. If you'",
+   "description_source": "full posting",
+   "source": "Coinbase careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Programmeur.meuse Engin - OS (Game Network)",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000156561090-programmeur-meuse-engin-os-game-network-",
+   "posted": "2026-10-20T13:32:15.388000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "C++",
+    "systems architecture",
+    "low-level programming"
+   ],
+   "dealbreakers_hit": [
+    "Senior, Staff, Principal, Lead, Manager, Architect"
+   ],
+   "reason": "This is a senior-level role focusing on C++ engine programming and architecture, which hits your avoid_roles criteria.",
+   "description": "En tant que programmeur·euse moteur C++ sénior à Ubisoft Montréal, vous rejoindrez l’équipe Core Services - Online Tech Foundations. Cette équipe crée les technologies qui soutiennent les services en ligne de nombreuses productions d’Ubisoft. Vous contribuerez à concevoir et à faire évoluer des syst",
+   "description_source": "full posting",
+   "source": "Ubisoft careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Engineer",
+   "company": "Stripe",
+   "location": "South San Francisco, CA",
+   "url": "https://stripe.com/jobs/search?gh_jid=8314283",
+   "posted": "2026-10-22T17:01:03+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "senior",
+   "years_required": 2,
+   "matched_skills": [
+    "AWS"
+   ],
+   "missing_required": [
+    "Go",
+    "Ruby",
+    "Kubernetes",
+    "distributed systems experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This Stripe role requires specific experience in Go, Ruby, and cloud infrastructure that does not align with your backend and QA background, and the responsibilities lean senior.",
+   "description": "Who we are About Stripe Stripe, LLC. is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to in",
+   "description_source": "full posting",
+   "source": "Stripe careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Functional Testing",
+   "company": "J M Group Inc",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5940435924?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T07:46:30Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 35,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "People management",
+    "QA leadership experience"
+   ],
+   "dealbreakers_hit": [
+    "Senior, Staff, Principal, Lead, Manager, Architect"
+   ],
+   "reason": "This is a senior Functional Testing Lead role requiring you to manage QA teams and lead strategy, which hits your avoid_roles dealbreaker for lead and management positions.",
+   "description": "Job DescriptionJob DescriptionWe are looking for an experienced Functional Testing Lead to manage QA teams and ensure high-quality software delivery. Responsibilities: Lead and manage the QA team in planning designing and executing comprehensive testing activities across multiple projects and releas",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Associate Cloud Engineer",
+   "company": "Aptiv",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940247558?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T04:50:06Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "C",
+    "C++",
+    "embedded systems",
+    "RTOS"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a junior-level cloud and embedded engineering role requiring C and C++ and embedded systems experience, which do not align with your core Java, backend, and QA automation skill set.",
+   "description": "Your Role Wind River, An Aptiv Company, is seeking an Associate Cloud Engineer to contribute to the development and testing of StarlingX for the Wind River Cloud Platform. This is a unique opportunity to work with cloud-native and open-source technologies including Kubernetes, Docker, OpenStack, and",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Backend Engineer",
+   "company": "Polargrid",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940271296?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T04:58:56Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Go",
+    "Kubernetes",
+    "AWS CDK",
+    "Infrastructure-as-Code"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role focuses heavily on Go, Kubernetes, and infrastructure-as-code, which you do not have in your stack, and it requires production systems ownership that leans beyond your current experience level.",
+   "description": "About PolarGrid PolarGrid is an early-stage Canadian AI infrastructure company building a distributed inference network. We run LLM and voice inference workloads on GPU nodes at the edge, with supporting backend services hosted on AWS. Our goal is to make AI inference fast, reliable, and secure for ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "DevOps III, FME Flow",
+   "company": "Safe Software",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940277282?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T05:01:41Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 35,
+   "seniority": "senior",
+   "years_required": 4,
+   "matched_skills": [
+    "Python",
+    "SQL"
+   ],
+   "missing_required": [
+    "Kubernetes",
+    "Docker",
+    "CI/CD pipeline administration",
+    "DevOps experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior DevOps role requiring 3-5 years of specialized infrastructure experience, which hits your avoid roles list and does not match your junior developer or QA profile.",
+   "description": "Safe Software is looking for a DevOps III to join our FME Flow DevOps team. In this role, you'll help manage our CI/CD pipelines, Kubernetes clusters, and cloud infrastructure. You'll identify inefficiencies in our existing systems and make changes that streamline workflows and reduce cloud costs. Y",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Online Programmer - OS (Game Network)",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000156561766-online-programmer-os-game-network-",
+   "posted": "2026-10-20T13:35:35.093000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "C++",
+    "systems architecture"
+   ],
+   "dealbreakers_hit": [
+    "Senior, Staff, Principal, Lead, Manager, Architect"
+   ],
+   "reason": "This is a senior C++ role requiring low-level engine programming and architecture experience, which hits your avoid roles dealbreaker.",
+   "description": "As a Senior C++ Engine Programmer at Ubisoft Montréal, you’ll join the Core Services - Online Tech Foundations team. The team builds technology that supports online services across many Ubisoft productions. You’ll help design and evolve distributed systems and middleware used in games, including gam",
+   "description_source": "full posting",
+   "source": "Ubisoft careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Engineer, Resource Automation",
+   "company": "Stripe",
+   "location": "South San Francisco, CA",
+   "url": "https://stripe.com/jobs/search?gh_jid=8314235",
+   "posted": "2026-10-22T16:43:29+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Go",
+    "Distributed systems and microservices",
+    "Docker",
+    "Kubernetes",
+    "Cloud infrastructure"
+   ],
+   "dealbreakers_hit": [
+    "Requires specific technologies (Go, Kubernetes, etc.) not in your strong profile"
+   ],
+   "reason": "Your backend and API background fit the general theme, but this role requires specific experience with Go, Kubernetes, and distributed systems that do not match your core stack.",
+   "description": "Who we are About Stripe Stripe, LLC. is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to in",
+   "description_source": "full posting",
+   "source": "Stripe careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Developer – Steel Detailing",
+   "company": "JMT Consultants",
+   "location": "The Forks, Winnipeg",
+   "url": "https://www.adzuna.ca/details/5940277805?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T05:02:24Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Tekla Structures or SDS2",
+    "5+ years of professional software development experience",
+    "5+ years of steel detailing and/or fabrication experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This role requires 5+ years of professional software development and domain-specific steel detailing experience, which hits your experience dealbreaker.",
+   "description": "JMT Consultants Inc. Winnipeg (In office) / Remote (Consideration for the right candidate) Full-Time Permanent Position JMT Consultants is a North American-based global leader specializing in steel and concrete design solutions. Services include pre-construction modeling, structural design support, ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Engineer I",
+   "company": "TD Bank",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940265006?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T04:56:22Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "Python",
+    "Git"
+   ],
+   "missing_required": [
+    "Big Data technologies (Spark, Scala, Hadoop, Hive)",
+    "Cassandra / NoSQL"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This role requires 5+ years of experience, triggering a dealbreaker and capping your score, despite your strong Java skills.",
+   "description": "Work Location: Toronto, Ontario, Canada Hours: 37.5 Line of Business: Technology Solutions Pay Details: $105,100 - $129,400 CAD This role is eligible for a discretionary variable compensation award that considers business and individual performance. TD is committed to providing fair and equitable co",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "QA Engineer",
+   "company": "First National",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5939043648?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-23T04:59:45Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "5+ years of experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation skills match well, but this role requires 5 plus years of experience which triggers your dealbreaker.",
+   "description": "We are hiring a QA Engineer, IT Applications & QA! Reporting To: Assistant Vice President IT, IT Applications & QA Full-Time/Part- Time: Full-time Salary Range: $66,685-$106,695 Posting Date: October 21, 2026 Closing Date: November 23, 2026 Hours of Work: 8:30 a.m. – 5:00 p.m. Grade: Office Location",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Développeur Fullstack Java - Fullstack Java Dev - Hybrid - Montreal/CA",
+   "company": "Opticca",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5940272843?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T04:59:37Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "Spring / Spring Boot",
+    "REST",
+    "SQL",
+    "ReactJS",
+    "GIT"
+   ],
+   "missing_required": [
+    "5+ years of experience",
+    "Lead/tech lead experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match well, but this is a senior role requiring 5+ years of experience and tech lead responsibilities, and it hits your dealbreaker.",
+   "description": "Développeur Java FullStack Hybride | Montréal Êtes-vous un développeur Java Full Stack talentueux et motivé à la recherche d'une nouvelle opportunité passionnante ? Nous sommes actuellement à la recherche d'un individu hautement qualifié pour rejoindre notre équipe en tant que développeur Java Full ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Quality Engineer II",
+   "company": "TD Bank",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940277633?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T05:02:06Z",
+   "keyword_matched": "Selenium automation",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "SQL / PostgreSQL",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Salesforce testing experience",
+    "nCino implementation experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and QA automation match well, but this role requires 5 years of experience and domain-specific knowledge like Salesforce and nCino that you lack.",
+   "description": "Work Location: Toronto, Ontario, Canada Hours: 37.5 Line of Business: Technology Solutions Pay Details: $81,600 - $115,200 CAD TD is committed to providing fair and equitable compensation opportunities to all colleagues. Growth opportunities and skill development are defining features of the colleag",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Développeur(euse) logiciel / Software Developer - Dynamics / Power Platform",
+   "company": "Genetec",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5939201392?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-23T07:32:03Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description Aperçu du poste : Le groupe Digital Experience est chargé de concevoir et de fournir la plateforme numérique pour notre écosystème, permettant ainsi à nos partenaires d'accomplir de manière autonome un large ensemble de tâches. Nous recherchons un développeur logiciel ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "RQ00788 - Software Developer - Full Stack - Seniorx3",
+   "company": "Source Code",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5939225293?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-23T07:38:42Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 10+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description RQ00788 - Software Developer - Full Stack - Seniorx3 Duration: 1 Year (250 Business Days) + 1 Possible Extension Location: 525 University Avenue Toronto ( Up to 3 days onsite (subject to HM's discretion) ) No security clearance Must Have skills: C# / .NET Development 1",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "AV Engineer",
+   "company": "Faire",
+   "location": "San Francisco, CA",
+   "url": "https://boards.greenhouse.io/faire/jobs/8899853002?gh_jid=8899853002",
+   "posted": "2026-10-19T13:55:10+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [],
+   "missing_required": [
+    "AV systems",
+    "video conferencing hardware",
+    "IT operations"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an AV Engineer role focusing on workplace technology and hardware support, which falls under your avoid_roles for IT support and does not match your software development background.",
+   "description": "About Faire Faire is a technology wholesale platform built on the belief that the future is local. Independent retailers around the globe collectively represent a multi-hundred-billion-dollar wholesale market that has historically been fragmented and offline. At Faire, we're using the power of tech,",
+   "description_source": "full posting",
+   "source": "Faire careers"
+  },
   {
    "date_found": "2026-10-23",
    "title": "Software Developer in Test II",
