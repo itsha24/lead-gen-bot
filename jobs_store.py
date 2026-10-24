@@ -19,7 +19,7 @@ LOCAL_TZ = ZoneInfo("America/Toronto")  # dates on the dashboard use your local 
 FIELDS = [
     "date_found", "title", "company", "location", "url", "posted", "keyword_matched",
     "fit_score", "seniority", "years_required", "matched_skills", "missing_required",
-    "dealbreakers_hit", "reason", "description", "description_source",
+    "dealbreakers_hit", "reason", "description", "description_source", "source",
 ]
 
 

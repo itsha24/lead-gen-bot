@@ -32,6 +32,10 @@ EMAIL_MIN_SCORE = 85
 # matters most, and the bot runs daily, so 3 days leaves margin for a missed run.
 JOB_MAX_DAYS_OLD = 3
 
+# Company career pages (companies.yaml) are fewer and higher quality, so look back
+# a little further: a week-old opening at a company you picked is still worth seeing.
+COMPANY_MAX_DAYS_OLD = 7
+
 # Adzuna location filter(s) — searched separately and combined.
 # "" (empty string) = no location filter, i.e. Canada-wide, which also
 # surfaces most remote-tagged postings.

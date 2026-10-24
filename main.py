@@ -1,6 +1,7 @@
 import os
 
 from config import EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN
+from company_boards import fetch_company_jobs
 from job_search import search_jobs
 from business_discovery import find_business_urls
 from tech_checker import check_business_list
@@ -26,8 +27,10 @@ def load_manual_urls():
 
 def run_job_search():
     print("Searching job postings...")
-    jobs = search_jobs(JOB_KEYWORDS, JOB_SEARCH_LOCATIONS)
-    print(f"Found {len(jobs)} job leads.")
+    company_jobs = fetch_company_jobs()  # first, so a job on both keeps the direct link
+    adzuna_jobs = search_jobs(JOB_KEYWORDS, JOB_SEARCH_LOCATIONS)
+    jobs = company_jobs + adzuna_jobs
+    print(f"Found {len(jobs)} job leads ({len(company_jobs)} from company career pages, {len(adzuna_jobs)} from Adzuna).")
 
     stored = load_jobs()
     known = known_urls(stored)

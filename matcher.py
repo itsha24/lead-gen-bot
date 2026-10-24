@@ -368,7 +368,7 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None) -> list[dict]:
     # full text often reveals "7+ years" the snippet cut off. Those are saved as
     # low fits without an AI call, so they never come back to take a slot.
     from posting_fetcher import enrich_jobs  # local import: only needed when scoring
-    enrich_jobs(kept)
+    enrich_jobs([j for j in kept if j.get("description_source") != "full posting"])
     scored = []
     to_score = []
     for job in kept:

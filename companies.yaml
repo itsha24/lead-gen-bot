@@ -1,0 +1,29 @@
+# Companies whose career pages the bot checks every run.
+#
+# These come straight from each company's hiring system, so jobs show up here
+# first — often before Indeed, LinkedIn or Adzuna — and you apply directly.
+#
+# TO ADD A COMPANY: open its careers page, click any job, and copy the link if
+# it looks like one of these (the bot figures out the rest):
+#   https://job-boards.greenhouse.io/COMPANY   (or boards.greenhouse.io/COMPANY)
+#   https://jobs.lever.co/COMPANY
+#   https://jobs.ashbyhq.com/COMPANY
+# Companies on other systems (Workday, SmartRecruiters, their own site) aren't
+# supported yet — Adzuna still covers many of those.
+
+companies:
+  # Montreal
+  - https://job-boards.greenhouse.io/appdirect
+  - https://job-boards.greenhouse.io/workleap
+  - https://jobs.ashbyhq.com/hopper
+  - https://jobs.lever.co/plusgrade
+  # Canada (Toronto / remote in Canada)
+  - https://jobs.ashbyhq.com/wealthsimple
+  - https://jobs.ashbyhq.com/1password
+  - https://jobs.ashbyhq.com/cohere
+  - https://job-boards.greenhouse.io/faire
+  - https://job-boards.greenhouse.io/stripe
+  # Remote-friendly (hire in Canada)
+  - https://job-boards.greenhouse.io/gitlab
+  - https://job-boards.greenhouse.io/mozilla
+  - https://job-boards.greenhouse.io/coinbase

@@ -164,6 +164,8 @@
     color: var(--text-faint); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; }
   .stale { opacity: 0.55; }
   .fresh { color: var(--status-replied); font-weight: 600; }
+  .tag-direct { display: inline-block; margin-left: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 4px; padding: 0 5px; white-space: nowrap; }
   .fresh::before { content: "● "; font-size: 9px; vertical-align: 1px; }
   .cards { display: flex; flex-direction: column; }
   .card { padding: 14px 16px; border-bottom: 1px solid var(--border); }
@@ -294,7 +296,8 @@
     Job matches are scored by AI against my profile by a daily GitHub Actions run; 85+ matches are also emailed.
     Only postings from the last 3 days are fetched; <span class="fresh">green</span> = posted in the last 24 hours (apply first).
     Postings drop off after 30 days.
-    <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read. Tech Signals come from
+    <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read.
+    <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. Tech Signals come from
     <a href="https://docs.google.com/spreadsheets/d/1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I/edit" target="_blank">the sheet</a>.
   </div>
 </div>
@@ -429,6 +432,7 @@ async function fetchJobs() {
         "Age": daysAgo(j.posted),
         "Hours": hoursAgo(j.posted),
         "Source": j.description_source || "snippet",
+        "Direct": j.keyword_matched === "company board",
       }));
     } catch (e) { lastErr = e; }
   }
@@ -476,6 +480,7 @@ function jobCard(r) {
     <div class="card-top">
       <span class="badge ${tone}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span>
       <span class="badge ${tone}">${esc(r.Status)}</span>
+      ${r.Direct ? '<span class="tag-direct">apply direct</span>' : ''}
     </div>
     <a class="card-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
     <div class="card-meta">${meta}</div>
@@ -606,6 +611,8 @@ function render() {
       } else if (col === 'Reason' && state.activeTab === 'Job Leads') {
         const tag = r.Source === 'snippet' ? '<span class="tag-snippet" title="Scored from a short job-board snippet, not the full posting">snippet</span>' : '';
         html += `<td>${esc(val)}${tag}</td>`;
+      } else if (col === 'Company' && state.activeTab === 'Job Leads') {
+        html += `<td>${esc(val)}${r.Direct ? '<br><span class="tag-direct" title="From the company\'s own careers page">apply direct</span>' : ''}</td>`;
       } else if (col === 'Date Found' || col === 'Posted') {
         html += `<td class="mono">${esc(String(val).slice(0,10))}</td>`;
       } else if (col === 'Fit Score') {
