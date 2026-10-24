@@ -1,29 +1,6 @@
 {
- "updated": "2026-10-24T03:10:26+00:00",
+ "updated": "2026-10-24T03:28:29+00:00",
  "jobs": [
-  {
-   "date_found": "2026-10-23",
-   "title": "Junior Quality Assurance Automation Analyst",
-   "company": "CGI",
-   "location": "Toronto, Ontario",
-   "url": "https://www.adzuna.ca/details/5882407625?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-09-13T04:32:41Z",
-   "keyword_matched": "Selenium automation",
-   "fit_score": 88,
-   "seniority": "junior",
-   "years_required": 1,
-   "matched_skills": [
-    "Java",
-    "QA test automation"
-   ],
-   "missing_required": [
-    "Selenium WebDriver"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your Java and QA automation skills match this junior role well, and it only requires 1-3 years of experience.",
-   "description": "Position Description: This role is hybrid and requires working from our client's office in downtown Toronto a minimum of 2 days per week (subject to change). We are seeking a Junior QA Analyst to join our Quality Assurance team. The ideal candidate will have hands-on experience with Selenium automat",
-   "description_source": "full posting"
-  },
   {
    "date_found": "2026-10-23",
    "title": "Software Developer in Test II",
@@ -141,29 +118,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "QA Automation Engineer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727254794?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:44:51Z",
-   "keyword_matched": "QA automation engineer",
-   "fit_score": 75,
-   "seniority": "junior",
-   "years_required": 2,
-   "matched_skills": [
-    "QA test automation"
-   ],
-   "missing_required": [
-    "Python",
-    "Linux/Unix"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your QA automation background is a strong fit for this SDET role requiring 2-3 years of experience, though you will need to pick up Python and Linux/Unix.",
-   "description": "Technology The Technology division partners with our business units and leading technology companies to redefine how we do business in ever more global and dynamic financial markets. Technology?s mission is to ensure the Firm manages its global businesses and serves clients on a market-leading techn",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "Testeur · euse AQ Développement / Development QA Tester",
    "company": "side",
    "location": "Montréal, Québec",
@@ -250,129 +204,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "Développeur.euse Java Full Stack / Java Full Stack Developer x2 (Signature)",
-   "company": "Portage CyberTech",
-   "location": "Westmount, Montréal",
-   "url": "https://www.adzuna.ca/details/5888946329?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-09-18T04:43:49Z",
-   "keyword_matched": "Spring Boot developer",
-   "fit_score": 68,
-   "seniority": "intermediate",
-   "years_required": 3,
-   "matched_skills": [
-    "Java",
-    "Spring Boot",
-    "REST APIs",
-    "PostgreSQL",
-    "AWS (S3)"
-   ],
-   "missing_required": [
-    "MongoDB",
-    "RabbitMQ"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your Java and Spring Boot skills are a strong match for this intermediate role, though it requires 3 years of experience and professional French, both of which you meet.",
-   "description": "Titre du poste : Développeur.euse Java Full Stack (x2) Département: Ingénierie (Signature) Rapports à : Chef·fe d’équipe Emplacement : Hybride (télétravail et présence sur site à Montréal) Niveau : Intermédiaire Exigence linguistique : Français requis, Anglais un atout. À propos de Portage CyberTech",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Developer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727232924?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:42:51Z",
-   "keyword_matched": "Java developer",
-   "fit_score": 68,
-   "seniority": "intermediate",
-   "years_required": null,
-   "matched_skills": [
-    "Java",
-    "Java Spring",
-    "SQL",
-    "QA test automation"
-   ],
-   "missing_required": [
-    "cloud technologies",
-    "Big Data problems",
-    "microservice architecture"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your Java background is a good fit, but the role asks for cloud and big data experience which are currently gaps.",
-   "description": "Position Description The Trade Completion team is looking for a developer to join the dynamic environment of the global Trades Enrichment Area. We are looking for a technically proficient java developer that will work on creating new applications and enhancing existing applications for the TC applic",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "C# developer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727150695?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:35:19Z",
-   "keyword_matched": "C# developer",
-   "fit_score": 68,
-   "seniority": "intermediate",
-   "years_required": 3,
-   "matched_skills": [
-    "C# / ASP.NET",
-    "SQL / PostgreSQL",
-    "Python"
-   ],
-   "missing_required": [
-    "WPF",
-    "WinForms",
-    "Linux scripting"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your C# and Python skills match well, but the role asks for 3 years of experience which stretches your junior background slightly.",
-   "description": "Position Description: About the Commodities Technology Group: -We are responsible for delivering front-to-back technology solutions for the Global Commodities Business covering Listed and OTC trading in Power, Energy, Agriculture and Metals. -Focus on problem-solving and delivering best-in-class tec",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "C# Developer - WPF/Winforms",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727138491?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:34:19Z",
-   "keyword_matched": "C# developer",
-   "fit_score": 68,
-   "seniority": "intermediate",
-   "years_required": 3,
-   "matched_skills": [
-    "C# / ASP.NET",
-    "Java",
-    "SQL / PostgreSQL",
-    "Python"
-   ],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Your C# and Java background fit well, and though it asks for 3 years, you have working C# experience and strong Java to make this a good intermediate fit.",
-   "description": "Position Description: About the Commodities Technology Group: -We are responsible for delivering front-to-back technology solutions for the Global Commodities Business covering Listed and OTC trading in Power, Energy, Agriculture and Metals. -Focus on problem-solving and delivering best-in-class tec",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Developer",
-   "company": "Morgan Stanley E-TRADE",
-   "location": "Canada",
-   "url": "https://www.adzuna.ca/details/5609224370?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-02-01T14:20:37Z",
-   "keyword_matched": "Java developer",
-   "fit_score": 65,
-   "seniority": "unclear",
-   "years_required": null,
-   "matched_skills": [
-    "Java"
-   ],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Your Java background is a good fit, but the short snippet lacks details on required experience and seniority level.",
-   "description": "Job Number: 4701 External Description: Java Developer Job Number: MOR1JP00094589 Community / Marketing Title: Java Developer Location_formattedLocationLong: Montreal, Quebec CA",
-   "description_source": "snippet"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "Java Backend developer - Java 17, DevSecOps, Kubernetes",
    "company": "Astra North Infoteck Inc.",
    "location": "Montréal, Québec",
@@ -446,29 +277,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "QA Automation Specialist (12-month Contract) | Spécialiste QA automatisation (Contrat de 12 mois)",
-   "company": "Jesta I.S.",
-   "location": "Westmount, Montréal",
-   "url": "https://www.adzuna.ca/details/5771014536?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-06-20T17:10:13Z",
-   "keyword_matched": "test automation engineer",
-   "fit_score": 65,
-   "seniority": "intermediate",
-   "years_required": 3,
-   "matched_skills": [
-    "QA test automation",
-    "REST APIs",
-    "Java",
-    "Python"
-   ],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Your QA automation and programming skills match well, and although it asks for 3-5 years of experience, your strong background in test automation makes it a solid intermediate fit.",
-   "description": "Company Overview Jesta I.S. is a leading supplier of ERP software for the apparel, footwear, and soft-goods industries. Our global client base includes many recognizable brands and continues to grow. Position Summary We’re looking for a QA Automation Specialist to join our QA team and help elevate t",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "Java Full Stack & IAM Developer",
    "company": "CYNET SYSTEMS",
    "location": "King and Spadina, City of Toronto",
@@ -530,85 +338,6 @@
    "dealbreakers_hit": [],
    "reason": "Good fit for a junior QA role in Montreal matching the candidate's QA automation skills, though the short description lacks detailed technical requirements.",
    "description": "About us Eli Health is making continuous hormone monitoring possible so users can support their daily and long-term health. No more waiting days to track key biomarkers—get results you can use within minutes. Eli’s flagship product, Hormometer®, is the first instant hormone monitoring platform to de"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Backend Developer",
-   "company": "Sapsol Technologies Inc",
-   "location": "Mississauga, Peel region",
-   "url": "https://www.adzuna.ca/details/5685954340?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-04-01T15:21:33Z",
-   "keyword_matched": "backend developer",
-   "fit_score": 60,
-   "seniority": "intermediate",
-   "years_required": null,
-   "matched_skills": [
-    "Java",
-    "Spring Boot",
-    "REST APIs",
-    "SQL / PostgreSQL"
-   ],
-   "missing_required": [
-    "Microservices architecture"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your Java and Spring Boot skills match well, but this is an intermediate role requiring microservices experience.",
-   "description": "Key Responsibilities Design, develop, and maintain backend services using Core Java and Spring Boot Build and manage Microservices-based architecture Develop and consume RESTful APIs Work with SQL and/or NoSQL databases for data storage and retrieval Collaborate with frontend developers, DevOps team",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Share Point Engineer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727087560?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:27:30Z",
-   "keyword_matched": "ASP.NET developer",
-   "fit_score": 60,
-   "seniority": "intermediate",
-   "years_required": null,
-   "matched_skills": [
-    "C# / ASP.NET",
-    "REST APIs",
-    "SQL / PostgreSQL"
-   ],
-   "missing_required": [
-    "Office 365 migration experience",
-    "PowerShell scripting",
-    "Microsoft Graph API"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your C# and API skills give you some relevant background, but this role is heavily focused on specialized SharePoint and Office 365 migration engineering which is outside your core expertise.",
-   "description": "Description: The company's SharePoint Engineering team is responsible for the build of the SharePoint platform On-prem and cloud for firmwide collaboration as well as application hosting & development. Besides providing platform expertise, we offer economies of scale and ease of management by creati",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Backend Developer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727228693?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:42:27Z",
-   "keyword_matched": "backend developer",
-   "fit_score": 60,
-   "seniority": "intermediate",
-   "years_required": 4,
-   "matched_skills": [
-    "Java",
-    "Spring framework",
-    "REST APIs",
-    "SQL",
-    "Git"
-   ],
-   "missing_required": [
-    "4+ years of work experience",
-    "Multithreading",
-    "Unix/Linux platform experience"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your Java and Spring skills match this backend role well, but it asks for 4+ years of experience which makes it a stretch for your junior profile.",
-   "description": "Job Position: Java Backend Developer Technology Technology works as a strategic partner with our company business units and the world's leading technology companies to redefine how we do business in ever more global, complex, and dynamic financial markets. Our company's sizeable investment in techno",
-   "description_source": "full posting"
   },
   {
    "date_found": "2026-10-23",
@@ -863,33 +592,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "Full stack developer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727224616?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:42:05Z",
-   "keyword_matched": "Spring Boot developer",
-   "fit_score": 50,
-   "seniority": "intermediate",
-   "years_required": null,
-   "matched_skills": [
-    "Java",
-    "Spring Boot",
-    "Selenium"
-   ],
-   "missing_required": [
-    "Angular",
-    "TypeScript",
-    "RxJS",
-    "NgRx"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "Your Java and Selenium automation match the desirable and required skills, but the role heavily requires Angular and frontend technologies which are outside your core profile.",
-   "description": "Description: ISG Research is currently in the middle of an implementation of a multi-year initiative called Research 2.0. This platform requires in-depth understanding of Java and quick learning capabilities. Morgan Stanley is seeking to fill a position in Research 2.0 initiative with someone who ha",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "Java Developer",
    "company": "Turing",
    "location": "Toronto, Ontario",
@@ -925,33 +627,6 @@
    "dealbreakers_hit": [],
    "reason": "This is a stretch because the posting requires Python as the primary backend language, which is only a working skill for the candidate.",
    "description": "Job Description Job Description We are a dynamic and innovative software development company working on high-profile projects in the automotive industry. Our current projects are closely related to MediaMarktSaturn’s digital platforms. We are looking for a skilled Python Backend Developer to join ou"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Developer",
-   "company": "Worldhire",
-   "location": "Toronto, Ontario",
-   "url": "https://www.adzuna.ca/details/5120009728?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2025-03-31T13:19:11Z",
-   "keyword_matched": "Java developer",
-   "fit_score": 40,
-   "seniority": "intermediate",
-   "years_required": 3,
-   "matched_skills": [
-    "Java",
-    "SQL"
-   ],
-   "missing_required": [
-    "J2EE",
-    "Oracle",
-    "WAS"
-   ],
-   "dealbreakers_hit": [
-    "Requires 5+ years of experience"
-   ],
-   "reason": "Your Java and SQL match well, but the role requires 3 to 7 years of experience which stretches your junior profile.",
-   "description": "Role: Java Developer Location: Toronto, Canada Experience: 3-7 years of experience Candidates having PR/Citizenship status are eligible to apply Job Description We are looking for a Java developer responsible for building Java applications. This includes anything between complex groups of back-end s",
-   "description_source": "full posting"
   },
   {
    "date_found": "2026-10-23",
@@ -1044,33 +719,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "Software Dev QA Developer",
-   "company": "Fortinet",
-   "location": "Burnaby, Greater Vancouver",
-   "url": "https://www.adzuna.ca/details/5682434329?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-03-29T16:37:05Z",
-   "keyword_matched": "QA developer",
-   "fit_score": 30,
-   "seniority": "senior",
-   "years_required": 5,
-   "matched_skills": [
-    "QA test automation",
-    "Python"
-   ],
-   "missing_required": [
-    "Network protocols (TCP/IP, HTTPS/SSL)",
-    "Cybersecurity / Firewall knowledge",
-    "Perl/Ruby/Bash scripting"
-   ],
-   "dealbreakers_hit": [
-    "Requires 5+ years of experience"
-   ],
-   "reason": "Your QA automation and Python match, but this role requires 5+ years of experience which triggers your dealbreaker.",
-   "description": "Description Join Fortinet, a cybersecurity pioneer with over two decades of excellence, as we continue to shape the future of cybersecurity and redefine the intersection of networking and security. At Fortinet, our mission is to safeguard people, devices, and data everywhere. Requirements: Run manua",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "QA Automation Engineer",
    "company": "SWTCH Energy Inc.",
    "location": "Toronto, Ontario",
@@ -1123,59 +771,6 @@
    ],
    "reason": "Your QA automation skills are a match, but this role requires eligibility for Canadian Security Clearance which triggers your dealbreaker.",
    "description": "About the role: We are looking for a hands-on and automation-oriented engineer to support system verification and validation activities across complex wireless and embedded platforms. This role focuses on developing and maintaining automated test suites, executing validation workflows, analyzing fai",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Developer",
-   "company": "Alquemy",
-   "location": "Ottawa, Ottawa region",
-   "url": "https://www.adzuna.ca/details/5880781644?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-09-12T04:46:34Z",
-   "keyword_matched": "Java developer",
-   "fit_score": 30,
-   "seniority": "senior",
-   "years_required": 5,
-   "matched_skills": [
-    "Java",
-    "SQL"
-   ],
-   "missing_required": [
-    "5+ years of Java experience",
-    "enterprise financial experience"
-   ],
-   "dealbreakers_hit": [
-    "Requires 5+ years of experience"
-   ],
-   "reason": "This role requires 5+ years of Java experience and enterprise financial background, hitting your experience dealbreaker.",
-   "description": "Job Description Java Application Developer Role Summary We are seeking a Java Application Developer to support application enhancements, modernization, system integrations, data solutions, and cloud-based initiatives within a complex enterprise environment. Responsibilities Design, develop, and impl",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Playwright Automation Test Engineer",
-   "company": "Cognizant",
-   "location": "Toronto, Ontario",
-   "url": "https://www.adzuna.ca/details/5880725626?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-09-12T03:39:54Z",
-   "keyword_matched": "test automation engineer",
-   "fit_score": 30,
-   "seniority": "senior",
-   "years_required": 5,
-   "matched_skills": [
-    "QA test automation",
-    "REST APIs",
-    "SQL / PostgreSQL"
-   ],
-   "missing_required": [
-    "Playwright",
-    "Java-based test automation frameworks (5+ years)"
-   ],
-   "dealbreakers_hit": [
-    "Requires 5+ years of experience"
-   ],
-   "reason": "Your QA automation background is strong, but this role requires 5 to 8 years of experience, triggering your dealbreaker for experience requirements.",
-   "description": "**About the role** We are looking for experienced Playwright Automation Test Engineer to join our QEA team. The ideal candidate will have hands-on expertise in automation frameworks, API and data validation, and AI-assisted automation.This role requires strong problem-solving skills and the ability ",
    "description_source": "full posting"
   },
   {
@@ -1314,28 +909,6 @@
   },
   {
    "date_found": "2026-10-23",
-   "title": "Applications Administrator - Customer Facing/Digital Technologies",
-   "company": "TAME Search",
-   "location": "Toronto, Ontario",
-   "url": "https://www.adzuna.ca/details/5807484961?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-07-19T17:45:34Z",
-   "keyword_matched": "ASP.NET developer",
-   "fit_score": 25,
-   "seniority": "intermediate",
-   "years_required": 3,
-   "matched_skills": [],
-   "missing_required": [
-    "Application administration",
-    "Active Directory",
-    "Windows Server"
-   ],
-   "dealbreakers_hit": [],
-   "reason": "This is an IT support and applications administration role, which falls under your avoid_roles list of IT support or helpdesk roles.",
-   "description": "Provide technical administration and support for corporate software applications to ensure optimal performance in a secured manner. RESPONSIBILITIES Under minimal supervision, responsible for technical administration of corporate applications Provide technical support for solutions, as per addendum ",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
    "title": "Database Automation Test Engineer",
    "company": "Infoya",
    "location": "East York, Toronto",
@@ -1359,132 +932,6 @@
    ],
    "reason": "The role requires senior-level experience and data architecture expertise which exceeds the junior level of the candidate, hitting the seniority dealbreaker.",
    "description": "Job Description Job Description About the Job: Infoya is looking for an experienced Senior Automation Engineer with strong expertise in test automation , database testing, ETL validation, and data pipeline testing. The ideal candidate will have hands-on experience working with cloud-based data platf"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Business Analyst",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727114405?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:32:04Z",
-   "keyword_matched": "QA developer",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 5+ years — filtered without AI.",
-   "description": "Description: Job Title: LCG ICT Business Analyst Job Description: The candidate will join a team responsible for modernizing our technology solutions across the department that will also include aligning with Firm’s strategic priorities of cloud readiness, DevOps, platform reliability, and automatio",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Software Developer in Test Automation",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727090446?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:27:58Z",
-   "keyword_matched": "software developer in test",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 8+ years — filtered without AI.",
-   "description": "Role will involve: -Developing & configuring software, tools to deliver test automation -Onboarding various DevOps practices to software delivery -Designing, implementing and enhancing test automation solution and frameworks with focus on CICD -Updating existing automation suites to achieve higher c",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Développeur·se backend - Backend Developer",
-   "company": "Northstar Earth and Space",
-   "location": "Westmount, Montréal",
-   "url": "https://www.adzuna.ca/details/5879454803?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-09-11T04:49:21Z",
-   "keyword_matched": "backend developer",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 5+ years — filtered without AI.",
-   "description": "English follows À propos de NorthStar NorthStar Ciel & Terre utilise les données des télescopes optiques pour créer des services d'information adaptés aux besoins des clients du gouvernement et de l'industrie. Son portefeuille comprend la dynamique des orbites et des algorithmes d'apprentissage auto",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Java Developer",
-   "company": "Scalian",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5872887576?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-09-06T04:32:32Z",
-   "keyword_matched": "Java developer",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 30+ years — filtered without AI.",
-   "description": "Java Developer (M/F/D) Montréal | Permanent Contract | Full-Time Are you a Java Developer or would you like to become one? If your answer is yes, it’s your lucky day as we are looking for a dynamic and talented person to join our team in Montréal! Why join us? To acquire experience in different crit",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Guidewire Automation Test Engineer",
-   "company": "Cognizant",
-   "location": "Toronto, Ontario",
-   "url": "https://www.adzuna.ca/details/5816264597?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-07-26T02:42:44Z",
-   "keyword_matched": "test automation engineer",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 6+ years — filtered without AI.",
-   "description": "We are seeking a skilled and experienced Guidewire Automation Test Engineer to join our dynamic Quality Engineering team. In this role, you will be responsible for designing, developing, and executing comprehensive testing strategies for enterprise Guidewire implementations (PolicyCenter, BillingCen",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Python Developer",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727220775?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:41:44Z",
-   "keyword_matched": "Selenium automation",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 5+ years — filtered without AI.",
-   "description": "Description: We are looking for a proficient Python developer to join one of our existing agile squad. Ideally, coming from a Java or structured language background, the candidate should be capable of developing and integrating Python libraries and code. The candidate will work on building a classif",
-   "description_source": "full posting"
-  },
-  {
-   "date_found": "2026-10-23",
-   "title": "Sdet",
-   "company": "Jose Merciline",
-   "location": "Montréal, Québec",
-   "url": "https://www.adzuna.ca/details/5727114970?utm_medium=api&utm_source=67a2fd52",
-   "posted": "2026-05-12T16:32:08Z",
-   "keyword_matched": "software developer in test",
-   "fit_score": 15,
-   "seniority": "senior",
-   "years_required": null,
-   "matched_skills": [],
-   "missing_required": [],
-   "dealbreakers_hit": [],
-   "reason": "Full posting requires 8+ years — filtered without AI.",
-   "description": "Job Title: Software Developer in Test This role involves solving complex testing technical challenges, through the development /coding of programs, tools & automation frameworks, focuses on incorporating DevOps and Test & Behavior Driven Development practices for a robust & quality software delivery",
-   "description_source": "full posting"
   }
  ]
 }

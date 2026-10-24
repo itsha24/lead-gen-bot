@@ -6,7 +6,9 @@ Adzuna has a free developer tier: https://developer.adzuna.com/
 import os
 import requests
 
-from config import ADZUNA_COUNTRY
+from datetime import datetime, timedelta, timezone
+
+from config import ADZUNA_COUNTRY, JOB_MAX_DAYS_OLD
 
 ADZUNA_APP_ID = os.environ.get("ADZUNA_APP_ID")
 ADZUNA_APP_KEY = os.environ.get("ADZUNA_APP_KEY")
@@ -19,6 +21,8 @@ def _search_one(keyword, location, results_per_keyword, seen_urls):
         "app_key": ADZUNA_APP_KEY,
         "results_per_page": results_per_keyword,
         "what": keyword,
+        "max_days_old": JOB_MAX_DAYS_OLD,  # recent postings only
+        "sort_by": "date",                 # newest first
         "content-type": "application/json",
     }
     if location:
@@ -63,4 +67,16 @@ def search_jobs(keywords, locations=None, results_per_keyword=10):
         for loc in locations:
             all_results.extend(_search_one(kw, loc, results_per_keyword, seen_urls))
 
-    return all_results
+    # Safety net in case the API ignores max_days_old: drop anything older ourselves.
+    cutoff = datetime.now(timezone.utc) - timedelta(days=JOB_MAX_DAYS_OLD)
+    fresh = [j for j in all_results if _posted_at(j) is None or _posted_at(j) >= cutoff]
+    if len(fresh) < len(all_results):
+        print(f"[job_search] Dropped {len(all_results) - len(fresh)} postings older than {JOB_MAX_DAYS_OLD} days.")
+    return fresh
+
+
+def _posted_at(job):
+    try:
+        return datetime.fromisoformat((job.get("posted") or "").replace("Z", "+00:00"))
+    except ValueError:
+        return None

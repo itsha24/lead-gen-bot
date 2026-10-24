@@ -28,6 +28,10 @@ MAX_JOBS_PER_RUN = 40
 # 85 = "apply today" only. Lower to 75 if you go days without an email.
 EMAIL_MIN_SCORE = 85
 
+# Only fetch postings this many days old or newer. Applying in the first day or two
+# matters most, and the bot runs daily, so 3 days leaves margin for a missed run.
+JOB_MAX_DAYS_OLD = 3
+
 # Adzuna location filter(s) — searched separately and combined.
 # "" (empty string) = no location filter, i.e. Canada-wide, which also
 # surfaces most remote-tagged postings.

@@ -163,6 +163,8 @@
   .tag-snippet { display: inline-block; margin-left: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px;
     color: var(--text-faint); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; }
   .stale { opacity: 0.55; }
+  .fresh { color: var(--status-replied); font-weight: 600; }
+  .fresh::before { content: "● "; font-size: 9px; vertical-align: 1px; }
   .cards { display: flex; flex-direction: column; }
   .card { padding: 14px 16px; border-bottom: 1px solid var(--border); }
   .card:last-child { border-bottom: 0; }
@@ -290,7 +292,8 @@
 
   <div class="footer-note">
     Job matches are scored by AI against my profile by a daily GitHub Actions run; 85+ matches are also emailed.
-    Jobs stay here for 60 days after they're found, and postings over 30 days old are dimmed.
+    Only postings from the last 3 days are fetched; <span class="fresh">green</span> = posted in the last 24 hours (apply first).
+    Postings drop off after 30 days.
     <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read. Tech Signals come from
     <a href="https://docs.google.com/spreadsheets/d/1VK5Y0k9S7UPcNK9-uiqMMpPGqht72BlQcs30lAmys1I/edit" target="_blank">the sheet</a>.
   </div>
@@ -320,6 +323,18 @@ const SCHEMAS = {
 function localDay(d = new Date()) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
+function hoursAgo(iso) {
+  const t = Date.parse(iso || "");
+  return isNaN(t) ? null : Math.max(0, (Date.now() - t) / 3600000);
+}
+function ageText(iso) {
+  const h = hoursAgo(iso);
+  if (h === null) return "";
+  if (h < 1) return "just now";
+  if (h < 24) return `${Math.floor(h)}h ago`;
+  const d = Math.floor(h / 24);
+  return d === 1 ? "1 day ago" : `${d} days ago`;
+}
 function daysAgo(iso) {
   if (!iso) return null;
   const t = Date.parse(iso);
@@ -328,7 +343,7 @@ function daysAgo(iso) {
 const VIEWS = [
   ["today", "Today", r => r["Date Found"] === localDay()],
   ["week", "This week", r => r["Date Found"] >= localDay(new Date(Date.now() - 6 * 86400000))],
-  ["all", "All (60 days)", () => true],
+  ["all", "All (30 days)", () => true],
 ];
 function savedPref(key, fallback) {
   try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
@@ -412,6 +427,7 @@ async function fetchJobs() {
         "Date Found": j.date_found,
         "Posted": j.posted,
         "Age": daysAgo(j.posted),
+        "Hours": hoursAgo(j.posted),
         "Source": j.description_source || "snippet",
       }));
     } catch (e) { lastErr = e; }
@@ -444,14 +460,17 @@ function jobsInView(view) {
   return state.data["Job Leads"].filter(def[2]);
 }
 
-function postedText(a) {
-  return a === null || a === undefined ? '' : a <= 0 ? 'posted today' : a === 1 ? 'posted 1 day ago' : `posted ${a} days ago`;
+function postedText(iso) {
+  const t = ageText(iso);
+  return t ? `posted ${t}` : '';
 }
 
 function jobCard(r) {
   const n = parseFloat(r["Fit Score"]);
   const tone = statusClass(r.Status);
-  const meta = [r.Company, r.Location, postedText(r.Age)].filter(Boolean).map(esc).join(' · ');
+  const fresh = r.Hours !== null && r.Hours < 24;
+  const meta = [r.Company, r.Location].filter(Boolean).map(esc).join(' · ')
+    + (postedText(r.Posted) ? ` · <span class="${fresh ? 'fresh' : ''}">${esc(postedText(r.Posted))}</span>` : '');
   const snip = r.Source === 'snippet' ? '<span class="tag-snippet">snippet</span>' : '';
   return `<div class="card ${r.Age > 30 ? 'stale' : ''}">
     <div class="card-top">
@@ -582,9 +601,8 @@ function render() {
         const label = state.activeTab === 'Job Leads' ? 'View posting →' : (short.length > 45 ? short.slice(0,45)+'…' : short);
         html += `<td><a href="${esc(safeUrl(val))}" target="_blank" rel="noopener">${esc(label)}</a></td>`;
       } else if (col === 'Posted' && state.activeTab === 'Job Leads') {
-        const a = r.Age;
-        const txt = a === null || a === undefined ? '—' : a <= 0 ? 'today' : a === 1 ? '1 day ago' : `${a} days ago`;
-        html += `<td class="mono" title="${esc(String(val).slice(0,10))}">${esc(txt)}</td>`;
+        const fresh = r.Hours !== null && r.Hours < 24;
+        html += `<td class="mono ${fresh ? 'fresh' : ''}" title="${esc(String(val).slice(0,16).replace('T',' '))}">${esc(ageText(val) || '—')}</td>`;
       } else if (col === 'Reason' && state.activeTab === 'Job Leads') {
         const tag = r.Source === 'snippet' ? '<span class="tag-snippet" title="Scored from a short job-board snippet, not the full posting">snippet</span>' : '';
         html += `<td>${esc(val)}${tag}</td>`;

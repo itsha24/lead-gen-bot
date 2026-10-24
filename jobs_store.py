@@ -12,7 +12,8 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 STORE_PATH = os.path.join("docs", "data", "jobs.json")
-KEEP_DAYS = 60  # drop jobs found more than this many days ago to keep the file small
+KEEP_DAYS = 60          # drop jobs found more than this many days ago
+MAX_POSTING_AGE_DAYS = 30  # drop jobs whose posting is older than this — likely filled or closed
 LOCAL_TZ = ZoneInfo("America/Toronto")  # dates on the dashboard use your local day
 
 FIELDS = [
@@ -70,7 +71,9 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
         added.append(record)
         seen |= {job["url"], job_key(job)}
 
-    kept = [j for j in existing if (j.get("date_found") or today) >= cutoff]
+    posted_cutoff = (now - timedelta(days=MAX_POSTING_AGE_DAYS)).strftime("%Y-%m-%d")
+    kept = [j for j in existing if (j.get("date_found") or today) >= cutoff
+            and (j.get("posted") or today)[:10] >= posted_cutoff]
     jobs, keys = [], set()
     for j in sorted(added + kept, key=lambda j: j.get("fit_score") or 0, reverse=True):
         if _is_internship(j) or job_key(j) in keys:  # internships are never shown; repeats add nothing
@@ -87,5 +90,5 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
         )
     dropped = len(existing) - len(kept)
     print(f"[jobs_store] Added {len(added)} jobs; {len(jobs)} total"
-          + (f" (dropped {dropped} older than {KEEP_DAYS} days)." if dropped else "."))
+          + (f" (dropped {dropped} stale: posted over {MAX_POSTING_AGE_DAYS} days ago or found over {KEEP_DAYS} days ago)." if dropped else "."))
     return jobs
