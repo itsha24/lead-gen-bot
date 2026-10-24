@@ -3,7 +3,7 @@ name: Daily Job Matcher
 on:
   schedule:
     # Daily at 9:00am Eastern (13:00 UTC) — job search only
-    - cron: "0 13 * * *"
+    - cron: "7 13 * * *"
     # Extra weekly run at 11:00am Eastern (15:00 UTC) Monday — full run,
     # includes business discovery + tech checks
     - cron: "0 15 * * 1"
