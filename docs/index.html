@@ -223,7 +223,10 @@
   table.jobs col.c-job { width: 26%; } table.jobs col.c-reason { width: 40%; }
   table.jobs col.c-gaps { width: 17%; } table.jobs col.c-posted { width: 92px; }
   .job-title { font-weight: 600; color: var(--text) !important; line-height: 1.35; display: inline-block; }
-  .job-title:hover { color: var(--accent) !important; }
+  .job-title:hover { color: var(--accent) !important; text-decoration: underline; }
+  .job-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 7px; }
+  .job-links .tag-direct { margin-left: 0; }
+  .job-link { color: var(--accent) !important; font-size: 12.5px; font-weight: 600; }
   .job-meta { color: var(--text-muted); font-size: 12px; margin-top: 3px; line-height: 1.4; }
   .tier { display: block; margin-top: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); }
   .clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.45; }
@@ -922,7 +925,8 @@ function render() {
       if (jobsTab && col === 'Job') {
         html += `<td class="wrap"><a class="job-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
           <div class="job-meta">${[r.Company, r.Location].filter(Boolean).map(esc).join(' · ')}</div>
-          ${r.Direct ? '<span class="tag-direct" title="From the company\'s own careers page">apply direct</span>' : ''}</td>`;
+          <div class="job-links"><a class="job-link" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">View posting →</a>
+          ${r.Direct ? '<span class="tag-direct" title="From the company\'s own careers page">apply direct</span>' : ''}</div></td>`;
       } else if (jobsTab && col === 'Fit Score') {
         const n = parseFloat(val);
         html += `<td><span class="badge ${statusClass(r.Status)}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span><span class="tier">${esc(r.Status)}</span></td>`;
