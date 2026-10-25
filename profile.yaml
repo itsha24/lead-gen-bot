@@ -5,7 +5,7 @@
 name: Hassan Awan
 
 experience:
-  level: junior            # junior | intermediate
+  level: junior            # entry / junior. Intermediate roles are a stretch (see stretch_roles)
   years_professional: 2      # internships + contracts (UKG, Oshara, Lowkler/Zako) + freelance
   summary: >
     Software developer with internship and contract experience (UKG, Oshara,
@@ -13,11 +13,14 @@ experience:
     Java/Spring Boot backend; comfortable across the full stack.
 
 target_roles:
-  - Junior / Intermediate Software Developer
+  - Junior / entry-level Software Developer
   - Junior Backend Developer (Java, C#)
   - QA Automation / SDET
   - Junior Full-Stack Developer
   - Integration / Automation Developer
+
+stretch_roles:
+  - Intermediate roles asking for 2 years or less (worth a shot, never a top match)
 
 avoid_roles:
   - Senior, Staff, Principal, Lead, Manager, Architect

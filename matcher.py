@@ -147,10 +147,13 @@ SYSTEM_PROMPT = """You are a career advisor screening job postings for one speci
 Be honest and strict: a wasted application costs the candidate time, so do not inflate scores.
 
 Scoring rubric:
-- 85-100: Apply today. Right seniority, most required skills are "strong", no dealbreakers.
-- 65-84: Good fit. Right seniority, a gap or two in required skills that are learnable.
-- 40-64: Stretch. Seniority slightly high OR several required skills missing.
-- 0-39: Skip. Wrong seniority, wrong field, or any dealbreaker hit.
+- 85-100: Apply today. Junior/entry level, most required skills are "strong", no dealbreakers.
+- 65-84: Good fit. Junior/entry level, a gap or two in required skills that are learnable.
+- 40-64: Stretch. An intermediate role asking 2 years or less, OR several required skills missing.
+- 0-39: Skip. Asks for 3+ years, senior scope, wrong field, or any dealbreaker hit.
+
+Seniority: the candidate is junior with about 2 years. Label a role "intermediate" when it says
+intermediate/mid-level or expects independent ownership; "junior" for junior, entry-level or new-grad roles.
 
 Rules:
 - Judge seniority from responsibilities (mentoring, owning architecture, leading teams = senior),
@@ -203,6 +206,28 @@ def _model(provider: str) -> str:
     return os.environ.get("MATCHER_MODEL") or DEFAULT_MODELS[provider]
 
 
+# Hard limits applied after the AI scores, so seniority rules are enforced the same
+# way every time (and can be re-applied to jobs already saved). Junior is the target;
+# intermediate is a stretch; 3+ years is a skip.
+MAX_SCORE_SENIOR = 30
+MAX_SCORE_3_PLUS_YEARS = 35
+MAX_SCORE_INTERMEDIATE = 70
+
+
+def seniority_cap(seniority: str | None, years_required) -> int:
+    try:
+        years = int(years_required) if years_required is not None else None
+    except (TypeError, ValueError):
+        years = None
+    if seniority == "senior":
+        return MAX_SCORE_SENIOR
+    if years is not None and years >= 3:
+        return MAX_SCORE_3_PLUS_YEARS
+    if seniority == "intermediate":
+        return MAX_SCORE_INTERMEDIATE
+    return 100
+
+
 def _clean(result: dict) -> dict:
     """Guard against slightly-off model output so one bad row can't break the sheet."""
     score = int(round(float(result.get("fit_score", 0))))
@@ -212,6 +237,7 @@ def _clean(result: dict) -> dict:
     result.setdefault("seniority", "unclear")
     result.setdefault("years_required", None)
     result["reason"] = str(result.get("reason", "")).strip()
+    result["fit_score"] = min(result["fit_score"], seniority_cap(result["seniority"], result["years_required"]))
     return result
 
 

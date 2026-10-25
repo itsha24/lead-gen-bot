@@ -3,16 +3,17 @@
 # (QA / backend developer roles), matched to your resume skills.
 # Add/remove phrases to tune what counts as a relevant posting.
 JOB_KEYWORDS = [
+    # Junior-specific searches first: generic ones mostly return experienced roles.
+    "junior developer",
+    "junior software developer",
+    "développeur junior",
     "QA developer",
     "QA automation engineer",
     "software developer in test",
     "backend developer",
     "Java developer",
     "C# developer",
-    "ASP.NET developer",
-    "Spring Boot developer",
     "test automation engineer",
-    "Selenium automation",
 ]
 
 # ---- AI job matcher ----
