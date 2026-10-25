@@ -4,9 +4,9 @@ on:
   schedule:
     # Twice a day, Toronto time: 9:00am and 6:00pm (catches morning and afternoon/West Coast postings).
     # The Saturday 9:00am run is "full" (jobs + client leads); every other run is jobs only.
-    - cron: "0 9 * * *"
+    - cron: "37 6 * * *"
       timezone: "America/Toronto"
-    - cron: "0 18 * * *"
+    - cron: "37 15 * * *"
       timezone: "America/Toronto"
   workflow_dispatch: # manual "Run workflow" button in the Actions tab
     inputs:
