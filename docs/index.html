@@ -509,19 +509,36 @@ function b64decode(b64) {
   const bin = atob((b64 || "").replace(/\s/g, ""));
   return new TextDecoder().decode(Uint8Array.from(bin, c => c.charCodeAt(0)));
 }
+async function ghError(res, action) {
+  let detail = "";
+  try { detail = (await res.json()).message || ""; } catch { }
+  if (res.status === 401) return new Error("GitHub says the token is invalid or expired — create a new one");
+  if (res.status === 403 || res.status === 404)
+    return new Error(`the token can't ${action} lead-gen-bot (GitHub: "${detail || res.status}"). Edit the token: ` +
+      "Repository access → Only select repositories → lead-gen-bot, and Permissions → Contents → Read and write");
+  return new Error(`GitHub error ${res.status}${detail ? `: ${detail}` : ""}`);
+}
+async function ghCanSeeRepo() {
+  const res = await fetch(`https://api.github.com/repos/${REPO}`, {
+    headers: { Authorization: `Bearer ${sync.token}`, Accept: "application/vnd.github+json" }, cache: "no-store" });
+  if (!res.ok) throw await ghError(res, "see");
+}
 async function ghGetStatus() {
   const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${STATUS_PATH}?ref=main&t=${Date.now()}`, {
     headers: { Authorization: `Bearer ${sync.token}`, Accept: "application/vnd.github+json" }, cache: "no-store" });
-  if (res.status === 404) return { data: { jobs: {}, leads: {} }, sha: null };
-  if (res.status === 401 || res.status === 403) throw new Error("GitHub rejected the token (expired, or missing Contents: Read and write on lead-gen-bot)");
-  if (!res.ok) throw new Error(`GitHub error ${res.status}`);
+  if (res.status === 404) {
+    // Either the file doesn't exist yet, or the token can't see the repo (GitHub answers 404 for both).
+    await ghCanSeeRepo();
+    return { data: { jobs: {}, leads: {} }, sha: null };
+  }
+  if (!res.ok) throw await ghError(res, "read");
   const j = await res.json();
   return { data: JSON.parse(b64decode(j.content) || "{}"), sha: j.sha };
 }
 async function loadStatuses() {
   let remote = { jobs: {}, leads: {} };
   try {
-    if (sync.token) { remote = (await ghGetStatus()).data; sync.state = "synced"; sync.error = ""; }
+    if (sync.token) { remote = (await ghGetStatus()).data; sync.state = localStorageGet("syncWorked") ? "synced" : "connected"; sync.error = ""; }
     else {
       for (const url of STATUS_URLS) {
         try { const r = await fetch(`${url}?t=${Date.now()}`, { cache: "no-store" }); if (r.ok) { remote = await r.json(); break; } } catch { }
@@ -531,9 +548,10 @@ async function loadStatuses() {
   } catch (e) { sync.state = "error"; sync.error = e.message; }
   const backup = readBackup();
   sync.data = applyChanges(remote, backup);
-  if (sync.token && sync.state === "synced" && (Object.keys(backup.jobs).length || Object.keys(backup.leads).length)) saveStatuses();
+  if (sync.token && sync.state !== "error" && (Object.keys(backup.jobs).length || Object.keys(backup.leads).length)) saveStatuses();
   updateSyncBtn();
 }
+function localStorageGet(k) { try { return localStorage.getItem(k); } catch { return null; } }
 function getStatus(kind, key) { return sync.data[kind][key] || DEFAULTS[kind]; }
 function setStatus(kind, key, value) {
   sync.data = applyChanges(sync.data, { [kind]: { [key]: value } });
@@ -557,14 +575,14 @@ async function saveStatuses() {
                                  content: b64encode(JSON.stringify(merged, null, 1) + "\n"), ...(sha ? { sha } : {}) }),
         });
         if (res.status === 409 || res.status === 422) continue;  // someone else saved first: re-read and retry
-        if (res.status === 401 || res.status === 403) throw new Error("GitHub rejected the token (expired, or missing Contents: Read and write on lead-gen-bot)");
-        if (!res.ok) throw new Error(`GitHub error ${res.status}`);
+        if (!res.ok) throw await ghError(res, "save to");
         // Keep only changes made while this save was in flight.
         const now = readBackup();
         for (const kind of ["jobs", "leads"]) for (const k of Object.keys(backup[kind])) if (now[kind][k] === backup[kind][k]) delete now[kind][k];
         writeBackup(now);
         sync.data = applyChanges(merged, now);
         sync.state = "synced"; sync.error = "";
+        try { localStorage.setItem("syncWorked", "1"); } catch { }
         break;
       } catch (e) { sync.state = "error"; sync.error = e.message; break; }
     }
@@ -577,11 +595,13 @@ function updateSyncBtn() {
   const btn = document.getElementById("sync-btn"); if (!btn) return;
   btn.classList.toggle("synced", sync.state === "synced" && !pendingCount());
   btn.classList.toggle("error", sync.state === "error");
-  btn.textContent = sync.state === "error" ? "⇅ sync error"
+  btn.textContent = sync.state === "error" ? "⇅ sync error — tap for details"
     : !sync.token ? "⇅ this device only"
-    : pendingCount() ? "⇅ saving…" : "⇅ synced";
+    : pendingCount() ? "⇅ saving…"
+    : sync.state === "connected" ? "⇅ connected" : "⇅ synced";
   const msg = document.getElementById("sync-msg");
   if (msg) msg.textContent = sync.state === "error" ? `Couldn't sync: ${sync.error}. Your changes are kept on this device and will upload once it works.`
+    : sync.state === "connected" ? "Connected. Your first status change will be saved to GitHub — the button turns green once it works."
     : sync.token ? "Synced. Changes save to GitHub a second after you make them." : "Not set up on this device yet. Statuses are saved here only.";
 }
 
@@ -1020,7 +1040,7 @@ document.getElementById('sync-save').onclick = async () => {
   try { localStorage.setItem("ghToken", value); } catch { }
   document.getElementById('sync-msg').textContent = "Checking the token…";
   await loadStatuses();
-  if (sync.state === "synced") { await saveStatuses(); document.getElementById('sync-panel').hidden = true; await loadAll(false); }
+  if (sync.state !== "error") { await saveStatuses(); if (sync.state !== "error") document.getElementById('sync-panel').hidden = true; await loadAll(false); }
 };
 document.getElementById('sync-remove').onclick = () => {
   sync.token = ""; sync.state = "local";
