@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T16:26:42+00:00",
+ "updated": "2026-10-25T00:05:07+00:00",
  "jobs": [
   {
    "date_found": "2026-10-24",
@@ -24,6 +24,32 @@
    "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
    "description_source": "full posting",
    "source": "1Password careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Acquisition Software Developer",
+   "company": "Teledyne Technologies Incorporated",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5940719106?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:16Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Python",
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "C",
+    "C++"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Python and test automation match well, but the role requires 3 years of experience and heavy C/C++ development which is outside your strongest stack.",
+   "description": "Be visionary Teledyne Technologies Incorporated provides enabling technologies for industrial growth markets that require advanced technology and high reliability. These markets include aerospace and defense, factory automation, air and water quality environmental monitoring, electronics design and ",
+   "description_source": "full posting",
+   "source": "Adzuna"
   },
   {
    "date_found": "2026-10-24",
@@ -104,6 +130,83 @@
   },
   {
    "date_found": "2026-10-24",
+   "title": "Frontend Developer, Device Security",
+   "company": "1Password",
+   "location": "Remote (United States | Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/1password/e9f8842c-3ed3-4b89-bd55-f59cff9773cb",
+   "posted": "2026-10-20T19:13:28.677000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "React"
+   ],
+   "missing_required": [
+    "TypeScript"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your 2 years of experience match the seniority level and you have React, but you lack TypeScript and your strongest background is in Java/backend and QA automation rather than frontend.",
+   "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
+   "description_source": "full posting",
+   "source": "1Password careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Development Engineer in Test, Full Stack, Creativity Apps",
+   "company": "Apple Inc.",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5940718991?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:14Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "iOS/macOS test automation",
+    "CI/CD pipelines"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation background is a great match, but it requires 3 years of experience and mobile/macOS specific testing which is slightly above your junior level.",
+   "description": "Software Development Engineer in Test, Full Stack, Creativity Apps Vancouver, British Columbia, Canada Software and Services Imagine what you could do here. At Apple, new ideas have a way of becoming outstanding products, services, and customer experiences very quickly. Bring passion and dedication ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Full Stack Software Engineer",
+   "company": "Veta Virtual Inc.",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940719682?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:29Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "React",
+    "SQL / PostgreSQL",
+    "REST APIs",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Golang",
+    "Next.js",
+    "TypeScript",
+    "Node.js"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and SQL skills match well, but this intermediate role requires 3 years of experience and missing technologies like Golang and Next.js make it a stretch.",
+   "description": "Launch Your Next Successful Chapter with Veta Virtual! Competitive Pay | 100% Remote | Golang, Java, React, TypeScript | Fintech & Cryptocurrency Industry Veta Virtual is hiring a Full Stack Software Engineer for one of our high growth clients in the fintech and cryptocurrency industry. This is not ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
    "title": "Junior Security Engineer",
    "company": "1Password",
    "location": "Remote (United States | Canada) (remote)",
@@ -153,6 +256,58 @@
    "dealbreakers_hit": [],
    "reason": "Your Java and Spring Boot match well, but the role asks for 3 to 5 years of experience which is a stretch for your junior level.",
    "description": "About Us: Newfold Digital is a leading web technology company serving millions of customers globally. Our customers know us through our robust portfolio of brands. We have some of the industry's most prominent and storied go-to-market brands, including Bluehost, HostGator, Network Solutions, Domain.",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Software Development Engineer, Demand Tech",
+   "company": "Amazon",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5940719315?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:25Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 45,
+   "seniority": "senior",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "system design or architecture experience",
+    "3+ years of professional experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role leans senior with required system design experience and 3+ years of professional development, which is above your current 2 years of experience.",
+   "description": "Join Amazon's Reach Planning Engineering team within Demand Tech to build the next generation of advertising technology. In this role, you'll own, design, and deliver highly scalable systems that empower advertisers to plan campaigns and build strategies related to reach and other media planning cap",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Full-Stack AI Engineer",
+   "company": "Appnovation",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5940719538?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:27Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 45,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "React",
+    "SQL / PostgreSQL",
+    "REST APIs",
+    "Python"
+   ],
+   "missing_required": [
+    "4+ years in full-stack development",
+    "Vue.js or Nuxt.js",
+    "AI design tools (v0.dev, bolt.new, Lovable)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role is a stretch because it requires 4 years of experience and strong frontend/AI prototyping tools that are outside your core backend and QA focus.",
+   "description": "About Us Appnovation is a global, full-service digital partner that combines Strategy, Experience & Design, Engineering and Managed Services. We build digital solutions that deliver real impact today and serve as foundations for future growth. Bold ambition. Practical action. Endless possibilities. ",
    "description_source": "full posting",
    "source": "Adzuna"
   },
@@ -228,6 +383,87 @@
    "description": "Ready to do the most impactful work of your career? At Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it’s a place to be pushed past your perceived limits. If you'",
    "description_source": "full posting",
    "source": "Coinbase careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Chief Developer in Data Engineering",
+   "company": "Banque Nationale du Canada",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5940717343?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:50:48Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "Python",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "data architecture",
+    "data modeling",
+    "ETL and ELT data pipelines",
+    "Snowflake"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This role matches your avoid_roles list as it is a senior/lead position (\"Chief Developer\") requiring 5+ years of experience in data engineering architecture, which is outside your junior profile.",
+   "description": "Area(s) of interest: Business intelligence and data Location(s): Montreal A career as a Chief Developer in Data Engineering within the Data Strategy team in the Business Performance, Evolution and Processes sector at National Bank means acting as an analytical data specialist. Leveraging your expert",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Systems Design Engineer - dGPU / CPU Software Feature Enablement",
+   "company": "AMD",
+   "location": "Markham, York region",
+   "url": "https://www.adzuna.ca/details/5940718931?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:13Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "GPU architecture",
+    "systems engineering",
+    "ROCm / Linux GPU drivers"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior technical lead and systems design role which hits your avoid_roles criteria for senior and lead positions.",
+   "description": "ADVANCE YOUR CAREER. ADVANCE THE WORLD. At AMD, we believetechnology has the power to solve the world’s most important challenges. From advancing healthcare and scientific discovery to powering AI and the technologies people rely on every day, innovation at AMDis shapingthefuture. Whetheryou’redesig",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "DevOps Engineer",
+   "company": "Onset",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940717323?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:50:48Z",
+   "keyword_matched": "ASP.NET developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "C# / ASP.NET"
+   ],
+   "missing_required": [
+    "DevOps",
+    "Windows Server administration",
+    "SQL Server database administration"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This DevOps Engineer role is out of your target domain as you specialize in software development and QA automation rather than server administration, and it hits an avoid-role category for infrastructure/DevOps.",
+   "description": "Onset is seeking an experienced DevOps Engineer to support application development, SQL Server database administration, Windows server administration, Azure cloud services, DevOps operations, and system maintenance. This is a hybrid position . The contractor will be expected to work onsite two days ",
+   "description_source": "full posting",
+   "source": "Adzuna"
   },
   {
    "date_found": "2026-10-24",
@@ -384,6 +620,112 @@
    "dealbreakers_hit": [],
    "reason": "This is a senior DevOps role requiring 3-5 years of specialized infrastructure experience, which hits your avoid roles list and does not match your junior developer or QA profile.",
    "description": "Safe Software is looking for a DevOps III to join our FME Flow DevOps team. In this role, you'll help manage our CI/CD pipelines, Kubernetes clusters, and cloud infrastructure. You'll identify inefficiencies in our existing systems and make changes that streamline workflows and reduce cloud costs. Y",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Partner Engineer, Android Platform/ Galaxy AI",
+   "company": "Samsungresearchamerica",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940719387?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:26Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [
+    "software program management",
+    "software project management",
+    "Korean and English bilingual proficiency"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This senior-level Partner Engineer and product management role requires 5+ years of experience and hits your experience dealbreaker.",
+   "description": "Lab Summary: Are you passionate about transforming cutting-edge technologies into impactful services used by millions daily? At Mobile Platform Solutions (MPS), we are looking for an enthusiastic Android Partner Engineer to share their creative vision and contribute to building innovative applicatio",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Forward Deployed Engineer, Sovereign AI",
+   "company": "Urban Ridge Supplies",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5940719185?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:19Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "Agentic AI",
+    "RAG",
+    "Python production shipping"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "Your application is blocked because the role requires security clearance eligibility, and you lack strong production experience with Python, RAG, and agentic AI.",
+   "description": "Who are we? Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems. We’re training and deploying frontier models for enterprises who are building AI systems. We believe tha",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Forward Deployment Engineer",
+   "company": "Urban Ridge Supplies",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5940719548?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:27Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "DevOps/SRE tooling",
+    "Legacy enterprise modernization (WebSphere/WebLogic)"
+   ],
+   "dealbreakers_hit": [
+    "Senior role (Senior, Staff, Principal, Lead, Manager, Architect)"
+   ],
+   "reason": "This is a senior-level Forward Deployment Engineer role requiring extensive enterprise modernization and technical leadership, which hits your avoid_roles dealbreaker for senior positions.",
+   "description": "Project description The project is focused on improving the security, release reliability, maintainability, and operational resilience of business-critical banking applications. Forward Deployed Engineers will conduct targeted, hands-on engagements with development teams that are facing challenges w",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Digital Asset QA Engineer",
+   "company": "RBC",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5940719625?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:28Z",
+   "keyword_matched": "Selenium automation",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation skills match well, but this role requires mentoring team members and establishing standards, making it too senior for your experience level.",
+   "description": "Job DescriptionPrimary Responsibilities Design, develop, and execute comprehensive test strategies for smart contracts, blockchain integrations, and platform components Build and maintain automated test frameworks for smart contract testing (unit, integration, and scenario-based tests) Develop autom",
    "description_source": "full posting",
    "source": "Adzuna"
   },
@@ -588,6 +930,104 @@
   },
   {
    "date_found": "2026-10-24",
+   "title": "VP of Systems Engineering - Canada",
+   "company": "Bankjoy",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5940715621?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:50:26Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 10+ years — filtered without AI.",
+   "description": "Who We Are Bankjoy is a Y Combinator and Bessemer Venture Partner backed FinTech startup. We are changing the way community banks and credit unions do business, enabling them to become tech-driven and digital first. Bankjoy provides modern digital banking products including mobile banking, online ba",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "RF Hardware Developer (ULF/VLF)",
+   "company": "Syntronic - A Global Design House",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5940718926?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:13Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 10+ years — filtered without AI.",
+   "description": "Join Syntronic: Where Your Innovation Shapes the Future At Syntronic, we don't just follow industry trends—we set them! Join us in partnering with visionary companies and the brightest minds to turn ground-breaking ideas into reality. Imagine working on cutting-edge telecom advancements, pioneering ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Développeur Logiciel Backend",
+   "company": "EXFO Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5940719008?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:51:14Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Location: Montreal - Hybrid About Us We build mission-critical fiber monitoring and network visibility platforms used by leading telecommunications operators and data center providers worldwide. Our solutions enable real-time monitoring of fiber networks, including fault detection and localization, ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "AVP Full Stack Java/Angular Developer",
+   "company": "Citigroup Inc.",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5940717870?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:50:55Z",
+   "keyword_matched": "Spring Boot developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "The Applications Development Manager is an intermediate management level position responsible for providing full leadership and direction to a team of employees in an effort to establish and implement new or revised application systems and programs in coordination with the Technology team. The overa",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "KDB Developer / Développeur(euse) KDB",
+   "company": "Nöord Technologies Corporation",
+   "location": "Outremont, Montréal",
+   "url": "https://www.adzuna.ca/details/5939824743?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-23T21:26:16Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Q/KDB+",
+    "UNIX/Linux low-latency systems"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your background is in junior Java and QA, but this role requires extensive hands-on Q/KDB+ and low-latency trading system experience at a senior level.",
+   "description": "The French version of this job posting is below. / La version française de cette offre se trouve plus bas. At Nöord Technologies, we empower top-tier financial institutions with exceptional talent in banking and capital markets. For the needs of one of our prestigious clients, a major banking actor ",
+   "description_source": "full posting",
+   "source": "Adzuna"
+  },
+  {
+   "date_found": "2026-10-24",
    "title": "Développeur(euse) logiciel / Software Developer - Dynamics / Power Platform",
    "company": "Genetec",
    "location": "Montréal, Québec",
@@ -646,6 +1086,37 @@
    "description": "About Faire Faire is a technology wholesale platform built on the belief that the future is local. Independent retailers around the globe collectively represent a multi-hundred-billion-dollar wholesale market that has historically been fragmented and offline. At Faire, we're using the power of tech,",
    "description_source": "full posting",
    "source": "Faire careers"
+  },
+  {
+   "date_found": "2026-10-24",
+   "title": "Full Stack Software Developer (Java/React) (RQ11657) Government Services Integration Cluster",
+   "company": "Softline Technology Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5940717233?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-24T12:50:47Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 7,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "7 years of experience",
+    "Technical Lead experience",
+    "Dynamics 365",
+    "Power Platform",
+    "Azure"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior technical leadership and architecture role requiring 7 years of experience and hitting your dealbreaker, making it far above your junior level.",
+   "description": "Description Responsibilities: Technical Leadership Provide technical leadership, guidance, and mentorship to developers and technical team members. Lead by example as a hands‑on contributor while enabling team success and delivery excellence. Perform code reviews and establish development standards,",
+   "description_source": "full posting",
+   "source": "Adzuna"
   },
   {
    "date_found": "2026-10-23",
