@@ -168,10 +168,9 @@
   }
   .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(79,209,197,0.08); }
   .views { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  #job-controls { flex-wrap: wrap; gap: 10px; align-items: center; }
-  .pipeline-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; max-width: 100%; }
+  #job-controls.stack { flex-direction: column; align-items: flex-start; gap: 10px; }
   .views { max-width: 100%; overflow-x: auto; }
-  @media (max-width: 720px) { .pipeline-group { flex-direction: column; align-items: flex-start; gap: 6px; } }
+  @media (max-width: 720px) { .tab .long { display: none; } .tab { padding-left: 10px; padding-right: 10px; white-space: nowrap; } }
   .group-label { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
   .since { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); margin-top: 5px; }
   .view-btn {
@@ -345,13 +344,14 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" data-tab="Job Leads">Job Matches <span class="count" id="count-jobs">–</span></button>
-    <button class="tab" data-tab="Leads">Client Leads <span class="count" id="count-leads">–</span></button>
+    <button class="tab active" data-tab="Job Leads"><span class="long">Job </span>Matches <span class="count" id="count-jobs">–</span></button>
+    <button class="tab" data-tab="Applications"><span class="long">My </span>Applications <span class="count" id="count-apps">–</span></button>
+    <button class="tab" data-tab="Leads"><span class="long">Client </span>Leads <span class="count" id="count-leads">–</span></button>
   </div>
 
-  <div class="controls" id="job-controls">
+  <div class="controls stack" id="job-controls">
     <div class="views" id="view-chips"></div>
-    <div class="pipeline-group"><span class="group-label">My applications</span><div class="views" id="pipeline-chips"></div></div>
+    <div class="views" id="pipeline-chips"></div>
     <div class="views" id="sort-chips" title="Best now = fit score plus a boost for postings from the last 1-3 days"></div>
   </div>
 
@@ -367,7 +367,7 @@
   <div class="footer-note">
     Job matches are scored by AI against my profile by a daily GitHub Actions run; 85+ matches are also emailed.
     Only postings from the last 3 days are fetched; <span class="fresh">green</span> = posted in the last 24 hours (apply first).
-    Postings drop off after 30 days, unless they're in My applications (Saved, Applied, Interviewing).
+    Postings drop off after 30 days, unless they're in My Applications (Saved, Applied, Interviewing).
     <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read.
     <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. <br>Client leads: local businesses found weekly on Google Maps, websites audited, scored against services.yaml with a drafted first message.
     Your statuses (Applied, Contacted…) sync across devices once you set up ⇅ sync.
@@ -444,6 +444,7 @@ const PIPELINE = [
   ["interviewing", "Interviewing", r => r.Track === "Interviewing"],
 ];
 const isPipeline = view => PIPELINE.some(v => v[0] === view);
+const curView = () => state.tab === "Applications" ? state.appView : state.view;
 function savedPref(key, fallback) {
   try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
 }
@@ -454,7 +455,9 @@ function savePref(key, value) {
 let state = {
   view: savedPref("jobView", null),
   showLowFit: savedPref("showLowFit", "0") === "1",
-  activeTab: "Job Leads",
+  activeTab: "Job Leads",   // which data: "Job Leads" (also used by My Applications) or "Leads"
+  tab: "Job Leads",         // which top tab is open: "Job Leads", "Applications" or "Leads"
+  appView: null,
   data: { "Leads": [], "Job Leads": [] },
   search: "",
   statusFilter: null,
@@ -704,7 +707,7 @@ async function loadAll(showLoading = true) {
     r.TrackedAt = getStatusAt("jobs", r.URL);
     r.TrackedTs = Date.parse(r.TrackedAt || "") || 0;
   });
-  document.getElementById('count-jobs').textContent = jobsRes.status === "fulfilled" ? jobsRes.value.length : "!";
+  state.jobsLoaded = jobsRes.status === "fulfilled";
   document.getElementById('count-leads').textContent = techRes.status === "fulfilled"
     ? techRes.value.filter(l => l.Status === "New").length || techRes.value.length : "!";
   const updated = state.jobsUpdated ? `matches updated ${new Date(state.jobsUpdated).toLocaleString()}` : "no matches saved yet";
@@ -820,28 +823,27 @@ function renderViews() {
   const controls = document.getElementById('job-controls');
   controls.style.display = state.activeTab === "Job Leads" ? "" : "none";
   if (state.activeTab !== "Job Leads") return;
+  const apps = state.tab === "Applications";
   if (!state.view) {  // first visit: today if there's anything new, else this week
     state.view = jobsInView("today").length ? "today" : jobsInView("week").length ? "week" : "all";
   }
-  const fill = (boxId, views) => {
+  if (!state.appView) state.appView = ["applied", "interviewing", "saved"].find(v => jobsInView(v).length) || "applied";
+  const fill = (boxId, views, current, onPick) => {
     const box = document.getElementById(boxId);
     box.innerHTML = '';
     views.forEach(([key, label]) => {
       const b = document.createElement('button');
-      b.className = 'view-btn' + (state.view === key ? ' active' : '');
+      b.className = 'view-btn' + (current === key ? ' active' : '');
       b.innerHTML = `${esc(label)}<span class="n">${jobsInView(key).length}</span>`;
-      b.onclick = () => {
-        const wasPipeline = isPipeline(state.view);
-        state.view = key; savePref("jobView", key);
-        if (isPipeline(key)) { state.sortCol = "TrackedTs"; state.sortDir = -1; }      // most recent first
-        else if (wasPipeline) { state.sortCol = (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2]; state.sortDir = -1; }
-        render();
-      };
+      b.onclick = () => { onPick(key); render(); };
       box.appendChild(b);
     });
   };
-  fill('view-chips', VIEWS);
-  fill('pipeline-chips', PIPELINE);
+  document.getElementById('view-chips').style.display = apps ? "none" : "";
+  document.getElementById('sort-chips').style.display = apps ? "none" : "";
+  document.getElementById('pipeline-chips').style.display = apps ? "" : "none";
+  if (apps) fill('pipeline-chips', PIPELINE, state.appView, key => { state.appView = key; });
+  else fill('view-chips', VIEWS, state.view, key => { state.view = key; savePref("jobView", key); });
 }
 
 function renderSorts() {
@@ -858,15 +860,15 @@ function renderSorts() {
 
 function rowsForTab() {
   if (state.activeTab !== "Job Leads") return state.data[state.activeTab];
-  let rows = jobsInView(state.view);
-  if (isPipeline(state.view)) return rows;  // your own picks: show everything, whatever the score
+  let rows = jobsInView(curView());
+  if (isPipeline(curView())) return rows;  // your own picks: show everything, whatever the score
   if (!state.showLowFit && !state.statusFilter) rows = rows.filter(r => r.Status !== "Low fit");
   if (!state.showDismissed) rows = rows.filter(r => r.Track !== "Not interested");
   return rows;
 }
 
 function renderChips() {
-  const rows = state.activeTab === "Job Leads" ? jobsInView(state.view) : state.data[state.activeTab];
+  const rows = state.activeTab === "Job Leads" ? jobsInView(curView()) : state.data[state.activeTab];
   const statuses = [...new Set(rows.map(r => r.Status).filter(Boolean))];
   const container = document.getElementById('status-chips');
   container.innerHTML = '';
@@ -881,16 +883,16 @@ function renderChips() {
     container.appendChild(chip);
   });
   if (state.activeTab === "Job Leads") {
-    const low = jobsInView(state.view).filter(r => r.Status === "Low fit").length;
-    if (low && !state.statusFilter) {
+    const low = jobsInView(curView()).filter(r => r.Status === "Low fit").length;
+    if (low && !state.statusFilter && state.tab !== "Applications") {
       const t = document.createElement('button');
       t.className = 'chip' + (state.showLowFit ? ' active' : '');
       t.textContent = state.showLowFit ? `hide ${low} low fit` : `+ ${low} low fit hidden`;
       t.onclick = () => { state.showLowFit = !state.showLowFit; savePref("showLowFit", state.showLowFit ? "1" : "0"); render(); };
       container.appendChild(t);
     }
-    const dismissed = jobsInView(state.view).filter(r => r.Track === "Not interested").length;
-    if (dismissed) {
+    const dismissed = jobsInView(curView()).filter(r => r.Track === "Not interested").length;
+    if (dismissed && state.tab !== "Applications") {
       const d = document.createElement('button');
       d.className = 'chip' + (state.showDismissed ? ' active' : '');
       d.textContent = state.showDismissed ? `hide ${dismissed} not interested` : `+ ${dismissed} not interested hidden`;
@@ -900,12 +902,15 @@ function renderChips() {
   }
 }
 
+function updateCounts() {
+  document.getElementById('count-jobs').textContent = state.jobsLoaded === false ? "!" : state.data["Job Leads"].filter(r => r.Track === "—").length;
+  document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(r => !untracked(r)).length;
+}
+
 function render() {
+  updateCounts();
   renderViews();
-  if (state.activeTab === "Job Leads") {
-    renderSorts();
-    document.getElementById('sort-chips').style.display = isPipeline(state.view) ? "none" : "";
-  }
+  if (state.activeTab === "Job Leads" && state.tab !== "Applications") renderSorts();
   renderChips();
   const schema = SCHEMAS[state.activeTab];
   let rows = [...rowsForTab()];
@@ -937,10 +942,10 @@ function render() {
       none = "No client leads yet — they're found by the weekly run (Mondays), or run the workflow with mode 'full'.";
     if (state.activeTab === "Job Leads") {
       if (!state.data["Job Leads"].length) none = "No job matches yet — they appear after the next daily run.";
-      else if (state.view === "today" && !state.search && !state.statusFilter)
+      else if (curView() === "today" && !state.search && !state.statusFilter)
         none = "No new matches today yet — the bot runs at 9am and 6pm. Check This week.";
-      else if (isPipeline(state.view) && !state.search) {
-        const label = PIPELINE.find(v => v[0] === state.view)[1];
+      else if (isPipeline(curView()) && !state.search) {
+        const label = PIPELINE.find(v => v[0] === curView())[1];
         none = `Nothing in ${label} yet — set a job's Track to "${label}" and it moves here.`;
       }
     }
@@ -1053,11 +1058,12 @@ document.querySelectorAll('.tab').forEach(tab => {
   tab.onclick = () => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
-    state.activeTab = tab.dataset.tab;
+    state.tab = tab.dataset.tab;
+    state.activeTab = state.tab === "Applications" ? "Job Leads" : state.tab;
     state.statusFilter = null;
-    state.sortCol = state.activeTab === "Job Leads"
-      ? (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2]
-      : SCHEMAS[state.activeTab].sortDefault;
+    if (state.tab === "Applications") state.sortCol = "TrackedTs";                       // most recent first
+    else if (state.tab === "Job Leads") state.sortCol = (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2];
+    else state.sortCol = SCHEMAS[state.activeTab].sortDefault;
     state.sortDir = -1;
     render();
   };
