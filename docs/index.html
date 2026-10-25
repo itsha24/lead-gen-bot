@@ -204,6 +204,11 @@
   .lead-msg pre { white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.55; color: var(--text);
     background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 8px 0; }
   .lead-subject { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; }
+  .reach summary { color: var(--accent); }
+  .ro-label { font-size: 12px; font-weight: 600; color: var(--text-muted); margin: 12px 0 6px; }
+  .ro-label .chars { font-weight: 400; color: var(--text-faint); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; }
+  .ro-block pre { margin: 0 0 6px; }
+  .ro-foot { font-size: 11.5px; color: var(--text-faint); margin-top: 8px; }
   .card.lead .card-top { flex-wrap: wrap; }
   .lead-status { margin-left: auto; max-width: 140px; border: 0; cursor: pointer; font-family: 'JetBrains Mono', monospace; appearance: auto; }
   .card { padding: 14px 16px; border-bottom: 1px solid var(--border); }
@@ -585,6 +590,15 @@ async function loadStatuses() {
 function localStorageGet(k) { try { return localStorage.getItem(k); } catch { return null; } }
 function getStatus(kind, key) { return statusOf(sync.data[kind][key]) || DEFAULTS[kind]; }
 function getStatusAt(kind, key) { return statusTime(sync.data[kind][key]); }
+function followedUpAt(kind, key) { const v = sync.data[kind][key]; return (v && typeof v === "object") ? v.f || null : null; }
+function markFollowedUp(kind, key) {
+  const v = sync.data[kind][key];
+  const stored = { ...(v && typeof v === "object" ? v : { s: v || DEFAULTS[kind] }), f: new Date().toISOString() };
+  sync.data = applyChanges(sync.data, { [kind]: { [key]: stored } });
+  const backup = readBackup(); backup[kind][key] = stored; writeBackup(backup);
+  if (sync.token) { clearTimeout(sync.timer); sync.timer = setTimeout(saveStatuses, 700); }
+  updateSyncBtn();
+}
 function setStatus(kind, key, value) {
   const stored = value === DEFAULTS[kind] ? value : { s: value, t: new Date().toISOString() };
   sync.data = applyChanges(sync.data, { [kind]: { [key]: stored } });
@@ -695,6 +709,10 @@ async function fetchJobs() {
         "Priority": (j.fit_score ?? 0) + freshnessBonus(j.posted),
         "Source": j.description_source || "snippet",
         "Direct": j.keyword_matched === "company board",
+        "Matched": j.matched_skills || [],
+        "Note": j.outreach_note || "",
+        "EmailSubject": j.outreach_subject || "",
+        "Email": j.outreach_email || "",
       }));
     } catch (e) { lastErr = e; }
   }
@@ -719,6 +737,7 @@ async function loadAll(showLoading = true) {
     r.StatusTs = Date.parse(r.StatusAt || "") || 0;
   });
   state.data["Job Leads"].forEach(r => {
+    r.FollowedUpAt = followedUpAt("jobs", r.URL);
     r.Track = getStatus("jobs", r.URL);
     r.TrackedAt = getStatusAt("jobs", r.URL);
     r.TrackedTs = Date.parse(r.TrackedAt || "") || 0;
@@ -813,7 +832,81 @@ function wireTrackSelects(wrap) {
   });
 }
 
-function jobCard(r) {
+// Signature for outreach templates (the AI drafts use profile.yaml's contact section).
+const ME = { name: "Hassan Awan", portfolio: "https://itsha24.github.io/Portfolio/", linkedin: "https://www.linkedin.com/in/hawan24/" };
+const FOLLOW_UP_AFTER_DAYS = 7;
+const isFrench = r => /[éèàç]|\b(développeu|programmeu|analyste|logiciel|stagiaire|ingénieu)/i.test(`${r.Title} ${r.Reason}`)
+                      && /développ|logiciel|programm|analyste|ingénieu/i.test(r.Title);
+const li = q => `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(q)}`;
+function daysSince(iso) { const t = Date.parse(iso || ""); return isNaN(t) ? null : Math.floor((Date.now() - t) / 86400000); }
+function followUpDue(r) {
+  const d = daysSince(r.TrackedAt);
+  return r.Track === "Applied" && d !== null && d >= FOLLOW_UP_AFTER_DAYS && !r.FollowedUpAt;
+}
+
+function templates(r) {
+  const fr = isFrench(r), skills = (r.Matched || []).slice(0, 2).join(fr ? " et " : " and ") || (fr ? "l'automatisation des tests et le développement backend" : "test automation and backend development");
+  const sign = `${ME.name}\n${ME.portfolio}\n${ME.linkedin}`;
+  if (fr) return {
+    note: `Bonjour [Nom], j'ai postulé pour le poste ${r.Title} chez ${r.Company}. Mon expérience en ${skills} correspond bien au poste et j'aimerais beaucoup échanger avec vous.`.slice(0, 300),
+    subject: `Candidature – ${r.Title}`,
+    email: `Bonjour [Nom],\n\nJ'ai postulé pour le poste ${r.Title} chez ${r.Company}. Mon expérience en ${skills} correspond bien à ce que vous recherchez.\n\nSeriez-vous disponible pour un court appel, ou pourriez-vous m'indiquer la bonne personne à contacter?\n\nMerci,\n${sign}`,
+    followup: `Bonjour [Nom],\n\nJe fais un suivi concernant ma candidature au poste ${r.Title} chez ${r.Company}. Le poste m'intéresse toujours beaucoup — mon expérience en ${skills} y correspond bien. Y a-t-il autre chose que je pourrais vous transmettre?\n\nMerci,\n${sign}`,
+  };
+  return {
+    note: `Hi [Name], I just applied for the ${r.Title} role at ${r.Company}. My background in ${skills} lines up well with it, and I'd love to connect.`.slice(0, 300),
+    subject: `Application – ${r.Title}`,
+    email: `Hi [Name],\n\nI recently applied for the ${r.Title} role at ${r.Company}. My background in ${skills} lines up well with what the team is looking for.\n\nWould you be open to a quick chat, or could you point me to the right person?\n\nThanks,\n${sign}`,
+    followup: `Hi [Name],\n\nI'm following up on my application for the ${r.Title} role at ${r.Company}. I'm still very interested — my experience in ${skills} is a strong match. Is there anything else I can share to help with the process?\n\nThanks,\n${sign}`,
+  };
+}
+
+function copyBlock(id, label, text, extra = "") {
+  return `<div class="ro-block"><div class="ro-label">${esc(label)}${extra}</div>
+    <pre id="${id}">${esc(text)}</pre><button class="lead-btn copy-text" type="button" data-target="${id}">Copy</button></div>`;
+}
+
+function reachOutPanel(r, idx) {
+  const t = templates(r), ai = !!r.Email;
+  const note = r.Note || t.note, subject = r.EmailSubject || t.subject, email = r.Email || t.email;
+  const due = followUpDue(r);
+  const people = [
+    [`recruiter ${r.Company}`, "Recruiters"], [`talent acquisition ${r.Company}`, "Talent acquisition"],
+    [`${isFrench(r) ? "développeur" : "software developer"} ${r.Company}`, "Developers"],
+  ].map(([q, l]) => `<a class="lead-btn" href="${esc(li(q))}" target="_blank" rel="noopener">${esc(l)} at ${esc(r.Company)}</a>`).join("");
+  const followed = r.FollowedUpAt ? `<div class="since">followed up ${esc(ageText(r.FollowedUpAt))}</div>` : "";
+  return `<details class="lead-msg reach"${due ? " open" : ""}><summary>Reach out${due ? ' <span class="badge contacted">follow up due</span>' : ""}</summary>
+    <div class="ro-label">1. Find someone (opens LinkedIn search — pick a person yourself)</div>
+    <div class="lead-actions">${people}</div>
+    ${due ? copyBlock(`fu-${idx}`, "Follow-up message", t.followup) : ""}
+    ${copyBlock(`note-${idx}`, "2. LinkedIn connection note", note, ` <span class="chars">${note.length}/300</span>`)}
+    ${copyBlock(`mail-${idx}`, "3. Or an email", `Subject: ${subject}\n\n${email}`)}
+    <div class="ro-foot">${ai ? "Drafted by AI from the posting and your profile." : "Template — an AI-written draft replaces it after the next run."} Replace [Name] before sending.</div>
+    ${r.Track === "Applied" ? `<div class="lead-actions"><button class="lead-btn mark-fu" type="button" data-key="${esc(r.URL)}">${r.FollowedUpAt ? "Followed up again" : "Mark followed up"}</button></div>${followed}` : ""}
+  </details>`;
+}
+
+function wireReachOut(wrap) {
+  wrap.querySelectorAll('.copy-text').forEach(btn => {
+    btn.onclick = async () => {
+      const text = document.getElementById(btn.dataset.target).textContent;
+      try { await navigator.clipboard.writeText(text); btn.textContent = "Copied ✓"; }
+      catch { const rg = document.createRange(); rg.selectNodeContents(document.getElementById(btn.dataset.target));
+              const sel = getSelection(); sel.removeAllRanges(); sel.addRange(rg); btn.textContent = "Selected — Ctrl+C"; }
+      setTimeout(() => { btn.textContent = "Copy"; }, 2000);
+    };
+  });
+  wrap.querySelectorAll('.mark-fu').forEach(btn => {
+    btn.onclick = () => {
+      markFollowedUp("jobs", btn.dataset.key);
+      const row = state.data["Job Leads"].find(r => r.URL === btn.dataset.key);
+      if (row) row.FollowedUpAt = followedUpAt("jobs", row.URL);
+      render();
+    };
+  });
+}
+
+function jobCard(r, idx) {
   const n = parseFloat(r["Fit Score"]);
   const tone = statusClass(r.Status);
   const fresh = r.Hours !== null && r.Hours < 24;
@@ -832,6 +925,7 @@ function jobCard(r) {
     <div class="card-reason">${esc(r.Reason)}${snip}</div>
     ${r["Missing Skills"] ? `<div class="card-gaps">Gaps: ${esc(r["Missing Skills"])}</div>` : ''}
     <a class="card-link" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">View posting →</a>
+    ${state.tab === "Applications" ? reachOutPanel(r, idx) : ""}
   </div>`;
 }
 
@@ -953,7 +1047,8 @@ function updateCounts() {
   document.getElementById('count-leads').textContent = state.leadsLoaded === false ? "!" : leadsIn("New").length;
   document.getElementById('count-outreach').textContent = OUTREACH.reduce((n, [, label]) => n + leadsIn(label).length, 0);
   document.getElementById('count-jobs').textContent = state.jobsLoaded === false ? "!" : state.data["Job Leads"].filter(r => r.Track === "—").length;
-  document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(r => !untracked(r)).length;
+  const dueN = state.data["Job Leads"].filter(followUpDue).length;
+  document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(r => !untracked(r)).length + (dueN ? ` · ${dueN} follow-up` : "");
 }
 
 function render() {
@@ -1016,9 +1111,11 @@ function render() {
     wireLeadCards(wrap);
     return;
   }
-  if (state.activeTab === "Job Leads" && window.matchMedia("(max-width: 720px)").matches) {
-    wrap.innerHTML = '<div class="cards">' + rows.map(jobCard).join('') + '</div>';
+  if (state.activeTab === "Job Leads" && (state.tab === "Applications" || window.matchMedia("(max-width: 720px)").matches)) {
+    if (state.tab === "Applications") rows.sort((a, b) => followUpDue(b) - followUpDue(a) || b.TrackedTs - a.TrackedTs);
+    wrap.innerHTML = '<div class="cards">' + rows.map((r, i) => jobCard(r, i)).join('') + '</div>';
     wireTrackSelects(wrap);
+    wireReachOut(wrap);
     return;
   }
 

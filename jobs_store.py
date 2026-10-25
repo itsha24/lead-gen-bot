@@ -22,6 +22,7 @@ FIELDS = [
     "date_found", "title", "company", "location", "url", "posted", "keyword_matched",
     "fit_score", "seniority", "years_required", "matched_skills", "missing_required",
     "dealbreakers_hit", "reason", "description", "description_source", "source",
+    "outreach_note", "outreach_subject", "outreach_email",
 ]
 
 

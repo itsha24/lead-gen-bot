@@ -135,10 +135,23 @@ SCORE_TOOL = {
                 "type": "string",
                 "description": "One sentence on the main reason for the score, addressed to the candidate as 'you' (e.g. 'Your Java and QA automation match well, but it needs 3 years').",
             },
+            "outreach_note": {
+                "type": "string",
+                "description": "If fit_score >= 60: a LinkedIn connection note (max 280 characters) from the candidate to a recruiter or developer at the company. Otherwise an empty string.",
+            },
+            "outreach_subject": {
+                "type": "string",
+                "description": "If fit_score >= 60: a short email subject line. Otherwise an empty string.",
+            },
+            "outreach_email": {
+                "type": "string",
+                "description": "If fit_score >= 60: an 80-130 word email from the candidate to a recruiter at the company, signed with their name and links. Otherwise an empty string.",
+            },
         },
         "required": [
             "fit_score", "seniority", "years_required", "matched_skills",
             "missing_required", "dealbreakers_hit", "reason",
+            "outreach_note", "outreach_subject", "outreach_email",
         ],
     },
 }
@@ -167,7 +180,18 @@ Rules:
 - A role matching anything else under "avoid_roles" caps the score at 35, even if the
   skills match well. Say which avoid_roles entry it hit in the reason.
 - Job board descriptions are often short snippets. If key details are missing, score on what
-  is there and say so in the reason rather than guessing."""
+  is there and say so in the reason rather than guessing.
+
+Outreach drafts (only when fit_score >= 60; otherwise leave the three outreach fields empty):
+- Written by the candidate in first person to someone at the company (recruiter, hiring manager or
+  developer). Start with "Hi [Name]," so the candidate fills in the name.
+- Same language as the posting (French posting -> French, "vous").
+- Name the exact role title, say the candidate has applied, and give ONE concrete, true match between
+  their background (from the profile only) and the posting. Never invent experience, numbers or names.
+- Friendly and brief: no flattery, no "I hope this finds you well", no exclamation marks, no emoji.
+- The email ends with a one-line ask (a quick chat, or who the right person is) and a signature:
+  the candidate's name, portfolio and LinkedIn from the profile's contact section.
+- The LinkedIn note must be 280 characters or fewer and has no signature."""
 
 
 def load_profile(path: str = PROFILE_PATH) -> dict:
@@ -212,6 +236,7 @@ def _model(provider: str) -> str:
 MAX_SCORE_SENIOR = 30
 MAX_SCORE_3_PLUS_YEARS = 35
 MAX_SCORE_INTERMEDIATE = 70
+OUTREACH_MIN_FIT = 60  # jobs worth applying to get a drafted outreach message
 
 
 def seniority_cap(seniority: str | None, years_required) -> int:
@@ -238,6 +263,12 @@ def _clean(result: dict) -> dict:
     result.setdefault("years_required", None)
     result["reason"] = str(result.get("reason", "")).strip()
     result["fit_score"] = min(result["fit_score"], seniority_cap(result["seniority"], result["years_required"]))
+    for key in ("outreach_note", "outreach_subject", "outreach_email"):
+        result[key] = str(result.get(key) or "").strip()
+    if result["fit_score"] < OUTREACH_MIN_FIT:   # e.g. capped by the seniority rules after the AI wrote it
+        result["outreach_note"] = result["outreach_subject"] = result["outreach_email"] = ""
+    if len(result["outreach_note"]) > 300:      # LinkedIn connection notes are capped at 300 characters
+        result["outreach_note"] = result["outreach_note"][:297].rsplit(" ", 1)[0] + "…"
     return result
 
 
@@ -363,6 +394,65 @@ def score_posting(provider: str, client, profile: dict, posting: dict) -> dict:
     if provider == "gemini":
         return _clean(score_with_gemini(profile, posting))
     return _clean(score_with_claude(client, profile, posting))
+
+
+# ---------------------------------------------------------------------------
+# 2b. Outreach drafts for jobs you're already tracking (scored before drafts existed,
+#     or below the 60 cut-off but you applied anyway)
+# ---------------------------------------------------------------------------
+
+OUTREACH_TOOL = {
+    "name": "record_outreach",
+    "description": "Record outreach drafts for a job the candidate applied to.",
+    "input_schema": {
+        "type": "object",
+        "properties": {k: SCORE_TOOL["input_schema"]["properties"][k]
+                       for k in ("outreach_note", "outreach_subject", "outreach_email")},
+        "required": ["outreach_note", "outreach_subject", "outreach_email"],
+    },
+}
+
+
+def draft_outreach(jobs: list[dict], max_jobs: int = 8, deadline: float | None = None) -> int:
+    """Fill outreach_* on tracked jobs that lack them (in place). Returns how many were drafted."""
+    todo = [j for j in jobs if not j.get("outreach_email")][:max_jobs]
+    provider = pick_provider()
+    if not todo or not provider:
+        return 0
+    from posting_fetcher import fetch_full_description
+    client = None
+    if provider == "claude":
+        import anthropic
+        client = anthropic.Anthropic()
+    profile = load_profile()
+    system = SYSTEM_PROMPT.replace("(only when fit_score >= 60; otherwise leave the three outreach fields empty)",
+                                   "(always write them: the candidate already applied)")
+    done = 0
+    for i, job in enumerate(todo):
+        if deadline and time.monotonic() > deadline:
+            break
+        if provider == "gemini" and i:
+            time.sleep(GEMINI_DELAY_SECONDS)
+        posting = dict(job)
+        posting["description"] = fetch_full_description(job.get("url"), job.get("description") or "") or job.get("description") or ""
+        prompt = build_user_prompt(profile, posting).replace(
+            "Score this posting for the candidate using the record_fit tool.",
+            "The candidate has applied to this job. Write the outreach drafts using the record_outreach tool.")
+        try:
+            r = gemini_structured(system, prompt, OUTREACH_TOOL["input_schema"]) if provider == "gemini" \
+                else claude_structured(client, system, prompt, OUTREACH_TOOL)
+        except QuotaExhausted:
+            break
+        except Exception as e:
+            print(f"[matcher] Couldn't draft outreach for {job.get('title')} @ {job.get('company')}: {e}")
+            continue
+        job["outreach_note"] = str(r.get("outreach_note") or "").strip()[:300]
+        job["outreach_subject"] = str(r.get("outreach_subject") or "").strip()
+        job["outreach_email"] = str(r.get("outreach_email") or "").strip()
+        done += 1
+    if done:
+        print(f"[matcher] Drafted outreach for {done} job(s) you're tracking.")
+    return done
 
 
 # ---------------------------------------------------------------------------

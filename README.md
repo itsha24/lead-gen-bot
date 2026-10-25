@@ -60,6 +60,7 @@ There's no server or database. The workflow commits `docs/data/*.json` back to t
 ## Dashboard
 
 - **Job Matches:** Today / This week / All, sorted by *Best now*, *Fit score* or *Newest*. Postings under 24 hours old are green. Jobs from company career pages are tagged *apply direct*. You can mark a job Saved, Applied, Interviewing or Not interested.
+- **My Applications:** Saved / Applied / Interviewing. Each job has a **Reach out** panel: LinkedIn people searches for recruiters and developers at the company (you pick the person — nothing is automated on LinkedIn), plus a LinkedIn note (≤300 chars) and an email the LLM drafts from the posting and my profile in the same call that scores the job. Seven days after applying, a follow-up draft appears and the morning email reminds me (again at day 14) until I mark it followed up.
 - **Client Leads:** one card per business with the score, offer, what the audit found, Call / Email (pre-filled) / Website / Maps buttons, and the drafted message with a copy button. Status: New → Contacted → Replied → Won.
 - **Sync:** statuses are saved to `docs/data/status.json` through the GitHub API with a fine-grained token scoped to this one repo, so phone and laptop agree. Offline changes are kept locally and uploaded on the next sync; save conflicts are retried.
 - Works on phones (card layout) and escapes all job/business text before rendering.

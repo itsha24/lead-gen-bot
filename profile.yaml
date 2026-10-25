@@ -4,6 +4,11 @@
 
 name: Hassan Awan
 
+contact:   # used to sign outreach messages
+  email: awan.hassan@outlook.com
+  linkedin: https://www.linkedin.com/in/hawan24/
+  portfolio: https://itsha24.github.io/Portfolio/
+
 experience:
   level: junior            # entry / junior. Intermediate roles are a stretch (see stretch_roles)
   years_professional: 2      # internships + contracts (UKG, Oshara, Lowkler/Zako) + freelance

@@ -9,10 +9,10 @@ from config import (
     RUN_BUDGET_MINUTES,
 )
 from job_search import search_jobs
-from jobs_store import is_known, job_key, known_urls, load_jobs, save_jobs
+from jobs_store import is_known, job_key, known_urls, load_jobs, save_jobs, tracked_urls
 from lead_scorer import score_leads
 from leads_store import known_keys, lead_key, load_leads, save_leads
-from matcher import score_jobs
+from matcher import draft_outreach, score_jobs
 from notifier import send_job_digest
 from site_audit import audit_businesses
 
@@ -57,7 +57,9 @@ def run_job_search():
     scored = score_jobs(jobs, max_jobs=MAX_JOBS_PER_RUN, deadline=JOBS_DEADLINE)
     # Only AI-scored jobs are saved; unscored ones get another chance next run.
     scored = [j for j in scored if isinstance(j.get("fit_score"), int)]
-    send_job_digest(scored, min_score=EMAIL_MIN_SCORE, min_fit=EMAIL_MIN_FIT)
+    tracked = tracked_urls()
+    draft_outreach([j for j in stored if j.get("url") in tracked], deadline=JOBS_DEADLINE)
+    send_job_digest(scored, min_score=EMAIL_MIN_SCORE, min_fit=EMAIL_MIN_FIT, tracked_jobs=[j for j in stored if j.get("url") in tracked])
     save_jobs(stored, scored)
 
 
