@@ -11,9 +11,9 @@ on:
   workflow_dispatch: # manual "Run workflow" button in the Actions tab
     inputs:
       mode:
-        description: "jobs_only = job matching only · full = also business discovery (uses Places credits)"
+        description: "jobs_only = job matching only · full = also client leads (uses Places credits) · auto = full on Saturday mornings, else jobs_only (used by the outside scheduler)"
         type: choice
-        options: [jobs_only, full]
+        options: [jobs_only, full, auto]
         default: jobs_only
 
 # Lets the run save docs/data/jobs.json and leads.json (the dashboard's data) back to the repo.
@@ -47,7 +47,7 @@ jobs:
       - name: Determine run mode
         id: mode
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.mode }}" != "auto" ]; then
             echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
           elif [ "$(TZ=America/Toronto date +%u)" = "6" ] && [ "$(TZ=America/Toronto date +%H)" -lt 15 ]; then  # Saturday morning
             echo "mode=full" >> "$GITHUB_OUTPUT"
