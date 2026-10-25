@@ -12,6 +12,8 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 STORE_PATH = os.path.join("docs", "data", "jobs.json")
+STATUS_PATH = os.path.join("docs", "data", "status.json")  # written by the dashboard
+KEEP_FOREVER = {"Saved", "Applied", "Interviewing"}       # jobs you're tracking are never pruned
 KEEP_DAYS = 60          # drop jobs found more than this many days ago
 MAX_POSTING_AGE_DAYS = 30  # drop jobs whose posting is older than this — likely filled or closed
 LOCAL_TZ = ZoneInfo("America/Toronto")  # dates on the dashboard use your local day
@@ -32,6 +34,17 @@ def load_jobs(path: str = STORE_PATH) -> list[dict]:
     except (json.JSONDecodeError, OSError) as e:
         print(f"[jobs_store] Could not read {path} ({e}) — starting fresh.")
         return []
+
+
+def tracked_urls(path: str = STATUS_PATH) -> set[str]:
+    """URLs of jobs you've marked Saved / Applied / Interviewing on the dashboard."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            jobs = (json.load(f) or {}).get("jobs") or {}
+    except (OSError, json.JSONDecodeError):
+        return set()
+    status = lambda v: v.get("s") if isinstance(v, dict) else v
+    return {url for url, v in jobs.items() if status(v) in KEEP_FOREVER}
 
 
 def _is_internship(job: dict) -> bool:
@@ -72,8 +85,9 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
         seen |= {job["url"], job_key(job)}
 
     posted_cutoff = (now - timedelta(days=MAX_POSTING_AGE_DAYS)).strftime("%Y-%m-%d")
-    kept = [j for j in existing if (j.get("date_found") or today) >= cutoff
-            and (j.get("posted") or today)[:10] >= posted_cutoff]
+    keep = tracked_urls()
+    kept = [j for j in existing if j.get("url") in keep
+            or ((j.get("date_found") or today) >= cutoff and (j.get("posted") or today)[:10] >= posted_cutoff)]
     jobs, keys = [], set()
     for j in sorted(added + kept, key=lambda j: j.get("fit_score") or 0, reverse=True):
         if _is_internship(j) or job_key(j) in keys:  # internships are never shown; repeats add nothing
