@@ -10,6 +10,8 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 STORE_PATH = os.path.join("docs", "data", "leads.json")
+STATUS_PATH = os.path.join("docs", "data", "status.json")  # written by the dashboard
+KEEP_FOREVER = {"Contacted", "Replied", "Won"}            # leads you're working are never pruned
 KEEP_DAYS = 120  # outreach is slower than job hunting; keep leads around longer
 LOCAL_TZ = ZoneInfo("America/Toronto")
 
@@ -28,6 +30,21 @@ def _offer_names() -> dict:
             return {o["id"]: o["name"] for o in (yaml.safe_load(f) or {}).get("offers") or []}
     except Exception:
         return {}
+
+
+def tracked_keys(path: str | None = None) -> set[str]:
+    """Dashboard keys (place id, else website, else name) of leads in Outreach."""
+    try:
+        with open(path or STATUS_PATH, encoding="utf-8") as f:
+            leads = (json.load(f) or {}).get("leads") or {}
+    except (OSError, json.JSONDecodeError):
+        return set()
+    status = lambda v: v.get("s") if isinstance(v, dict) else v
+    return {k for k, v in leads.items() if status(v) in KEEP_FOREVER}
+
+
+def _dashboard_key(lead: dict) -> str:
+    return lead.get("place_id") or lead.get("website") or lead.get("name") or ""
 
 
 def lead_key(b: dict) -> str:
@@ -70,7 +87,8 @@ def save_leads(existing: list[dict], new: list[dict], path: str | None = None) -
         rec["date_found"] = today
         added.append(rec)
         seen.add(lead_key(b))
-    kept = [l for l in existing if (l.get("date_found") or today) >= cutoff]
+    keep = tracked_keys()
+    kept = [l for l in existing if _dashboard_key(l) in keep or (l.get("date_found") or today) >= cutoff]
     leads = sorted(added + kept, key=lambda l: (l.get("date_found") or "", l.get("lead_score") or 0), reverse=True)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:

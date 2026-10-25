@@ -170,7 +170,12 @@
   .views { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
   #job-controls.stack { flex-wrap: wrap; align-items: center; gap: 10px; }
   .views { max-width: 100%; overflow-x: auto; }
-  @media (max-width: 720px) { .tab .long { display: none; } .tab { padding-left: 10px; padding-right: 10px; white-space: nowrap; } }
+  .tab .short { display: none; }
+  @media (max-width: 720px) {
+    .tab .full { display: none; } .tab .short { display: inline; }
+    .tabs { overflow-x: auto; scrollbar-width: none; }
+    .tab { padding-left: 7px; padding-right: 7px; white-space: nowrap; font-size: 13.5px; }
+  }
   .group-label { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
   .since { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); margin-top: 5px; }
   .view-btn {
@@ -344,15 +349,19 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" data-tab="Job Leads"><span class="long">Job </span>Matches <span class="count" id="count-jobs">–</span></button>
-    <button class="tab" data-tab="Applications"><span class="long">My </span>Applications <span class="count" id="count-apps">–</span></button>
-    <button class="tab" data-tab="Leads"><span class="long">Client </span>Leads <span class="count" id="count-leads">–</span></button>
+    <button class="tab active" data-tab="Job Leads"><span class="full">Job Matches</span><span class="short">Jobs</span> <span class="count" id="count-jobs">–</span></button>
+    <button class="tab" data-tab="Applications"><span class="full">My Applications</span><span class="short">Applied</span> <span class="count" id="count-apps">–</span></button>
+    <button class="tab" data-tab="Leads"><span class="full">Client Leads</span><span class="short">Leads</span> <span class="count" id="count-leads">–</span></button>
+    <button class="tab" data-tab="Outreach">Outreach <span class="count" id="count-outreach">–</span></button>
   </div>
 
   <div class="controls stack" id="job-controls">
     <div class="views" id="view-chips"></div>
     <div class="views" id="pipeline-chips"></div>
     <div class="views" id="sort-chips" title="Best now = fit score plus a boost for postings from the last 1-3 days"></div>
+  </div>
+  <div class="controls" id="lead-controls" style="display:none">
+    <div class="views" id="outreach-chips"></div>
   </div>
 
   <div class="controls">
@@ -444,6 +453,9 @@ const PIPELINE = [
   ["interviewing", "Interviewing", r => r.Track === "Interviewing"],
 ];
 const isPipeline = view => PIPELINE.some(v => v[0] === view);
+// Client leads you've reached out to move to Outreach and are never pruned.
+const OUTREACH = [["contacted", "Contacted"], ["replied", "Replied"], ["won", "Won"]];
+const leadsIn = label => state.data["Leads"].filter(r => r.Status === label);
 const curView = () => state.tab === "Applications" ? state.appView : state.view;
 function savedPref(key, fallback) {
   try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
@@ -701,15 +713,18 @@ async function loadAll(showLoading = true) {
   else state.errors["Job Leads"] = `Couldn't load job matches (${jobsRes.reason.message}).`;
   if (techRes.status === "fulfilled") state.data["Leads"] = techRes.value;
   else state.errors["Leads"] = `Couldn't load client leads (${techRes.reason.message}).`;
-  state.data["Leads"].forEach(r => { r.Status = getStatus("leads", r.key); });
+  state.data["Leads"].forEach(r => {
+    r.Status = getStatus("leads", r.key);
+    r.StatusAt = getStatusAt("leads", r.key);
+    r.StatusTs = Date.parse(r.StatusAt || "") || 0;
+  });
   state.data["Job Leads"].forEach(r => {
     r.Track = getStatus("jobs", r.URL);
     r.TrackedAt = getStatusAt("jobs", r.URL);
     r.TrackedTs = Date.parse(r.TrackedAt || "") || 0;
   });
   state.jobsLoaded = jobsRes.status === "fulfilled";
-  document.getElementById('count-leads').textContent = techRes.status === "fulfilled"
-    ? techRes.value.filter(l => l.Status === "New").length || techRes.value.length : "!";
+  state.leadsLoaded = techRes.status === "fulfilled";
   const updated = state.jobsUpdated ? `matches updated ${new Date(state.jobsUpdated).toLocaleString()}` : "no matches saved yet";
   document.getElementById('last-updated').textContent = `${updated} · refreshed ${new Date().toLocaleTimeString()}`;
   render();
@@ -740,6 +755,7 @@ function leadCard(r) {
     </div>
     <a class="card-title" href="${esc(safeUrl(l.maps_url || l.website))}" target="_blank" rel="noopener">${esc(l.name)}</a>
     <div class="card-meta">${meta}</div>
+    ${r.Status !== "New" && r.StatusAt ? `<div class="since">${esc(r.Status.toLowerCase())} ${esc(ageText(r.StatusAt))}</div>` : ""}
     <div class="card-reason">${esc(l.why)}</div>
     ${opps ? `<ul class="lead-opps">${opps}</ul>` : ""}
     <div class="lead-actions">
@@ -761,7 +777,7 @@ function wireLeadCards(wrap) {
     const row = state.data["Leads"].find(r => r.key === key);
     card.querySelector('.lead-status').onchange = (e) => {
       setStatus("leads", key, e.target.value);
-      if (row) row.Status = e.target.value;
+      if (row) { row.Status = e.target.value; row.StatusAt = getStatusAt("leads", key); row.StatusTs = Date.parse(row.StatusAt || "") || 0; }
       render();
     };
     const copy = card.querySelector('.copy');
@@ -819,6 +835,21 @@ function jobCard(r) {
   </div>`;
 }
 
+function renderOutreachViews() {
+  const box = document.getElementById('lead-controls');
+  box.style.display = state.tab === "Outreach" ? "" : "none";
+  if (state.tab !== "Outreach") return;
+  const row = document.getElementById('outreach-chips');
+  row.innerHTML = '';
+  OUTREACH.forEach(([key, label]) => {
+    const b = document.createElement('button');
+    b.className = 'view-btn' + (state.outreachView === key ? ' active' : '');
+    b.innerHTML = `${esc(label)}<span class="n">${leadsIn(label).length}</span>`;
+    b.onclick = () => { state.outreachView = key; render(); };
+    row.appendChild(b);
+  });
+}
+
 function renderViews() {
   const controls = document.getElementById('job-controls');
   controls.style.display = state.activeTab === "Job Leads" ? "" : "none";
@@ -859,6 +890,11 @@ function renderSorts() {
 }
 
 function rowsForTab() {
+  if (state.tab === "Outreach") {
+    if (!state.outreachView) state.outreachView = OUTREACH.find(([, l]) => leadsIn(l).length)?.[0] || "contacted";
+    return leadsIn(OUTREACH.find(v => v[0] === state.outreachView)[1]);
+  }
+  if (state.tab === "Leads") return state.data["Leads"].filter(r => r.Status === "New" || (state.showDismissedLeads && r.Status === "Not interested"));
   if (state.activeTab !== "Job Leads") return state.data[state.activeTab];
   let rows = jobsInView(curView());
   if (isPipeline(curView())) return rows;  // your own picks: show everything, whatever the score
@@ -872,6 +908,17 @@ function renderChips() {
   const statuses = [...new Set(rows.map(r => r.Status).filter(Boolean))];
   const container = document.getElementById('status-chips');
   container.innerHTML = '';
+  if (state.activeTab === "Leads") {
+    const ni = leadsIn("Not interested").length;
+    if (state.tab === "Leads" && ni) {
+      const d = document.createElement('button');
+      d.className = 'chip' + (state.showDismissedLeads ? ' active' : '');
+      d.textContent = state.showDismissedLeads ? `hide ${ni} not interested` : `+ ${ni} not interested hidden`;
+      d.onclick = () => { state.showDismissedLeads = !state.showDismissedLeads; render(); };
+      container.appendChild(d);
+    }
+    return;
+  }
   statuses.forEach(s => {
     const chip = document.createElement('button');
     chip.className = 'chip' + (state.statusFilter === s ? ' active' : '');
@@ -903,12 +950,16 @@ function renderChips() {
 }
 
 function updateCounts() {
+  document.getElementById('count-leads').textContent = state.leadsLoaded === false ? "!" : leadsIn("New").length;
+  document.getElementById('count-outreach').textContent = OUTREACH.reduce((n, [, label]) => n + leadsIn(label).length, 0);
   document.getElementById('count-jobs').textContent = state.jobsLoaded === false ? "!" : state.data["Job Leads"].filter(r => r.Track === "—").length;
   document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(r => !untracked(r)).length;
 }
 
 function render() {
   updateCounts();
+  if (state.tab === "Outreach") rowsForTab();  // picks a default bucket before drawing the buttons
+  renderOutreachViews();
   renderViews();
   if (state.activeTab === "Job Leads" && state.tab !== "Applications") renderSorts();
   renderChips();
@@ -939,7 +990,12 @@ function render() {
   if (rows.length === 0) {
     let none = "Nothing matches this view.";
     if (state.activeTab === "Leads" && !state.data["Leads"].length)
-      none = "No client leads yet — they're found by the weekly run (Mondays), or run the workflow with mode 'full'.";
+      none = "No client leads yet — they're found by the Saturday morning run, or run the workflow with mode 'full'.";
+    else if (state.tab === "Outreach" && !state.search) {
+      const label = OUTREACH.find(v => v[0] === state.outreachView)[1];
+      none = `Nothing in ${label} yet — set a lead's status to "${label}" and it moves here.`;
+    } else if (state.tab === "Leads" && !state.search)
+      none = "You've worked through every lead — new ones arrive Saturday morning. See them under Outreach.";
     if (state.activeTab === "Job Leads") {
       if (!state.data["Job Leads"].length) none = "No job matches yet — they appear after the next daily run.";
       else if (curView() === "today" && !state.search && !state.statusFilter)
@@ -954,7 +1010,8 @@ function render() {
   }
 
   if (state.activeTab === "Leads") {
-    rows.sort((a, b) => (b.Status === "New") - (a.Status === "New") || (b.Score ?? 0) - (a.Score ?? 0));
+    if (state.tab === "Outreach") rows.sort((a, b) => b.StatusTs - a.StatusTs);  // most recent first
+    else rows.sort((a, b) => (b.Status === "New") - (a.Status === "New") || (b.Score ?? 0) - (a.Score ?? 0));
     wrap.innerHTML = '<div class="cards">' + rows.map(leadCard).join('') + '</div>';
     wireLeadCards(wrap);
     return;
@@ -1059,7 +1116,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     state.tab = tab.dataset.tab;
-    state.activeTab = state.tab === "Applications" ? "Job Leads" : state.tab;
+    state.activeTab = state.tab === "Applications" ? "Job Leads" : state.tab === "Outreach" ? "Leads" : state.tab;
     state.statusFilter = null;
     if (state.tab === "Applications") state.sortCol = "TrackedTs";                       // most recent first
     else if (state.tab === "Job Leads") state.sortCol = (SORTS.find(x => x[0] === savedPref("jobSort", "best")) || SORTS[0])[2];
