@@ -216,8 +216,20 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: auto;   /* never cut columns off: scroll sideways if the window is narrow */
   }
+  table.jobs { min-width: 860px; table-layout: fixed; }
+  table.jobs col.c-fit { width: 96px; } table.jobs col.c-track { width: 138px; }
+  table.jobs col.c-job { width: 26%; } table.jobs col.c-reason { width: 40%; }
+  table.jobs col.c-gaps { width: 17%; } table.jobs col.c-posted { width: 92px; }
+  .job-title { font-weight: 600; color: var(--text) !important; line-height: 1.35; display: inline-block; }
+  .job-title:hover { color: var(--accent) !important; }
+  .job-meta { color: var(--text-muted); font-size: 12px; margin-top: 3px; line-height: 1.4; }
+  .tier { display: block; margin-top: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); }
+  .clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.45; }
+  .clamp.open { display: block; }
+  .more { background: none; border: 0; padding: 2px 0 0; color: var(--accent); cursor: pointer; font-size: 12px; font-family: 'Inter', sans-serif; }
+  td.wrap { overflow-wrap: anywhere; }
 
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
 
@@ -370,7 +382,7 @@ const LEAD_STATUSES = ["New", "Contacted", "Replied", "Won", "Not interested"];
 const SCHEMAS = {
   "Leads": { columns: [], sortDefault: "Score" },
   "Job Leads": {
-    columns: ["Fit Score", "Status", "Track", "Title", "Company", "Location", "Reason", "Missing Skills", "Posted", "URL"],
+    columns: ["Fit Score", "Track", "Job", "Reason", "Missing Skills", "Posted"],
     sortDefault: "Priority",
   }
 };
@@ -610,6 +622,7 @@ async function fetchJobs() {
         "Fit Score": j.fit_score,
         "Status": (TIERS.find(([min]) => (j.fit_score ?? 0) >= min) || TIERS[3])[1],
         "Title": j.title,
+        "Job": j.title,
         "Company": j.company,
         "Location": j.location,
         "Reason": j.reason,
@@ -884,19 +897,41 @@ function render() {
 
   const displayCols = schema.columns.filter(c => c !== 'Error' || rows.some(r => r.Error));
 
-  let html = '<table><thead><tr>';
+  const jobsTab = state.activeTab === 'Job Leads';
+  const SORT_KEY = { "Posted": "PostedTs", "Job": "Job", "Fit Score": "Fit Score" };
+  let html = jobsTab
+    ? '<table class="jobs"><colgroup><col class="c-fit"><col class="c-track"><col class="c-job"><col class="c-reason"><col class="c-gaps"><col class="c-posted"></colgroup><thead><tr>'
+    : '<table><thead><tr>';
   displayCols.forEach(col => {
-    const sorted = state.sortCol === col ? ' sorted' : '';
-    const arrow = state.sortCol === col ? (state.sortDir === 1 ? ' ↑' : ' ↓') : '';
-    html += `<th class="${sorted.trim()}" data-col="${esc(col)}">${esc(col)}${arrow}</th>`;
+    const key = jobsTab ? (SORT_KEY[col] || "") : col;
+    const sorted = key && state.sortCol === key ? ' sorted' : '';
+    const arrow = key && state.sortCol === key ? (state.sortDir === 1 ? ' ↑' : ' ↓') : '';
+    html += `<th class="${sorted.trim()}" data-col="${esc(key)}">${esc(col)}${arrow}</th>`;
   });
   html += '</tr></thead><tbody>';
+  const clamp = (text, extra = '') => {
+    const t = String(text ?? '');
+    return t.length > 170 ? `<div class="clamp">${esc(t)}${extra}</div><button class="more" type="button">more</button>`
+                          : `<div>${esc(t)}${extra}</div>`;
+  };
 
   rows.forEach(r => {
     html += `<tr class="${r.Age !== null && r.Age > 30 ? 'stale' : ''}">`;
     displayCols.forEach(col => {
       const val = r[col] ?? '';
-      if (col === 'Track') {
+      if (jobsTab && col === 'Job') {
+        html += `<td class="wrap"><a class="job-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
+          <div class="job-meta">${[r.Company, r.Location].filter(Boolean).map(esc).join(' · ')}</div>
+          ${r.Direct ? '<span class="tag-direct" title="From the company\'s own careers page">apply direct</span>' : ''}</td>`;
+      } else if (jobsTab && col === 'Fit Score') {
+        const n = parseFloat(val);
+        html += `<td><span class="badge ${statusClass(r.Status)}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span><span class="tier">${esc(r.Status)}</span></td>`;
+      } else if (jobsTab && col === 'Reason') {
+        const tag = r.Source === 'snippet' ? ' <span class="tag-snippet" title="Scored from a short job-board snippet, not the full posting">snippet</span>' : '';
+        html += `<td class="wrap">${clamp(val, tag)}</td>`;
+      } else if (jobsTab && col === 'Missing Skills') {
+        html += `<td class="wrap muted">${clamp(val)}</td>`;
+      } else if (col === 'Track') {
         html += `<td>${trackSelect(r)}</td>`;
       } else if (col === 'Status') {
         html += `<td><span class="badge ${statusClass(val)}"><span class="dot"></span>${esc(val || 'New')}</span></td>`;
@@ -929,12 +964,20 @@ function render() {
   html += '</tbody></table>';
   wrap.innerHTML = html;
   wireTrackSelects(wrap);
+  wrap.querySelectorAll('.more').forEach(btn => {
+    btn.onclick = () => {
+      const box = btn.previousElementSibling;
+      box.classList.toggle('open');
+      btn.textContent = box.classList.contains('open') ? 'less' : 'more';
+    };
+  });
 
   wrap.querySelectorAll('th').forEach(th => {
     th.onclick = () => {
       const col = th.dataset.col;
+      if (!col) return;  // not a sortable column
       if (state.sortCol === col) { state.sortDir *= -1; }
-      else { state.sortCol = col; state.sortDir = 1; }
+      else { state.sortCol = col; state.sortDir = ["Job", "Title", "Company"].includes(col) ? 1 : -1; }  // numbers/dates: highest/newest first
       render();
     };
   });
