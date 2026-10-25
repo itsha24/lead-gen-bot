@@ -168,7 +168,7 @@
   }
   .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(79,209,197,0.08); }
   .views { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  #job-controls.stack { flex-direction: column; align-items: flex-start; gap: 10px; }
+  #job-controls.stack { flex-wrap: wrap; align-items: center; gap: 10px; }
   .views { max-width: 100%; overflow-x: auto; }
   @media (max-width: 720px) { .tab .long { display: none; } .tab { padding-left: 10px; padding-right: 10px; white-space: nowrap; } }
   .group-label { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
