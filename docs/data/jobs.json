@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T17:11:31+00:00",
+ "updated": "2026-10-26T23:18:46+00:00",
  "jobs": [
   {
    "date_found": "2026-10-26",
@@ -78,6 +78,285 @@
    "dealbreakers_hit": [],
    "reason": "This is an intermediate software developer role involving broad ownership of proprietary systems and AI integration without specifying entry-level requirements, making it a stretch for your experience level.",
    "description": "Job DescriptionJob Description:\\n\\nSoftware Developer Salary: $100,000–$110,000 CAD annually Responsibilities The Software Developer will be responsible for the design, development, implementation, integration, maintenance, and continuous improvement of software applications, artificial intelligence",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Android Engineer, Identity Product",
+   "company": "Stripe",
+   "location": "San Francisco, CA; Seattle, WA; New York City, NY",
+   "url": "https://stripe.com/jobs/search?gh_jid=8311069",
+   "posted": "2026-10-26T20:50:46+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Android development",
+    "Kotlin",
+    "mobile SDK development"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of experience"
+   ],
+   "reason": "Your background matches Java and APIs, but this role requires 3+ years of experience and specialized Android SDK development.",
+   "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies from the world’s largest enterprises to the most ambitious startups use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "iOS Engineer, Identity Product",
+   "company": "Stripe",
+   "location": "San Francisco, CA; Seattle, WA; New York City, NY",
+   "url": "https://stripe.com/jobs/search?gh_jid=8311082",
+   "posted": "2026-10-26T20:53:41+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "React Native",
+    "REST APIs",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Swift",
+    "Objective-C",
+    "iOS development"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of professional software-development experience"
+   ],
+   "reason": "Your React Native and API background matches the team's scope, but this role requires 3+ years of experience and deep iOS/Swift development which you do not have.",
+   "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies from the world’s largest enterprises to the most ambitious startups use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Security Engineer, Corporate Security",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8319444?gh_jid=8319444",
+   "posted": "2026-10-26T20:47:39+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 3,
+   "matched_skills": [],
+   "missing_required": [
+    "security engineering experience",
+    "endpoint security",
+    "macOS or endpoint hardening"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of experience in a specialized non-entry field"
+   ],
+   "reason": "Your background is in general software development and QA automation, but this role requires 3+ years of specialized security engineering experience.",
+   "description": "Ready to do the most impactful work of your career? At Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it’s a place to be pushed past your perceived limits. If you'",
+   "description_source": "full posting",
+   "source": "Coinbase careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Engineer, AI & Software Testing",
+   "company": "Magna International, Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5941898724?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-25T22:18:06Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Machine Learning",
+    "Automotive industry experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of experience"
+   ],
+   "reason": "Your Python skills match the AI testing scope, but the role requires 3+ years of experience which hits your dealbreaker.",
+   "description": "What we offer: At Magna, you can expect an engaging and dynamic environment where you can help to develop industry-leading automotive technologies. We invest in our employees, providing them with the support and resources they need to succeed. As a member of our global team, you can expect exciting,",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Software Development Engineer - AI Infrastructure Development Platform",
+   "company": "Workday",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5942366301?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T13:07:23Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "3+ years of experience",
+    "Kubernetes",
+    "Distributed systems",
+    "AI infrastructure or MLOps"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Python skills match, but this role requires 3+ years of experience and hits your dealbreaker threshold.",
+   "description": "Your work days are brighter here. We’re obsessed with making hard work pay off, for our people, our customers, and the world around us. As a Fortune 500 company and a leading AI platform for managing people, money, and agents, we’re shaping the future of work so teams can reach their potential and f",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Forward Deployed Engineer, Infrastructure Specialist (Public Sector)",
+   "company": "FDE Times",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5942365927?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T13:07:00Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Kubernetes",
+    "Helm",
+    "Cloud infrastructure / DevOps"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "Your background is in Java development and QA automation, but this role requires active Top Secret security clearance, hitting your dealbreakers.",
+   "description": "Coherence is the leading security‑first enterprise AI company. We build cutting‑edge foundation AI models and end‑to‑end products that are designed to solve real‑world business problems. We’re training and deploying frontier models for enterprises who are building AI systems. We believe that our wor",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "ETL Consultant",
+   "company": "Analyst Technical Solutions",
+   "location": "North York, Toronto",
+   "url": "https://www.adzuna.ca/details/5942365259?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T13:06:38Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Description Employment Ontario is one of the major programs delivered by the Employment and Training Division of the Ontario Ministry of Training, Colleges and Universities. Employment Ontario helps the citizens of Ontario gain the training, skills and experience to achieve their goals. The Employme",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Quality Engineer - Automotive",
+   "company": "Almag Aluminum",
+   "location": "Brampton, Peel region",
+   "url": "https://www.adzuna.ca/details/5942647195?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T14:08:21Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Reporting directly to the Quality Manager, this role is responsible for supporting and advancing the objectives of the Quality Department through active participation in quality system development, continuous improvement initiatives, and cross-functional collaboration. The position requires a soluti",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Large Loss Claims Handler",
+   "company": "Zego",
+   "location": "Halifax region, Nova Scotia",
+   "url": "https://www.adzuna.ca/details/5942366349?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T13:07:26Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "insurance claims management",
+    "liability and indemnity",
+    "legal frameworks (CPR, MIB)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an insurance claims handling role, which completely falls outside your technical software development background.",
+   "description": "About Zego At Zego, we're on a mission to do the good thing, not the insurance thing. Insurance hasn't changed much in over a century. The way we live, work and travel has. We're building the real-time, AI-driven infrastructure that powers innovative insurance, so good drivers get cover that works t",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Subject Matter Expert (SME) - Generative AI Neurology/Neuroscience",
+   "company": "Cactus Communications",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5942365883?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T13:06:57Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "MD degree",
+    "Active U.S. clinical license",
+    "Board certification in Internal Medicine"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior medical and research role requiring an MD degree and clinical license, which does not match your software development background.",
+   "description": "Freelance Subject Matter Experts (GenAI in Medical Research) We are seeking accomplished physician-researchers to serve as Subject Matter Experts (SME) in the field of Generative AI for medical research. The SME will be instrumental in supporting the development and validation of Generative AI (GenA",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -497,5 +776,6 @@
   "rq11617 ux designer junior|maarut": "2026-10-26",
   "https://www.adzuna.ca/details/5939602335?utm_medium=api&utm_source=67a2fd52": "2026-10-26",
   "ux designer|vtech solution": "2026-10-26"
- }
+ },
+ "pending": []
 }
