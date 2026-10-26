@@ -3,16 +3,17 @@ import time
 from urllib.parse import urlparse
 
 from business_discovery import find_businesses
-from company_boards import fetch_company_jobs
+from company_boards import _relevant as relevant_role, fetch_company_jobs
+from email_alerts import fetch_alert_jobs
 from config import (
     EMAIL_MIN_FIT, EMAIL_MIN_SCORE, JOB_KEYWORDS, JOB_SEARCH_LOCATIONS, MAX_JOBS_PER_RUN, MAX_LEADS_PER_RUN,
     RUN_BUDGET_MINUTES,
 )
 from job_search import search_jobs
-from jobs_store import ACTIVE, is_known, job_key, known_urls, load_jobs, load_seen, save_jobs, tracked_urls
+from jobs_store import ACTIVE, is_known, job_key, known_urls, load_jobs, load_pending, load_seen, save_jobs, tracked_urls
 from lead_scorer import score_leads
 from leads_store import known_keys, lead_key, load_leads, save_leads
-from matcher import draft_outreach, score_jobs
+from matcher import draft_outreach, prefilter, score_jobs
 from notifier import send_job_digest
 from site_audit import audit_businesses
 
@@ -39,12 +40,16 @@ def load_manual_urls():
 def run_job_search():
     print("Searching job postings...")
     company_jobs = fetch_company_jobs()  # first, so a job on both keeps the direct link
+    seen = load_seen()
+    alert_jobs, alert_ids = fetch_alert_jobs(set(seen))  # LinkedIn / Indeed / Glassdoor / Jobright emails
+    alert_jobs = load_pending() + [j for j in alert_jobs if relevant_role(j)]  # + ones not scored last run
     adzuna_jobs = search_jobs(JOB_KEYWORDS, JOB_SEARCH_LOCATIONS)
-    jobs = company_jobs + adzuna_jobs
-    print(f"Found {len(jobs)} job leads ({len(company_jobs)} from company career pages, {len(adzuna_jobs)} from Adzuna).")
+    jobs = company_jobs + alert_jobs + adzuna_jobs
+    print(f"Found {len(jobs)} job leads ({len(company_jobs)} from company career pages, "
+          f"{len(alert_jobs)} from alert emails, {len(adzuna_jobs)} from Adzuna).")
 
     stored = load_jobs()
-    known = known_urls(stored) | set(load_seen())  # includes jobs you cleared off the dashboard
+    known = known_urls(stored) | set(seen)  # includes jobs you cleared off the dashboard
     fresh, seen_now = [], set()
     for j in jobs:  # skip jobs already on the dashboard, and repeat postings within this run
         if is_known(j, known) or job_key(j) in seen_now:
@@ -60,7 +65,10 @@ def run_job_search():
     tracked = tracked_urls(statuses=ACTIVE)  # no outreach drafts for rejections
     draft_outreach([j for j in stored if j.get("url") in tracked], deadline=JOBS_DEADLINE)
     send_job_digest(scored, min_score=EMAIL_MIN_SCORE, min_fit=EMAIL_MIN_FIT, tracked_jobs=[j for j in stored if j.get("url") in tracked])
-    save_jobs(stored, scored)
+    # Alert emails are read once, so their jobs that weren't scored this run (cap, quota, time) are kept for the next.
+    done = {j.get("url") for j in scored}
+    pending = [j for j in jobs if j.get("keyword_matched") == "email alert" and j.get("url") not in done and not prefilter(j)]
+    save_jobs(stored, scored, seen_ids=alert_ids, pending=pending)
 
 
 def run_business_discovery():

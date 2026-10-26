@@ -48,6 +48,15 @@ def load_seen(path: str = STORE_PATH) -> dict:
         return {}
 
 
+def load_pending(path: str = STORE_PATH) -> list[dict]:
+    """Jobs from alert emails that weren't scored yet (the email itself is only read once)."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            return (json.load(f) or {}).get("pending") or []
+    except (OSError, json.JSONDecodeError):
+        return []
+
+
 def tracked_urls(path: str = STATUS_PATH, statuses: set[str] = KEEP_FOREVER) -> set[str]:
     """URLs of jobs you've marked with one of these statuses on the dashboard."""
     try:
@@ -79,7 +88,7 @@ def is_known(job: dict, known: set[str]) -> bool:
     return job.get("url") in known or job_key(job) in known
 
 
-def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> list[dict]:
+def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH, seen_ids=(), pending=()) -> list[dict]:
     """Merge newly scored jobs into the store, drop old ones, and write the file."""
     now = datetime.now(LOCAL_TZ)
     today = now.strftime("%Y-%m-%d")
@@ -109,10 +118,13 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
     jobs.sort(key=lambda j: (j.get("date_found") or "", j.get("fit_score") or 0), reverse=True)
 
     seen = {k: d for k, d in load_seen(path).items() if d >= cutoff}  # forget cleared jobs after KEEP_DAYS
+    seen.update({k: today for k in seen_ids})  # alert emails already read
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(
-            {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "jobs": jobs, "seen": seen},
+            {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "jobs": jobs, "seen": seen,
+             "pending": [{k: p.get(k) for k in FIELDS} for p in pending
+                         if (p.get("posted") or today)[:10] >= (now - timedelta(days=4)).strftime("%Y-%m-%d")]},
             f, indent=1, ensure_ascii=False,
         )
     dropped = len(existing) - len(kept)

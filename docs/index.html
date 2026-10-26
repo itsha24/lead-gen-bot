@@ -186,7 +186,7 @@
   .view-btn.active { background: var(--surface-raised); color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); }
   .view-btn .n { color: var(--text-faint); font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-left: 6px; }
   .tag-snippet { display: inline-block; margin-left: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px;
-    color: var(--text-faint); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; }
+    color: var(--text-faint); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; white-space: nowrap; }
   .stale { opacity: 0.55; }
   .fresh { color: var(--status-replied); font-weight: 600; }
   .tag-direct { display: inline-block; margin-left: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px;
@@ -383,7 +383,7 @@
     Only postings from the last 3 days are fetched; <span class="fresh">green</span> = posted in the last 24 hours (apply first).
     Postings drop off after 30 days, unless they're in My Applications (Saved, Applied, Interviewing, Rejected).
     <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read.
-    <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. <br>Client leads: local businesses found weekly on Google Maps, websites audited, scored against services.yaml with a drafted first message.
+    <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. A <span class="tag-snippet">LinkedIn alert</span>-style tag = found in your job-alert emails. <br>Client leads: local businesses found weekly on Google Maps, websites audited, scored against services.yaml with a drafted first message.
     Your statuses (Applied, Contacted…) sync across devices once you set up ⇅ sync.
   </div>
 </div>
@@ -711,6 +711,7 @@ async function fetchJobs() {
         "Priority": (j.fit_score ?? 0) + freshnessBonus(j.posted),
         "Source": j.description_source || "snippet",
         "Direct": j.keyword_matched === "company board",
+        "Alert": j.keyword_matched === "email alert" ? (j.source || "email alert") : "",
         "Matched": j.matched_skills || [],
         "Note": j.outreach_note || "",
         "EmailSubject": j.outreach_subject || "",
@@ -920,6 +921,7 @@ function jobCard(r, idx) {
       <span class="badge ${tone}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span>
       <span class="badge ${tone}">${esc(r.Status)}</span>
       ${r.Direct ? '<span class="tag-direct">apply direct</span>' : ''}
+      ${r.Alert ? `<span class="tag-snippet" title="Found in your job-alert emails">${esc(r.Alert)}</span>` : ''}
       <span style="margin-left:auto">${trackSelect(r)}</span>
     </div>
     <a class="card-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
@@ -1149,7 +1151,7 @@ function render() {
         html += `<td class="wrap"><a class="job-title" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">${esc(r.Title)}</a>
           <div class="job-meta">${[r.Company, r.Location].filter(Boolean).map(esc).join(' · ')}</div>
           <div class="job-links"><a class="job-link" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">View posting →</a>
-          ${r.Direct ? '<span class="tag-direct" title="From the company\'s own careers page">apply direct</span>' : ''}</div></td>`;
+          ${r.Direct ? '<span class="tag-direct" title="From the company\'s own careers page">apply direct</span>' : ''}${r.Alert ? `<span class="tag-snippet" title="Found in your job-alert emails">${esc(r.Alert)}</span>` : ''}</div></td>`;
       } else if (jobsTab && col === 'Fit Score') {
         const n = parseFloat(val);
         html += `<td><span class="badge ${statusClass(r.Status)}"><span class="dot"></span>${isNaN(n) ? '—' : n}</span><span class="tier">${esc(r.Status)}</span></td>`;

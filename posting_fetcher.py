@@ -119,5 +119,5 @@ def enrich_jobs(jobs: list[dict], workers: int = 6) -> list[dict]:
         else:
             job["description_source"] = "snippet"
     print(f"[posting_fetcher] Got the full posting for {got} of {len(jobs)} jobs "
-          f"(the rest are scored from Adzuna's snippet).")
+          f"(the rest are scored from the job board's snippet).")
     return jobs

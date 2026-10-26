@@ -65,6 +65,7 @@ jobs:
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GMAIL_ALERTS_URL: ${{ secrets.GMAIL_ALERTS_URL }}  # job-alert emails (apps_script/README.md)
           LEAD_SHEET_ID: ${{ secrets.LEAD_SHEET_ID }}
           GOOGLE_SHEETS_CREDS_PATH: service_account.json
         run: python main.py

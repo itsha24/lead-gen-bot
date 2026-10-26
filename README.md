@@ -1,8 +1,8 @@
 # Lead Gen Bot: an AI job matcher and client finder
 
-A personal automation that runs every morning on GitHub Actions and does two jobs:
+A personal automation that runs twice a day on GitHub Actions and does two jobs:
 
-1. **Job matching.** Pulls fresh developer postings from company career pages and Adzuna, filters out roles I can't get (senior titles, "5+ years", internships), reads each full posting, and has an LLM score how well it fits **my** profile. The best fresh matches are emailed to me; everything lands on a dashboard.
+1. **Job matching.** Pulls fresh developer postings from company career pages, Adzuna, and my LinkedIn / Indeed / Glassdoor / Jobright alert emails, filters out roles I can't get (senior titles, "5+ years", internships), reads each full posting, and has an LLM score how well it fits **my** profile. The best fresh matches are emailed to me; everything lands on a dashboard.
 2. **Client leads for freelance work.** Once a week it finds local businesses on Google Maps, audits their websites, and has an LLM pick what to offer each one and draft a first message in French or English.
 
 **Live dashboard:** https://itsha24.github.io/lead-gen-bot/
@@ -19,9 +19,10 @@ Job boards kept showing me senior roles and postings that were weeks old. Keywor
 
 ```mermaid
 flowchart LR
-  subgraph Daily["Every day, 9:00 Toronto time"]
+  subgraph Daily["Twice a day"]
     A[Company career pages<br/>Greenhouse · Lever · Ashby<br/>SmartRecruiters · Workday] --> C
     B[Adzuna API<br/>last 3 days, newest first] --> C
+    B2[Job-alert emails<br/>LinkedIn · Indeed · Glassdoor<br/>LLM extracts the jobs] --> C
     C[Dedupe<br/>same title + company] --> D[Free filters<br/>senior titles · years · internships]
     D --> E[Fetch full posting]
     E --> F[Re-check years<br/>on full text]
@@ -55,6 +56,11 @@ There's no server or database. The workflow commits `docs/data/*.json` back to t
 - The LLM only gets facts the bot verified (Google listing + website audit) plus my real past projects from `services.yaml`, and must not invent anything. It returns a lead score, the best offer, concrete opportunities, and a 70–120 word first message in the business's language.
 - **Lesson learned:** the first live run flagged 9 restaurants as "website returns 403". The sites were fine; they block bots. Now a blocked or slow site counts as *couldn't check*, the AI is told so, and it's forbidden from claiming anything is wrong. Only verifiable problems (dead domain, bad certificate, no site, social-only) become pitches.
 
+**Job-alert emails** (`email_alerts.py`, `apps_script/`)
+- An Outlook rule and Gmail filter put the alerts under one label; a read-only Google Apps Script web app returns just that label to the run.
+- The LLM pulls the jobs out of each email (whatever site sent it, so no per-site parser to break). Links are numbered `[L12]` in the text and the model answers with the number, so it never has to copy a long tracking URL. LinkedIn and Indeed links are normalized so the same job from two alerts dedupes.
+- Each email is read once; jobs that miss this run's scoring cap are carried over so nothing is lost.
+
 **Priority** (`ranking.py`): fit score + a freshness bonus (+12 under 24h, +8, +4, then −1/day after a week). A 76 posted this morning outranks an 86 from three weeks ago, both on the dashboard and in the email.
 
 ## Dashboard
@@ -77,7 +83,7 @@ There's no server or database. The workflow commits `docs/data/*.json` back to t
 
 ## Running it
 
-**GitHub Actions** (`.github/workflows/daily_job_matcher.yml`) runs daily at 9:00 Toronto time; Saturdays are a *full* run with client leads. Use **Run workflow** to start one manually (`jobs_only` or `full`).
+**GitHub Actions** (`.github/workflows/daily_job_matcher.yml`) runs twice a day (about 6:37am and 3:37pm Toronto time); the Saturday morning run is *full* with client leads. Use **Run workflow** to start one manually (`jobs_only` or `full`).
 
 Secrets:
 
@@ -87,6 +93,7 @@ Secrets:
 | `ADZUNA_APP_ID`, `ADZUNA_APP_KEY` | Adzuna job search (free developer tier) |
 | `GOOGLE_PLACES_API_KEY` | Business discovery: Places API (New); ≤24 requests per weekly run, within the 1,000/month free tier |
 | `EMAIL_ADDRESS`, `EMAIL_APP_PASSWORD` | Daily email. A Resend API key (`re_…`) works where Gmail SMTP is blocked from GitHub's servers |
+| `GMAIL_ALERTS_URL` | Optional: job-alert emails. Setup in [`apps_script/README.md`](apps_script/README.md) |
 | `PAGESPEED_API_KEY` | Optional page-speed check in the site audit |
 
 **Locally:**
