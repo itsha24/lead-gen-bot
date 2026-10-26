@@ -9,7 +9,7 @@ from config import (
     RUN_BUDGET_MINUTES,
 )
 from job_search import search_jobs
-from jobs_store import is_known, job_key, known_urls, load_jobs, save_jobs, tracked_urls
+from jobs_store import is_known, job_key, known_urls, load_jobs, load_seen, save_jobs, tracked_urls
 from lead_scorer import score_leads
 from leads_store import known_keys, lead_key, load_leads, save_leads
 from matcher import draft_outreach, score_jobs
@@ -44,7 +44,7 @@ def run_job_search():
     print(f"Found {len(jobs)} job leads ({len(company_jobs)} from company career pages, {len(adzuna_jobs)} from Adzuna).")
 
     stored = load_jobs()
-    known = known_urls(stored)
+    known = known_urls(stored) | set(load_seen())  # includes jobs you cleared off the dashboard
     fresh, seen_now = [], set()
     for j in jobs:  # skip jobs already on the dashboard, and repeat postings within this run
         if is_known(j, known) or job_key(j) in seen_now:

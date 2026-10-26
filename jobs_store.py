@@ -37,6 +37,16 @@ def load_jobs(path: str = STORE_PATH) -> list[dict]:
         return []
 
 
+def load_seen(path: str = STORE_PATH) -> dict:
+    """Jobs cleared off the dashboard: {url or title|company key: date cleared}.
+    They count as already seen, so a later run doesn't score them and add them back."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            return (json.load(f) or {}).get("seen") or {}
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
 def tracked_urls(path: str = STATUS_PATH) -> set[str]:
     """URLs of jobs you've marked Saved / Applied / Interviewing on the dashboard."""
     try:
@@ -97,10 +107,11 @@ def save_jobs(existing: list[dict], new: list[dict], path: str = STORE_PATH) -> 
         jobs.append(j)
     jobs.sort(key=lambda j: (j.get("date_found") or "", j.get("fit_score") or 0), reverse=True)
 
+    seen = {k: d for k, d in load_seen(path).items() if d >= cutoff}  # forget cleared jobs after KEEP_DAYS
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(
-            {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "jobs": jobs},
+            {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "jobs": jobs, "seen": seen},
             f, indent=1, ensure_ascii=False,
         )
     dropped = len(existing) - len(kept)
