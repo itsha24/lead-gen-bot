@@ -381,7 +381,7 @@
   <div class="footer-note">
     Job matches are scored by AI against my profile by a daily GitHub Actions run; 85+ matches are also emailed.
     Only postings from the last 3 days are fetched; <span class="fresh">green</span> = posted in the last 24 hours (apply first).
-    Postings drop off after 30 days, unless they're in My Applications (Saved, Applied, Interviewing).
+    Postings drop off after 30 days, unless they're in My Applications (Saved, Applied, Interviewing, Rejected).
     <span class="tag-snippet">snippet</span> = scored from a short job-board snippet because the full posting couldn't be read.
     <span class="tag-direct">apply direct</span> = from the company's own careers page (companies.yaml), usually the first place a job appears. <br>Client leads: local businesses found weekly on Google Maps, websites audited, scored against services.yaml with a drafted first message.
     Your statuses (Applied, Contacted…) sync across devices once you set up ⇅ sync.
@@ -446,6 +446,7 @@ function daysAgo(iso) {
   return isNaN(t) ? null : Math.floor((Date.now() - t) / 86400000);
 }
 const untracked = r => r.Track === "—" || r.Track === "Not interested";
+const activeApp = r => ["Saved", "Applied", "Interviewing"].includes(r.Track);
 const VIEWS = [
   ["today", "Today", r => untracked(r) && r["Date Found"] === localDay()],
   ["week", "This week", r => untracked(r) && r["Date Found"] >= localDay(new Date(Date.now() - 6 * 86400000))],
@@ -456,6 +457,7 @@ const PIPELINE = [
   ["saved", "Saved", r => r.Track === "Saved"],
   ["applied", "Applied", r => r.Track === "Applied"],
   ["interviewing", "Interviewing", r => r.Track === "Interviewing"],
+  ["rejected", "Rejected", r => r.Track === "Rejected"],  // out of the way, kept as history
 ];
 const isPipeline = view => PIPELINE.some(v => v[0] === view);
 // Client leads you've reached out to move to Outreach and are never pruned.
@@ -497,7 +499,7 @@ function statusClass(status) {
   if (s === "saved") return "contacted";
   if (s.includes("good")) return "interested";
   if (s.includes("stretch")) return "contacted";
-  if (s.includes("not") || s.includes("low")) return "not-interested";
+  if (s.includes("not") || s.includes("low") || s === "rejected") return "not-interested";
   if (s.includes("interested")) return "interested";
   if (s.includes("contact")) return "contacted";
   if (s.includes("repl")) return "replied";
@@ -510,7 +512,7 @@ function statusClass(status) {
 const REPO = "itsha24/lead-gen-bot";
 const STATUS_PATH = "docs/data/status.json";
 const STATUS_URLS = [`https://raw.githubusercontent.com/${REPO}/main/${STATUS_PATH}`, "data/status.json"];
-const JOB_TRACK = ["—", "Saved", "Applied", "Interviewing", "Not interested"];
+const JOB_TRACK = ["—", "Saved", "Applied", "Interviewing", "Rejected", "Not interested"];
 const DEFAULTS = { jobs: "—", leads: "New" };
 const sync = { token: "", data: { jobs: {}, leads: {} }, timer: null, state: "local", error: "", saving: null };
 try { sync.token = localStorage.getItem("ghToken") || ""; } catch { /* no storage */ }
@@ -925,7 +927,7 @@ function jobCard(r, idx) {
     <div class="card-reason">${esc(r.Reason)}${snip}</div>
     ${r["Missing Skills"] ? `<div class="card-gaps">Gaps: ${esc(r["Missing Skills"])}</div>` : ''}
     <a class="card-link" href="${esc(safeUrl(r.URL))}" target="_blank" rel="noopener">View posting →</a>
-    ${state.tab === "Applications" ? reachOutPanel(r, idx) : ""}
+    ${state.tab === "Applications" && activeApp(r) ? reachOutPanel(r, idx) : ""}
   </div>`;
 }
 
@@ -1048,7 +1050,7 @@ function updateCounts() {
   document.getElementById('count-outreach').textContent = OUTREACH.reduce((n, [, label]) => n + leadsIn(label).length, 0);
   document.getElementById('count-jobs').textContent = state.jobsLoaded === false ? "!" : state.data["Job Leads"].filter(r => r.Track === "—").length;
   const dueN = state.data["Job Leads"].filter(followUpDue).length;
-  document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(r => !untracked(r)).length + (dueN ? ` · ${dueN} follow-up` : "");
+  document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(activeApp).length + (dueN ? ` · ${dueN} follow-up` : "");
 }
 
 function render() {

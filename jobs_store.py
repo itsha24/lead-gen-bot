@@ -13,7 +13,8 @@ from zoneinfo import ZoneInfo
 
 STORE_PATH = os.path.join("docs", "data", "jobs.json")
 STATUS_PATH = os.path.join("docs", "data", "status.json")  # written by the dashboard
-KEEP_FOREVER = {"Saved", "Applied", "Interviewing"}       # jobs you're tracking are never pruned
+ACTIVE = {"Saved", "Applied", "Interviewing"}             # applications still in play
+KEEP_FOREVER = ACTIVE | {"Rejected"}                       # never pruned (rejections kept as history)
 KEEP_DAYS = 60          # drop jobs found more than this many days ago
 MAX_POSTING_AGE_DAYS = 30  # drop jobs whose posting is older than this — likely filled or closed
 LOCAL_TZ = ZoneInfo("America/Toronto")  # dates on the dashboard use your local day
@@ -47,15 +48,15 @@ def load_seen(path: str = STORE_PATH) -> dict:
         return {}
 
 
-def tracked_urls(path: str = STATUS_PATH) -> set[str]:
-    """URLs of jobs you've marked Saved / Applied / Interviewing on the dashboard."""
+def tracked_urls(path: str = STATUS_PATH, statuses: set[str] = KEEP_FOREVER) -> set[str]:
+    """URLs of jobs you've marked with one of these statuses on the dashboard."""
     try:
         with open(path, encoding="utf-8") as f:
             jobs = (json.load(f) or {}).get("jobs") or {}
     except (OSError, json.JSONDecodeError):
         return set()
     status = lambda v: v.get("s") if isinstance(v, dict) else v
-    return {url for url, v in jobs.items() if status(v) in KEEP_FOREVER}
+    return {url for url, v in jobs.items() if status(v) in statuses}
 
 
 def _is_internship(job: dict) -> bool:
