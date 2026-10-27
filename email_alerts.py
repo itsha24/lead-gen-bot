@@ -161,6 +161,9 @@ def fetch_alert_jobs(seen: set[str]) -> tuple[list[dict], list[str]]:
         if len(done) >= MAX_EMAILS_PER_RUN:
             break
         mid = f"email:{m['id']}"
+        if m.get("error"):
+            print(f"[email_alerts] The Gmail script couldn't read one email ({m['error'][:120]}) — skipping it.")
+            continue
         if NOT_ALERTS.search(f"{m.get('from')} {m.get('subject')}"):
             done.append(mid)
             continue
