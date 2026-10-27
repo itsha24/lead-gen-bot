@@ -1,6 +1,392 @@
 {
- "updated": "2026-10-27T00:35:43+00:00",
+ "updated": "2026-10-27T16:05:11+00:00",
  "jobs": [
+  {
+   "date_found": "2026-10-27",
+   "title": "Backend Developer",
+   "company": "BUMP",
+   "location": "Nepean, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5943373377?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T07:34:53Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "PHP / Laravel",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your background matches the 2 years of backend experience required and your PHP and Laravel skills are a strong fit for this role.",
+   "description": "Job DescriptionJob DescriptionCompany Description BUMP provides secure charitable lottery and fundraising platform solutions to most recognizable professional sports foundations and well-known and distinguished not-for-profits across North America. Our Mission is to be the most valued partner to cha",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi BUMP team, I recently applied for the Backend Developer role. With my background in backend development and Laravel, I am confident in my ability to contribute to your prediction-markets platform. Let me know if you would like to connect.",
+   "outreach_subject": "Application: Backend Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI am writing to express my interest in the Backend Developer position at BUMP. I recently submitted my application for the role.\n\nWith two years of professional software development experience, I bring a strong background in building backend applications using PHP and Laravel, designing REST APIs, and working with PostgreSQL databases. These technical skills align well with the responsibilities outlined for your Prediction Markets team.\n\nI would welcome the opportunity to discuss how my background matches your needs for this hybrid role in Nepean.\n\nThank you for your time and consideration.\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Quality Engineer – API & Test Automation",
+   "company": "Recrute Action",
+   "location": "Church and Wellesley, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5942785077?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T19:28:55Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Java",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Playwright",
+    "JMeter"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation and Java skills match well, making this a good junior fit despite some missing tools like Playwright and JMeter.",
+   "description": "Quality Engineer – API & Test Automation Bring your expertise to the insurance sector for our client and contribute to the quality and automation of integrated digital solutions. Take part in an Agile environment where you will support reliable digital experiences through automated testing, data val",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Quality Engineer role. With my QA automation and Java experience, I can contribute quickly to your API and integration testing suites. I would love to connect. https://itsha24.github.io/Portfolio/ | https://www.linkedin.com/in/hawan24/",
+   "outreach_subject": "Application: Quality Engineer – API & Test Automation",
+   "outreach_email": "Hi Recruiter,\n\nI recently applied for the Quality Engineer – API & Test Automation position. With my background in QA test automation, Java, and REST APIs, I am well-prepared to contribute to your automated API and integration test suites.\n\nMy hands-on experience aligns closely with your need for robust testing practices within Agile environments. I would appreciate the opportunity to discuss how my skills can support your client's digital solutions.\n\nDo you have a few minutes for a quick chat this week, or could you point me to the right hiring manager?\n\nBest,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Unified Customer Experience - Software Engineer",
+   "company": "Questrade Financial Group",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5943242173?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T04:59:10Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 50,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "The posting snippet does not list specific technical requirements or years of experience, but it is a software engineering role matching your junior target.",
+   "description": "What’s in it for you as an employee of QFG? Health & wellbeing resources and programs Paid vacation, personal, and sick days for work-life balance Competitive compensation and benefits packages Work-life balance in a hybrid environment with at least 3 days in office Career growth and development opp",
+   "description_source": "snippet",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Fresh Sales Account Representative, Ethnic",
+   "company": "Export Packers",
+   "location": "Brampton, Peel region",
+   "url": "https://www.adzuna.ca/details/5943400257?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T08:11:45Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 35,
+   "seniority": "unclear",
+   "years_required": 2,
+   "matched_skills": [],
+   "missing_required": [
+    "Ethnic retail food sales",
+    "Mandarin and/or Cantonese"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a sales role, which hits your avoid_roles criteria for pure sales positions.",
+   "description": "Job DescriptionJob Description About the Company Export Packers Company Limited is a multi-faceted, growth-oriented international food company. Since 1937, this privately owned family company based in Ontario, Canada, has built itself into a global food expert, providing exceptional service and inno",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Software Engineer",
+   "company": "Salt",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5942973874?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T22:18:32Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "Node.js",
+    "GraphQL",
+    "serverless computing"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and API background matches, but the role requires TypeScript and Node.js which you lack, and asks for an experienced profile.",
+   "description": "Our client is looking for an experienced Software Engineer to join our client's team on a short-term contract. The ideal candidate will have strong backend development experience, particularly with TypeScript and Node.js, and a solid understanding of modern API architectures, serverless technologies",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Greenhouse Experience Specialist",
+   "company": "Deloitte",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5942974544?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T22:18:36Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [],
+   "missing_required": [
+    "client-facing experience",
+    "workshop facilitation",
+    "project management"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3-5 years of experience"
+   ],
+   "reason": "Your background is in software development and QA, but this is a non-technical client experience specialist role requiring 3-5 years of professional services experience, which triggers your dealbreaker for experience requirements.",
+   "description": "Job Type: Permanent Work Model: Hybrid Reference code: 135688 Primary Location: Montreal, QC All Available Locations: Montreal, QC Our Purpose At Deloitte, our Purpose is to make an impact that matters. We exist to inspire and help our people, organizations, communities, and countries to thrive by b",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Software Developer (Content Integration & Data Pipelines)",
+   "company": "Jobgether",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5943229619?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T04:44:52Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "TypeScript and JavaScript proficiency",
+    "Production web scraping expertise",
+    "Kafka",
+    "Solr"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java background is a match, but this role requires 3+ years of professional experience and hits your dealbreaker threshold.",
+   "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Software Developer (Content Integration & Data Pipelines) based in Canada. We are seeking a skilled Software Developer to build and scale production-grade data pipelines ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Intermediate QA Analyst",
+   "company": "atVenu",
+   "location": "Kensington, Calgary",
+   "url": "https://www.adzuna.ca/details/5942757174?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T17:08:12Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "3+ years of experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation matches well, but this intermediate role requires 3+ years of experience, triggering your dealbreaker for experience requirements.",
+   "description": "Intermediate QA Analyst - Job Description About the Job Exciting news—atVenu is expanding! As we continue to grow, our QA team needs to grow with us. We’re looking for sharp, detail-oriented QA Analysts who can spot even the smallest errors. With our software being used in live events, it’s crucial ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Performance Tester",
+   "company": "Tecsys Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5943401585?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T08:12:23Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "PostgreSQL",
+    "AWS",
+    "Python"
+   ],
+   "missing_required": [
+    "JMeter",
+    "Playwright",
+    "Performance testing",
+    "Kubernetes"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background matches PostgreSQL and AWS, but this role requires 5+ years of experience and senior performance testing expertise.",
+   "description": "Job DescriptionJob Description Having recognized the advantages of remote work, such as improved employee morale, increased productivity, and positive impacts on both employee wellbeing and the environment, we are proud to be a digital-first company. Our digital-first work environment, combined with",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Front End Web Developer",
+   "company": "eCapital",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5942806990?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T20:24:27Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 25,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [],
+   "missing_required": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "WordPress/CMS"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your profile is focused on Java, Spring Boot, and QA automation, whereas this role requires 4+ years of dedicated front-end web development experience with HTML, CSS, and JavaScript.",
+   "description": "About Us: At eCapital, we are on a mission to ignite growth and empower businesses across North America and the U.K. by accelerating their access to capital. As a leading financial company, our extensive expertise and forward-thinking technology creates customized, cutting-edge solutions for clients",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Bilingual Business Analyst - French",
+   "company": "Sodales Solutions",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5943401955?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T08:12:35Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description About the Role Are you passionate about solving complex business challenges and transforming ideas into impactful solutions? We're seeking an experienced Business Analyst to partner with business leaders, customers, and technical teams to drive enterprise initiatives f",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "IBM Technology Developer (35554)",
+   "company": "Myticas Consulting",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5943343853?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T06:49:19Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "IBM MDM",
+    "BPM Workflows",
+    "AI-assisted development tools within the IBM ecosystem"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an intermediate role requiring extensive experience in the IBM technology stack (IBM MDM and BPM Workflows), which you do not possess.",
+   "description": "Our GTA client is seeking an experienced IBM Technology Developer Developer with extensive experience in the IBM technology stack and a strong understanding of AI tools and practices. The ideal candidate will have hands-on expertise in IBM MDM, and BPM Workflows, and be capable of designing, develop",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Business Systems Analyst",
+   "company": "emergiTEL",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5943236181?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-27T04:49:53Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 6,
+   "matched_skills": [],
+   "missing_required": [
+    "Business Analysis",
+    "Requirements Gathering",
+    "BRD/DRS Documentation"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior Business Systems Analyst role requiring 6 to 9 years of banking sector experience, which does not match your developer and QA background.",
+   "description": "emergiTEL is hiring a Business Systems Analyst (BSA) for our client in the Banking industry. This is a Contract role. Compensation: $50-$60 Location: Downtown Toronto, ON (Hybrid - up to 2 days/week in office) Job Description Act as a Business Analyst for major initiatives by: Gathering and document",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-27",
+   "title": "Guidewire PolicyCenter Developer, Data Consistency Controls (DBCC)",
+   "company": "Maarut",
+   "location": "Montréal East, Montréal",
+   "url": "https://www.adzuna.ca/details/5942785070?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-26T19:28:55Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Guidewire InsuranceSuite development experience",
+    "Gosu"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a specialized Guidewire developer role requiring specific InsuranceSuite and Gosu experience which you do not have, and the posting explicitly excludes general Java developers without Guidewire background.",
+   "description": "Our client is preparing an on-premise upgrade of Guidewire PolicyCenter from version 10.2.2 to 10.2.5 and is seeking a Guidewire Developer to support the initiative. The primary focus will be identifying and resolving Database Consistency Checks (DBCC), including both data corrections and Gosu code ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-10-26",
    "title": "Full Stack Engineer",
