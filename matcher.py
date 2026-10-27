@@ -502,6 +502,9 @@ def score_jobs(jobs: list[dict], max_jobs: int | None = None, deadline: float | 
     scored = []
     to_score = []
     for job in kept:
+        if job.get("closed"):
+            print(f"[matcher] CLOSED: {job.get('title')} @ {job.get('company')} — the posting is no longer open; skipped.")
+            continue
         rejection = prefilter(job) if job.get("description_source") == "full posting" else None
         if rejection:
             print(f"[matcher] FILTERED after reading full posting: {job.get('title')} @ {job.get('company')} — {rejection}")

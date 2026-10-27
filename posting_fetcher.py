@@ -81,21 +81,62 @@ def _from_page_text(soup: BeautifulSoup, snippet: str) -> str | None:
     return page[match.start():]
 
 
-def fetch_full_description(url: str, snippet: str) -> str | None:
-    """Return the full posting text, or None if it couldn't be found reliably."""
+# Banners job sites show once a posting is taken down. Only checked near the top of the
+# page, so a "similar jobs" list further down can't make a live job look closed.
+CLOSED = re.compile(
+    r"no longer accepting applications|(?:this|the) (?:job|position|posting|role|opportunity) "
+    r"(?:is|has) (?:no longer (?:available|open|active|accepting)|expired|been filled|been closed|closed)"
+    r"|(?:job|posting|position) (?:has )?expired|this job is closed|job (?:is )?no longer available"
+    r"|n'accepte plus de candidatures|(?:ce poste|cette offre|l'offre)(?: d'emploi)? (?:n'est plus disponible|a expiré|est expirée|est fermée)",
+    re.IGNORECASE)
+CLOSED_CHECK_CHARS = 4000
+
+
+def _expired_in_json_ld(soup: BeautifulSoup) -> bool:
+    from datetime import datetime, timezone
+    for tag in soup.find_all("script", type="application/ld+json"):
+        m = re.search(r'"validThrough"\s*:\s*"([^"]+)"', tag.string or "")
+        if not m:
+            continue
+        try:
+            end = datetime.fromisoformat(m.group(1).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        return (end if end.tzinfo else end.replace(tzinfo=timezone.utc)) < datetime.now(timezone.utc)
+    return False
+
+
+def fetch_posting(url: str, snippet: str) -> tuple[str | None, bool]:
+    """(full posting text or None, whether the posting looks closed)."""
     if not url or not url.startswith(("http://", "https://")):
-        return None
+        return None, False
     try:
         resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT_SECONDS, allow_redirects=True)
     except requests.RequestException:
-        return None
+        return None, False
+    if resp.status_code in (404, 410):
+        return None, True  # the posting was taken down
     if resp.status_code != 200 or "html" not in resp.headers.get("Content-Type", "html"):
-        return None
+        return None, False  # blocked or login wall: can't tell, so assume it's open
     soup = BeautifulSoup(resp.text, "html.parser")
-    text = _from_json_ld(soup) or _from_page_text(soup, snippet)
+    if _expired_in_json_ld(soup):
+        return None, True
+    text = _from_json_ld(soup)
+    page = BeautifulSoup(resp.text, "html.parser")
+    for tag in page(["script", "style", "noscript"]):
+        tag.decompose()
+    top = _clean_text(page.get_text(" "))[:CLOSED_CHECK_CHARS]
+    if CLOSED.search(top):
+        return None, True
+    text = text or _from_page_text(soup, snippet)
     if not text or len(text) < len(snippet or "") + MIN_GAIN_CHARS:
-        return None
-    return text[:MAX_CHARS]
+        return None, False
+    return text[:MAX_CHARS], False
+
+
+def fetch_full_description(url: str, snippet: str) -> str | None:
+    """Return the full posting text, or None if it couldn't be found reliably."""
+    return fetch_posting(url, snippet)[0]
 
 
 def enrich_jobs(jobs: list[dict], workers: int = 6) -> list[dict]:
@@ -104,14 +145,17 @@ def enrich_jobs(jobs: list[dict], workers: int = 6) -> list[dict]:
         return jobs
 
     def work(job):
-        return fetch_full_description(job.get("url"), job.get("description") or "")
+        return fetch_posting(job.get("url"), job.get("description") or "")
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
         results = list(pool.map(work, jobs))
 
-    got = 0
-    for job, full in zip(jobs, results):
+    got = closed = 0
+    for job, (full, is_closed) in zip(jobs, results):
         job["snippet"] = job.get("description") or ""
+        if is_closed:
+            job["closed"] = True
+            closed += 1
         if full:
             job["description"] = full
             job["description_source"] = "full posting"
@@ -119,5 +163,6 @@ def enrich_jobs(jobs: list[dict], workers: int = 6) -> list[dict]:
         else:
             job["description_source"] = "snippet"
     print(f"[posting_fetcher] Got the full posting for {got} of {len(jobs)} jobs "
-          f"(the rest are scored from the job board's snippet).")
+          f"(the rest are scored from the job board's snippet)"
+          + (f"; {closed} postings are already closed and were skipped." if closed else "."))
     return jobs

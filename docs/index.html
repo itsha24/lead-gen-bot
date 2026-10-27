@@ -445,7 +445,8 @@ function daysAgo(iso) {
   const t = Date.parse(iso);
   return isNaN(t) ? null : Math.floor((Date.now() - t) / 86400000);
 }
-const untracked = r => r.Track === "—" || r.Track === "Not interested";
+const DISMISSED = ["Not interested", "Closed"];  // hidden from Job Matches (toggle to show)
+const untracked = r => r.Track === "—" || DISMISSED.includes(r.Track);
 const activeApp = r => ["Saved", "Applied", "Interviewing"].includes(r.Track);
 const VIEWS = [
   ["today", "Today", r => untracked(r) && r["Date Found"] === localDay()],
@@ -499,7 +500,7 @@ function statusClass(status) {
   if (s === "saved") return "contacted";
   if (s.includes("good")) return "interested";
   if (s.includes("stretch")) return "contacted";
-  if (s.includes("not") || s.includes("low") || s === "rejected") return "not-interested";
+  if (s.includes("not") || s.includes("low") || s === "rejected" || s === "closed") return "not-interested";
   if (s.includes("interested")) return "interested";
   if (s.includes("contact")) return "contacted";
   if (s.includes("repl")) return "replied";
@@ -512,7 +513,7 @@ function statusClass(status) {
 const REPO = "itsha24/lead-gen-bot";
 const STATUS_PATH = "docs/data/status.json";
 const STATUS_URLS = [`https://raw.githubusercontent.com/${REPO}/main/${STATUS_PATH}`, "data/status.json"];
-const JOB_TRACK = ["—", "Saved", "Applied", "Interviewing", "Rejected", "Not interested"];
+const JOB_TRACK = ["—", "Saved", "Applied", "Interviewing", "Rejected", "Not interested", "Closed"];
 const DEFAULTS = { jobs: "—", leads: "New" };
 const sync = { token: "", data: { jobs: {}, leads: {} }, timer: null, state: "local", error: "", saving: null };
 try { sync.token = localStorage.getItem("ghToken") || ""; } catch { /* no storage */ }
@@ -762,7 +763,7 @@ function visibleJobs(view) {
   let rows = jobsInView(view);
   if (isPipeline(view)) return rows;  // your own picks: show everything, whatever the score
   if (!state.showLowFit && !state.statusFilter) rows = rows.filter(r => r.Status !== "Low fit");
-  if (!state.showDismissed) rows = rows.filter(r => r.Track !== "Not interested");
+  if (!state.showDismissed) rows = rows.filter(r => !DISMISSED.includes(r.Track));
   return rows;
 }
 
@@ -1040,11 +1041,11 @@ function renderChips() {
       t.onclick = () => { state.showLowFit = !state.showLowFit; savePref("showLowFit", state.showLowFit ? "1" : "0"); render(); };
       container.appendChild(t);
     }
-    const dismissed = jobsInView(curView()).filter(r => r.Track === "Not interested").length;
+    const dismissed = jobsInView(curView()).filter(r => DISMISSED.includes(r.Track)).length;
     if (dismissed && state.tab !== "Applications") {
       const d = document.createElement('button');
       d.className = 'chip' + (state.showDismissed ? ' active' : '');
-      d.textContent = state.showDismissed ? `hide ${dismissed} not interested` : `+ ${dismissed} not interested hidden`;
+      d.textContent = state.showDismissed ? `hide ${dismissed} dismissed` : `+ ${dismissed} not interested / closed hidden`;
       d.onclick = () => { state.showDismissed = !state.showDismissed; render(); };
       container.appendChild(d);
     }

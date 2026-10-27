@@ -68,7 +68,10 @@ def run_job_search():
     # Alert emails are read once, so their jobs that weren't scored this run (cap, quota, time) are kept for the next.
     done = {j.get("url") for j in scored}
     pending = [j for j in jobs if j.get("keyword_matched") == "email alert" and j.get("url") not in done and not prefilter(j)]
-    save_jobs(stored, scored, seen_ids=alert_ids, pending=pending)
+    pending = [j for j in pending if not j.get("closed")]
+    # Closed postings are remembered so they're never fetched or shown again.
+    closed = [k for j in jobs if j.get("closed") for k in (j.get("url"), job_key(j)) if k]
+    save_jobs(stored, scored, seen_ids=list(alert_ids) + closed, pending=pending)
 
 
 def run_business_discovery():
