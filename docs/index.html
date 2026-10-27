@@ -757,6 +757,14 @@ function jobsInView(view) {
   const def = [...VIEWS, ...PIPELINE].find(v => v[0] === view) || VIEWS[2];
   return state.data["Job Leads"].filter(def[2]);
 }
+// What the list actually shows for a view (counts use this too, so the numbers match what you see).
+function visibleJobs(view) {
+  let rows = jobsInView(view);
+  if (isPipeline(view)) return rows;  // your own picks: show everything, whatever the score
+  if (!state.showLowFit && !state.statusFilter) rows = rows.filter(r => r.Status !== "Low fit");
+  if (!state.showDismissed) rows = rows.filter(r => r.Track !== "Not interested");
+  return rows;
+}
 
 function leadCard(r) {
   const l = r.raw, tone = statusClass(r.Status);
@@ -963,7 +971,7 @@ function renderViews() {
     views.forEach(([key, label]) => {
       const b = document.createElement('button');
       b.className = 'view-btn' + (current === key ? ' active' : '');
-      b.innerHTML = `${esc(label)}<span class="n">${jobsInView(key).length}</span>`;
+      b.innerHTML = `${esc(label)}<span class="n">${visibleJobs(key).length}</span>`;
       b.onclick = () => { onPick(key); render(); };
       box.appendChild(b);
     });
@@ -994,11 +1002,7 @@ function rowsForTab() {
   }
   if (state.tab === "Leads") return state.data["Leads"].filter(r => r.Status === "New" || (state.showDismissedLeads && r.Status === "Not interested"));
   if (state.activeTab !== "Job Leads") return state.data[state.activeTab];
-  let rows = jobsInView(curView());
-  if (isPipeline(curView())) return rows;  // your own picks: show everything, whatever the score
-  if (!state.showLowFit && !state.statusFilter) rows = rows.filter(r => r.Status !== "Low fit");
-  if (!state.showDismissed) rows = rows.filter(r => r.Track !== "Not interested");
-  return rows;
+  return visibleJobs(curView());
 }
 
 function renderChips() {
@@ -1050,7 +1054,7 @@ function renderChips() {
 function updateCounts() {
   document.getElementById('count-leads').textContent = state.leadsLoaded === false ? "!" : leadsIn("New").length;
   document.getElementById('count-outreach').textContent = OUTREACH.reduce((n, [, label]) => n + leadsIn(label).length, 0);
-  document.getElementById('count-jobs').textContent = state.jobsLoaded === false ? "!" : state.data["Job Leads"].filter(r => r.Track === "—").length;
+  document.getElementById('count-jobs').textContent = state.jobsLoaded === false ? "!" : visibleJobs("all").length;
   const dueN = state.data["Job Leads"].filter(followUpDue).length;
   document.getElementById('count-apps').textContent = state.data["Job Leads"].filter(activeApp).length + (dueN ? ` · ${dueN} follow-up` : "");
 }
