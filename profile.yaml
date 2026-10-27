@@ -40,8 +40,8 @@ skills:
     - QA test automation
     - REST APIs
     - SQL / PostgreSQL
-  working:       # used in projects, could ramp up quickly
     - C# / ASP.NET
+  working:       # used in projects, could ramp up quickly
     - React / React Native
     - PHP / Laravel
     - AWS (S3)
