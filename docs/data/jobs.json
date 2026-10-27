@@ -1,6 +1,64 @@
 {
- "updated": "2026-10-26T23:18:46+00:00",
+ "updated": "2026-10-27T00:35:43+00:00",
  "jobs": [
+  {
+   "date_found": "2026-10-26",
+   "title": "Full Stack Engineer",
+   "company": "GoPlay.ai",
+   "location": "Remote",
+   "url": "https://jobright.ai/jobs/info/6adf29769e3e874dbfbaa7b8",
+   "posted": "2026-10-26T22:29:45.000Z",
+   "keyword_matched": "email alert",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "REST APIs",
+    "SQL / PostgreSQL",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "JavaScript/TypeScript"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and backend background matches this junior full-stack role well, and it only asks for 0 to 2 years.",
+   "description": "Note: The job is a remote job and is open to candidates in USA. GoPlay is a marketplace helping parents find and book children’s activities. The Junior Full-Stack Developer builds and improves features across its web app and backend, fixes bugs, writes tests, works with APIs and databases, and parti",
+   "description_source": "full posting",
+   "source": "Jobright alert",
+   "outreach_note": "Hi, I just applied for the Full Stack Engineer role at GoPlay.ai. With my background in Java and backend development from my previous roles, I am confident I can contribute effectively to your web app and backend services. I would love to connect.",
+   "outreach_subject": "Application: Full Stack Engineer - Hassan Awan",
+   "outreach_email": "Hi Hiring Team,\n\nI recently applied for the Full Stack Engineer position at GoPlay.ai and wanted to reach out directly.\n\nWith two years of professional software development experience, I bring a strong background in Java and backend services, which aligns well with your tech stack requirements. In my previous work, I have built and maintained robust backend features, integrated REST APIs, and managed databases, making me well-prepared to help keep your marketplace platform stable and scalable.\n\nI would welcome a brief conversation to discuss how my skills can support GoPlay.ai's engineering goals.\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Associate Developer Full Stack",
+   "company": "Alterna Savings",
+   "location": "Toronto, ON",
+   "url": "https://jobright.ai/jobs/info/6adfcba5065c4e77efafba87",
+   "posted": "2026-10-26T22:29:45.000Z",
+   "keyword_matched": "email alert",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": 1,
+   "matched_skills": [
+    "React",
+    "REST APIs",
+    "PostgreSQL",
+    "SQL"
+   ],
+   "missing_required": [
+    ".NET / C# backend depth"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React and API background makes this junior full-stack role a good fit, though it asks for .NET/C# which you only have working experience with.",
+   "description": "Alterna Savings is hiring an Associate Developer Full Stack to develop and maintain web applications and digital experiences. The role contributes to frontend interfaces, backend services, APIs, integrations, testing, troubleshooting, and production support, with guidance from senior developers. Res",
+   "description_source": "full posting",
+   "source": "Jobright alert",
+   "outreach_note": "Hi [Name], I saw the Associate Developer Full Stack opening at Alterna Savings and applied. With my experience in React, REST APIs, and SQL, I can help build and maintain your web applications. Would love to connect.",
+   "outreach_subject": "Application: Associate Developer Full Stack - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Associate Developer Full Stack position at Alterna Savings and wanted to reach out directly. Given my background in building web applications with React, REST APIs, and PostgreSQL, I am confident I can contribute effectively to your frontend and backend services.\n\nDuring my previous software development experience, I have focused on writing clean, well-tested code and integrating services, which aligns well with your team's tech stack and guidance-oriented environment. I would welcome the opportunity to discuss how my skills can support your development goals.\n\nDo you have five minutes for a quick chat this week, or could you point me to the right person on the engineering team to speak with?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
   {
    "date_found": "2026-10-26",
    "title": "Software Developer",
@@ -28,6 +86,67 @@
    "outreach_note": "Hi, I applied for the Software Developer role at Amsted Canada. With my experience in backend development and object-oriented programming, I am confident I can contribute effectively to your team. I would love to connect.",
    "outreach_subject": "Application: Software Developer - Hassan Awan",
    "outreach_email": "Hi Hiring Team,\n\nI recently applied for the Software Developer position at Amsted Canada in Charlottetown. With two years of professional software development experience and a strong background in backend technologies and object-oriented programming, I am eager to contribute to your custom software solutions and support your growing technology team.\n\nThroughout my career, I have focused on writing clean code, collaborating with cross-functional teams, and continuously improving development practices. I am particularly drawn to Amsted's commitment to employee growth and innovation.\n\nWould you be open to a brief chat to discuss how my background aligns with your team's needs?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Technical Operations Engineer",
+   "company": "Stripe",
+   "location": "South San Francisco, CA",
+   "url": "https://stripe.com/jobs/search?gh_jid=8325807",
+   "posted": "2026-10-26T23:41:13+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 45,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "Python"
+   ],
+   "missing_required": [
+    "Ruby",
+    "Developer tools including git",
+    "Observability tooling"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Python and SQL match well and it asks for 2 years, but it requires Ruby and specific observability tooling you do not have.",
+   "description": "About Stripe Stripe, LLC. is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the ",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-26",
+   "title": "Frontend/Web Developer",
+   "company": "Konstruct Digital",
+   "location": "Calgary, AB",
+   "url": "https://jobright.ai/jobs/info/6adfbbac0a4cc7090f9828dc",
+   "posted": "2026-10-26T22:29:45.000Z",
+   "keyword_matched": "email alert",
+   "fit_score": 45,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "PHP",
+    "MySQL",
+    "Shopify"
+   ],
+   "missing_required": [
+    "WordPress CMS",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Divi"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your PHP and Shopify skills match, but this is primarily a frontend and WordPress development role rather than Java or QA automation.",
+   "description": "Konstruct Digital is hiring a Frontend/Web Developer to build and maintain responsive client websites across WordPress and other platforms. The role focuses on performance, SEO and analytics integrations, quality assurance, and collaboration with internal teams and clients. Responsibilities Build an",
+   "description_source": "full posting",
+   "source": "Jobright alert",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
   },
   {
    "date_found": "2026-10-26",
@@ -775,7 +894,8 @@
   "https://www.adzuna.ca/details/5939824737?utm_medium=api&utm_source=67a2fd52": "2026-10-26",
   "rq11617 ux designer junior|maarut": "2026-10-26",
   "https://www.adzuna.ca/details/5939602335?utm_medium=api&utm_source=67a2fd52": "2026-10-26",
-  "ux designer|vtech solution": "2026-10-26"
+  "ux designer|vtech solution": "2026-10-26",
+  "email:1a17a5581b72583b": "2026-10-26"
  },
  "pending": []
 }
