@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T16:55:51+00:00",
+ "updated": "2026-10-28T23:29:40+00:00",
  "jobs": [
   {
    "date_found": "2026-10-28",
@@ -319,6 +319,56 @@
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-28",
+   "title": "Technical Curriculum Developer, Technical Enablement",
+   "company": "Stripe",
+   "location": "San Francisco; Seattle; Remote",
+   "url": "https://stripe.com/jobs/search?gh_jid=8164666",
+   "posted": "2026-10-28T22:31:30+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 25,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "Curriculum development",
+    "Instructional design",
+    "Technical training"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your background is in software development, but this is a technical curriculum development role requiring 3+ years of instructional design experience.",
+   "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-28",
+   "title": "Spécialiste des tests système / System Test Specialist",
+   "company": "Genetec",
+   "location": "Sherbrooke, Estrie",
+   "url": "https://www.adzuna.ca/details/5944888241?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-28T15:59:05Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "À propos de Genetec : Genetec est un leader mondial dans le domaine des solutions unifiées de sécurité, de sûreté publique et d'intelligence d'affaires. Notre plateforme SC SaaS propose des produits innovants de sécurité physique basés sur le cloud qui protègent les personnes, les biens et les donné",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
   },
   {
    "date_found": "2026-10-28",
