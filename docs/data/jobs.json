@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T17:02:04+00:00",
+ "updated": "2026-10-30T23:11:45+00:00",
  "jobs": [
   {
    "date_found": "2026-10-30",
@@ -119,6 +119,63 @@
   },
   {
    "date_found": "2026-10-30",
+   "title": "Developer, Enterprise Tenants and Policies",
+   "company": "1Password",
+   "location": "Remote (United States | Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/1password/b9ff2259-517c-4ec2-b92f-646be8bf12b6",
+   "posted": "2026-10-30T19:13:47.185000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Go or Node.js or Ruby"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your 2 years of experience match the requirements, but the role asks for intermediate backend languages like Go or Node.js rather than your primary Java and C# stack.",
+   "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
+   "description_source": "full posting",
+   "source": "1Password careers",
+   "outreach_note": "Hi, I just applied to the Developer, Enterprise Tenants and Policies role. With my software development experience building REST APIs and backend systems, I am very interested in this work. Would love to connect.",
+   "outreach_subject": "Application: Developer, Enterprise Tenants and Policies - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Developer, Enterprise Tenants and Policies role at 1Password. With my professional software development background and strong experience building backend systems and REST APIs, I am very excited about the opportunity to contribute to your enterprise features and microservice architecture.\n\nCould we set up a quick chat, or let me know who the best person to speak with regarding this position would be?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Engineer in Test (SET)",
+   "company": "Machina Labs",
+   "location": "Chatsworth, Grey",
+   "url": "https://www.adzuna.ca/details/5947171850?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:40:22Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 50,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Python"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Azure"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation experience is a good match, but the role is intermediate and requires specific tech like TypeScript, React, and Azure which you do not have.",
+   "description": "About Machina Labs At Machina Labs, we’re reshaping manufacturing through advanced robotics and machine learning. Our platform uses the largest 6-axis robots on the market to form 2D sheets of metal into complex 3D parts, layer-by-layer. Traditional sheet metal production was designed for scale, not",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
    "title": "Software Engineer II - CIAM",
    "company": "Jobgether",
    "location": "Canada",
@@ -139,6 +196,62 @@
    "dealbreakers_hit": [],
    "reason": "Your backend and API background matches the technical scope, but Software Engineer II is an intermediate role with a high salary range asking for specialized CIAM expertise.",
    "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Software Engineer II – CIAM based in Canada. We are seeking a motivated Software Engineer to help build and enhance secure customer identity and authentication systems. I",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Engineer II - CIAM",
+   "company": "Affirm, Inc.",
+   "location": "Saskatoon, Saskatchewan",
+   "url": "https://www.adzuna.ca/details/5947170294?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:34:17Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Python or Kotlin"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This mid-level Software Engineer II role asks for Python or Kotlin which you have limited or no experience with, though it requires no fixed minimum years.",
+   "description": "At Affirm, we exist for the moments that matter—giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most. Affirm is building the next generation of customer identity and authentication. This role is a hands‑on, mid‑engineering ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Test Engineer for Robotics Platform & CI/CD",
+   "company": "Machina Labs",
+   "location": "Chatsworth, Grey",
+   "url": "https://www.adzuna.ca/details/5947171352?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:39:01Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Python"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Azure"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation and Python match, but the role asks for ownership and experience across TypeScript, React, and Azure, making it an intermediate scope.",
+   "description": "About Machina Labs: Engineering moves at software speed. Manufacturing doesn't. Yet. Machina Labs is changing that. We build intelligent, software-defined factories that produce complex metal structures directly from digital design. By integrating advanced metal forming, robotics, and automated prod",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -198,6 +311,97 @@
    "dealbreakers_hit": [],
    "reason": "Your React and frontend skills are limited to working level, and this role focuses heavily on ReactJS and frontend development.",
    "description": "Description Join Fortinet, a cybersecurity pioneer with over two decades of excellence, as we continue to shape the future of cybersecurity and redefine the intersection of networking and security. At Fortinet, our mission is to safeguard people, devices, and data everywhere. We are currently seekin",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Développeur·euse logiciel en exploitation de modèles d’apprentissage automatique",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000158757249-developpeur-euse-logiciel-en-exploitation-de-modeles-d-apprentissage-automatique",
+   "posted": "2026-10-30T14:17:11.981000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Machine Learning engineering",
+    "Rust",
+    "cloud infrastructure deployment"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role matches your avoid_roles list as it is a Data scientist / ML research role requiring machine learning specialization, which caps your score at 35.",
+   "description": "En tant que développeur·euse logiciel spécialisé·e en apprentissage automatique à Ubisoft Montréal, vous contribuerez à la création de systèmes fiables et évolutifs qui protègent la confiance et la sécurité de nos joueurs. Vous ferez partie du domaine Données consommateurs au sein du Bureau des donn",
+   "description_source": "full posting",
+   "source": "Ubisoft careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Forward Deployed Engineer, Infrastructure Specialist (North America)",
+   "company": "Cohere",
+   "location": "Toronto / Canada / Vancouver / Ottawa / Montreal (remote)",
+   "url": "https://jobs.ashbyhq.com/cohere/be48aafc-9610-4ebd-8414-a0722a3cd59a",
+   "posted": "2026-10-30T21:56:46.180000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Kubernetes",
+    "Helm",
+    "enterprise software deployment",
+    "cloud infrastructure expertise"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an intermediate-level infrastructure/deployments role requiring deep Kubernetes and cloud administration experience that exceeds your junior development and QA background.",
+   "description": "WHO ARE WE?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe’re training and deploying frontier models for enterprises who are building AI systems. We believe ",
+   "description_source": "full posting",
+   "source": "Cohere careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Engineer II, CRM & SEO",
+   "company": "SEOjobs.com",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5947170506?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:36:39Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "React / React Native",
+    "PostgreSQL",
+    "SQL / PostgreSQL",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "Ruby",
+    "Next.js",
+    "Data engineering pipelines (Airflow or dbt)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an intermediate/mid-level Software Engineer II role requiring 3-5 years of experience and missing several key stack requirements like TypeScript and Ruby, plus it hits an avoid role due to the mid-level/independent ownership scope.",
+   "description": "We’re transforming the grocery industry At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless op",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -290,6 +494,96 @@
   },
   {
    "date_found": "2026-10-30",
+   "title": "Security Incident Response Developer",
+   "company": "Wealthsimple",
+   "location": "Remote (Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/wealthsimple/0d2fc16a-b098-4d25-ac86-351465e8d466",
+   "posted": "2026-10-30T17:41:06.690000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "junior",
+   "years_required": 3,
+   "matched_skills": [
+    "AWS"
+   ],
+   "missing_required": [
+    "cybersecurity experience",
+    "incident response experience",
+    "SIEM tooling"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of experience in cybersecurity (candidate has 2 years total professional development experience, zero formal cybersecurity/incident response background)"
+   ],
+   "reason": "Your background is in general software development and QA automation, but this role specifically requires 3+ years in cybersecurity and hands-on incident response.",
+   "description": "BUILD SOMETHING PEOPLE LOVE\n\nWealthsimple is Canada’s leading financial innovator. The company offers a full suite of simple, sophisticated financial products across managed investing, do-it-yourself trading, cryptocurrency, tax filing, spending and saving. Wealthsimple currently serves more than 4 ",
+   "description_source": "full posting",
+   "source": "Wealthsimple careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Development Engineer, Demand Tech",
+   "company": "Amazon Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5947170287?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:34:16Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "3+ years of professional software development experience",
+    "1+ years of system design and architecture experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and API skills match well, but this role requires 3+ years of experience and hits your experience dealbreaker.",
+   "description": "Software Development Engineer, Demand Tech Join our dynamic Reach Planning Engineering team within Demand Tech to build the next generation of advertising technology at Amazon. In this role, you'll own, design, and deliver highly scalable systems that empower advertisers to plan campaigns and build ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Automation and Test Engineer - Photonics",
+   "company": "Lumentum Operations LLC",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5947169559?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:32:15Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 5,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "Python",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "5+ years of experience",
+    "hardware integration experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and automation skills match well, but this role requires 5+ years of experience which triggers your dealbreaker.",
+   "description": "locationsCanada - Ottawa (Bill Leathem)time typeFull timeposted onPosted Todayjob requisition id20261102It's fun to work in a company where people truly BELIEVE in what they're doing!We're committed to bringing passion and customer focus to the business.If you like wild growth and working with happy",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
    "title": "Embedded Software Developer",
    "company": "Ford Motor",
    "location": "Ottawa, Ottawa region",
@@ -374,6 +668,120 @@
    "description": "Why BCAA? Feel proud of what you do and help shape the future of BC at a BC Top Employer. We’re driven by purpose – delivering peace of mind to one in three BC households with insurance, roadside assistance, auto repair, Evo Car Share and Evolve E-Bike Share. With a long history of keeping roads saf",
    "description_source": "full posting",
    "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Serveur/serveuse au comptoir de salle à manger",
+   "company": "Les Restaurants Genoa Inc.",
+   "location": "Saint-Hyacinthe, Les Maskoutains",
+   "url": "https://www.adzuna.ca/details/5947170139?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:33:56Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Pay at Intact is about much more than just salary.Multiple benefits offered to support.Wellness account and much more.Share plan & other savings: up to.Employee Share Purchase Plan (ESPP) - with In... CA$24.22 hourly Remote Permanent The 10 most popular job searches in Saint-Hyacinthe, QC are: it it",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "QA Automation Engineer",
+   "company": "Cascade Debt Corporation",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5947169620?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:32:28Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Do you want to work in a small team where you can make a real difference in a company? Would you embrace the challenge of building a high-impact platform that is used globally? Then we want to speak with you! About Cascade: Cascade is a fintech startup backed by Canadian and US investors that empowe",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Engineer",
+   "company": "Kelly",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5947170157?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:33:59Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Job Title: Senior Forward Deployed Engineer – Spread Products (Financing & Securitization) Location: Mississauga, ON (Initially remote then hybrid) Duration 6 months (right to hire) Hiring Event: November 18–19 Role Overview Senior Forward Deployed Engineer with strong Java and Python expertise to b",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Back End Developer",
+   "company": "Cleo Consulting",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5947216753?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T14:34:56Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Assignment: RQ11429 - Software Developer - Back End - Senior Job Title: Back End Developer Requisition (SS): RQ11429 Start Date: 2026-09-03 Client: Government Services Integration Cluster End Date: 2027-05-31 Office Location: 222 Jarvis Street, Toronto Organization: Government Services Integration C",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Programmeur·euse Anti-triche (March of Giants)",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000158768864-programmeur-euse-anti-triche-march-of-giants-",
+   "posted": "2026-10-30T15:12:18.134000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "C++",
+    "Cybersecurity / Anti-cheat expertise",
+    "Windows internals"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This anti-cheat programming role requires specialized C++ low-level programming, game security, and Windows internals experience, which does not match your backend and QA background.",
+   "description": "La personne titulaire de ce poste est responsable de contribuer à la mission de l’équipe Anti-triche de March of Giants, en veillant à offrir à la communauté un environnement de jeu juste et compétitif. Ce rôle couvre la prévention et la détection de la triche par une double approche : renforcement ",
+   "description_source": "full posting",
+   "source": "Ubisoft careers",
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
@@ -677,6 +1085,59 @@
   },
   {
    "date_found": "2026-10-30",
+   "title": "Chef.fe Technique - Programmeur.meuse IU (Far Cry)",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000158754429-chef-fe-technique-programmeur-meuse-iu-far-cry-",
+   "posted": "2026-10-30T14:05:25.819000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "AAA game shipping experience",
+    "visual scripting UI systems",
+    "UI profiling and optimization"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior technical lead role requiring shipped AAA game titles and team supervision, which far exceeds your junior experience.",
+   "description": "Le ou la programmeur.meuse UI senior – chef.fe technique est la principale référence technique pour l’ensemble des systèmes d’interface utilisateur du projet. Cette personne fait le lien entre l’ingénierie, l’intégration de l’interface utilisateur et l’art technique, en veillant à ce que chaque élém",
+   "description_source": "full posting",
+   "source": "Ubisoft careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Engineer III",
+   "company": "TD Bank Group",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5947169545?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:32:13Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [
+    "Enterprise architecture",
+    "Cloud infrastructure leadership"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your skills match Java, but this is a senior Software Engineer III role requiring architecture ownership and leadership, hitting your avoid_roles criteria.",
+   "description": "## Software Engineer IIIApply: Onsite: Toronto, Ontario: Full time: Posted Today: End Date: November 28, 2026 (30 days left to apply): R\\\\_1519353**Work Location:**Toronto, Ontario, Canada**Hours:**37.5**Line of Business:**Technology Solutions**Pay Details:**$125,500 - $154,000 CADThe pay details po",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
    "title": "Programmeur.euse 3D Sénior",
    "company": "Ubisoft",
    "location": "Montreal, QC, CA",
@@ -700,6 +1161,88 @@
    "description": "Nous sommes une petite équipe autonome qui développe une expérience multijoueur ambitieuse sur l'Unreal Engine. Nous recherchons des développeur·euse·s très impliqué·e·s, animé·e·s par l’exécution, le sens des responsabilités et la fierté de construire quelque chose de concret - ensemble. Ce que vou",
    "description_source": "full posting",
    "source": "Ubisoft careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Synthetic Aperture Radar (SAR) Payload Systems Engineer | Remote Opportunity | Fastwater Staffing",
+   "company": "HIKINEX",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5947169696?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:32:42Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a scrambled aggregation of marketing, creative direction, and systems engineering roles completely unrelated to your background as a software developer.",
+   "description": "For 100 years, Reitmans (Canada) Limited (RCL) has defined the Canadian retail fashion landscape with its three iconic brands, Reitmans, RW&CO. We're excited about what we'll build together next. Our Permanent Alteo is looking for a Senior CreativeProduction Manager for a permanent position based in",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Lawyer – Family Law Litigation",
+   "company": "Lépine Talent Inc.",
+   "location": "Mascouche, Les Moulins",
+   "url": "https://www.adzuna.ca/details/5947169353?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:31:45Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [],
+   "missing_required": [
+    "Law degree",
+    "Family law litigation experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior law role requiring 8 years of experience in family law litigation, which is completely outside your software development field and hits your experience dealbreaker.",
+   "description": "After several years in practice, career progression is measured not only by the complexity of the matters you handle, but also by the contribution you make to your team and the next generation of lawyers. This position is intended for a lawyer with at least eight years of experience in family law li",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-30",
+   "title": "Software Engineer in Test",
+   "company": "Kelly",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5947169133?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-30T13:31:21Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "8-12+ years of experience",
+    "Lead SDET / QA Architect experience",
+    "Financial services/trading platform experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior-level role requiring 8-12+ years of experience and leadership scope, which does not fit your junior profile and hits your dealbreaker.",
+   "description": "Job Title : Senior SDET / Quality Engineering Architect Location : Mississauga, ON (Initially remote then hybrid) Hiring Event : November 18–19 Role Overview : Senior SDET / Quality Engineering Architect to lead quality engineering strategy for high-throughput, low-latency trading platforms. The rol",
+   "description_source": "full posting",
+   "source": "Adzuna",
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
