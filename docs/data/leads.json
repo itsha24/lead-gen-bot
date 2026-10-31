@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T16:35:56+00:00",
+ "updated": "2026-10-31T15:58:27+00:00",
  "offers": {
   "website": "New website or redesign",
   "online_store": "Shopify / online store",
@@ -8,6 +8,848 @@
   "custom_tool": "Custom web app or internal tool"
  },
  "leads": [
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ741m7XsRyUwRQGnP7gqB8b4",
+   "name": "Schnitzel & Cie par Bagel St-Henri",
+   "category": "Restaurant",
+   "address": "4354 Rue Saint-Antoine O, Montréal, QC H4C 1C8, Canada",
+   "phone": "(514) 516-2232",
+   "website": "https://www.facebook.com/Schnitzel-Cie-par-Bagel-St-Henri-107980587580877/",
+   "rating": 4.8,
+   "reviews": 425,
+   "maps_url": "https://maps.google.com/?cid=13758920220549802304&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "restaurants in Saint-Henri, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "This restaurant has strong reviews and volume with 425 ratings, but relies solely on a Facebook page instead of an official website.",
+   "opportunities": [
+    "Build a dedicated website with menu and contact info",
+    "Add direct online ordering or booking",
+    "Improve discoverability on Google search"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Schnitzel & Cie",
+   "message": "Bonjour,\n\nJe suis tombé sur votre page Facebook Schnitzel & Cie par Bagel St-Henri et j'ai vu que vous n'avez pas de site web dédié pour votre restaurant.\n\nJe aide les commerces locaux à se doter d'un site rapide, simple et adapté aux téléphones pour faciliter la vie des clients et attirer plus de monde.\n\nSeriez-vous ouvert à en discuter brièvement cette semaine pour voir ce qui serait utile pour vous?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJEdbcbwIZyUwROl3-QsjMF-A",
+   "name": "Caffe San Simeon",
+   "category": "Cafe",
+   "address": "49 Rue Dante, Montréal, QC H2S 1J8, Canada",
+   "phone": "(514) 274-3019",
+   "website": null,
+   "rating": 4.7,
+   "reviews": 425,
+   "maps_url": "https://maps.google.com/?cid=16147600149449694522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "This is a well-established cafe with strong reviews and 425 ratings, but they have no website at all.",
+   "opportunities": [
+    "Create a clean, mobile-friendly website with the cafe's menu and hours",
+    "Add location and contact details so local customers can find them easily on Google"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Caffe San Simeon",
+   "message": "Bonjour,\n\nJe remarque que le Caffe San Simeon n'a pas de site web pour présenter son menu et ses heures d'ouverture aux clients de la rue Dante.\n\nJe m'appelle Hassan et je conçois des sites web simples, rapides et adaptés aux téléphones pour les commerces locaux.\n\nSeriez-vous ouvert à une brève discussion pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ_WUiM9sVyUwR44NxrFtrxbE",
+   "name": "Victoria Café",
+   "category": "Cafe",
+   "address": "45 Rue Principale, Châteauguay, QC J6K 1E9, Canada",
+   "phone": "(450) 507-1596",
+   "website": null,
+   "rating": 4.6,
+   "reviews": 414,
+   "maps_url": "https://maps.google.com/?cid=12809762756604560355&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "boutiques in Châteauguay",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "Victoria Café has over 400 reviews and a strong 4.6 rating, but no website at all, making it a high-value local target for a professional web presence.",
+   "opportunities": [
+    "Build a clean, mobile-friendly website with menu and location details",
+    "Add clear operating hours and contact information",
+    "Help local customers find them easily on Google Search"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Victoria Café",
+   "message": "Bonjour,\n\nJe vois que le Victoria Café a une très belle réputation à Châteauguay avec plus de 400 avis, mais vous n'avez pas de site internet.\n\nJe aide les commerces locaux à se doter d'un site web rapide et adapté aux téléphones pour présenter leur menu et attirer de nouveaux clients.\n\nSeriez-vous ouvert à en discuter lors d'un court appel cette semaine?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJm9FBW24ZyUwR6zWXEOIRRqI",
+   "name": "Bazar Café",
+   "category": "Restaurant",
+   "address": "278 Rue Beaubien E, Montréal, QC H2S 1R6, Canada",
+   "phone": "(438) 799-0981",
+   "website": null,
+   "rating": 4.6,
+   "reviews": 404,
+   "maps_url": "https://maps.google.com/?cid=11693053145152697835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "Bazar Café has 404 positive reviews and is very active, but has no website at all for online menus or ordering.",
+   "opportunities": [
+    "Create a clean website with an accessible menu",
+    "Add online ordering directly on the site",
+    "Display hours, location, and contact information clearly"
+   ],
+   "language": "fr",
+   "email_subject": "Bazar Café - site web et commande en ligne",
+   "message": "Bonjour, je vois que le Bazar Café a d'excellents avis sur Google mais ne possède pas de site web pour présenter son menu ou faciliter la commande. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les restaurants de Montréal. Aimeriez-vous discuter d'une solution simple pour votre café?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ7USuKucdyUwReg_4IlEQExI",
+   "name": "Café Alice",
+   "category": "Coffee Shop",
+   "address": "3756 Rue Masson, Montréal, QC H1X 1S6, Canada",
+   "phone": "(514) 727-9144",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 382,
+   "maps_url": "https://maps.google.com/?cid=1302402657905282938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "Café Alice has 382 reviews with a 4.8 rating but completely lacks a website.",
+   "opportunities": [
+    "Build a fast, mobile-friendly website with menu and location details",
+    "Add clear opening hours and contact info",
+    "Improve local Google search visibility"
+   ],
+   "language": "fr",
+   "email_subject": "Café Alice - Site web",
+   "message": "Bonjour, je vois que Café Alice a une excellente réputation sur Google avec 382 avis mais n'a pas de site web. Je m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones pour les commerces locaux. Un site simple permettrait à vos clients de trouver facilement votre menu et vos heures d'ouverture. Seriez-vous ouvert à un court appel cette semaine pour en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJK7z5HLEZyUwRthBCxFRhuoY",
+   "name": "KAZA Café",
+   "category": "Coffee Shop",
+   "address": "3306 Bd Rosemont, Montréal, QC H1X 1K2, Canada",
+   "phone": "(514) 291-0192",
+   "website": null,
+   "rating": 4.9,
+   "reviews": 274,
+   "maps_url": "https://maps.google.com/?cid=9708178963448336566&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "KAZA Café has 274 reviews with a 4.9 rating but completely lacks a website, making a professional site a high-impact, high-urgency need.",
+   "opportunities": [
+    "Build a fast, mobile-friendly website with their menu and hours",
+    "Add a clear location and contact page for local customers",
+    "Display customer reviews to build more trust online"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour KAZA Café",
+   "message": "Bonjour, je suis tombé sur la fiche de KAZA Café et j'ai vu que vous aviez d'excellents avis mais pas de site web. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les commerces locaux. Avoir un site simple permettrait à vos clients de consulter facilement votre menu et vos heures d'ouverture. Seriez-vous ouvert à un court appel cette semaine pour en discuter? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJfRQ70gIbyUwRH8roDFHB-tM",
+   "name": "Café de la 3e",
+   "category": "Coffee Shop",
+   "address": "2700 Rue Dandurand, Montréal, QC H1Y 1S7, Canada",
+   "phone": null,
+   "website": null,
+   "rating": 4.7,
+   "reviews": 272,
+   "maps_url": "https://maps.google.com/?cid=15274733640033552927&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "Le Café de la 3e has 272 reviews with a 4.7 rating and is very active, but they have no website at all.",
+   "opportunities": [
+    "Build a clean, mobile-friendly website with menu and hours",
+    "Add location and directions so local customers find them easily on Google",
+    "Include a direct contact section"
+   ],
+   "language": "fr",
+   "email_subject": "Visibilité en ligne pour Café de la 3e",
+   "message": "Bonjour,\n\nJe suis tombé sur votre fiche Google pour le Café de la 3e et j'ai vu que vous n'avez pas de site web pour présenter votre menu et vos horaires aux clients du quartier.\n\nJe aide les commerces locaux à mettre en place des sites web simples, rapides et adaptés aux téléphones pour attirer plus de clients.\n\nSeriez-vous ouvert à un court appel cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ7b2lNegZyUwRRw_rrz4VloI",
+   "name": "Café Rose de Mai",
+   "category": "Cafe",
+   "address": "500 Rue Bélanger, Montréal, QC H2S 1G4, Canada",
+   "phone": "(514) 993-3824",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 255,
+   "maps_url": "https://maps.google.com/?cid=9409731830420803399&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "This active, well-reviewed café in Montreal has no website at all, making it a prime candidate for a clean web presence.",
+   "opportunities": [
+    "Build a fast, mobile-friendly website with the menu, hours, and location",
+    "Add a contact section or simple direction links",
+    "Set up basic search engine optimization so locals can find them easily"
+   ],
+   "language": "fr",
+   "email_subject": "Café Rose de Mai - site web",
+   "message": "Bonjour,\n\nEn regardant votre page Google pour le Café Rose de Mai, j'ai vu que vous n'avez pas de site web pour présenter votre menu et vos heures d'ouverture.\n\nJe aide les commerces locaux à mettre en place des sites rapides et adaptés aux téléphones qui permettent aux clients de vous trouver plus facilement en ligne.\n\nSeriez-vous disponible pour un court appel cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJMT-hlt4ZyUwRbA2MiCJEU9E",
+   "name": "Fleurimont Café & Vin",
+   "category": "Coffee Shop",
+   "address": "907 Bd Rosemont, Montréal, QC H2S 1Z8, Canada",
+   "phone": null,
+   "website": null,
+   "rating": 4.9,
+   "reviews": 191,
+   "maps_url": "https://maps.google.com/?cid=15083474492104379756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "This coffee shop has a strong 4.9 rating with 191 reviews and is fully active, but they have no website at all.",
+   "opportunities": [
+    "Build a fast, mobile-friendly website with their menu, hours, and location",
+    "Add clear directions and contact details to help new customers find them",
+    "Set up a clean page layout that matches the cozy vibe of their café"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Fleurimont Café & Vin",
+   "message": "Bonjour,\n\nJe vois que Fleurimont Café & Vin a d'excellents avis sur Google, mais vous n'avez pas de site web pour présenter votre menu et vos horaires en ligne.\n\nJe m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones pour les commerces locaux. Un site simple permettrait à vos clients de trouver facilement vos informations et de découvrir votre sélection de vins et cafés.\n\nAuriez-vous dix minutes cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJn-KM6XcayUwRlK0jZc9w2j4",
+   "name": "L'Avenue Notre Dame",
+   "category": "Brunch Restaurant",
+   "address": "3612 R. Notre Dame O, Montréal, QC H4C 1P5, Canada",
+   "phone": "(438) 387-3668",
+   "website": "http://restolavenue.ca/",
+   "rating": 4.6,
+   "reviews": 3085,
+   "maps_url": "https://maps.google.com/?cid=4529056411331833236&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "restaurants in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "This restaurant is highly active and popular with over 3,000 reviews, but their current website is not secure, lacking HTTPS which displays a browser warning.",
+   "opportunities": [
+    "Secure the website with HTTPS to remove browser warnings",
+    "Modernize the homepage design and mobile layout",
+    "Add a direct online booking or ordering system"
+   ],
+   "language": "fr",
+   "email_subject": "Sécurité et site web de L'Avenue Notre Dame",
+   "message": "Bonjour, je suis tombé sur le site de L'Avenue Notre Dame et j'ai remarqué que votre page affiche un avertissement de sécurité en raison de l'absence de certificat HTTPS. Comme vous avez une excellente réputation avec plus de 3000 avis, il est important que les clients arrivent sur un site sécurisé et moderne. Je propose de refondre votre site pour le sécuriser et le rendre parfaitement adapté aux mobiles. Seriez-vous disponible pour un court échange téléphonique cette semaine afin d'en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [
+    "mkayal@lavenuegcc.com"
+   ],
+   "issues": [
+    "not secure (no HTTPS) — browsers show a warning",
+    "no online booking, ordering or store found"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [
+    "facebook",
+    "instagram"
+   ],
+   "copyright_year": 2026,
+   "https": false
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ07floW0ZyUwRZuoV2k9fGqI",
+   "name": "Café San Gennaro",
+   "category": "Pizza Restaurant",
+   "address": "69 Rue Saint-Zotique Est, Montréal, QC H2S 1K7, Canada",
+   "phone": "(514) 273-6868",
+   "website": "http://sangennaro.ca/",
+   "rating": 4.7,
+   "reviews": 1849,
+   "maps_url": "https://maps.google.com/?cid=11680753380104727142&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Café San Gennaro has 1,849 reviews and high ratings, but their website shows a security warning due to no HTTPS and displays a verification error message on the homepage.",
+   "opportunities": [
+    "Fix the SSL certificate issue so browsers stop showing a security warning to visitors",
+    "Resolve the homepage verification error to ensure customers can see their menu and information",
+    "Add a secure and mobile-friendly layout for visitors on phones"
+   ],
+   "language": "fr",
+   "email_subject": "Problème de sécurité sur le site de Café San Gennaro",
+   "message": "Bonjour. En visitant le site de Café San Gennaro, mon navigateur indique que la connexion n'est pas sécurisée et la page d'accueil affiche un message de vérification. Je m'appelle Hassan Awan et je suis développeur web basé près de Montréal. Je construis des sites rapides et sécurisés pour les commerces locaux. Seriez-vous ouvert à un court appel pour discuter d'une mise à jour de votre site web? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "not secure (no HTTPS) — browsers show a warning",
+    "no online booking, ordering or store found"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": false
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJR1X4wXcayUwReGMQNts4LcY",
+   "name": "Sumac",
+   "category": "Middle Eastern Restaurant",
+   "address": "3618 R. Notre Dame O, Montréal, QC H4C 1P5, Canada",
+   "phone": "(514) 935-1444",
+   "website": "http://www.sumacrestaurant.com/",
+   "rating": 4.5,
+   "reviews": 1684,
+   "maps_url": "https://maps.google.com/?cid=14280132507617747832&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "restaurants in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Sumac is an established, highly-reviewed restaurant with 1,684 reviews, but their current website is not secure and shows a browser warning.",
+   "opportunities": [
+    "Fix the missing HTTPS security certificate so browsers stop showing a warning",
+    "Modernize the website layout to match mobile devices",
+    "Add online ordering or reservation capabilities directly on the site"
+   ],
+   "language": "en",
+   "email_subject": "Website security warning for Sumac",
+   "message": "Hello,\n\nI noticed when visiting your website that browsers show a security warning because the site is not secure with HTTPS.\n\nI build fast, secure, mobile-friendly websites for local businesses in Montreal. We could quickly secure your site and make it easy for your customers to check your menu and get in touch.\n\nWould you be open to a quick call this week to discuss how we could update your site?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "not secure (no HTTPS) — browsers show a warning",
+    "no online booking, ordering or store found"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": false
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ19h_xowjyUwRDIaHIPTFVRU",
+   "name": "Gym Fit Forme",
+   "category": "Fitness center",
+   "address": "3916 A. Jean-Noël-Lavoie, Laval, QC H7T 2H6, Canada",
+   "phone": "(514) 643-1888",
+   "website": "https://gymfitforme.com/",
+   "rating": 4.5,
+   "reviews": 1602,
+   "maps_url": "https://maps.google.com/?cid=1537352500125337100&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "gyms in Laval",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "Gym Fit Forme is a large, well-established multi-location fitness center with over 1,600 reviews, but lacks online class booking or member signup systems on their WordPress site.",
+   "opportunities": [
+    "Add a direct online class booking system for members",
+    "Set up online membership signups and plan purchases",
+    "Streamline member intake and trial session registration"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour les cours de Gym Fit Forme",
+   "message": "Bonjour l'équipe de Gym Fit Forme, je vois sur votre site que vos membres n'ont pas la possibilité de réserver directement leurs cours en groupe en ligne. Je m'appelle Hassan Awan, développeur web basé près de Montréal. Je construis des systèmes de réservation en ligne simples pour les centres de fitness qui permettent aux clients de réserver leurs places directement sur votre site sans passer par le téléphone. Auriez-vous cinq minutes cette semaine pour en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no online booking, ordering or store found"
+   ],
+   "platform": [
+    "WordPress"
+   ],
+   "ordering_booking": [],
+   "socials": [
+    "facebook",
+    "instagram",
+    "tiktok"
+   ],
+   "copyright_year": 2026,
+   "https": true
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJmV7riuERyUwRkdAyBuiuDTM",
+   "name": "EVA's - St. Henri",
+   "category": "Restaurant",
+   "address": "3981 R. Notre Dame O, Montréal, QC H4C 1R2, Canada",
+   "phone": null,
+   "website": null,
+   "rating": 4.3,
+   "reviews": 886,
+   "maps_url": "https://maps.google.com/?cid=3678788782191202449&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "restaurants in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "EVA's - St. Henri is a popular restaurant with 886 reviews and a 4.3 rating, but they have no website for online ordering or reservations.",
+   "opportunities": [
+    "Build a mobile-friendly website with online ordering",
+    "Set up direct digital menus and reservations without third-party commissions"
+   ],
+   "language": "fr",
+   "email_subject": "Site web et commande en ligne pour EVA's - St. Henri",
+   "message": "Bonjour, je vois que EVA's - St. Henri a une belle réputation sur sa fiche Google avec près de 900 avis mais ne possède pas de site web pour la commande en ligne. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les restaurants de Montréal. Aimeriez-vous discuter d'une solution simple pour recevoir vos commandes directement sur votre propre site. Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJuR6J5nEZyUwRZVV2hClD0PQ",
+   "name": "Moustache Café",
+   "category": "Coffee Shop",
+   "address": "35 Rue Beaubien E, Montréal, QC H2S 1P7, Canada",
+   "phone": "(514) 999-0685",
+   "website": null,
+   "rating": 4.4,
+   "reviews": 573,
+   "maps_url": "https://maps.google.com/?cid=17640673586005300581&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Moustache Café has no website despite having 573 reviews and a 4.4 rating, making a new site an urgent need for their established business.",
+   "opportunities": [
+    "Build a fast, mobile-friendly website with their menu and hours",
+    "Add location and contact information to help customers find them"
+   ],
+   "language": "fr",
+   "email_subject": "Visibilité en ligne pour Moustache Café",
+   "message": "Bonjour,\n\nJe suis tombé sur la fiche Google de Moustache Café et j'ai vu que vous n'aviez pas de site web pour présenter votre menu et vos heures d'ouverture.\n\nJe m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones portables pour les commerces locaux de la région de Montréal.\n\nSeriez-vous ouvert à un court appel pour en discuter?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJS2S632wZyUwRK2xSi19NwSo",
+   "name": "Café Conca d'Oro",
+   "category": "Coffee Shop",
+   "address": "184 Rue Dante, Montréal, QC H2S 1K1, Canada",
+   "phone": "(514) 495-0134",
+   "website": "https://www.instagram.com/cafeconcadoro/",
+   "rating": 4.7,
+   "reviews": 395,
+   "maps_url": "https://maps.google.com/?cid=3080828692852796459&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "This coffee shop is well-established with 395 reviews and a 4.7 rating, but relies entirely on an Instagram page instead of a real website.",
+   "opportunities": [
+    "Build a clean, mobile-friendly website with menu and hours",
+    "Add a dedicated page for location and contact details",
+    "Help customers find information quickly without leaving Google"
+   ],
+   "language": "fr",
+   "email_subject": "Café Conca d'Oro et votre site web",
+   "message": "Bonjour,\n\nJe remarque que le Café Conca d'Oro utilise uniquement une page Instagram et n'a pas de site web dédié pour regrouper vos informations et votre menu.\n\nJe m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones pour les commerces locaux. Un site simple permettrait à vos clients de trouver facilement vos heures d'ouverture et votre emplacement directement sur Google.\n\nSeriez-vous ouvert à en discuter brièvement cette semaine?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJXQRmKkEZyUwRCFgaUD7kx-k",
+   "name": "Soucoupe Café",
+   "category": "Coffee Shop",
+   "address": "6910 Rue Fabre, Montréal, QC H2G 2Z6, Canada",
+   "phone": "(514) 759-1638",
+   "website": "https://www.facebook.com/lasoucoupe.fabre/",
+   "rating": 4.7,
+   "reviews": 246,
+   "maps_url": "https://maps.google.com/?cid=16845683887485638664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Soucoupe Café has 246 reviews and a 4.7 rating but relies solely on a Facebook page instead of an independent website.",
+   "opportunities": [
+    "Create a dedicated website with menu and opening hours",
+    "Add clear location and contact details for customers",
+    "Improve discoverability on Google searches"
+   ],
+   "language": "fr",
+   "email_subject": "Un site web pour Soucoupe Café",
+   "message": "Bonjour, j'ai vu que Soucoupe Café utilise uniquement une page Facebook pour sa présence en ligne. Aimeriez-vous un site web simple et rapide sur lequel vos clients pourraient consulter votre menu et vos horaires facilement. Je m'appelle Hassan Awan et je conçois des sites web pour les commerces locaux de Montréal. Seriez-vous disponible pour un court appel cette semaine. Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJD5_aDv4ZyUwRg9IjDJ6ymfU",
+   "name": "Augusta Café",
+   "category": "Coffee Shop",
+   "address": "1239 Rue de Bellechasse, Montréal, QC H2S 2B6, Canada",
+   "phone": "(514) 277-4924",
+   "website": "https://www.instagram.com/augusta_cafe_/",
+   "rating": 4.9,
+   "reviews": 244,
+   "maps_url": "https://maps.google.com/?cid=17697372602607325827&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Augusta Café has 244 reviews and a 4.9 rating indicating a strong local business, but they only use an Instagram page instead of a real website.",
+   "opportunities": [
+    "Build a clean, mobile-friendly website with their menu, hours, and location",
+    "Add a dedicated page for location and contact details",
+    "Improve local search visibility beyond Instagram"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Augusta Café",
+   "message": "Bonjour, je vois que Augusta Café n'a qu'une page Instagram pour l'instant. Je m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones portables pour les commerces locaux à Montréal, afin de vous aider à être plus facilement trouvés sur Google. Seriez-vous ouvert à un court échange de dix minutes cette semaine pour en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ01EZiAYZyUwR4p-QcZiYMCs",
+   "name": "Café Tasse et Vous",
+   "category": "Brunch Restaurant",
+   "address": "780 Bd Rosemont, Montréal, QC H2S 0A7, Canada",
+   "phone": "(514) 277-2233",
+   "website": "https://www.instagram.com/tasse.et.vous",
+   "rating": 4.6,
+   "reviews": 243,
+   "maps_url": "https://maps.google.com/?cid=3112155123020767202&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "This brunch restaurant has 243 reviews with a 4.6 rating, but only uses an Instagram page instead of a real website for reservations or menus.",
+   "opportunities": [
+    "Add a dedicated website with online menu and table reservations",
+    "Avoid paying high commissions to third-party delivery or booking apps",
+    "Show opening hours and location clearly for new visitors"
+   ],
+   "language": "fr",
+   "email_subject": "Café Tasse et Vous - Site web et réservations en ligne",
+   "message": "Bonjour, je vois que Café Tasse et Vous utilise uniquement Instagram pour partager votre menu et vos superbes brunchs. Avec plus de 200 avis et une excellente note, un vrai site web permettrait à vos clients de consulter le menu complet et de réserver une table directement en ligne. Je m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones pour les commerces locaux de Montréal. Seriez-vous ouvert à un court échange pour en discuter?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ0XXmV3oZyUwRKy8zSmcXNCI",
+   "name": "Café Sorbier",
+   "category": "Coffee Shop",
+   "address": "2651 Rue Beaubien E, Montréal, QC H1Y 1G8, Canada",
+   "phone": null,
+   "website": "http://instagram.com/sorbiercafe",
+   "rating": 4.7,
+   "reviews": 241,
+   "maps_url": "https://maps.google.com/?cid=2464620628472442667&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Café Sorbier is well-established with 241 reviews and a 4.7 rating, but they only use an Instagram page instead of a real website.",
+   "opportunities": [
+    "Create a clean, fast website with their menu and hours",
+    "Add a mobile-friendly layout for customers searching on the go",
+    "Improve local Google search visibility beyond social media"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Café Sorbier",
+   "message": "Bonjour, j'ai remarqué que le Café Sorbier utilise actuellement seulement une page Instagram et n'a pas de site web propre pour présenter son menu et ses informations. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les commerces locaux. Avoir un site dédié permet souvent d'attirer plus facilement de nouveaux clients qui cherchent un café sur Google. Seriez-vous ouvert à un court échange pour en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJKbo2TtoRyUwRb687gHDfhaw",
+   "name": "Juanitos",
+   "category": "Restaurant",
+   "address": "4919 R. Notre Dame O, Montréal, QC H4C 1S9, Canada",
+   "phone": "(263) 385-5050",
+   "website": "https://linktr.ee/juanitos.mtl",
+   "rating": 4.9,
+   "reviews": 239,
+   "maps_url": "https://maps.google.com/?cid=12431588020706848623&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "restaurants in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Juanitos has 239 reviews with a 4.9 rating but only uses a Linktree for their web presence, making a proper restaurant website a high-value fit.",
+   "opportunities": [
+    "Build a real website with menu and location info",
+    "Add a system for online ordering or direct table reservations",
+    "Improve discoverability on Google search"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Juanitos",
+   "message": "Bonjour,\n\nJ'ai vu que Juanitos utilise actuellement une page de liens pour son site internet malgré un fort volume d'avis positifs sur Google.\n\nJe m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones pour les restaurants de la région de Montréal.\n\nPouvons-nous en discuter rapidement cette semaine pour voir ce qui conviendrait le mieux?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJr-m1CsQUyUwR_4sNFrwUdOI",
+   "name": "Le Bouquin D'occasion",
+   "category": "Book Store",
+   "address": "233 Bd D'Anjou, Châteauguay, QC J6J 2R3, Canada",
+   "phone": "(450) 698-2289",
+   "website": "https://www.facebook.com/lebouquindoccasion",
+   "rating": 4.8,
+   "reviews": 236,
+   "maps_url": "https://maps.google.com/?cid=16317690147926543359&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "boutiques in Châteauguay",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "The bookstore is well established with 236 reviews and a 4.8 rating, but only uses a Facebook page instead of an independent website.",
+   "opportunities": [
+    "Build a professional standalone website to showcase book categories",
+    "Add clear opening hours and contact details",
+    "List new arrivals and special collections online"
+   ],
+   "language": "fr",
+   "email_subject": "Un site web pour Le Bouquin D'occasion",
+   "message": "Bonjour,\n\nJe vois que Le Bouquin D'occasion utilise une page Facebook pour sa présence en ligne avec une excellente note de 4,8.\n\nAvoir un site web dédié permettrait à vos clients de consulter plus facilement vos arrivages et de vous trouver.\n\nJe propose de créer des sites web rapides et adaptés aux téléphones pour les commerces locaux.\n\nSeriez-vous ouvert à un court appel pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ8UkCrKsZyUwR0G2V6PGdLno",
+   "name": "Café Le Rusé",
+   "category": "Coffee Shop",
+   "address": "6200 Av. 1re, Montréal, QC H1Y 3A8, Canada",
+   "phone": "(514) 969-6797",
+   "website": null,
+   "rating": 4.7,
+   "reviews": 118,
+   "maps_url": "https://maps.google.com/?cid=8804147983870684624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "cafés in Rosemont, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Café Le Rusé has no website at all despite 118 positive reviews, making a new site an urgent need.",
+   "opportunities": [
+    "Create a clean, mobile-friendly website showcasing their menu and hours",
+    "Add a clear location and contact section for local customers",
+    "Include links to their social media pages"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Café Le Rusé",
+   "message": "Bonjour, j'ai vu que Café Le Rusé a de superbes avis sur Google mais ne semble pas avoir de site web officiel. Je m'appelle Hassan et je suis développeur web basé près de Montréal. Je conçois des sites simples et rapides pour les commerces locaux qui permettent aux clients de trouver facilement le menu, les heures d'ouverture et l'adresse. Seriez-vous ouvert à un court appel cette semaine pour en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJ3ZcrImkjyUwRdM6A3_JanxY",
+   "name": "Gold's Gym Laval",
+   "category": "Gym",
+   "address": "1164 Rue Desserte O, Laval, QC H7X 4C9, Canada",
+   "phone": "(514) 491-4379",
+   "website": "https://www.goldsgym.com/locations/pq/laval/",
+   "rating": 4.7,
+   "reviews": 2664,
+   "maps_url": "https://maps.google.com/?cid=1630121589309754996&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "gyms in Laval",
+   "lead_score": 25,
+   "best_offer": "booking_ordering",
+   "why": "This is a large international franchise location with over 2,600 reviews and a corporate website, making it an unsuitable fit for a local freelance developer.",
+   "opportunities": [
+    "Add local class booking",
+    "Improve lead capture"
+   ],
+   "language": "fr",
+   "email_subject": "Gold's Gym Laval",
+   "message": "Bonjour. J'ai consulté votre site web et j'ai vu que vous proposez de nombreux cours d'entraînement à Laval. Seriez-vous ouverts à discuter de l'ajout d'une réservation en ligne pour vos membres directement sur votre site. Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no online booking, ordering or store found"
+   ],
+   "platform": [
+    "WordPress"
+   ],
+   "ordering_booking": [],
+   "socials": [
+    "facebook",
+    "instagram"
+   ],
+   "copyright_year": 2026,
+   "https": true
+  },
+  {
+   "date_found": "2026-10-31",
+   "place_id": "ChIJJd3bj1cayUwR2KZnjxmbfx4",
+   "name": "Scandinave Spa (Vieux-Montréal)",
+   "category": "Spa",
+   "address": "71 R. de la Commune O, Montréal, QC H2Y 2C6, Canada",
+   "phone": "(514) 288-2009",
+   "website": "https://lorangerie.ca/?utm_source=gmb&utm_medium=organic",
+   "rating": 4.4,
+   "reviews": 2285,
+   "maps_url": "https://maps.google.com/?cid=2197645677262513880&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Vieux-Montréal",
+   "lead_score": 10,
+   "best_offer": "website",
+   "why": "This is a well-established spa with over 2,200 reviews and a modern WordPress website that already includes booking functionality, so they have no need for web services.",
+   "opportunities": [],
+   "language": "fr",
+   "email_subject": "Not applicable",
+   "message": "Not applicable",
+   "emails": [],
+   "issues": [
+    "no online booking, ordering or store found"
+   ],
+   "platform": [
+    "WordPress"
+   ],
+   "ordering_booking": [],
+   "socials": [
+    "facebook",
+    "instagram",
+    "linkedin"
+   ],
+   "copyright_year": null,
+   "https": true
+  },
   {
    "date_found": "2026-10-24",
    "place_id": "ChIJQeBqgsEjyUwRqeKOG0U1q-E",
