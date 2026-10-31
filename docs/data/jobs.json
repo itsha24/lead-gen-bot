@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T15:55:00+00:00",
+ "updated": "2026-10-31T22:46:53+00:00",
  "jobs": [
   {
    "date_found": "2026-10-31",
@@ -242,6 +242,35 @@
   },
   {
    "date_found": "2026-10-31",
+   "title": "Event Streaming Engineer - Kafka / Azure Event Hubs",
+   "company": "Coforge",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5948277140?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:17:17Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET"
+   ],
+   "missing_required": [
+    "Azure Event Hubs",
+    "Apache Kafka"
+   ],
+   "dealbreakers_hit": [
+    "avoid_roles"
+   ],
+   "reason": "This is a senior-level event streaming role requiring architecture and independent design responsibilities, which hits your avoid roles for senior positions.",
+   "description": "We are looking for a Senior Event Streaming Engineer / Lead to design and implement event-driven integration solutions using Azure Event Hubs and Apache Kafka. Responsibilities Design event-driven integrations, including Kafka connectivity, topic mapping, partitioning, and schema management. Configu",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
    "title": "Developer",
    "company": "Mitchell Martin",
    "location": "Toronto, Ontario",
@@ -462,6 +491,37 @@
   },
   {
    "date_found": "2026-10-31",
+   "title": "Consultant, Back End Developer",
+   "company": "CIBC",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5948276835?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:16:47Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Microservices",
+    "Cloud environments"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match, but this role requires 8-10 years of experience and senior responsibilities like coaching juniors.",
+   "description": "We’re building a relationship-oriented bank for the modern world. We need talented, passionate professionals who are dedicated to doing what’s right for our clients.At CIBC, we embrace your strengths and your ambitions, so you are empowered at work. Our team members have what they need to make a mea",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
    "title": "MAINFRAME TESTING",
    "company": "Epsilon Solutions LTD",
    "location": "Toronto, Ontario",
@@ -482,6 +542,106 @@
    "dealbreakers_hit": [],
    "reason": "Your QA automation skills match, but this is a senior mainframe testing role requiring leadership and specialized mainframe experience outside your background.",
    "description": "Job DescriptionJob DescriptionROLE: MAINFRAME TESTING TORONTO - HYBRID - FULLTIME Perform hands-on testing within the Credit Cards functional area, including test planning, design, case creation, and execution to deliver quality outcomes. Bring prior QE experience in Mainframe and API testing. Provi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "ILS Specialist (Reliability & Maintainability Engineer)",
+   "company": "RTX",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5948276606?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:16:31Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 15+ years — filtered without AI.",
+   "description": "At AMD, we believe technology has the power to solve the world’s most important challenges.From advancing healthcare and scientific discovery to powering AI and the technologies people rely on ever... Whether you’re designing next-gen processors, enabling AI breakthroughs, or bringing leading edge p",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "Software Developer III",
+   "company": "TekWissen LLC",
+   "location": "Thornhill, York region",
+   "url": "https://www.adzuna.ca/details/5948298474?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T14:35:20Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Overview: TekWissen is a global workforce management provider headquartered in Ann Arbor, Michigan that offers strategic talent solutions to our clients world-wide. This Client is an American multinational semiconductor company based in Santa Clara, California, that develops computer processors and ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "Backend Engineer, Data",
+   "company": "Stripe",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5948277178?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:17:20Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 6+ years — filtered without AI.",
+   "description": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "Technical Leader, Software Development",
+   "company": "Cisco Systems",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5948277087?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:17:11Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "REST APIs",
+    "AWS (S3)",
+    "React / React Native",
+    "Python"
+   ],
+   "missing_required": [
+    "distributed systems architecture",
+    "technical leadership",
+    "production SaaS operations"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and API skills match well, but this is a senior technical leadership role requiring 8+ years of experience and hits your dealbreaker for 5+ years required.",
+   "description": "The application window is expected to close on: 11/09/2026 Note: This is a remote Canada based role, requiring work within the Pacific Coast Time Zone. Preference will be given to the candidates from the Pacific time-zone locations. Meet the Team Join Cisco’s Splunk engineering organization and help",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -912,6 +1072,40 @@
   },
   {
    "date_found": "2026-10-31",
+   "title": "Business Technology Specialist( .Net/AWS/Banking)",
+   "company": "BMO",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5948277695?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:20:14Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    ".NET / C# / ASP.NET Core application development",
+    "Angular",
+    "Microservices-based solutions",
+    "Docker/Kubernetes",
+    "CI/CD pipelines and DevOps"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# skills match, but it requires 8 years of experience and senior technical leadership, hitting your dealbreaker.",
+   "description": "Application Deadline: 11/15/2026 Address: 100 King Street West Job Family Group: Technology Leads the design, development, implementation, and support of enterprise applications built on modern technologies including .NET, Angular, AWS cloud services, and AI-enabled development platforms . Serves as",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
    "title": "SAP Fiori / UI5 Developer (ABAP, BTP) SAP S/4HANA",
    "company": "eTeam Inc.",
    "location": "Montréal, Québec",
@@ -955,6 +1149,97 @@
    "dealbreakers_hit": [],
    "reason": "This is a Product Owner role in the insurance domain, which does not match your software development and QA engineering target roles.",
    "description": "Job DescriptionJob Description Role Name: Surety Product Owner Location: Mississauga, CA JOB DESCRIPTION: In this role you will work with Global Surety business stakeholders Product Leaders Business Analysts and Agile engineering teams to support delivery of business capabilities across the Surety p",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "ETL Developer - Snowflake",
+   "company": "Apptoza Inc.",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5948277191?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:17:21Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Python",
+    "SQL"
+   ],
+   "missing_required": [
+    "Snowflake",
+    "Medallion architecture",
+    "IDMC",
+    "data governance",
+    "data warehousing"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior ETL Developer role requiring 8 years of experience, which triggers your dealbreaker for 5+ years and falls under your avoid_roles for senior positions.",
+   "description": "Seeking a Senior ETL Developer with strong Snowflake expertise to design scalable, secure, and cost-effective data platforms. The ideal candidate will have hands‑on experience with Medallion architecture, data governance, data quality, Snowflake Cortex, and AI solutions. Key Responsibilities Design ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "Software (VB/VB.net/SQL) Developer to support ongoing maintenance and application development for a",
+   "company": "S.i. Systems",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5948276944?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:16:56Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [],
+   "missing_required": [
+    "US tax compliance",
+    "Accounting degree",
+    "US CPA"
+   ],
+   "dealbreakers_hit": [
+    "Wrong field (tax accounting instead of software development)"
+   ],
+   "reason": "This is a senior US Tax Manager role requiring 4 to 6 years of tax accounting experience, which is completely outside your field and seniority level.",
+   "description": "We are seeking an experienced US Tax Manager to join a growing public accounting and advisory team specializing in cross border tax compliance and consulting. This role is ideal for a tax professional with expertise in US federal income tax, cross border taxation, international tax reporting, tax co",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-10-31",
+   "title": "Technical Leader, Software Development",
+   "company": "105 Cisco Systems Canada Co.",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5948277098?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-10-31T13:17:13Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "distributed systems architecture",
+    "technical leadership"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior technical lead role requiring 8+ years of experience and leadership responsibilities, which triggers your dealbreaker for 5+ years of experience and your avoid rules for senior roles.",
+   "description": "The application window is expected to close on: 11/09/2026 Note: This is a remote Canada based role, requiring work within the Pacific Coast Time Zone. Preference will be given to the candidates from the Pacific time-zone locations. Meet the Team Join Cisco’s Splunk engineering organization and help",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
