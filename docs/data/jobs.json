@@ -1,6 +1,34 @@
 {
- "updated": "2026-11-02T20:54:54+00:00",
+ "updated": "2026-11-03T02:36:41+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-02",
+   "title": "Remote Software Developer / Software Engineer",
+   "company": "Baytex Energy Corp",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5951076537?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-02T20:57:03Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "C#",
+    "Python",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, C#, Python, and API experience match the requirements well, and it is a remote junior-friendly role.",
+   "description": "We are seeking a skilled and motivated Remote Software Developer / Software Engineer to design, develop, test, and maintain software applications. The successful candidate will work with technical and cross-functional teams to build reliable, scalable, and user-friendly software solutions in a fully",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the Remote Software Developer position at Baytex Energy. With my background in Java, C#, and API development from my previous roles, I am confident I can contribute effectively to your team. Let us connect.",
+   "outreach_subject": "Application: Remote Software Developer - Hassan Awan",
+   "outreach_email": "Hi Hiring Team,\n\nI am writing to express my interest in the Remote Software Developer position at Baytex Energy Corp. I have recently submitted my application for the role.\n\nThrough my professional experience, I have built strong skills in Java, C#, and REST API integration, which align well with the technical stack mentioned in your posting. In my previous work, I have focused on building reliable backend solutions and collaborating with cross-functional teams to deliver scalable software.\n\nDo you have 10 minutes next week for a brief chat, or could you point me to the right person on the engineering team to speak with regarding this role?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
   {
    "date_found": "2026-11-02",
    "title": "Development Consultant (Bilingual)",
@@ -26,6 +54,32 @@
    "outreach_note": "Hi [Name], I recently applied for the Development Consultant role. With my background in Java, C#, and software development, I am well-prepared to contribute to your team. Would love to connect and chat.",
    "outreach_subject": "Application for Development Consultant - Hassan Awan",
    "outreach_email": "Hi [Name],\n\nI am writing to let you know that I recently applied for the Development Consultant position at Querentia. \n\nWith two years of software development experience and strong proficiency in Java, C#, and Python, I am confident in my ability to write clean code, support application enhancements, and collaborate effectively within your Agile development team. Being bilingual in English and French, I am also fully comfortable working in French environments as requested in the posting.\n\nCould we schedule a brief chat to discuss how my background aligns with your team's current needs, or could you point me to the right hiring manager?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-02",
+   "title": "Full Stack Developer (Java/React) / Développeur(euse) full stack (Java/React)",
+   "company": "Nöord Technologies Corporation",
+   "location": "Outremont, Montréal",
+   "url": "https://www.adzuna.ca/details/5951148755?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-02T21:21:58Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "React",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and React skills match well, though the snippet is short on specific experience requirements.",
+   "description": "The French version of this job posting is below. / La version française de cette offre se trouve plus bas. At Nöord Technologies, we empower top-tier financial institutions with exceptional talent in banking and capital markets. For the needs of one of our prestigious clients, a major banking actor ",
+   "description_source": "snippet",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I applied to the Full Stack Developer role. With my background in Java and React development from my recent roles and projects, I am a great fit for this position. Let's connect.",
+   "outreach_subject": "Application: Full Stack Developer (Java/React)",
+   "outreach_email": "Hi [Name],\n\nI recently applied to the Full Stack Developer (Java/React) role at Nöord Technologies. Given my background in developing backend services in Java and building frontends with React, I believe I would be a strong addition to your client's IT team.\n\nDuring my recent contract and internship experience, I built robust web applications and integrated REST APIs, aligning closely with the technical stack needed for this banking and capital markets project.\n\nCould we arrange a quick chat this week to discuss how my skills match your team's current needs?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-02",
