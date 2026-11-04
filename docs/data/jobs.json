@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T18:43:23+00:00",
+ "updated": "2026-11-04T00:50:29+00:00",
  "jobs": [
   {
    "date_found": "2026-11-03",
@@ -56,6 +56,67 @@
    "outreach_note": "Hi, I just applied to the Software Developer - C#/.NET role at Genetec. With my background in C# and backend development, I am eager to contribute to your web applications. I would love to connect and chat about the team.",
    "outreach_subject": "Application: Software Developer - C#/.NET/Web - Hassan Awan",
    "outreach_email": "Hi [Name],\n\nI recently applied for the Software Developer - C#/.NET/Web position at Genetec. Looking over the posting, I was drawn to your team's focus on building robust web applications and maintaining high quality standards through automated testing.\n\nIn my recent professional experience, I have built and maintained backend systems and worked extensively with C# and ASP.NET, along with writing automated tests to ensure delivery quality. I am comfortable collaborating across teams and quickly picking up new tools to solve complex problems.\n\nCould we schedule a brief chat to discuss how my background aligns with your current projects, or could you point me to the right person to speak with?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-03",
+   "title": "Java Full stack engineer",
+   "company": "VDart Inc",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5952066479?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T13:42:54Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 68,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "React"
+   ],
+   "missing_required": [
+    "Microsoft Azure",
+    "Kubernetes",
+    "Salesforce solutions"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Spring Boot match well, but it is an intermediate role asking for Azure and cloud infrastructure experience.",
+   "description": "Job Title: Java Full stack engineer Location: Toronto, ON/Waterloo, ON (Hybrid) Job Type: Contract Responsibilities: Design, develop, test, and deploy Salesforce solutions Design, develop, test, and maintain scalable applications using Java, Spring Boot, and related technologies Develop RESTful APIs",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I recently applied to the Java Full Stack Engineer role. With my background in Java, Spring Boot, and REST APIs, I can help build and scale your backend microservices. I would love to connect and chat about the team's tech stack. Best, Hassan",
+   "outreach_subject": "Application for Java Full Stack Engineer",
+   "outreach_email": "Hi [Name],\n\nI am writing to express my interest in the Java Full Stack Engineer position in Toronto and Waterloo. I recently submitted my application for the role.\n\nWith my professional background developing scalable backend applications using Java, Spring Boot, and REST APIs, I am well-equipped to contribute effectively to your engineering team. I also have hands-on experience building frontend components with React, which aligns with your stack.\n\nI would welcome a brief conversation to discuss how my skills match your current project needs, or to connect with the right person on the hiring team.\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-03",
+   "title": "SharePoint .NET Developer",
+   "company": "Acestack",
+   "location": "Mont-Royal, Montréal",
+   "url": "https://www.adzuna.ca/details/5952066586?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T13:42:56Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "React / React Native"
+   ],
+   "missing_required": [
+    "SharePoint Online",
+    "Microsoft Graph API",
+    "Azure Active Directory"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and REST API skills fit well, but the role is intermediate and requires specific SharePoint and Microsoft Graph API experience.",
+   "description": "SharePoint .NET Developer Primary Skills: .NET Core / .NET 8+, SharePoint Online, Microsoft Graph API Job Type: Full-time Location: Montreal, QC | Hybrid Job Description We are seeking an experienced SharePoint .NET Developer with strong expertise in .NET Core, .NET 8+, SharePoint Online, Microsoft ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the SharePoint .NET Developer role. With my background in C# and backend development, I am eager to contribute to your team. Let us connect.",
+   "outreach_subject": "Application for SharePoint .NET Developer",
+   "outreach_email": "Hi [Name], I recently applied for the SharePoint .NET Developer position at Acestack. With my hands-on experience in C# and REST APIs, I am confident in my ability to build and support robust backend services for your team. I enjoy tackling complex architectural problems and delivering clean, maintainable code. Would you be open to a brief chat about the technical priorities for this role, or could you point me to the right person to speak with? Best, Hassan Awan https://itsha24.github.io/Portfolio/ https://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-03",
@@ -170,6 +231,33 @@
    "description": "GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the ",
    "description_source": "full posting",
    "source": "GitLab careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-03",
+   "title": "BA_Archer",
+   "company": "Acestack",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5952066616?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T13:42:57Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": 3,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Business Analysis",
+    "RSA Archer (GRC)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a Business Analyst role rather than a software development or QA automation position, which does not match your target roles.",
+   "description": "Job Title: Business Analyst Risk Technology (RSA Archer) Primary Skills: RSA Archer (GRC), Business Requirements Analysis, SQL & Data Mapping Location: Toronto, ON Work Model: Hybrid Job Summary We are seeking a motivated and analytical Business Analyst to join the Risk Technology team. The ideal ca",
+   "description_source": "full posting",
+   "source": "Adzuna",
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
@@ -541,6 +629,28 @@
   },
   {
    "date_found": "2026-11-03",
+   "title": "Salesforce Marketing Cloud",
+   "company": "VDart Inc",
+   "location": "Ontario, Canada",
+   "url": "https://www.adzuna.ca/details/5952066503?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T13:42:55Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Job Title: Sr. AEM with React Developer Location : Bellevue, WA (Preferred) / REMOTE Contract Primary Skills: AEM, React Job Description: We are seeking a highly skilled AEM Developer with a strong background in Adobe Experience Manager AEM component development, React and integration. The ideal can",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-03",
    "title": "Civil Engineers (EIT to P.Eng)",
    "company": "David Nairne & Associates",
    "location": "North Vancouver, Greater Vancouver",
@@ -774,6 +884,36 @@
    ],
    "reason": "Your C# and SQL match well, but this role requires 8+ years of Hyland OnBase experience and hits your experience dealbreaker.",
    "description": "Req ID: 389309 NTT DATA strives to hire exceptional, innovative and passionate individuals who want to grow with us. If you want to be part of an inclusive, adaptable, and forward-thinking organization, We are currently seeking a API Developer - OnBase We are looking for an API Developer - OnBase wi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-03",
+   "title": "Business Systems Analyst",
+   "company": "Acestack",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5952066564?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T13:42:56Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Business Requirements Analysis",
+    "Annuity & Insurance Domain",
+    "Data Mapping"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This role requires 8+ years of experience and is for a Business Systems Analyst, which falls outside your target software development and QA automation roles.",
+   "description": "Job Title: Business Systems Analyst Primary Skills: Business Requirements Analysis, Annuity & Insurance Domain, SQL & Data Mapping Location: Toronto, ON Work Model: Hybrid Job Summary We are seeking an experienced Business Systems Analyst with strong expertise in the Financial Services and Insurance",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
