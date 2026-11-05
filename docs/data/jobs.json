@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T19:00:32+00:00",
+ "updated": "2026-11-05T01:02:01+00:00",
  "jobs": [
   {
    "date_found": "2026-11-04",
@@ -28,6 +28,33 @@
   },
   {
    "date_found": "2026-11-04",
+   "title": "SDET - Software Development Engineer in Test",
+   "company": "VDart Inc",
+   "location": "Ontario, Canada",
+   "url": "https://www.adzuna.ca/details/5953370929?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-04T14:03:36Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Java",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, Selenium, SQL, and API test automation skills match this SDET role very well with no experience years specified.",
+   "description": "Job Title: Software Development Engineer in Test Work Location: Toronto, ON Mode: Fulltime Job description Technical Skills: Selenium Automation: Proficiency in writing automated test scripts using Selenium WebDriver. Experience with various locator strategies (ID, Name, Class Name, XPath, CSS Selec",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi VDart team, I recently applied for the SDET role in Toronto. With my background in Java and QA automation including Selenium and REST APIs, I can hit the ground running on your testing frameworks. Let's connect if you're open to a quick chat.",
+   "outreach_subject": "Application: SDET - VDart Inc",
+   "outreach_email": "Hi Recruiter,\n\nI recently applied for the SDET position with VDart Inc in Toronto and wanted to reach out directly.\n\nWith two years of software development experience and a strong focus on QA test automation, Java, and REST APIs, I am confident in my ability to build and maintain robust automated test suites for your team.\n\nMy background includes building automated test solutions and working with databases and APIs, which aligns well with your mandatory skills for this role. I would welcome the opportunity to discuss how I can contribute to your testing efforts.\n\nDo you have time for a quick call this week, or is there another team member I should connect with?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-04",
    "title": "Development QA Tester | Testeur QA en développement",
    "company": "NBCUniversal",
    "location": "Montréal, Québec",
@@ -49,6 +76,66 @@
    "outreach_note": "Hi [Name], I recently applied for the Development QA Tester role at NBCUniversal. With my background in QA automation and software testing, I am confident in my ability to help maintain build stability with your team. I would love to connect.",
    "outreach_subject": "Application: Development QA Tester - Hassan Awan",
    "outreach_email": "Hi [Name],\n\nI am writing to let you know that I have applied for the Development QA Tester role at NBCUniversal. With my professional background in QA test automation and software development, I can effectively validate functionality, document bugs, and support your engineering team in maintaining build stability throughout the development cycle.\n\nI am based locally in Montreal and am comfortable collaborating closely with developers, designers, and artists to ensure reliable software releases.\n\nDo you have five minutes next week for a quick chat about the team, or could you point me to the right person to speak with regarding this position?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-04",
+   "title": "QA Automation Engineer – Selenium & Playwright",
+   "company": "Astra North Infoteck Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5952791811?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-04T03:21:04Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 68,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Java",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Selenium",
+    "Playwright",
+    "TypeScript/JavaScript"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation and Java match the core requirements, but the role asks for experienced automation engineering with specific framework tools you are still learning or missing.",
+   "description": "QA Automation Engineer – Selenium & Playwright Work Arrangement: Hybrid – 3 Days per Week in Office Job Description We are looking for an experienced QA Automation Engineer with strong expertise in Selenium and Playwright to design, develop, and maintain robust automation frameworks for web applicat",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the QA Automation Engineer role. With my background in QA automation, Java, and REST APIs, I am confident I can contribute to your testing frameworks. I would love to connect.",
+   "outreach_subject": "Application: QA Automation Engineer – Hassan Awan",
+   "outreach_email": "Hi Hiring Team,\n\nI recently applied for the QA Automation Engineer position at Astra North Infoteck Inc. With my professional background in QA test automation, Java, and REST APIs, I can help build and maintain robust testing frameworks for your web applications.\n\nI have worked on automation pipelines and backend integrations, allowing me to collaborate closely with development teams to ensure high test coverage. I would welcome a brief chat to discuss how my skills align with your current testing needs.\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-04",
+   "title": "Junior Full Stack .Net Developer - 3704017",
+   "company": "Lighthouse Technology Services",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5952819447?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-04T04:04:55Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Microsoft Power Platform",
+    "Power Apps",
+    "Power Automate"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and SQL skills match well for this junior role, though it requires experience with Microsoft Power Platform which you can learn.",
+   "description": "Lighthouse Technology Services is partnering with our client to fill their Junior Full Stack .Net Developer position! This is a 6 month contract with potential to extend and/or convert and will be hybrid in Mississauga, Ontario, Canada. This role will be a W2 employee of Lighthouse Technology Servic",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I recently applied for the Junior Full Stack .Net Developer role. With my background in C# and SQL development from my previous professional experience, I can hit the ground running on your business applications. Let me know if you are open to a quick chat.",
+   "outreach_subject": "Application: Junior Full Stack .Net Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI am writing to express my interest in the Junior Full Stack .Net Developer position at Lighthouse Technology Services. I have recently submitted my application and wanted to connect directly.\n\nDuring my two years of professional software development experience, I have built robust backend systems and web applications using C# and .NET, alongside working with SQL databases for data management and query optimization. While I am less familiar with Microsoft Power Platform specifically, my strong programming foundation allows me to pick up new internal tools and automation platforms quickly.\n\nCould we schedule a brief call this week to discuss how my technical skills align with your team's needs?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-04",
@@ -403,6 +490,28 @@
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-04",
+   "title": "Systems Testing/QA Specialist",
+   "company": "Cleo Consulting",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5953371026?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-04T14:03:49Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 10+ years — filtered without AI.",
+   "description": "Assignment: RQ11674 - Systems Testing/QA Specialist - Senior Job Title: Systems Testing/QA Specialist Requisition (SS): RQ11674 Start Date: 2026-09-21 Client: Government Services Integration Cluster End Date: 2027-03-31 Office Location: 40 ST. Claire st., Toronto Organization: Government Services In",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
   },
   {
    "date_found": "2026-11-04",
