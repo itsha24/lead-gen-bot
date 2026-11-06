@@ -1,6 +1,361 @@
 {
- "updated": "2026-11-05T19:01:44+00:00",
+ "updated": "2026-11-06T01:06:29+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-05",
+   "title": "Junior Full-Stack .NET Developer",
+   "company": "Alquemy",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5954062351?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T03:52:07Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and .NET background matches this junior full-stack role well, and it asks for the 2 years of experience you have.",
+   "description": "Job Description Junior Full Stack .NET Developer Location: GTA Hybrid 6-Month Contract We are seeking a proactive, detail-oriented Junior Full-Stack .NET Developer to join our dynamic Enterprise Systems team. In this role, you will help build, enhance, maintain, and support robust business applicati",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the Junior Full-Stack .NET Developer role at Alquemy. With my 2 years of experience building applications with C#, .NET, and SQL, I would be a strong fit for your team. Would love to connect.",
+   "outreach_subject": "Application: Junior Full-Stack .NET Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\\n\\nI recently applied to the Junior Full-Stack .NET Developer position at Alquemy. Given my 2 years of professional software development experience, including hands-on work with C#, .NET, SQL, and RESTful APIs, I believe my background aligns closely with the needs of your Enterprise Systems team.\\n\\nI am comfortable building robust web applications and supporting end-to-end development lifecycles. I would appreciate the chance to discuss how my technical skills can contribute to your upcoming projects.\\n\\nDo you have time for a brief chat this week, or could you point me to the right hiring manager for this role?\\n\\nBest regards,\\n\\nHassan Awan\\nhttps://itsha24.github.io/Portfolio/\\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Software Developer - Applications",
+   "company": "Nakisa",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5951769295?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T09:21:17Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "React",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, Spring Boot, and REST API skills match this junior role well, and it is located in Montreal.",
+   "description": "Job DescriptionJob Description About Nakisa Nakisa is a global leader in AI-powered enterprise software for Human Resources, Financial Management, and Commercial Real Estate (CRE). Our cloud platform powers mission-critical operations for 1,100+ organizations in 135 countries and serves millions of ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the Software Developer role at Nakisa. With my backend and full-stack experience in Java, Spring Boot, and React, I can hit the ground running on your cloud-native platform. Let's connect if you're open to a brief chat.",
+   "outreach_subject": "Application: Software Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI am writing to express my interest in the Software Developer position at Nakisa. I recently submitted my application and wanted to connect directly.\n\nWith two years of professional software development experience, my strongest background is in Java, Spring Boot, and building RESTful APIs, alongside full-stack work with React and SQL databases. I noticed your team builds enterprise applications using Java and Spring Boot, which aligns closely with my core technical stack.\n\nI am based in Montreal and would love to bring my backend expertise to your engineering team.\n\nDo you have time for a quick chat this week, or could you point me to the right person on the hiring team?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Agentic QA Engineer",
+   "company": "TribalScale",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5954060685?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T03:51:47Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs",
+    "Python"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation and Python skills are a strong match for this junior-leaning testing role, though it involves modern AI agent workflows which you are currently learning.",
+   "description": "Shape the Future with TribalScale TribalScale is a digital innovation firm that helps organizations adapt and thrive in a rapidly changing world. We partner with clients to build transformative digital products, modernize technology platforms, and apply emerging technologies—including artificial int",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the Agentic QA Engineer role. With my background in QA automation and Python, I am excited about helping ensure the reliability of AI-driven systems at TribalScale. Would love to connect.",
+   "outreach_subject": "Application: Agentic QA Engineer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Agentic QA Engineer position at TribalScale and wanted to reach out directly.\n\nWith two years of experience spanning software development and QA test automation, along with hands-on proficiency in Python and REST APIs, I am well-prepared to help design automated test frameworks and validate complex workflows. I am particularly drawn to this role because of its focus on bridging traditional quality engineering with emerging AI agent systems.\n\nDo you have a few minutes for a quick chat about the team's testing priorities, or could you point me to the right person to speak with regarding this opening?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Développeuse ou développeur logiciel, Quality / Software Engineer",
+   "company": "Unity",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5954560423?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T12:01:10Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 60,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Unity"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and QA automation skills match well, but the role asks for Unity experience which is a missing requirement.",
+   "description": "L’opportunité Chez Unity, les membres de notre équipe d’assurance qualité (AQ) sont les spécialistes en matière de test et qualité pour des domaines phares. Nous sommes entièrement intégrés, et nous nous appuyons sur la communication et la collaboration pour aider l’ensemble de l’équipe à livrer des",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I recently applied for the Software Engineer, Quality role at Unity in Montreal. With my background in C# and QA test automation, I am very interested in contributing to the Sentis team. Let us connect if you have a moment.",
+   "outreach_subject": "Application: Software Engineer, Quality - Sentis team",
+   "outreach_email": "Hi [Name],\\n\\nI am writing to express my strong interest in the Software Engineer, Quality position with the Sentis team at Unity in Montreal, and I have recently submitted my application.\\n\\nWith two years of software development experience and a strong background in C# programming and QA test automation, I am well-equipped to help your team build robust testing frameworks and ensure the high stability of your platform products. I have previously worked in roles where collaboration between development and QA was essential for delivering clean code.\\n\\nDo you have a few minutes next week for a brief chat, or could you point me to the right person on the hiring team to speak with?\\n\\nBest regards,\\n\\nHassan Awan\\nhttps://itsha24.github.io/Portfolio/\\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Report Developer",
+   "company": "Hirematic Talent Solutions",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5954643872?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T13:56:53Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "SQL",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Azure Data Factory",
+    "Databricks",
+    "Azure Data Lake Storage",
+    "Spark",
+    "Power BI"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your SQL and Python match well, but this is a data engineering role heavily requiring Azure, Databricks, and Spark, which are outside your core backend and QA stack.",
+   "description": "Report Developer Junior Location: Toronto, Ontario Employment Type: Contract Work Arrangement: 5 Days Onsite Hourly Rate: CAD $40 - 45 Inc Contract Duration: 133 + 133 Days Role Overview The Government of Ontario is undertaking a large-scale Data & AI transformation initiative, with the Ontario Data",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Développeur de Tests Automatisés / Test Automation Developer",
+   "company": "OPAL-RT",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5951769663?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-03T09:21:36Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": 4,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Python",
+    "MATLAB/Simulink"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA test automation background matches well, but it asks for 3-5 years of experience and Python/MATLAB which makes it a stretch.",
+   "description": "Job DescriptionJob Description English will follow OPAL-RT Technologies recherche un Développeur en Automatisation de Tests. À propos d’OPAL-RT Technologies : Leader mondial dans la diversité des applications, nos outils sont utilisés dans une multitude de secteurs tels que l'automobile, l'aérospati",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "CLDRSRC10409- Data Science Developer - Toronto - Hybrid",
+   "company": "Cloud Resourcing",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5954643638?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T13:56:36Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "SQL",
+    "APIs",
+    "Git",
+    "Jira"
+   ],
+   "missing_required": [
+    "LLMs",
+    "RAG",
+    "agentic AI",
+    "Azure AI Foundry",
+    "machine learning pipelines"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This matches your avoid_roles criteria for a data science / ML research role requiring advanced AI and machine learning production expertise, which caps your score at 35.",
+   "description": "Must Haves: Advanced hands-on expertise in Python, software engineering, LLMs, RAG, agentic AI, APIs, prompt engineering, model evaluation, and production AI development. Strong hands-on experience with Microsoft Foundry/Azure AI Foundry, Azure Machine Learning, Azure AI services and cloud-based AI ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Full Stack Engineer",
+   "company": "ValueLabs",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5954559955?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T12:01:07Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "React",
+    "REST APIs",
+    "C# / ASP.NET"
+   ],
+   "missing_required": [
+    "Microservices architecture",
+    "Java microservices",
+    "Event-driven architecture"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role requires senior-level responsibilities including technical leadership, architecture design, and leading front-end and back-end development efforts.",
+   "description": "Location: Remote is fine but in Canada only Job Description: Frontend Development: Strong in React.js (hooks, context, state management, performance optimization). Experience with Redux / Zustand / RTK. Responsive design (CSS3, Material UI). Testing: Jest, React Testing Library Microservices archite",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Développeur infonuagique / Cloud Developer",
+   "company": "Taiga Motors",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5953129701?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-04T10:57:38Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "AWS (S3)",
+    "Python"
+   ],
+   "missing_required": [
+    "Pulumi",
+    "Azure",
+    "IoT architecture"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and AWS skills match well, but it requires 3 years of experience and mentions mentoring junior engineers, which makes it an intermediate role with a dealbreaker hit.",
+   "description": "Job DescriptionJob Description English to follow Description Taiga Motors, une entreprise de technologie et de fabrication de véhicules électriques hors route en pleine expansion, est à la recherche d’un développeur infonuagique pour concevoir et développer les services applicatifs infonuagiques qui",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Développeur sénior, remédiation des vulnérabilités",
+   "company": "Maarut",
+   "location": "Beauport, Québec City",
+   "url": "https://www.adzuna.ca/details/5954892532?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T19:58:04Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "AWS",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Ruby",
+    "vulnerability remediation",
+    "Linux/Windows OS administration"
+   ],
+   "dealbreakers_hit": [
+    "Senior, Staff, Principal, Lead, Manager, Architect"
+   ],
+   "reason": "This is a senior role requiring vulnerability remediation expertise and hits your avoid_roles criteria for senior titles.",
+   "description": "The client is looking for a senior developer to speed up the fixing of vulnerabilities as part of reducing technological risk in their main department. The role covers three layers at once: application code, Windows and Linux operating systems, and services hosted in AWS. Document production solutio",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": ".Net Fullstack Developer - Développeur(euse) Fullstack .Net",
+   "company": "Nectari Software Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5952960122?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-04T08:13:36Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "React / React Native",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "3 ans et + d’expérience en développement web (C#, ASP.NET Core)",
+    "Angular, React ou Vue.js (Angular/Vue missing, React matched)"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and SQL match well, but this role requires 3+ years of experience and triggers your dealbreaker for 5+ years requirement.",
+   "description": "Job DescriptionJob Description Qui sommes-nous ? Nectari Software Inc. est un leader mondial en matière d'intelligence d'affaires pour les petites et moyennes entreprises. Forts de plusieurs décennies d'expertise et d'une solide base en innovation, notre mission est d'aider les organisations à explo",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-05",
+   "title": "Application Analyst",
+   "company": "vTech Solution",
+   "location": "Alberta, Canada",
+   "url": "https://www.adzuna.ca/details/5954643686?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-05T13:56:39Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Oil Sands regulatory environment knowledge"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "Your C# and database skills match well, but this role requires security clearance and onsite work in Alberta, triggering a dealbreaker.",
+   "description": "Job Summary: The Application Analyst - Intermediate will support the Bitumen Royalty in Kind (BRIK) program by analyzing, designing, developing, testing, and maintaining C# and MS-SQL based applications. This role involves close collaboration with business users and technical teams to ensure solutio",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-11-05",
    "title": "Consultant, Backend Developer",
