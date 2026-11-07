@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T18:29:11+00:00",
+ "updated": "2026-11-07T00:17:33+00:00",
  "jobs": [
   {
    "date_found": "2026-11-06",
@@ -168,6 +168,35 @@
   },
   {
    "date_found": "2026-11-06",
+   "title": "Python Engineer/Developer",
+   "company": "Momento USA",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5955971991?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-06T14:46:35Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 50,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "REST APIs",
+    "SQL",
+    "AWS"
+   ],
+   "missing_required": [
+    "Django or Flask"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Python and REST API skills match well, but this is an intermediate-level role requiring specific framework experience you have listed as working knowledge.",
+   "description": "Python Engineer/Developer Canada- Remote Duration : Long Term We are looking for a skilled Python Developer with experience in designing, developing, and maintaining scalable applications. - Strong proficiency in Python, OOP concepts, and frameworks such as Django or Flask. - Experience with REST AP",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
    "title": "Full Stack Software Developer | Temporary Full Time (1.0 FTE) | CHEO Research Institute",
    "company": "Childrens Hospital of Eastern Ontario",
    "location": "Canada",
@@ -224,6 +253,60 @@
    "dealbreakers_hit": [],
    "reason": "Although the title is junior, it requires specialized Azure data and Spark engineering tools that do not align with your backend and QA automation background.",
    "description": "Job DescriptionJob Description TWC Global Services is Hiring..!! TWC Global Services is seeking a Junior Report Developer who will be undertaking a large-scale Data & AI transformation initiative for Government Sector Enterprise. Title - Report Developer - Junior Location- Toronto, ON Must-Have Skil",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "UI Programmer",
+   "company": "Ubisoft",
+   "location": "Saguenay, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000160212611-ui-programmer",
+   "posted": "2026-11-06T14:28:28.662000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C#"
+   ],
+   "missing_required": [
+    "C++ programming",
+    "3D graphics programming"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# matches the asset list, but the role requires primary experience with C++ and 3D graphics for game UI development, making it outside your core expertise.",
+   "description": "As a user interface programmer at Ubisoft Saguenay, you will develop the modules behind menus, the heads-up display (HUD), and mini-games. You’ll collaborate with design, programming, and art teams to create consistent, accessible interfaces suited to each platform. What you’ll do Review game design",
+   "description_source": "full posting",
+   "source": "Ubisoft careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "Full Stack Engineer (Go and React)",
+   "company": "Miratech",
+   "location": "Edmonton, Edmonton region",
+   "url": "https://www.adzuna.ca/details/5956109136?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-06T17:15:33Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "React",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Golang"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React matches, but it asks for Golang which is not in your profile, and the responsibilities indicate an intermediate to senior scope.",
+   "description": "Job Description Join a team building innovative, cloud-native applications that power next-generation conversational AI and enterprise solutions. As a Full Stack Engineer, you will develop scalable backend services, APIs, microservices, and modern web applications using Golang and React. You will wo",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -470,6 +553,32 @@
   },
   {
    "date_found": "2026-11-06",
+   "title": "Compiler Engineer for AI Tile-based DSL",
+   "company": "Intel Corporation",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5955916578?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-06T14:14:14Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 20,
+   "seniority": "intermediate",
+   "years_required": 1,
+   "matched_skills": [],
+   "missing_required": [
+    "C/C++",
+    "Compiler technologies",
+    "LLVM"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a compiler engineer role requiring C/C++ and LLVM compiler experience, which does not match your backend and QA automation background.",
+   "description": "## Compiler Engineer for AI Tile-based DSLApply: Canada, Toronto: Full time: Posted Today: JR0288443# **Job Details:**## Job Description:**The Role and Impact**As a Compiler Engineer at Intel, you will design, develop, test, and optimize cutting-edge compiler technologies tailored to Intel architect",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
    "title": "SAP BTP Full Stack Developer - Développeur Full Stack SAP BTP",
    "company": "SDA",
    "location": "Montréal, Québec",
@@ -493,6 +602,150 @@
    ],
    "reason": "Your Java background is a match, but this role requires 7+ years of experience and senior-level SAP BTP expertise, triggering your dealbreaker.",
    "description": "Job DescriptionJob Description About SDA At SDA, we specialize in helping enterprises unlock the full value of the SAP Business Technology Platform (SAP BTP). We do this through two complementary pillars: Products: We design and deliver innovative, user-centric solutions on SAP BTP, available on the",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "Full Stack - Java",
+   "company": "Procom",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5955916201?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-06T14:14:04Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 10+ years — filtered without AI.",
+   "description": "Full Stack - Java:On behalf of our Banking client, Procom is searching for a Full Stack - Java for a 6-month role. This position is a hybrid position with 3 days onsite at our client’s Mississauga office.Full Stack - Java - Job Description:This role involves working on the development and enhancemen",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "Software Engineer, GPU Infrastructure",
+   "company": "Cohere",
+   "location": "Seattle / Canada / New York / California (remote)",
+   "url": "https://jobs.ashbyhq.com/cohere/735f26a3-9456-49e2-8f84-23804534cfe4",
+   "posted": "2026-11-06T14:28:37.909000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "GPU Kubernetes clusters",
+    "Linux systems programming / advanced networking",
+    "Go"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior infrastructure and GPU cluster role requiring specialized machine learning ops and distributed systems experience far outside your junior backend and QA profile.",
+   "description": "WHO ARE WE?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe’re training and deploying frontier models for enterprises who are building AI systems. We believe ",
+   "description_source": "full posting",
+   "source": "Cohere careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "Software Engineer, ML Workload Platform",
+   "company": "Cohere",
+   "location": "Canada / United States (remote)",
+   "url": "https://jobs.ashbyhq.com/cohere/8f60b8e2-55b9-4258-a4cc-813273161f97",
+   "posted": "2026-11-06T15:27:08.011000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Kubernetes in production",
+    "Distributed systems",
+    "Python or Go",
+    "ML infrastructure"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an infrastructure and ML platform engineering role requiring deep Kubernetes and distributed systems experience, which does not match your backend and QA automation background.",
+   "description": "WHO ARE WE?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe’re training and deploying frontier models for enterprises who are building AI systems. We believe ",
+   "description_source": "full posting",
+   "source": "Cohere careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "Full Stack AI Developer",
+   "company": "Jobgether",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5955917283?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-06T14:14:36Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 6,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "React",
+    "AWS"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "AWS CDK",
+    "AWS Bedrock",
+    "SageMaker",
+    "PyTorch"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring match well, but this role requires 6 years of experience and senior scope, which exceeds your background.",
+   "description": "This position is listed on behalf of a partner company, which manages all applications and next steps. Our partner is looking for a Full Stack AI Developer based in Canada. Join a talented software development team building innovative digital solutions for leading companies across North America. In ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-06",
+   "title": "AI Security Engineer, AWS Security - AISec",
+   "company": "Amazon Inc.",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5955916263?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-06T14:14:05Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "Python"
+   ],
+   "missing_required": [
+    "AI security expertise",
+    "security architecture and design guidance",
+    "threat modeling",
+    "security vulnerability identification and remediation"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Python match, but this is a senior AI security engineering role requiring 5+ years of experience and security expertise, which hits your dealbreaker.",
+   "description": "AI Security Engineer, AWS Security - AISec Come join Earth's most customer-centric company! Amazon is looking for an AI Security Engineer with strong insight and passion for security to ensure our AI applications are designed and built to the highest standards. Your mission is to secure the AI exper",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
