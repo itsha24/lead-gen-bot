@@ -1,6 +1,482 @@
 {
- "updated": "2026-11-10T02:53:42+00:00",
+ "updated": "2026-11-10T18:56:29+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-10",
+   "title": "Backend Software Engineer - Remote / Telecommute",
+   "company": "CYNET SYSTEMS",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/land/ad/5959200874?se=vBn0Szfd8RGRTbZzUjwcZg&utm_medium=api&utm_source=67a2fd52&v=484F7CF7DDCA42C1185DED8F567ABCCE1C5D9489",
+   "posted": "2026-11-09T08:33:31Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 50,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a stretch intermediate backend role with a short snippet that does not specify required tech stacks or years of experience.",
+   "description": "Job Description Job Description Job Overview: Responsibilities: Design and implement clear, scalable APIs and backend services that power core claim workflows. Partner cross-functionally with Product, Operations, Data Science, and Engineering teams to define requirements, develop technical designs, ",
+   "description_source": "snippet",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Full Stack Java Engineer",
+   "company": "Miratech",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5960322395?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T08:09:23Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 50,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "React",
+    "REST APIs",
+    "PostgreSQL"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "Node.js",
+    "Jenkins"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, Spring Boot, React, and PostgreSQL match well, but this is an intermediate full-stack role requiring independent end-to-end ownership.",
+   "description": "Job Description We are looking for a Full Stack Engineer to design, develop, and support scalable cloud-native applications that power Workforce Management (WFM), Customer Experience (CX), and operational business processes. You will use Java and Spring Boot to develop scalable backend services, Rea",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Software Developer - CRM",
+   "company": "Innosystech Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5960417205?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T09:17:12Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 50,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Microsoft Dynamics 365",
+    "Azure Integration Services",
+    "TypeScript",
+    "CRM configuration"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and REST API skills match well, but this is an intermediate CRM development role requiring specific Microsoft Dynamics 365 and integration experience you do not have.",
+   "description": "Job DescriptionJob Description Job Title: Software Developer - CRM Location: Toronton Work Model: Onsite Duration: 6 months Extension: 1 Time Must Haves Demonstrated proficiency in CRM platform development and configuration, preferably Microsoft Dynamics 365 Customer Engagement (CRM), including enti",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Front-end Epsort Programmer - Rainbow Six Siege",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000160893659-front-end-epsort-programmer-rainbow-six-siege",
+   "posted": "2026-11-10T14:42:21.307000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C#"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "React",
+    "Next.js"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your background is in Java/Spring Boot and QA/backend, but this role focuses heavily on front-end web development with TypeScript, React, and Next.js.",
+   "description": "Job Description As a Front-end Programmer at Ubisoft Montréal, you’ll develop web platforms that support Rainbow Six Siege esports tournaments. You’ll work on r6esports.com, web applications and internal tools used by our teams and partners. Reporting to your team manager, you’ll work with other dev",
+   "description_source": "full posting",
+   "source": "Ubisoft careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Programmeuse, Programmeur Front-End Esport - Rainbow Six Siege",
+   "company": "Ubisoft",
+   "location": "Montreal, QC, CA",
+   "url": "https://jobs.smartrecruiters.com/Ubisoft2/744000160893379-programmeuse-programmeur-front-end-esport-rainbow-six-siege",
+   "posted": "2026-11-10T14:40:48.516000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "React",
+    "C#"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "Next.js",
+    "Micro-frontends"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React skills match, but this is an intermediate front-end role focusing heavily on TypeScript and Next.js rather than your core backend and QA stack.",
+   "description": "Au sein de l’équipe esport d’Ubisoft, vous participerez au développement et à l’évolution des plateformes web qui accompagnent les compétitions et l’écosystème esport de Rainbow Six Siege. Vous travaillerez sur différents projets, notamment des sites publics comme r6esports.com, des applications web",
+   "description_source": "full posting",
+   "source": "Ubisoft careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Software Engineering, Backend (All Teams)",
+   "company": "DoorDash, Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5960555441?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T12:13:54Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "microservices architecture",
+    "NoSQL databases",
+    "AI coding tools"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend experience matches some requirements, but the role asks for mid-level responsibilities like defining architecture and moving from monoliths to microservices.",
+   "description": "# Software Engineering, Backend (All Teams)Apply To JobJob ID: **3521006**DoorDash Technologies Canada Inc.Toronto, ON## **About the Team**DoorDash is building the world's most reliable on-demand, logistics engine for delivery! We're looking for experienced engineers to join our fast-growing enginee",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Systems Testing/QA Specialist - Toronto, ON (5 days onsite)",
+   "company": "Amicis Global",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/land/ad/5960420589?se=dKe4Szfd8RGW67hsumO50A&utm_medium=api&utm_source=67a2fd52&v=BBF179B00E87C5C146DD50C101D3A67BF938A0D2",
+   "posted": "2026-11-10T09:26:16Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation background matches, but the role asks for designing strategies and planning testing efforts for large systems, making it an intermediate-level position requiring 5 days onsite in Toronto.",
+   "description": "Job Description Job Description Title: Systems Testing/QA Specialist Location: Toronto, ON (5 days onsite) Duration:12 Months Client: OPS Description Responsibilities · Provides advice on the testing strategy, test plans, the selection of testing tools, and the identification of resources required f",
+   "description_source": "snippet",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Business Systems Analyst",
+   "company": "L R S",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5960208404?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T04:54:16Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "This is a Business Systems Analyst role in trading, which falls outside your target developer and QA automation roles under avoid_roles.",
+   "description": "Job Description Fulcrum Consulting, an LRS company, is seeking a Business Systems Analyst with our client in Toronto, Canada. Our client is seeking a Business Systems Analyst to support a trading application, with a strong focus on trading processes and technical analysis. The ideal candidate has so",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Data Driven QA Automation Engineer",
+   "company": "Riseup Labs",
+   "location": "Vancouver, Greater Vancouver",
+   "url": "https://www.adzuna.ca/details/5960335830?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T08:14:15Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "QA test automation",
+    "SQL / PostgreSQL",
+    "Python"
+   ],
+   "missing_required": [
+    "Snowflake",
+    "dbt tests",
+    "Airflow or Dagster"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation and Python match well, but it asks for 4-6 years of experience and data engineering skills you lack, triggering a dealbreaker.",
+   "description": "Job Context: Riseup Labs is seeking a QA Engineer ( who lives in Canada near at Vancouver, Calgary or Toronto ) to own quality across their data pipelines, platforms and applications. The data stack includes Snowflake, SQL, dbt, AWS or Azure, and Airflow or Dagster. Some standard tests already exist",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Co-Founder - Full-Stack Developer",
+   "company": "MOKO",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5959267923?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-09T08:51:19Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Python",
+    "JavaScript",
+    "MVC and OOP design patterns"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your SQL and AWS match, but it requires 3+ years of experience and Python/JavaScript, which triggers your experience dealbreaker.",
+   "description": "Job DescriptionJob Description MOKO is the first streaming mobile app for Afro Music. We are looking to hire talented developers to join our team. Be part of a fast moving, lean product development team working on the continued development of the MOKO web application. Deliver reliable, scalable new ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Full Stack Engineer",
+   "company": "hireVouch",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5960419348?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T09:22:45Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "React",
+    "PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Node.js",
+    "TypeScript",
+    "Next.js"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your React and PostgreSQL match, but it requires 4-6 years of experience and Node.js/TypeScript which triggers your dealbreaker.",
+   "description": "Job DescriptionJob Description Full Stack Engineer We are seeking a skilled Full Stack Engineer to join our dynamic team, focusing on developing features for an innovative web application aimed at transforming how individuals manage their significant expenses. Our platform enables users to make paym",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "AI-Augmented Automation Engineer (Java & Selenium/Playwright)",
+   "company": "Citi",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5959388656?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-09T12:14:39Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Selenium",
+    "Playwright",
+    "CI/CD tools",
+    "Investment banking experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and QA automation match well, but this role requires 5+ years of experience and senior responsibilities like mentoring.",
+   "description": "We are seeking an experienced Automation Engineer to drive end-to-end automation and spearhead AI-augmented testing practices within our Front Office Trading platform. In this role, you will design robust automation frameworks using Java and Selenium/Playwright, while integrating modern AI/GenAI too",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "AI Platform Engineer",
+   "company": "Ironbelly Studios",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5959224762?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-09T08:39:57Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "PostgreSQL"
+   ],
+   "missing_required": [
+    "Python",
+    "FastAPI",
+    "Docker",
+    "Kubernetes",
+    "LangChain/LangGraph",
+    "Unreal Engine"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior platform engineering role requiring expert-level Python, Kubernetes, and Unreal Engine experience, which hits your avoid_roles for senior positions.",
+   "description": "Job DescriptionJob Description Introduction At Ironbelly, we are fundamentally changing how video games are made. Our AI team, led by industry luminaries and veterans, is building GameFrame AI —a platform that allows developers to create complex, professional games using natural language. We are the",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Software Developer - Order Gateway",
+   "company": "Squarepoint Capital",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5960555121?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T12:13:50Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Position Overview The Order Gateway team develops and maintains Squarepoint’s order entry gateways, which are essential for routing orders and managing trade information across global exchanges and brokers for multiple asset classes. We are seeking a highly skilled senior developer who thrives on ta",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Solutions Designer",
+   "company": "Innosystech Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5960417656?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T09:18:42Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 10+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description Job Title: Solutions Designer – Senior Location: Toronto, Ontario, Canada Work Model: Onsite Duration: 12 months Extension: 1 Time Must Haves Experience with Dynamics 365, Microsoft Power platform, and Azure solution design Working knowledge of Dynamics interoperabilit",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Security Engineer, GRC",
+   "company": "1Password",
+   "location": "Remote (United States | Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/1password/15658971-e4f4-490b-97fe-5e716ddab770",
+   "posted": "2026-11-10T15:01:36.995000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [],
+   "missing_required": [
+    "security compliance and GRC framework experience",
+    "FedRAMP or federal compliance programs",
+    "3+ years in security/compliance"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a Security Engineer GRC role requiring 3+ years of compliance experience, which is outside your software development and QA background.",
+   "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
+   "description_source": "full posting",
+   "source": "1Password careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Intermediate Piping Materials Engineer",
+   "company": "Vista Projects Limited",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5960419561?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T09:23:22Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 4,
+   "matched_skills": [],
+   "missing_required": [
+    "Mechanical Engineering degree",
+    "Piping engineering experience",
+    "P.Eng"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a mechanical engineering role in the energy sector requiring 4-8 years of piping materials experience, which is completely outside your software development background.",
+   "description": "Job DescriptionJob DescriptionWhat Vista Does Vista Projects is an integrated engineering firm who has been solving complex challenges in the energy industry since 1985. We are innovators at our core. We continually find better, smarter ways to design and deliver oil and gas projects, and we are pro",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-11-09",
    "title": "Professional Services Engineer - KSA",
