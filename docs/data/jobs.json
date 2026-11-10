@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T21:39:30+00:00",
+ "updated": "2026-11-10T02:53:42+00:00",
  "jobs": [
   {
    "date_found": "2026-11-09",
@@ -174,6 +174,31 @@
   },
   {
    "date_found": "2026-11-09",
+   "title": "Développeur intermédiaire en transfert de données",
+   "company": "Medfar",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5958901513?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-09T02:16:57Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "data transfer engines",
+    "interfaces"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an intermediate role requiring mentoring of junior developers and independent ownership, and it hits your avoid_roles for intermediate titles.",
+   "description": "Description du poste À titre de Développeur intermédiaire en transfert de données, vous serez impliqué dans l’utilisation et développement d'engins de transfert de données et d'interfaces. Sous le directeur du déploiement et de l’amélioration continue, vous rejoindrez une équipe multidisciplinaire d",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-09",
    "title": "Online Programmer (Online Services - Player Identity)",
    "company": "Ubisoft",
    "location": "Montréal, Québec",
@@ -290,6 +315,28 @@
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-09",
+   "title": "Electrical Stations Engineer",
+   "company": "WSP Canada",
+   "location": "Trail, Kootenay Boundary",
+   "url": "https://www.adzuna.ca/details/5959684402?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-09T20:26:08Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "What if you could redefine what's possible? With us, you can. You want Purpose. Growth. Opportunity. People who get it. We are the home of ambitious, passionate, and innovative world shapers. With an unmatched breadth and depth of engineering, advisory and science-based expertise, our global minds u",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
   },
   {
    "date_found": "2026-11-09",
