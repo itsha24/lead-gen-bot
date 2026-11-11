@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T18:56:29+00:00",
+ "updated": "2026-11-11T00:52:24+00:00",
  "jobs": [
   {
    "date_found": "2026-11-10",
@@ -199,6 +199,36 @@
   },
   {
    "date_found": "2026-11-10",
+   "title": "Développeur·se de produits IA | AI Product Developer",
+   "company": "Valsoft Corporation",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5960650496?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T14:27:02Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "React",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "3+ years of experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, Spring Boot, and React match well, but this role asks for 3 years of experience and contributing directly to architecture decisions.",
+   "description": "Développeur·se de produits IA À propos de DemandBridge DemandBridge propose des logiciels qui permettent aux distributeurs et aux entreprises de gérer leur marketing, leur commerce électronique, leur approvisionnement et leurs activités quotidiennes au sein d’un écosystème connecté. Nos produits cou",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
    "title": "Business Systems Analyst",
    "company": "L R S",
    "location": "Toronto, Ontario",
@@ -216,6 +246,38 @@
    "dealbreakers_hit": [],
    "reason": "This is a Business Systems Analyst role in trading, which falls outside your target developer and QA automation roles under avoid_roles.",
    "description": "Job Description Fulcrum Consulting, an LRS company, is seeking a Business Systems Analyst with our client in Toronto, Canada. Our client is seeking a Business Systems Analyst to support a trading application, with a strong focus on trading processes and technical analysis. The ideal candidate has so",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Full Stack Developer - FNV Diagnostics Cloud",
+   "company": "Lincoln Motor Company",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5960555465?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T12:13:55Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "front end development",
+    "relational databases"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match, but this role requires 8 years of experience and senior responsibilities, hitting your dealbreaker.",
+   "description": "Ford of Canada's operations include a national headquarters, three vehicle assembly and engine manufacturing plants, three parts distribution centers, and three Connectivity and Innovation centers. Ford employs approximately 7,000 people in Canada, while an additional 18,000 people are employees in ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -344,6 +406,37 @@
    ],
    "reason": "Your Java and QA automation match well, but this role requires 5+ years of experience and senior responsibilities like mentoring.",
    "description": "We are seeking an experienced Automation Engineer to drive end-to-end automation and spearhead AI-augmented testing practices within our Front Office Trading platform. In this role, you will design robust automation frameworks using Java and Selenium/Playwright, while integrating modern AI/GenAI too",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-10",
+   "title": "Technical Business Analyst",
+   "company": "Fonemed",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5960419609?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-10T09:23:29Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 25,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "business analysis",
+    "requirements gathering",
+    "user stories and acceptance criteria writing"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a Technical Business Analyst role requiring 3+ years of experience and a strong background in business analysis rather than a software development or QA automation role.",
+   "description": "Job DescriptionJob Description Technical Business Analyst Remote Fonemed is redefining how individuals and healthcare organizations connect through secure, cloud-native technology. Our Florizel platform supports a wide range of digital health services and solutions, empowering virtual care delivery ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
