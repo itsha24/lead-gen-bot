@@ -1,6 +1,36 @@
 {
- "updated": "2026-11-11T19:03:34+00:00",
+ "updated": "2026-11-12T02:03:55+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur(euse) logiciel / Software Developer - C#/.NET, WPF and Web",
+   "company": "Genetec Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961952641?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:50Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "React",
+    "REST APIs",
+    "QA test automation",
+    "Git"
+   ],
+   "missing_required": [
+    "WPF"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C#, .NET, and React skills match well for this junior-leaning role, and WPF is listed as learnable.",
+   "description": "Aperçu du poste: Nous recherchons un(e) développeur(euse) logiciel pour créer et assurer la maintenance de logiciels de bureau, web et cloud destinés à l’ensemble des produits Genetec dans les domaines des transports et de la sécurité physique. Ce poste couvre le développement d’applications de bure",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the Software Developer position. With my background in C# and .NET backend development, I would love to connect and learn more about the team's work on desktop and cloud applications. Best, Hassan",
+   "outreach_subject": "Application: Software Developer - C#/.NET - Hassan Awan",
+   "outreach_email": "Hi Genetec Team,\n\nI recently applied for the Software Developer - C#/.NET, WPF and Web position. With two years of professional experience building software, I am very comfortable working with C#, .NET, and REST APIs, along with frontend frameworks like React.\n\nI was particularly drawn to this role because of your focus on scalable backend services and transit solutions, which aligns closely with my technical background and enthusiasm for robust application development. I am eager to contribute to your software lifecycle from planning to delivery.\n\nCould we schedule a brief chat to discuss how my skills can support your development team?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
   {
    "date_found": "2026-11-11",
    "title": "Software Developer - Applications",
@@ -57,6 +87,68 @@
   },
   {
    "date_found": "2026-11-11",
+   "title": "RQ11532 - Software Developer - Junior",
+   "company": "Source Code",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5961944648?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:42Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "SQL / PostgreSQL",
+    "REST APIs",
+    "RESTful WebServices"
+   ],
+   "missing_required": [
+    "Oracle database",
+    "JWT, Oauth2.0, SSL Certificates"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and SQL match well and it asks for 2 years, though it requires Oracle and security protocols you lack.",
+   "description": "RQ11532 - Software Developer - Junior Location :222 Jarvis Street, Toronto (5 days ONSITE) Duration: 1 yearContract (283 Business days) + 1 possible extension Must Have: 2+ years of experience as a designer and developer in the large-scale multi-client web applications 2+ year of hands-on working ex",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the RQ11532 Junior Software Developer role. With 2 years of professional development experience and strong Java and SQL skills, I am confident I can contribute effectively to your team. Let's connect.",
+   "outreach_subject": "Application for RQ11532 - Software Developer - Junior",
+   "outreach_email": "Hi [Name],\n\nI am writing to express my interest in the RQ11532 Software Developer - Junior position at Source Code. I recently submitted my application and wanted to reach out directly.\n\nWith two years of professional software development experience, I bring a strong background in Java and SQL databases. During my previous roles, I focused on building reliable backend components and REST APIs, which aligns well with the technical expectations for this project.\n\nI would welcome a brief conversation to discuss how my background matches your current project requirements.\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur(euse) logiciel en test / Software Developer - SC Video Systems",
+   "company": "Genetec Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961946742?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:21:10Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "QA test automation",
+    "C#",
+    ".NET",
+    "SQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "PowerShell",
+    "video systems knowledge",
+    "performance and load testing expertise"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and QA automation skills match this junior SDET role well, though you will need to learn video streaming protocols and performance testing tools.",
+   "description": "La dynamique de votre équipe: L’équipe QA Domains de Security Center est responsable de l’assurance de la qualité et de la fiabilité de la plateforme phare de sécurité physique de Genetec. Nous testons et validons les trois piliers de Security Center : la vidéosurveillance, le contrôle d’accès et la",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Software Developer in Test role at Genetec. With my background in C#, .NET, and QA automation, I would love to bring my testing experience to your Video Systems Test team. Let's connect.",
+   "outreach_subject": "Application: Software Developer in Test - Video Systems - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Software Developer in Test position within the Video Systems Test team at Genetec and wanted to reach out directly.\n\nWith my background in software development and QA automation, particularly working with C#, .NET, SQL, and automated test frameworks, I was excited to see this opening. During my previous experience, I focused on building reliable test solutions and robust backend integrations, which aligns well with your need for test automation infrastructure and API validation.\n\nI am based in Montreal and would welcome a brief chat to discuss how my automation skills can support your team's upcoming releases. Alternatively, please let me know if there is a better person to contact.\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
    "title": "Software Designer C# / Angular, Embedded Applications",
    "company": "Matrox",
    "location": "Dorval, Montréal",
@@ -81,6 +173,250 @@
    "outreach_note": "Hi, I applied for the Software Designer C# / Angular role. With my background in C# backend development and REST APIs, I can help build and test your embedded applications effectively. Let's connect.",
    "outreach_subject": "Application: Software Designer C# / Angular (Hassan Awan)",
    "outreach_email": "Hi Matrox Team,\n\nI recently applied for the Software Designer C# / Angular, Embedded Applications position. Given my professional background in C# and REST APIs, I am confident in my ability to contribute to your development team and write robust unit and integration tests.\n\nI have built backend services and worked with .NET environments, which aligns well with your requirements for developing applications on Windows and Linux platforms. I am eager to bring my problem-solving skills to your collaborative environment in Dorval.\n\nDo you have five minutes for a quick chat this week about the team's current projects?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur(euse) logiciel / Software Developer - Access Control SaaS",
+   "company": "Genetec Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961952093?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:42Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 70,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Go",
+    "Microsoft Azure"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and C# background fit the multi-level software developer opening well, though it primarily uses Go and Azure which you would need to learn.",
+   "description": "Qui sommes-nous?: Fournisseur chef de file de technologie pour des solutions unifiées en intelligence d’affaires, sécurité physique, sécurité publique et opérations. Genetec développe des logiciels à plateforme ouverte, de l’équipement informatique et des services basés sur le cloud pour le secteur ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Software Developer role. With my background in backend development and APIs, I am excited about Genetec's SaaS platform. Would love to connect.",
+   "outreach_subject": "Application: Software Developer - Access Control SaaS",
+   "outreach_email": "Hi [Name],\\n\\nI recently applied for the Software Developer, Access Control SaaS position at Genetec. With my professional experience in backend development and building REST APIs, I am very comfortable designing reliable services and working collaboratively within engineering teams.\\n\\nYour focus on scalable, distributed software aligns closely with my background. I would appreciate a brief chat to discuss how my technical skills can contribute to your team, or to learn who the right hiring contact might be.\\n\\nBest regards,\\n\\nHassan Awan\\nhttps://itsha24.github.io/Portfolio/\\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Front End Developer React Native",
+   "company": "Highspring",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961947511?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:21:22Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 68,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "React / React Native"
+   ],
+   "missing_required": [
+    "React Native"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React Native experience is at a working level rather than strong, but you match the junior scope and Agile background well.",
+   "description": "Highspring is a professional services and consulting firm specializing in digital transformation, modern application development, and large-scale platform modernization. We partner with leading organizations to design, build, and deliver high-impact technology solutions, embedding our consultants wi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the React Native Developer role at Highspring. With my experience in React Native and enterprise mobile applications, I would love to connect. Best, Hassan",
+   "outreach_subject": "Application: React Native Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied to the React Native Developer role at Highspring and wanted to reach out directly. My background includes working with React Native and building cross-platform applications, which aligns well with your digital transformation initiatives for financial institutions.\n\nI am comfortable collaborating within cross-functional Agile squads to deliver high-quality code and integrate with backend services. I would appreciate the chance to discuss how my development background can support your upcoming client projects.\n\nCould we set up a brief chat this week, or is there someone else on the delivery team I should connect with?\n\nBest,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Full Stack Developer - Java / Angular",
+   "company": "Compunnel Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961955608?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:31Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 68,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL",
+    "Microservices",
+    "API Development",
+    "Git",
+    "CI/CD",
+    "Agile Methodology",
+    "Software Testing",
+    "Troubleshooting",
+    "Problem Solving",
+    "Communication Skills"
+   ],
+   "missing_required": [
+    "Angular",
+    "AI Coding assistants",
+    "Generative AI (GenAI)",
+    "Agent-Based Development"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, Spring Boot, and REST API skills are strong matches, but you are missing Angular and the specific AI tooling requested, making this a good fit for your junior profile.",
+   "description": "We are seeking a Full Stack Developer - Java / Angular to design, develop, and modernize enterprise applications supporting compliance and critical business workflows. This role is responsible for building scalable full-stack solutions, developing Java Spring Boot backend services and Angular fronte",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi Compunnel team, I recently applied for the Full Stack Developer role. With my background in Java and Spring Boot backend development, I would love to connect and learn more about your modernization initiatives.",
+   "outreach_subject": "Application: Full Stack Developer - Java / Angular - Hassan Awan",
+   "outreach_email": "Hi [Name], I recently submitted an application for the Full Stack Developer - Java / Angular position at Compunnel Inc. With my professional background in Java, Spring Boot, REST APIs, and SQL backend development, I can contribute effectively to your scalable enterprise solutions and microservices architecture. I am comfortable collaborating across teams and quickly adapting to new tech stacks. Do you have a few minutes for a quick chat this week, or could you point me to the right person on the engineering team to speak with regarding this role? Best regards, Hassan Awan https://itsha24.github.io/Portfolio/ https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "AI Solutions Developer - (GenAI / OpenAI)",
+   "company": "Genpact Ltd.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961948956?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:21:47Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "OpenAI API integration experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and API skills match well for this junior-to-intermediate AI developer role in Montreal, though it requires specific GenAI experience that you are currently learning.",
+   "description": "Genpact – Développeur de Solutions IA (GenAI / OpenAI) Genpact (NYSE : G) est une entreprise mondiale de services professionnels et de solutions qui aide ses clients à obtenir des résultats favorisant leur transformation et leur croissance. Avec plus de 125 000 employés répartis dans plus de 30 pays",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Bonjour, je viens de postuler pour le poste de Développeur de Solutions IA. Avec mon expérience en développement backend, intégration d'API et bases de données, je serais ravi d'apporter ma contribution à votre équipe à Montréal. Discutons-en.",
+   "outreach_subject": "Candidature : Développeur de Solutions IA",
+   "outreach_email": "Bonjour,\n\nJe vous contacte suite à ma candidature pour le poste de Développeur de Solutions IA (GenAI / OpenAI) chez Genpact à Montréal. \n\nFort d'une expérience en développement backend et en intégration d'API REST, je suis particulièrement motivé par les projets impliquant l'automatisation et l'intégration de services intelligents.\n\nBien que mes compétences en IA soient actuellement en phase d'apprentissage, ma solide maîtrise des API, des bases de données SQL et du développement de code maintenable me permettra de m'adapter rapidement aux exigences de vos projets de génération de résumés par LLM.\n\nSeriez-vous disponible pour un court échange cette semaine ?\n\nCordialement,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Full-Stack Java/Angular Engineer for Cloud & AI",
+   "company": "Compunnel Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961954074?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:10Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "Microservices",
+    "SQL",
+    "Full Stack Development",
+    "API Development",
+    "Git",
+    "CI/CD",
+    "Agile Methodology",
+    "Software Testing",
+    "Troubleshooting"
+   ],
+   "missing_required": [
+    "Angular"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, Spring Boot, and REST API skills match this junior full-stack role well, but you will need to learn Angular for the frontend.",
+   "description": "We are seeking a Full Stack Developer - Java / Angular to design, develop, and modernize enterprise applications supporting compliance and critical business workflows. This role is responsible for building scalable full-stack solutions, developing Java Spring Boot backend services and Angular fronte",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Full-Stack Java/Angular Engineer role. With my background in Java and Spring Boot development and REST APIs, I am confident I can contribute effectively to your team. Let us connect.",
+   "outreach_subject": "Application: Full-Stack Java/Angular Engineer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Full-Stack Java/Angular Engineer position at Compunnel Inc. and wanted to reach out directly.\n\nWith my professional experience building backend services using Java and Spring Boot, along with designing REST APIs and working with SQL databases, I am well-equipped to contribute to your enterprise application modernization initiatives. While my primary backend strength is Java, I am a fast learner comfortable picking up frontend frameworks like Angular as needed.\n\nCould we schedule a brief chat to discuss how my background aligns with your team's current projects?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur logiciel Wayside",
+   "company": "Alstom",
+   "location": "Saint-Bruno, La Vallée-du-Richelieu",
+   "url": "https://www.adzuna.ca/details/5961949670?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:00Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C#",
+    "SQL",
+    "Python"
+   ],
+   "missing_required": [
+    "Docker",
+    "Kubernetes",
+    "Linux"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C#, Python, and SQL match well, but this intermediate role mentions architectural design and mentoring junior developers which stretches beyond your 2 years.",
+   "description": "Sélectionnez la fréquence (en jours) de réception d’une alerte: Chez Alstom, nous avons une connaissance pointue des réseaux de transport et comprenons ce qui conduit les individus à les emprunter. Des trains à grande vitesse, métros, monorails et tramways aux systèmes intégrés, services, infrastruc",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the Développeur logiciel Wayside role at Alstom. With my background in C#, Python, and SQL, I believe I can contribute well to your software solutions. Let us connect.",
+   "outreach_subject": "Application for Développeur logiciel Wayside - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Développeur logiciel Wayside position at Alstom in Saint-Bruno. With two years of software development experience and a strong background in C#, Python, and SQL, I am confident in my ability to build robust and scalable software solutions for your railway systems.\n\nI am comfortable working in multidisciplinary environments and bring a proactive approach to integration and software delivery. I would appreciate the opportunity to discuss how my technical skills align with your team's current projects.\n\nDo you have a few minutes for a quick chat this week, or could you point me to the right hiring manager?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Software Engineer II",
+   "company": "Zebra Technologies Canada, ULC",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961955364?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:28Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "C#",
+    "Python"
+   ],
+   "missing_required": [
+    "C++",
+    "performance optimization (SIMD, parallel processing)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your 2 years of experience and C# skills match well, but this intermediate role expects C++ and performance optimization experience.",
+   "description": "Overview At Zebra, we are a community of innovators who come together to create new ways of working. United by curiosity and a culture of caring, we develop smart solutions that anticipate our customer’s and partner’s needs and solve their challenges. Being part of Zebra Nation means you are seen, h",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Software Engineer II role in Montreal. With my background in C# and software development, I am well-equipped to contribute to your engineering team. Let's connect.",
+   "outreach_subject": "Application for Software Engineer II - Montreal",
+   "outreach_email": "Hi Zebra Technologies Team,\n\nI recently applied for the Software Engineer II position at your Montreal office and wanted to reach out directly.\n\nWith two years of software development experience and strong working knowledge of C# and Python, I am confident in my ability to build and maintain robust software solutions alongside your team. Your focus on designing efficient systems aligns closely with my technical background and professional growth.\n\nI would welcome a brief conversation to discuss how my skills can support the engineering group.\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Full-Stack Developer",
+   "company": "Lucova Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5961958759?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:24:13Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 60,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "backend development experience",
+    "security and PCI compliance knowledge"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and QA background aligns with this junior-leaning full-stack role, though specific stack technologies are not listed in the snippet.",
+   "description": "Lucova Inc. is an emerging technology company with clients across North America. We bring technology, data and people together to enhance and personalize the human experience of commerce. Our tools allow brands to personalize each unique experience and interact with their customers like never before",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I recently applied for the Full-Stack Developer role at Lucova. With my background in backend development, Java, and QA test automation, I am eager to help your team build robust solutions. Would love to connect. https://itsha24.github.io/Portfolio/",
+   "outreach_subject": "Application for Full-Stack Developer",
+   "outreach_email": "Hi [Name],\n\nI am writing to let you know that I recently applied for the Full-Stack Developer position at Lucova. Given my professional experience in backend development, building REST APIs, and QA test automation, I am confident in my ability to contribute effectively to your core tech team.\n\nI have built practical solutions using Java, Spring Boot, and C#, and I am comfortable owning the testing and troubleshooting process to maintain high standards.\n\nWould you be open to a brief chat about the team's current priorities, or could you point me to the right person to speak with regarding this role?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-11",
@@ -139,6 +475,33 @@
   },
   {
    "date_found": "2026-11-11",
+   "title": "AI Software Developer - Intermediate",
+   "company": "Delta Controls",
+   "location": "Surrey, Greater Vancouver",
+   "url": "https://www.adzuna.ca/details/5961953166?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:58Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 45,
+   "seniority": "intermediate",
+   "years_required": 1,
+   "matched_skills": [
+    "AWS (S3)",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Python"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your background matches the intermediate level and Python is listed under your learning skills, but this role requires strong Python and building AI/ML features which is a stretch for your profile.",
+   "description": "About Delta Intelligent Building Technologies (Canada) Inc. (formerly known as Delta Controls) Delta Intelligent Building Technologies (Canada) Inc. (a subsidiary of Delta Electronics) is a leading building controls manufacturer with over 300 partners in more than 80 countries. For over three decade",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
    "title": "Software Engineer II",
    "company": "Electronic Arts ",
    "location": "Greater Vancouver, British Columbia",
@@ -158,6 +521,208 @@
    "dealbreakers_hit": [],
    "reason": "Your QA automation experience matches well, but this intermediate Software Engineer II role asks for TypeScript/JavaScript and mobile frameworks like Appium or Detox which are not your primary stack.",
    "description": "Description & Requirements Electronic Arts creates next-level entertainment experiences that inspire players and fans around the world. Here, everyone is part of the story. Part of a community that connects across the globe. A place where creativity thrives, new perspectives are invited, and ideas m",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Systems Testing / QA Specialist",
+   "company": "Hirematic Talent Solutions",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5962006348?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T13:56:17Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation matches the technical requirements, but the title and responsibilities point to an intermediate or senior contract role requiring 5 days a week onsite in Toronto.",
+   "description": "Senior Systems Testing / QA Specialist Location: Toronto, Ontario Job Type: Contract Hourly Rate: $40 - $45 Inc Contract Duration: 125 + 125 Days Work Arrangement: Onsite 5 days a week Must-Have Qualifications Proven experience in executing testing-related activities and data reconciliation activiti",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Software Development Engineer",
+   "company": "TekWissen LLC",
+   "location": "Thornhill, York region",
+   "url": "https://www.adzuna.ca/details/5962006224?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T13:55:58Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "SQL",
+    "Python",
+    "PostgreSQL"
+   ],
+   "missing_required": [
+    "system security architecture",
+    "cryptography and encryption key management",
+    "hardware and firmware interactions"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and SQL match the preferred stack, but this intermediate role focuses heavily on hardware, firmware, and product security architecture.",
+   "description": "Overview: TekWissen is a global workforce management provider headquartered in Ann Arbor, Michigan that offers strategic talent solutions to our clients world-wide. This Client is an American multinational semiconductor company based in Santa Clara, California, that develops computer processors and ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Ingénieur logiciel IA — Plateforme d'agents conversationnels",
+   "company": "Jaide Health",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961949573?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:21:58Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "React",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "JavaScript",
+    "TypeScript",
+    "Node.js"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your React and AWS skills match, but the role asks for mentoring juniors and senior-leaning software engineering responsibilities in JavaScript/TypeScript, and it hits your avoid_roles criteria for intermediate engineering scope.",
+   "description": "Aidez à redéfinir le support client à l'ère de l'IA. La plupart des entreprises fonctionnent encore avec des systèmes de ticketing conçus en 2007, auxquels l'IA a été greffée après coup. Botpress est la plateforme d'agents IA enterprise pour le support client — construite dans l'autre sens. En tant ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "System Development Engineer II",
+   "company": "Motorola Solutions Inc",
+   "location": "British Columbia, Canada",
+   "url": "https://www.adzuna.ca/details/5961954383?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:14Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Linux/Unix internals",
+    "Infrastructure as Code"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation and API skills match well, but it is an intermediate role requiring 3 years of experience and deep infrastructure/DevOps expertise.",
+   "description": "Company Overview At Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep people safer everywhere. We build and connect technologies to help protect people, property and places. Our solutions foster t",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Devops Consultant",
+   "company": "Info-Ways",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961955596?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:31Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "Solaris 11",
+    "Systems Administrator experience",
+    "Perl or Ruby"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This DevOps and systems administration role does not match your target software development or QA roles, and falls outside your core skill set.",
+   "description": "Role: Devops Consultant Location: Montreal, QC Duration: 6+ Months BGV will be done for the selected candidates. Position Description: The Infrastructure-as-a-Service (IaaS) Platform Engineering team is looking for a DevOps Specialist to enhance the operational tooling used to build, operate and man",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Software Development Engineer - Product Security",
+   "company": "CYNET SYSTEMS",
+   "location": "Thornhill, York region",
+   "url": "https://www.adzuna.ca/details/5962006294?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T13:56:09Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Python",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "security architecture",
+    "hardware and firmware security"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This product security role focuses heavily on hardware, firmware, and systems security domains outside your core backend and QA profile.",
+   "description": "Pay Range: $65.63hr - $69.28hr Job Overview: As a key member of the Business Enterprise Applications team with a focus within the IT Global Operations & Supply Chain team, the successful candidate will use expert software engineering skills to develop product security. The candidate will be responsi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "CLDRSRC10432 - Full stack Java Developer - Toronto",
+   "company": "Cloud Resourcing",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5962006230?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T13:55:59Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring",
+    "REST APIs",
+    "SQL"
+   ],
+   "missing_required": [
+    "J2EE",
+    "JSF",
+    "Oracle",
+    "AngularJS"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Spring skills match, but the scope and responsibilities lean intermediate-to-senior, capping your score due to the avoid_roles criteria.",
+   "description": "MUST HAVES - Experience in systems design, configuration, integration and development, IT security, programming concepts, languages and related methods, techniques, practices and standards in JAVA, J2EE, JSF, HTML/DHTML, XML/XSL Hands on experience in n-tier web-based application development using O",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -306,6 +871,289 @@
    "dealbreakers_hit": [],
    "reason": "Your QA test automation and Python match, but this role requires specialized game industry build engineering and Unreal Engine pipeline experience that does not align with your core backend and general QA background.",
    "description": "About Offworld Industries: Offworld Industries Ltd. (Offworld) is the independent studio behind the successful military first-person shooter game, “Squad”. Offworld was formed in 2014 by more than 15 developers who had worked together on the well known Project Reality mod for Battlefield 2. The foun",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur(se) Fullstack Java / React | Full Stack Java / React Developer",
+   "company": "Astek",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961946338?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:21:01Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "React",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "5 years of experience",
+    "Kubernetes",
+    "CI/CD"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and React match well, but this role requires a minimum of 5 years of experience which hits your dealbreaker.",
+   "description": "Offre d'emploi : Développeur(se) Fullstack Java / React Localisation : Montréal Mode de travail : Hybride (5 jours/semaine au bureau pendant les 2 premiers mois, puis 3 jours/semaine au bureau) Début : Dès que possible Salaire : À discuter Le masculin est utilisé pour alléger l'annonce. Ce que nous ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Full Stack Developer (Java/React) / Développeur(euse) full stack (Java/React)",
+   "company": "Noordtechnologies",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961943515?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:30Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "React",
+    "REST APIs",
+    "PostgreSQL"
+   ],
+   "missing_required": [
+    "Kubernetes",
+    "Kafka",
+    "Investment banking domain experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and React match well, but it requires 5 years of experience and senior responsibilities like code reviews for juniors, hitting your dealbreaker.",
+   "description": "Full Stack Developer (Java/React) / Développeur(euse) full stack (Java/React) The French version of this job posting is below. / La version française de cette offre se trouve plus bas. Chez Nöord Technologies, nous accompagnons des institutions financières de premier plan en leur proposant des talen",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Software Integration Engineer - Associate",
+   "company": "Icapitalnetwork",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5961958142?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:24:04Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL",
+    "React / React Native"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and REST API skills match well, but the role asks for 3+ years of experience which hits your dealbreaker.",
+   "description": "About the Role iCapital is looking to hire a Software Integration Engineer - Associate to join the Annuities Platform Team. This role develops, tests and supports well-defined integration solutions that connect client and product systems. The work spans application, API, and database layers and foll",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "QA Automation Engineer",
+   "company": "360training",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5961954563?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:17Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Playwright",
+    "Cypress",
+    "Selenium",
+    "CI/CD integration",
+    "Git"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation skills match well, but this role requires 4+ years of experience which hits your dealbreaker for experience requirements.",
+   "description": "360training At 360training, we’re more than an online training provider—we’re on a mission to empower people and organizations to thrive. As a fast-growing leader in online and live training across multiple industries, we deliver regulatory-approved training and certifications that power careers and",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Founding Game Developer",
+   "company": "Storycraft Games",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961955145?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:25Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "Mobile game development",
+    "Multiplayer game networking",
+    "Game client architecture"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior founding game developer role requiring advanced career experience and game architecture ownership, which exceeds your junior level.",
+   "description": "Summary We’re hiring an experienced game developer to help us design and build delightful user interfaces and games using modern web technology. Our product includes generative AI tools and real-time collaborative, multiplayer experiences so we are looking for someone who thrives at the intersection",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Software Developer",
+   "company": "Retrospect Backup",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961954931?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:22Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "Java",
+    "Python"
+   ],
+   "missing_required": [
+    "4+ years of experience",
+    "distributed systems",
+    "ZFS or advanced Unix-based file systems",
+    "S3-compatible object storage architecture"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Python match well, but this role requires 4+ years of experience which exceeds your background.",
+   "description": "Protecting 100 Petabytes in over 500,000 homes and businesses in over 100 countries, Retrospect is dedicated to providing reliable backup and recovery tools for professionals and small-to-midsize businesses with Retrospect Backup and Retrospect Virtual, covering physical servers and endpoints, virtu",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur Java intermédiaire",
+   "company": "SII Group",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961955989?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:36Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Angular",
+    "Docker",
+    "Kubernetes",
+    "Jenkins"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match well, but this intermediate role requires 3 years of experience which hits your dealbreaker threshold.",
+   "description": "Contexte : Nous recherchons des développeurs backend qui contribueront à différents projets d’évolution et de modernisation dans le secteur des services financiers. Nous recherchons avant tout des personnes autonomes, rigoureuses et capables de prendre rapidement en charge leurs activités de dévelop",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "C# / C++ Developpeur (Real Time expert)",
+   "company": "Noordtechnologies",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961955135?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:25Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "C#"
+   ],
+   "missing_required": [
+    "C++",
+    "real-time low-latency development",
+    "distributed systems architecture"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role is an intermediate-to-senior position requiring deep C++ real-time trading experience and distributed architecture ownership, which does not match your junior profile.",
+   "description": "Nöord Technologies Corporation | Term to perm At Nöord Technologies, we empower top-tier financial institutions with exceptional talent in banking and capital markets. For the needs of one of our prestigious clients, a major banking actor in Montreal currently experiencing strong growth, we are acti",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Software Engineer in Test",
+   "company": "Bounce",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961944999?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:46Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "QA test automation",
+    "Python",
+    "AWS"
+   ],
+   "missing_required": [
+    "Typescript",
+    "Playwright or Cypress"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of experience"
+   ],
+   "reason": "Your QA automation skills match well, but this role requires 3+ years of experience and expects mid-senior level independent ownership.",
+   "description": "Bounce is the new social way to pay; a smart and fun alternative to traditional money transfers. Canada’s first Venmo-style app, rail-agnostic, and designed to go viral (Hey, Bounce me!). Whether you're requesting for rent, sending money for concert tickets, or splitting trip group expenses, Bounce ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -538,6 +1386,61 @@
   },
   {
    "date_found": "2026-11-11",
+   "title": "Développeur NodeJS/NodeJS developer",
+   "company": "Akkodis",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961938827?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:19:38Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Node.js",
+    "TypeScript",
+    "GCP"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior-level role involving system architecture, mentoring, and owning end-to-end integrations in Node.js and TypeScript, which does not match your junior Java and C# profile.",
+   "description": "Direct message the job poster from Akkodis // Key responsibilities Own the end-to-end design, development, and rollout of new supplier integrations and data pipelines, demonstrating a high level of technical competency and leadership Utilize your deep knowledge of Node.js and TypeScript to build and",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Test Automation",
+   "company": "Altis",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961947143?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:21:16Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Playwright",
+    "Senior-level architecture ownership"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior-level role requiring senior C# development and ownership experience, which exceeds your junior level.",
+   "description": "Senior C# Developer, QA Automation (Playwright) Location: Montreal, QC Language: Professional working proficiency in spoken and written English, with the ability to develop and validate automated testing for English and French customer experiences Duration: 6-month contract About the Opportunity Are",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
    "title": "Software Developer",
    "company": "OpenText",
    "location": "Richmond Hill, York region",
@@ -596,6 +1499,205 @@
    ],
    "reason": "Your Java matches, but this role requires 5+ years of experience and senior responsibilities like mentoring junior developers, hitting your dealbreaker.",
    "description": "Location: Montreal, QC, Canada (100% onsite, no remote or hybrid) Type: Contract, 12/01/2026 to 11/30/2027 Interview: May require an in-person interview About the Role You’ll build and support core components of a Market Risk platform in Core Java, use AI tools to power agentic and analytical workfl",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Full Stack Java Developer",
+   "company": "Compunnel Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961954643?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:18Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "We are seeking a Senior Full Stack Java Developer with strong experience in distributed systems and exposure to cloud architectures. This role will focus on building a resilient, scalable, and secure cloud-based settlement platform. The developer will participate in requirements refinement, architec",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Signaling Engineer, Rail and Transit",
+   "company": "WSP Canada",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5962360192?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T20:21:19Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "What if you could redefine what's possible? With us, you can. With us, you can. You want Purpose. Growth. Opportunity. People who get it. We are the home of ambitious, passionate, and innovative world shapers. With an unmatched breadth and depth of engineering, advisory and science-based expertise, ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Développeur(euse) Full Stack - Java Spring Boot / Angular",
+   "company": "Astek Group",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961950907?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:22Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 7+ years — filtered without AI.",
+   "description": "Localisation : Montréal (présence en bureau requise 3 jours/semaine) Mode de travail : Hybride Début : [Date / Dès que possible] Ce que nous allons accomplir ensemble Dans le cadre du renforcement d'une plateforme technologique déployée à l'échelle internationale, nous recherchons un(e) développeur(",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Full Stack Java Spring & Angular Pro — Hybrid (Montréal)",
+   "company": "Astek Group",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961944674?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:43Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 7+ years — filtered without AI.",
+   "description": "Localisation : Montréal (présence en bureau requise 3 jours/semaine) Mode de travail : Hybride Début : [Date / Dès que possible] Ce que nous allons accomplir ensemble Dans le cadre du renforcement d'une plateforme technologique déployée à l'échelle internationale, nous recherchons un(e) développeur(",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Automation Developer",
+   "company": "vTech Solution",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5962006237?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T13:56:02Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job Summary: The Automation Developer is responsible for identifying automation opportunities within software processes and designing, developing, and executing automated QA test scripts. This role involves collaborating with QA analysts and software developers to enhance testing efficiency, ensure ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "QA Analyst",
+   "company": "EXFO Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961945913?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:56Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job Description Ingénieur en développement logiciel de tests (SDET) À propos de nous Nous développons des plateformes critiques de surveillance de la fibre et de visibilité réseau utilisées par de grands opérateurs de télécommunications et fournisseurs de centres de données partout dans le monde. No",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "iOS Software Developer - Intermediate",
+   "company": "Väderstad Group",
+   "location": "Regina region, Saskatchewan",
+   "url": "https://www.adzuna.ca/details/5961956074?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:37Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs",
+    "automated unit and UI testing"
+   ],
+   "missing_required": [
+    "iOS",
+    "Swift",
+    "OAuth or OIDC",
+    "C, C++ or Rust"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background is in Java/Spring and QA automation, but this role requires 3+ years of native iOS and Swift development at an intermediate level.",
+   "description": "## iOS Software Developer - IntermediateApply: Regina, Canada: Full time: Posted Today: JR101462SummaryVäderstad is looking for people who share our passion for farming. Our employees are the most important resource we have in achieving our goals. We provide great career opportunities for the right ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Databricks Developer",
+   "company": "Apex Systems",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5961939164?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:19:42Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "C#"
+   ],
+   "missing_required": [
+    "Azure Data Factory",
+    "Databricks",
+    "Azure Functions",
+    "Python",
+    "Spark",
+    "Pandas",
+    "Delta Lake",
+    "Azure DevOps"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background does not match this senior data engineering role, and it requires 4-6 years of experience which hits your dealbreaker.",
+   "description": "Join to apply for the Databricks Developer role at Apex Systems Join to apply for the Databricks Developer role at Apex Systems Get AI-powered advice on this job and more exclusive features. Job#: 2076192 Job Description: Databricks Developer Client: Big 5 Bank Location: Downtown Toronto. Hybrid: Th",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -899,6 +2001,33 @@
   },
   {
    "date_found": "2026-11-11",
+   "title": "11796",
+   "company": "Maarut",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961953036?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:56Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 10,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Guidewire PolicyCenter",
+    "Gosu"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and SQL skills match well, but this role requires specific Guidewire PolicyCenter and Gosu experience with intermediate-to-senior autonomous problem solving.",
+   "description": "Montreal /Quebec city, Canada Job Description Our client is preparing an on-premise upgrade of Guidewire PolicyCenter from version 10.2.2 to 10.2.5 and is seeking a Guidewire Developer to support the initiative. The primary focus will be identifying and resolving Database Consistency Checks (DBCC), ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
    "title": "Backend Developer",
    "company": "Luxoft",
    "location": "Calgary, Calgary region",
@@ -926,6 +2055,36 @@
    ],
    "reason": "Your Java matches, but this is a senior role requiring 10+ years of experience, triggering your dealbreaker.",
    "description": "One of the world's leading providers of products and services to the global energy industry. With a presence in more than 70 countries and 130 nationalities represented in our workforce, we are one of the world's most diverse companies. This allows us to offer multiple career paths, best-in-class tr",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-11",
+   "title": "Spécialiste en Vibration des Systèmes / Systems Vibration Specialist",
+   "company": "Airbus SE",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961952674?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:22:51Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 10,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "Vibration analysis",
+    "Aerospace engineering degree",
+    "FEM modeling (HyperWorks & Nastran)"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior aerospace engineering role requiring 10+ years of experience in vibration analysis, which does not match your software development background.",
+   "description": "Description de l'emploi : Vous avez une expérience des analyses de vibration , vous avez travaillé dans le secteur aéronautique et vous souhaitez évoluer et développer de nouvelles compétences? Ce poste est pour vous! Job Description : Do you have experience with vibration analysis, have you worked ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
