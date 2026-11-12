@@ -1,6 +1,545 @@
 {
- "updated": "2026-11-12T02:03:55+00:00",
+ "updated": "2026-11-12T19:13:43+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-12",
+   "title": "Software Developer - Micro-Integration Platform",
+   "company": "Solace Corporation",
+   "location": "Kanata, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5963157002?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T08:17:34Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "AWS (S3)",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Apache Camel",
+    "Docker",
+    "Kubernetes"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Spring Boot background matches the backend requirements well, though it is an integration role asking for some specific messaging tools.",
+   "description": "Job DescriptionJob Description Enterprise AI is moving from pilots to production, and the constraint is no longer the model — it's the data. Agents are only as good as what they can sense, trust, and act on in the moment, and real-time, event-driven data is becoming the foundation every serious AI s",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Integration Software Developer role. With my background in Java and Spring Boot backend development, I am eager to contribute to the Micro-Integration Platform team. Would love to connect.",
+   "outreach_subject": "Application for Integration Software Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Integration Software Developer position at Solace Corporation. With two years of professional software development experience, I am very interested in your work on the Micro-Integration Platform.\n\nMy background includes strong proficiency in Java and Spring Boot, building REST APIs, and handling backend integrations, which aligns well with the tech stack you use for micro-integrations. I enjoy building reliable backend systems and would be excited to bring this experience to your team.\n\nDo you have a few minutes for a quick chat this week about the team's current priorities, or could you point me to the right person to speak with?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Fixed Income Electronic Trading - Programmer Analyst",
+   "company": "Societe Generale SA",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961956749?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:45Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "Git"
+   ],
+   "missing_required": [
+    "MVVM",
+    "Dependency Injection",
+    "Entity Framework",
+    "CI/CD pipelines"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and object-oriented background match well for this junior programmer analyst role, though it asks for .NET design patterns and tools you haven't highlighted.",
+   "description": "Responsibilities The position is for a C#/.NET developer to join the Fixed Income electronic trading team. This team develops and maintains software solutions in an Agile environment, supporting price contribution, RFQ management, Order Management Systems (OMS), and straight-through processing of el",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the Fixed Income Electronic Trading - Programmer Analyst role. With my background in C# and backend development, I am eager to contribute to your trading tools. I would welcome a quick chat to discuss how my skills fit.",
+   "outreach_subject": "Application: Fixed Income Electronic Trading - Programmer Analyst",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Fixed Income Electronic Trading - Programmer Analyst position at Societe Generale. With my professional experience in C# and backend software development, I am confident in my ability to support your electronic trading systems and collaborate effectively with your global team.\n\nThroughout my career, I have focused on building robust backend solutions and maintaining clean, well-tested code in agile environments. I am excited about the opportunity to bring these technical foundations to your Fixed Income Flow desks.\n\nCould we schedule a brief chat to discuss the team's current projects, or could you point me to the right person to speak with regarding this role?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Software Engineer II",
+   "company": "Uber Technologies Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5963510786?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T12:14:32Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 50,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "distributed systems experience",
+    "high-throughput backend scaling"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Python match the requirements and the role asks for 2 years, but it is a Software Engineer II position at Uber building high-throughput distributed systems which leans toward an intermediate/senior scope.",
+   "description": "About the role: We are seeking passionate software engineers to join our Hydration Platform team and help build the foundation platform used by many engineering teams across Uber Eats. You will collaborate closely with Uber infrastructure teams and Uber Eats product engineering teams. You will have ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "QNX- Graduate Systems Software Developer (Sensor Framework)",
+   "company": "BlackBerry",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5962898728?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T05:07:53Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 40,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "C",
+    "C++",
+    "Embedded systems"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your profile is strong in Java and QA automation, but this role requires C and C++ and focuses on embedded software and systems programming, which are outside your core tech stack.",
+   "description": "Worker Sub-Type: Regular Job Description: QNX enhances the human experience and amplifies technology-driven industries, providing a trusted foundation for software-defined businesses to thrive. The business leads the way in delivering safe and secure operating systems, hypervisors, middleware, solut",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "IT Solutions and Data Designer",
+   "company": "iA Financial Group",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961957042?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:23:49Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "Python"
+   ],
+   "missing_required": [
+    "Data modeling",
+    "ETL/ELT concepts",
+    "Data warehouses",
+    "Technical leadership"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your SQL and Python match well, but this intermediate data designer role expects significant data warehousing and technical leadership experience.",
+   "description": "Job Description Build the Future with Us Are you passionate about designing technology solutions and looking to contribute to a company whose purpose is to help clients feel confident and secure about their future? As an IT Solutions and Data Designer within Corporate IT Solution Delivery, Strategy ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Software Test Engineer/EIT/Specialist",
+   "company": "Planar Motor Incorporated",
+   "location": "Richmond, Greater Vancouver",
+   "url": "https://www.adzuna.ca/details/5963510998?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T12:14:35Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Python"
+   ],
+   "missing_required": [
+    "C/C++",
+    "embedded systems"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA test automation matches well, but the role asks for C/C++ and embedded systems experience which you lack.",
+   "description": "Planar Motor is redefining motion through precision planar magnetic levitation. Our cutting-edge, industry-leading systems enabling ultra-smooth, multi-degree-of-freedom movement for industries ranging from advanced manufacturing to biomedical automation. We are a team of forward thinkers, engineers",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Wayside Software Developer",
+   "company": "Alstom",
+   "location": "Québec, Canada",
+   "url": "https://www.adzuna.ca/details/5961942947?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:24Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "C#",
+    "Python",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "C++",
+    "Docker / Kubernetes",
+    "Linux"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role expects senior responsibilities including designing software architecture and mentoring junior developers, which exceeds your junior level.",
+   "description": "Date: 26 Sept 2026 Company: Alstom At Alstom, we build what millions depend on daily - rail transportation systems that can't afford to fail. We're more than 85,000 people worldwide creating the industry's most diverse portfolio: high-speed trains, metros, trams, maintenance services and integrated ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "QA & Automation Engineer",
+   "company": "Questrade Financial Group",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5962898111?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T05:07:15Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "HTML, CSS and JavaScript/TypeScript",
+    "Playwright or Cypress",
+    "MarTech experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA test automation matches well, but it requires 4+ years of experience which triggers your dealbreaker.",
+   "description": "What’s in it for you as an employee of QFG? Health & wellbeing resources and programs Paid vacation, personal, and sick days for work-life balance Competitive compensation and benefits packages Work-life balance in a hybrid environment with at least 3 days in office Career growth and development opp",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Salesforce Quality Analyst Tester",
+   "company": "OSI Digital",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5963219598?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T08:51:18Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Salesforce Tester work experience",
+    "Service Cloud and Salesforce administration"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation skills match, but this role requires 4+ years of Salesforce testing experience which triggers your dealbreaker for experience requirements.",
+   "description": "Job DescriptionJob Description Role: Salesforce QA Tester (Manual Tester) Type: FT Location: Toronto, Canada Position Summary: The Quality Assurance (QA) Engineer role will be responsible for running manual test of all the features being developed. They will occasionally leverage analyst and adminis",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Android & Linux Software Engineer",
+   "company": "Hewlett Packard Co.",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5963510373?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T12:14:27Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "Java",
+    "Python",
+    "Git"
+   ],
+   "missing_required": [
+    "C++",
+    "Linux networking",
+    "Android networking internals"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java matches, but this role asks for 3-6 years of C++ and Linux/Android networking experience, hitting your experience dealbreaker.",
+   "description": "Android & Linux Software EngineerDescription -Job SummaryYou will develop networking features for Poly Video products built on Linux and Android, from implementation through unit testing, working with senior engineers on design. These solutions must perform reliably in demanding customer environment",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Systems Testing/QA Specialist",
+   "company": "Innosystech Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/land/ad/5963171109?se=voi-Kcze8RGZqo4-VsdaPQ&utm_medium=api&utm_source=67a2fd52&v=2AA5DE012474F899D353C2C759549016AEE05095",
+   "posted": "2026-11-12T08:26:06Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 25,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "API testing"
+   ],
+   "missing_required": [
+    "senior testing strategy and planning experience"
+   ],
+   "dealbreakers_hit": [
+    "Senior, Staff, Principal, Lead, Manager, Architect"
+   ],
+   "reason": "This role is senior level with leadership responsibilities like advising on testing strategy, and it hits your avoid_roles dealbreaker for senior positions.",
+   "description": "Job Description Job Description Job Title: Systems Testing/QA Specialist - Senior Location: Toronto Work Model: Onsite Duration: 10 months Extension: 1 Time Must Haves -experience in process, planning, organizing, and implementing testing efforts -Experience with manual testing -Analysis of business",
+   "description_source": "snippet",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Model-Based Systems Engineer (MBSE)",
+   "company": "Collabera",
+   "location": "Windsor, Essex region",
+   "url": "https://www.adzuna.ca/details/5963511233?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T12:14:38Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 20,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java"
+   ],
+   "missing_required": [
+    "SysML",
+    "UML",
+    "MBSE",
+    "IBM Rational Rhapsody or MagicDraw"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java matches partially, but this role requires 3+ years of experience in Systems Engineering with MBSE, SysML, and UML, which is outside your development and QA background.",
+   "description": "We are seeking a Model-Based Systems Engineer with hands-on experience in MBSE, SysML, and UML to support vehicle feature modeling, system architecture, requirements engineering, and system verification. Key Responsibilities: Develop and maintain system models across vehicle, subsystem, and componen",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Chef D'équipe - Transfert de Données",
+   "company": "MEDFAR",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961944901?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:45Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "MEDFAR Solutions Cliniques a été fondée en 2010 par deux ingénieurs aéronautiques qui ont réalisé que les systèmes de santé n'exploitaient pas le plein potentiel de la technologie. Soutenue par une vaste communauté d'experts médicaux et axée sur le succès des cliniques et la sécurité des patients, M",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Software Engineer - Java & Kotlin (Backend)",
+   "company": "Vaco",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961958840?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:24:14Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Overview We're hiring a backend developer to join a dynamic and forward-thinking team focused on rebuilding and scaling a large-scale login and registration platform. If you're looking to work on meaningful systems that impact millions of users-and want to do it using a modern stack-you'll want to e",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Software Application Developer",
+   "company": "CGI",
+   "location": "Halifax region, Nova Scotia",
+   "url": "https://www.adzuna.ca/details/5962898109?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T05:07:14Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Position Description: This is an exciting time for CGI, and we want you to be part of it. We are Canada's largest independent information technology services firm, and we continue to grow our Financial Services Technology practice across the country. CGI is seeking an Intermediate/Senior Software De",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Développeur ServiceNow",
+   "company": "DELAN - IT Talent Solutions",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5961944212?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-11T12:20:38Z",
+   "keyword_matched": "développeur junior",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [],
+   "missing_required": [
+    "ServiceNow development experience",
+    "ITSM module expertise",
+    "ServiceNow certification"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background in Java and full-stack development does not match this senior ServiceNow developer role, which requires 5+ years of dedicated ServiceNow experience and mentoring juniors.",
+   "description": "Le Développeur ServiceNow sera responsable de configurer et développer le module ITSM d'une grande organisation, en contribuant à l'évolution de la plateforme vers une nouvelle instance. Configurer et développer des solutions dans le module ITSM de ServiceNow Optimiser et uniformiser la base de donn",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Backend Developer (Ruby and Golang)",
+   "company": "MIRDigital",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5963139527?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T08:13:05Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Ruby",
+    "Golang"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and C# background does not match this role's primary requirements for Ruby and Golang.",
+   "description": "Job DescriptionJob Description Tech Talent International (TTI) supplies technical talent to a variety of clients ranging from Fortune 100/500/1000 companies, to startups, small and mid-sized organizations in Canada/US. We are currently hiring a Backend Developer (Ruby and Golang) for our consulting ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Oracle EBS Finance Specialist",
+   "company": "Standard Aero",
+   "location": "YWG, Winnipeg",
+   "url": "https://www.adzuna.ca/details/5962880836?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T04:49:20Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 10,
+   "seniority": "intermediate",
+   "years_required": 5,
+   "matched_skills": [
+    "SQL"
+   ],
+   "missing_required": [
+    "Oracle EBS",
+    "Oracle EBS Financials",
+    "PL/SQL",
+    "Oracle EBS customizations"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This role requires 5 plus years of experience specifically in Oracle EBS, which is a dealbreaker and outside of your software development background.",
+   "description": "Description Build an Aviation Career You’re Proud Of At StandardAero, we use our ingenuity and know-how to find solutions for the simple to the most complex challenges in aviation. Together, we get the job done and done well. Our stability, resources, and respectful culture supports you in building ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Data Engineer",
+   "company": "Princeton IT Services",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5963224434?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T08:56:23Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Snowflake",
+    "Snowpark",
+    "Python",
+    "dbt",
+    "ETL/ELT pipelines"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This senior-level Data Engineer role requires 5 to 7 years of experience and deep expertise in Snowflake and data platforms, which does not match your junior profile.",
+   "description": "Job DescriptionJob Description Job Title: Data Engineer – Snowflake Location: Toronto,ON Job Overview We are building a modern data platform centered on Snowflake and are seeking a Snowflake-focused Data Engineer to design, build, and operationalize Snowflake-native solutions. This role combines adv",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-11-11",
    "title": "Développeur(euse) logiciel / Software Developer - C#/.NET, WPF and Web",
