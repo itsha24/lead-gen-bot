@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T19:13:43+00:00",
+ "updated": "2026-11-13T01:26:03+00:00",
  "jobs": [
   {
    "date_found": "2026-11-12",
@@ -32,6 +32,32 @@
    "outreach_note": "Hi, I applied for the Integration Software Developer role. With my background in Java and Spring Boot backend development, I am eager to contribute to the Micro-Integration Platform team. Would love to connect.",
    "outreach_subject": "Application for Integration Software Developer - Hassan Awan",
    "outreach_email": "Hi [Name],\n\nI recently applied for the Integration Software Developer position at Solace Corporation. With two years of professional software development experience, I am very interested in your work on the Micro-Integration Platform.\n\nMy background includes strong proficiency in Java and Spring Boot, building REST APIs, and handling backend integrations, which aligns well with the tech stack you use for micro-integrations. I enjoy building reliable backend systems and would be excited to bring this experience to your team.\n\nDo you have a few minutes for a quick chat this week about the team's current priorities, or could you point me to the right person to speak with?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Développeur(se) logiciel IA | AI Software Developer",
+   "company": "Valsoft Corporation",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5963224399?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T08:56:20Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "AI agent tooling experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your background matches the junior opening and SQL requirement, but it expects deep hands-on AI agent development experience which is a learning skill for you.",
+   "description": "Job DescriptionJob Description (English version follows) Qui sommes-nous : Manos Manos Software Group fait partie de Valsoft Corporation, un investisseur à long terme dans les entreprises de logiciels de marchés verticaux. Valsoft acquiert et exploite des sociétés de logiciels avec une vision de dét",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the junior AI Software Developer role at Valsoft. With my full-stack and API integration experience, I am confident I can ship fast and contribute to your healthcare solutions. Let's connect.",
+   "outreach_subject": "Application: Junior AI Software Developer - Hassan Awan",
+   "outreach_email": "Hi team,\n\nI recently applied for the Junior AI Software Developer position at Valsoft Corporation. With two years of software development experience and strong fundamentals in SQL and backend integrations, I am excited about the opportunity to build and scale your healthcare practice software.\n\nDuring my previous contract and internship roles, I built robust APIs and managed databases while adapting quickly to new codebases. I am eager to apply this adaptability to your stack and leverage AI-assisted tools to deliver features into production.\n\nDo you have five minutes this week for a brief chat about the team's current development priorities?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-12",
@@ -143,6 +169,65 @@
    "dealbreakers_hit": [],
    "reason": "Your SQL and Python match well, but this intermediate data designer role expects significant data warehousing and technical leadership experience.",
    "description": "Job Description Build the Future with Us Are you passionate about designing technology solutions and looking to contribute to a company whose purpose is to help clients feel confident and secure about their future? As an IT Solutions and Data Designer within Corporate IT Solution Delivery, Strategy ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Security Engineer, Corporate Security",
+   "company": "1Password",
+   "location": "Remote (United States | Canada) (remote)",
+   "url": "https://jobs.ashbyhq.com/1password/13200311-77c5-49ed-a3ce-8460d5c72d91",
+   "posted": "2026-11-12T20:58:07.937000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Python or Go",
+    "CI/CD tooling",
+    "Identity and access management (SSO, SAML/OIDC, MFA, RBAC)",
+    "Security engineering experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your background has some cloud and API overlap, but this role asks for 3+ years of security engineering experience and hits your avoid criteria for senior or out-of-field scope.",
+   "description": "1Password is growing. We’ve surpassed $500M in ARR and we’re continuing to accelerate, earning a spot on the Forbes Cloud 100 for four years in a row and teaming up with iconic partners like Oracle Red Bull Racing.\n\n\n\nAbout 1Password\n\nAt 1Password, we’re building the foundation for a safe, productiv",
+   "description_source": "full posting",
+   "source": "1Password careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "Business Partner",
+   "company": "BGIS",
+   "location": "Markham, York region",
+   "url": "https://www.adzuna.ca/details/5962890870?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T04:59:50Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Business analysis",
+    "Project management",
+    "CRM"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This Business Partner role focuses on business analysis, project coordination, and CRM rather than software development or QA automation, hitting your avoid_roles criteria.",
+   "description": "Description SUMMARY Account Technology team oversee customer relationship management, business analysis, product and project management utilizing best-in-class software to support BGIS customers. Working directly with client/business partners and BGIS IT to manage and drive application enhancements ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -359,6 +444,40 @@
   },
   {
    "date_found": "2026-11-12",
+   "title": "Specialized IT Consultant",
+   "company": "Innosystech Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5963224564?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T08:56:40Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL"
+   ],
+   "missing_required": [
+    "Angular",
+    "Spring Integration",
+    "Docker/Kubernetes",
+    "Azure"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior consultant role requiring 8+ years of experience and enterprise architecture ownership, which exceeds your junior level.",
+   "description": "Job DescriptionJob Description Job Title: Specialized IT Consultant - Senior Location: Toronto Work Model: Onsite Duration: 7 Months Extension: 2 Project Description The Court Technology & Transformation Division (CTTD) aims to innovate service delivery and support for accused individuals by develop",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
    "title": "Chef D'équipe - Transfert de Données",
    "company": "MEDFAR",
    "location": "Montréal, Québec",
@@ -470,6 +589,32 @@
    "dealbreakers_hit": [],
    "reason": "Your Java and C# background does not match this role's primary requirements for Ruby and Golang.",
    "description": "Job DescriptionJob Description Tech Talent International (TTI) supplies technical talent to a variety of clients ranging from Fortune 100/500/1000 companies, to startups, small and mid-sized organizations in Canada/US. We are currently hiring a Backend Developer (Ruby and Golang) for our consulting ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-12",
+   "title": "EverPro - SEO Strategist for PLG Growth & AI Visibility (Remote, Canada)",
+   "company": "EverCommerce Solutions",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5962883994?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-12T04:52:53Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 10,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "SEO",
+    "WordPress",
+    "Technical SEO"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a marketing and SEO role rather than a software development position, which hits your avoid_roles criteria for pure marketing/sales roles.",
+   "description": "EverCommerce (Nasdaq: EVCM) is a leading service commerce platform, providing vertically-tailored, integrated SaaS solutions that help more than 745,000 global service-based businesses accelerate growth, streamline operations, and increase retention. Its modern digital and mobile applications create",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
