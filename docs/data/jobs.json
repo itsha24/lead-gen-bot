@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T18:47:13+00:00",
+ "updated": "2026-11-14T01:00:22+00:00",
  "jobs": [
   {
    "date_found": "2026-11-13",
@@ -50,6 +50,35 @@
    "outreach_note": "Hi [Name], I recently applied for the Automation Developer - Intermediate role. With my background in QA test automation and software development, I am confident I can contribute to your team. Let me know if we can connect.",
    "outreach_subject": "Application: Automation Developer - Intermediate (JP247)",
    "outreach_email": "Hi [Name], \n\nI am writing to express my interest in the Automation Developer - Intermediate role at P@thlion Staffing Careers and have recently submitted my application. \n\nWith my professional experience in software development and QA test automation, I have a strong foundation in designing and executing scripts to test functionality and identify bugs effectively. I am confident in my ability to collaborate with your team to improve workflows and deliver reliable automation solutions. \n\nCould we set up a brief chat to discuss how my background aligns with your needs, or could you point me to the right person to speak with? \n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-13",
+   "title": "Software Developer",
+   "company": "Teckhorizon Inc",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5964888336?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-13T13:54:32Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Azure DevOps",
+    "Entity Framework Core"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and API skills match well, but this intermediate role requires 3 to 5 years of experience.",
+   "description": "Position Overview The client is seeking an Intermediate Software Developer to design, develop, secure, test, and maintain scalable web applications and backend services. The successful candidate will have strong hands-on experience with C#, .NET, RESTful APIs, SQL Server, and Azure DevOps, and will ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
   },
   {
    "date_found": "2026-11-13",
@@ -108,6 +137,37 @@
    "dealbreakers_hit": [],
    "reason": "Your Java and Spring Boot match well, but the role asks for 3 years of experience and German language skills, and triggers your dealbreaker regarding years required.",
    "description": "This position is listed on behalf of a partner company, which manages all applications and next steps. Our partner is looking for a Java Fullstack Software Engineer (Spring Boot / Angular) based in Canada. As a Java Fullstack Software Engineer, you will contribute to the development of a modern, sca",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-13",
+   "title": "Software Engineer (4-month contract)",
+   "company": "Fable",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5964989391?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-13T17:27:23Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "JavaScript or TypeScript and Node.js",
+    "AI tool integrations or agent tools",
+    "LLM integration"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of professional backend development experience"
+   ],
+   "reason": "Your backend experience matches some aspects, but this role requires 3+ years of professional experience and hits your dealbreaker.",
+   "description": "About Fable Global enterprises work with Fable to make products more accessible for over one billion people who live with disabilities. Our customers include global leaders like Walmart, Slack, and Shopify. Fable was featured on the Forbes Accessibility 100 list in 2025, awarded Fast Company’s Most ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -338,6 +398,28 @@
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-13",
+   "title": "CLDRSRC10444 - Automation Developer - Toronto",
+   "company": "Cloud Resourcing",
+   "location": "Regent Park, City of Toronto",
+   "url": "https://www.adzuna.ca/details/5964888205?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-13T13:54:26Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Mandatory Experience: 7+ years of experience in Quality Assurance, Test Automation, or Quality Engineering. 5+ years of experience developing and maintaining automation frameworks. 3+ years of hands-on performance testing experience. 5+ years of experience working in Agile/Scrum environments. Experi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
   },
   {
    "date_found": "2026-11-13",
