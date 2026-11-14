@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T17:06:32+00:00",
+ "updated": "2026-11-14T17:23:28+00:00",
  "offers": {
   "website": "New website or redesign",
   "online_store": "Shopify / online store",
@@ -8,6 +8,851 @@
   "custom_tool": "Custom web app or internal tool"
  },
  "leads": [
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJ1xwy91MfyUwRZUQilyMKkoA",
+   "name": "Kashish Indian Beauty Salon",
+   "category": "Beauty Salon",
+   "address": "5138 Av. du Parc, Montréal, QC H2V 4G5, Canada",
+   "phone": "(438) 765-2991",
+   "website": null,
+   "rating": 4.9,
+   "reviews": 285,
+   "maps_url": "https://maps.google.com/?cid=9264478531430270053&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "The salon has 285 reviews with a 4.9 rating and high local demand, but no website at all for online bookings.",
+   "opportunities": [
+    "Add online appointment booking directly on a simple site",
+    "List services and pricing clearly for clients",
+    "Display operating hours and address details"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Kashish Indian Beauty Salon",
+   "message": "Bonjour,\n\nJe vois que Kashish Indian Beauty Salon a d'excellents avis sur Google à Montréal mais n'a pas encore de site web pour permettre à vos clients de réserver en ligne.\n\nJe m'appelle Hassan et je aide les salons locaux à mettre en place des systèmes de réservation simples sur leur propre site, sans passer par des plateformes tierces.\n\nSeriez-vous ouvert à un court échange cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJfySg13IayUwRikhiiBuEntw",
+   "name": "Brows by Tania",
+   "category": "Beauty Salon",
+   "address": "4710 Saint Ambroise St Ste 247, Montreal, QC H4C 0C6, Canada",
+   "phone": "(514) 294-3436",
+   "website": null,
+   "rating": 4.9,
+   "reviews": 202,
+   "maps_url": "https://maps.google.com/?cid=15897288988451555466&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Saint-Henri, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "Brows by Tania has over 200 positive reviews and an active salon in Montreal but no website at all, making it difficult for clients to book online easily.",
+   "opportunities": [
+    "Add a direct online booking page on their own domain",
+    "Display service menu and clear pricing",
+    "Show client testimonials and location details"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Brows by Tania",
+   "message": "Bonjour Tania,\n\nJe vois que Brows by Tania a d'excellents avis sur Google à Montréal, mais que vous n'avez pas de site web pour permettre à vos clients de réserver directement en ligne.\n\nJe m'appelle Hassan et je conçois des sites web simples avec prise de rendez-vous intégrée, ce qui évite de gérer les réservations uniquement par téléphone.\n\nSeriez-vous ouverte à un court échange cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJAQBUSH4ZyUwRLe8yqixSckU",
+   "name": "Neelam Esthetique Boutique Salon",
+   "category": "Beauty Salon",
+   "address": "119 Av. Fairmount O, Montréal, QC H2T 2M4, Canada",
+   "phone": "(514) 235-7129",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 141,
+   "maps_url": "https://maps.google.com/?cid=5004152487749545773&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "This active salon has 141 reviews with a 4.8 rating and no website at all, meaning clients have to call or message manually to book appointments.",
+   "opportunities": [
+    "Add an online booking system directly on a simple website",
+    "Display a clear service menu and pricing",
+    "Showcase client reviews and contact details"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Neelam Esthetique",
+   "message": "Bonjour, j'ai vu sur votre fiche Google que Neelam Esthetique compte d'excellents avis mais n'a pas de site web pour permettre aux clientes de réserver facilement. Je m'appelle Hassan et je aide les salons de Montréal à mettre en place des systèmes de réservation en ligne simples pour éviter les appels téléphoniques manqués. Seriez-vous disponible pour un court appel afin d'en discuter ? Hassan Awan https://itsha24.github.io/Portfolio/ horticulturalist@example.com (note: ignoring placeholder email, use freelancer profile contact). Cordialement, Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJdVm_jWcRyUwRMPpVMo2yYG4",
+   "name": "Salt Studio",
+   "category": "Hair Salon",
+   "address": "4030 Saint Ambroise St #429, Montreal, QC H4C 2C7, Canada",
+   "phone": "(514) 409-1444",
+   "website": null,
+   "rating": 4.9,
+   "reviews": 72,
+   "maps_url": "https://maps.google.com/?cid=7953553261440924208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Saint-Henri, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "Salt Studio has 72 reviews with a 4.9 rating but no website, meaning they likely take bookings only by phone or social media.",
+   "opportunities": [
+    "Add a dedicated online booking system directly on their own site",
+    "Display a clear service menu and pricing list online",
+    "Showcase client testimonials and portfolio photos in one place"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Salt Studio",
+   "message": "Bonjour,\n\nEn consultant votre page Google pour Salt Studio, j'ai remarqué que vous n'avez pas de site web pour vos réservations en ligne.\n\nJe propose de mettre en place un système de réservation simple directement sur votre propre site, ce qui évite de dépendre uniquement du téléphone.\n\nSeriez-vous ouvert à un court échange cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\n\n- Hassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJNwm-030ZyUwRyjZpa-_kygU",
+   "name": "Salon Maguire",
+   "category": "Hair Salon",
+   "address": "17 Rue Maguire, Montréal, QC H2T 1B7, Canada",
+   "phone": "(514) 974-0051",
+   "website": null,
+   "rating": 4.9,
+   "reviews": 65,
+   "maps_url": "https://maps.google.com/?cid=417397632435566282&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "Salon Maguire has strong reviews and high client satisfaction but no website or online booking system, relying only on phone calls.",
+   "opportunities": [
+    "Create a clean, mobile-friendly website with a built-in online booking system",
+    "Allow clients to reserve appointments directly without having to call",
+    "Display your address, opening hours, and services clearly on Google"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Salon Maguire",
+   "message": "Bonjour, je vois que Salon Maguire a d'excellents avis sur Google, mais que vos clients n'ont pas la possibilité de réserver leurs rendez-vous en ligne directement. Je m'appelle Hassan et je conçois des sites web simples et adaptés aux téléphones pour les salons à Montréal, incluant un système de réservation intégré. Aimeriez-vous voir un exemple rapide de ce que je pourrais mettre en place pour vous. Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJHUm1zrkbyUwRpf_sl3j_d1Q",
+   "name": "Salon Naomi Savaria Artiste Beauté",
+   "category": "Beauty Salon",
+   "address": "4020 Rue Saint-Ambroise, Montréal, QC H4C 2E1, Canada",
+   "phone": "(514) 659-4626",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 45,
+   "maps_url": "https://maps.google.com/?cid=6086614314824564645&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Saint-Henri, Montréal",
+   "lead_score": 90,
+   "best_offer": "booking_ordering",
+   "why": "The salon is established with 45 reviews and a 4.8 rating, but has no website at all for clients to book appointments.",
+   "opportunities": [
+    "Add online booking directly on your own page",
+    "Showcase services, pricing and photos of your work",
+    "Help local clients find your address and hours easily on Google"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Salon Naomi Savaria",
+   "message": "Bonjour, je suis tombé sur votre page Google pour Salon Naomi Savaria et j'ai vu que vous n'avez pas de site web pour permettre à vos clients de réserver en ligne. Je m'appelle Hassan et je conçois des sites web simples avec prise de rendez-vous intégrée pour les salons de coiffure et de beauté à Montréal. Aimeriez-vous voir un exemple rapide de ce que je pourrais mettre en place pour vous? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJDWFjVF8ZyUwRA9W_nysqZkQ",
+   "name": "Centre Dentaire MédicArt",
+   "category": "Dental Clinic",
+   "address": "6302 R. Saint-Denis #1, Montréal, QC H2S 2R7, Canada",
+   "phone": "(514) 384-9240",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 43,
+   "maps_url": "https://maps.google.com/?cid=4928673209055696131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "dental clinics in Mile End, Montréal",
+   "lead_score": 90,
+   "best_offer": "website",
+   "why": "This dental clinic has 43 reviews with a 4.8 rating but completely lacks a website, making it a high-intent prospect for a professional web presence.",
+   "opportunities": [
+    "Build a professional multi-page website from scratch",
+    "Add clear contact information and service details",
+    "Make the site mobile-friendly for patients searching on phones"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Centre Dentaire MédicArt",
+   "message": "Bonjour, je vois que le Centre Dentaire MédicArt n'a pas de site web pour présenter ses services aux patients de Montréal. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les entreprises locales. Un bon site permettrait à vos patients de trouver facilement vos coordonnées et les détails de vos soins. Seriez-vous ouvert à une brève discussion cette semaine pour en discuter?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJH5PJwmkayUwRSeCdbfqXm4g",
+   "name": "Coiffure En Vogue",
+   "category": "Hair Salon",
+   "address": "204 R. Notre Dame O Ste 100, Montreal, QC H2Y 1T3, Canada",
+   "phone": "(438) 300-8280",
+   "website": "https://www.411sante.com/salon-coiffure/montreal/ville-marie-centre-ville-9/coiffure-en-vogue-ne-pas-changer-pour-linstant.htm",
+   "rating": 4.7,
+   "reviews": 1052,
+   "maps_url": "https://maps.google.com/?cid=9843628512385032265&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "The salon has over a thousand positive Google reviews and is clearly active, but their current online presence routes through a third-party directory page rather than a dedicated booking system.",
+   "opportunities": [
+    "Set up a direct online booking page on their own domain",
+    "Replace the third-party directory page with a modern site",
+    "Add mobile-friendly appointment scheduling"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Coiffure En Vogue",
+   "message": "Bonjour, j'ai vu votre fiche Google avec vos nombreux avis et j'ai remarqué que votre site web actuel redirige vers un répertoire tiers plutôt que d'offrir une réservation en ligne directe. Je m'appelle Hassan Awan, je suis développeur web basé à Montréal, et je conçois des sites simples qui permettent aux clients de réserver directement en ligne. Seriez-vous disponible pour un court appel afin d'en discuter?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [
+    "salonenvogue@gmail.com"
+   ],
+   "issues": [
+    "no online booking, ordering or store found"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [
+    "facebook",
+    "instagram"
+   ],
+   "copyright_year": 2026,
+   "https": true
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJb6b0ZjsZyUwRFMHGt2_nKAc",
+   "name": "Salon Bask",
+   "category": "Beauty Salon",
+   "address": "1320 Ave.Thérèse-Lavoie-Roux, Montréal, QC H2V 0C2, Canada",
+   "phone": "(514) 564-2275",
+   "website": "https://instagram.com/salonbask?igshid=MzMyNGUyNmU2YQ==",
+   "rating": 4.9,
+   "reviews": 150,
+   "maps_url": "https://maps.google.com/?cid=515916624344563988&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Salon Bask has 150 reviews with a 4.9 rating but only uses an Instagram page instead of an official website.",
+   "opportunities": [
+    "Build a dedicated website with a booking section",
+    "Display pricing, services, and location clearly",
+    "Turn Instagram followers into direct clients"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Salon Bask",
+   "message": "Bonjour, je vois que vous utilisez uniquement une page Instagram pour Salon Bask et que vous n'avez pas de site web dédié. Un site rapide et adapté aux téléphones permettrait à vos clients de consulter vos services et de réserver plus facilement. Aimeriez-vous voir un exemple de maquette pour votre salon? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJeaniabYRyUwRFK3e9GXkmsM",
+   "name": "Revolution Hair Studio Saint-Henri",
+   "category": "Hair Salon",
+   "address": "4219 R. Notre Dame O, Montréal, QC H4C 1R4, Canada",
+   "phone": "(514) 543-8317",
+   "website": null,
+   "rating": 4.7,
+   "reviews": 134,
+   "maps_url": "https://maps.google.com/?cid=14094829110360452372&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Revolution Hair Studio Saint-Henri has 134 reviews with a 4.7 rating but no website at all, making it a high-intent lead for a professional site.",
+   "opportunities": [
+    "Build a clean, mobile-friendly website with service menus and hours",
+    "Add online booking integration so clients can book appointments directly",
+    "Improve local Google visibility for hair salon searches in Saint-Henri"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Revolution Hair Studio Saint-Henri",
+   "message": "Bonjour,\n\nJ'ai vu que Revolution Hair Studio Saint-Henri a d'excellents avis sur Google mais ne semble pas avoir de site web officiel pour présenter vos services et vos disponibilités.\n\nJe aide les salons de coiffure à se doter d'un site rapide et adapté aux mobiles qui permet à vos clients de trouver facilement vos informations et de réserver.\n\nSeriez-vous ouvert à un court échange cette semaine pour en discuter ?\n\nCordialement,\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\n\nL'offre de site web permet d'avoir une vitrine en ligne professionnelle et d'attirer de nouveaux clients dans votre quartier de Montréal.\n\nN'hésitez pas à me faire signe si cela vous intéresse.\n\nBonne journée,\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJBYGZuzIayUwRZL4Tos1V8Qs",
+   "name": "Salon De Coiffure Nella",
+   "category": "Hair Salon",
+   "address": "4200 Rue Saint-Urbain, Montréal, QC H2W 1V5, Canada",
+   "phone": "(514) 844-8157",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 77,
+   "maps_url": "https://maps.google.com/?cid=860563345480334948&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "You should target Salon De Coiffure Nella because they have strong reviews and high ratings but no website at all, relying only on phone calls for appointments.",
+   "opportunities": [
+    "Add a simple online booking system for haircuts and styling",
+    "Create a clean, mobile-friendly website with address, hours, and services",
+    "Display pricing and contact information clearly to attract new clients"
+   ],
+   "language": "fr",
+   "email_subject": "Prise de rendez-vous en ligne pour Salon De Coiffure Nella",
+   "message": "Bonjour.\n\nEn consultant votre fiche Google, j'ai remarqué que Salon De Coiffure Nella n'a pas encore de site web pour permettre à vos clients de réserver directement en ligne.\n\nJe m'appelle Hassan Awan et je conçois des sites web épurés dotés d'un système de réservation en ligne simple, ce qui évite d'avoir à gérer tous les rendez-vous uniquement par téléphone.\n\nSeriez-vous ouvert à un court échange cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJVwRgENcbyUwRIFJJM7mDM_o",
+   "name": "Clinique Dre Joséphine B. N. Tran",
+   "category": "Dental Clinic",
+   "address": "406 Bd Saint-Joseph E, Montréal, QC H2J 1J5, Canada",
+   "phone": "(514) 735-5909",
+   "website": null,
+   "rating": 4.7,
+   "reviews": 67,
+   "maps_url": "https://maps.google.com/?cid=18028898564746859040&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "dental clinics in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "The clinic has no website and relies solely on phone calls for appointments, despite having 67 positive Google reviews and an established presence in Montreal.",
+   "opportunities": [
+    "Add a direct online booking system for patients",
+    "Create a clean, mobile-friendly informational site with clinic hours and location"
+   ],
+   "language": "fr",
+   "email_subject": "Clinique Dre Joséphine B. N. Tran - prise de rendez-vous en ligne",
+   "message": "Bonjour,\n\nJ'ai vu que la Clinique Dre Joséphine B. N. Tran n'a pas de site web pour permettre à vos patients de réserver en ligne.\n\nJe propose d'ajouter un système de prise de rendez-vous directement sur votre propre site, ce qui évite de passer uniquement par le téléphone.\n\nSeriez-vous ouvert à un court appel cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJm_Ca9tUbyUwR4mudQdpLQHY",
+   "name": "Les Coiffeuses",
+   "category": "Hair Salon",
+   "address": "5116 Boul. Saint-Laurent, Montréal, QC H2T 1R8, Canada",
+   "phone": "(514) 667-7667",
+   "website": "https://www.facebook.com/lescoiffeuses",
+   "rating": 4.8,
+   "reviews": 66,
+   "maps_url": "https://maps.google.com/?cid=8520893895760767970&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "The salon has strong ratings and reviews on a Facebook page instead of an official website, and currently relies on manual booking methods.",
+   "opportunities": [
+    "Add a dedicated booking system directly on your own site",
+    "Give clients a clean mobile-friendly page to schedule appointments",
+    "Save time spent managing appointments manually by phone"
+   ],
+   "language": "fr",
+   "email_subject": "Prise de rendez-vous en ligne pour Les Coiffeuses",
+   "message": "Bonjour,\n\nJ'ai vu que votre salon utilise principalement une page Facebook pour se présenter en ligne et que la prise de rendez-vous se fait encore par téléphone. Je m'appelle Hassan et je conçois des sites web simples avec un système de réservation en ligne intégré pour les salons de coiffure à Montréal, ce qui évite de dépendre des réseaux sociaux. Seriez-vous ouvert à un court échange cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\n\navan.hassan@outlook.com",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJu48G-XsZyUwR0ZitSa5PnXE",
+   "name": "Coiffure Mile-End",
+   "category": "Hair Salon",
+   "address": "219 R. Saint Viateur Ouest, Montréal, QC H2T 2L6, Canada",
+   "phone": "(514) 262-7059",
+   "website": null,
+   "rating": 4.7,
+   "reviews": 59,
+   "maps_url": "https://maps.google.com/?cid=8186787307608447185&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "The salon has 59 reviews and a 4.7 rating but no website, meaning they likely miss out on online bookings.",
+   "opportunities": [
+    "Add a direct online booking system to their own web page",
+    "Create a clean, mobile-friendly landing page with their address and hours",
+    "List their services and pricing clearly for clients"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Coiffure Mile-End",
+   "message": "Bonjour,\n\nJe suis tombé sur votre page Google et j'ai vu que vous n'avez pas de site web pour Coiffure Mile-End.\n\nJe aide les salons de coiffure à installer un système de réservation en ligne simple directement sur leur propre page, ce qui évite de tout gérer par téléphone.\n\nSeriez-vous ouvert à un court appel cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nerevan.hassan@outlook.com",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJRY9BPYUbyUwRqLmY1YtNSKQ",
+   "name": "Black Velvet Montréal",
+   "category": "Beauty Salon",
+   "address": "4529 Rue Clark Suite 309, Montréal, QC H2T 2T3, Canada",
+   "phone": null,
+   "website": "https://instagram.com/blackvelvetmtl",
+   "rating": 4.9,
+   "reviews": 44,
+   "maps_url": "https://maps.google.com/?cid=11837796883522697640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "This beauty salon has a high rating and 44 reviews on Google, but no website, relying solely on an Instagram page.",
+   "opportunities": [
+    "Build a professional website to display services and pricing",
+    "Add an online booking section so clients can book appointments directly",
+    "Improve discoverability on Google search"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Black Velvet Montréal",
+   "message": "Bonjour, j'ai remarqué que Black Velvet Montréal utilise seulement une page Instagram pour présenter vos services de salon de beauté. Avoir un site web dédié permettrait à vos clients de consulter vos tarifs et de réserver plus facilement en ligne. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les entreprises locales de la région de Montréal. Seriez-vous disponible pour un court appel cette semaine afin d'en discuter? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJaS8M2ZEbyUwRxIK7hgT8CEU",
+   "name": "Notre-Dame-du-Vintage",
+   "category": "Home Goods Store",
+   "address": "3731 R. Notre Dame O, Montréal, QC H4C 1P8, Canada",
+   "phone": "(438) 375-6444",
+   "website": null,
+   "rating": 4.4,
+   "reviews": 39,
+   "maps_url": "https://maps.google.com/?cid=4974502884801217220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "clothing stores in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "online_store",
+   "why": "This active vintage home goods store on Rue Notre-Dame has no website at all, which is a clear gap for e-commerce and local visibility.",
+   "opportunities": [
+    "Build a clean online store to showcase vintage home goods",
+    "Set up easy online purchasing and shipping options",
+    "Display current stock and opening hours clearly for local buyers"
+   ],
+   "language": "fr",
+   "email_subject": "Votre boutique Notre-Dame-du-Vintage en ligne",
+   "message": "Bonjour,\n\nJe vois que votre boutique Notre-Dame-du-Vintage sur la rue Notre-Dame n'a pas encore de site web pour présenter vos trouvailles. J'ai conçu et mis en place la boutique en ligne Shopify pour Cats and Totes (https://catsandtotes.com), ce qui leur permet de vendre facilement leurs produits directement en ligne.\n\nJe peux vous aider à lancer une boutique en ligne simple et efficace pour retenir l'attention de vos clients et vendre vos articles de décoration vintage. Seriez-vous disponible pour un court appel cette semaine?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJUfzlE4AbyUwRYI9SmWMvwxU",
+   "name": "Le studio beauté",
+   "category": "Beauty Salon",
+   "address": "3522 R. Notre Dame O, Montréal, QC H4C 1P4, Canada",
+   "phone": null,
+   "website": null,
+   "rating": 4.8,
+   "reviews": 37,
+   "maps_url": "https://maps.google.com/?cid=1568149200075657056&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "booking_ordering",
+   "why": "Le studio beauté has no website and relies on phone-only bookings, yet is active with 37 reviews and a 4.8 rating.",
+   "opportunities": [
+    "Build a professional mobile-friendly website",
+    "Add a direct online booking system for clients",
+    "Showcase services and prices clearly"
+   ],
+   "language": "fr",
+   "email_subject": "Réservation en ligne pour Le studio beauté",
+   "message": "Bonjour, je vois que Le studio beauté a d'excellents avis sur Google mais ne dispose pas encore de site web pour permettre à vos clients de réserver directement en ligne. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les salons à Montréal. Je peux installer un système de réservation simple sur votre propre site pour vous éviter de tout gérer par téléphone. Aimeriez-vous voir un exemple rapide de ce que cela donnerait pour votre salon ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJk2EhZGsbyUwRI-18ZzWwCyo",
+   "name": "Pao-Luna",
+   "category": "Services",
+   "address": "4647 Av. Christophe-Colomb, Montréal, QC H2J 2T2, Canada",
+   "phone": "(514) 885-7935",
+   "website": null,
+   "rating": 5,
+   "reviews": 28,
+   "maps_url": "https://maps.google.com/?cid=3029708917752786211&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "yoga studios in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Pao-Luna has 28 reviews with a 5-star rating on Google in Montreal, but they have no website at all.",
+   "opportunities": [
+    "Créer un site web professionnel et moderne",
+    "Ajouter une section claire pour présenter vos services et votre localisation",
+    "Faciliter la prise de contact pour vos clients sur mobile"
+   ],
+   "language": "fr",
+   "email_subject": "Visibilité en ligne pour Pao-Luna",
+   "message": "Bonjour,\n\nJ'ai vu votre fiche Google avec vos 28 avis et votre note parfaite, mais vous n'avez pas de site web pour présenter Pao-Luna.\n\nJe suis développeur web basé près de Montréal. Je peux vous aider à créer un site simple, rapide et adapté aux téléphones pour que vos clients vous trouvent plus facilement et prennent contact avec vous.\n\nSeriez-vous disponible pour un court appel cette semaine afin d'en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJ7Wo1GwoZyUwRQqOIRancCIg",
+   "name": "Al-Awoon Accountants and Tax Consultants",
+   "category": "Accounting",
+   "address": "1011 Rue Jean-Talon O, Montréal, QC H3N 1T2, Canada",
+   "phone": "(514) 249-6665",
+   "website": null,
+   "rating": 4.9,
+   "reviews": 28,
+   "maps_url": "https://maps.google.com/?cid=9802327208546050882&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "accounting firms in Plateau-Mont-Royal, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "The business has no website despite a strong 4.9 rating and 28 reviews, making a simple informational site ideal.",
+   "opportunities": [
+    "Create a professional, mobile-friendly website with service details",
+    "Add a contact form so clients can easily reach out for tax appointments",
+    "Improve local Google search visibility for accounting services in Jean-Talon"
+   ],
+   "language": "fr",
+   "email_subject": "Site web pour Al-Awoon Accountants and Tax Consultants",
+   "message": "Bonjour, je suis tombé sur votre cabinet Al-Awoon Accountants and Tax Consultants et j'ai remarqué que vous n'avez pas de site web pour présenter vos services d'impôt et de comptabilité. Je m'appelle Hassan et je conçois des sites web rapides et adaptés aux téléphones pour les entreprises locales à Montréal. Un site simple permettrait à vos clients potentiels de voir vos services et de vous contacter facilement en ligne. Seriez-vous disponible cette semaine pour en discuter brièvement? Cordialement, Hassan Awan (https://itsha24.github.io/Portfolio/)",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJTR8ybtMbyUwRJyw4n6UI3fk",
+   "name": "Salon Hairtime",
+   "category": "Beauty Salon",
+   "address": "4529 Rue Clark Ste 202, Montréal, QC H2T 2T3, Canada",
+   "phone": "(514) 507-7656",
+   "website": null,
+   "rating": 4.8,
+   "reviews": 27,
+   "maps_url": "https://maps.google.com/?cid=18004556392730995751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Salon Hairtime has a solid 4.8-star rating across 27 Google reviews but completely lacks a website for clients to see services or book appointments.",
+   "opportunities": [
+    "Build a fast, mobile-friendly website with service listings",
+    "Add an online booking section so clients can schedule appointments easily",
+    "Display operating hours and location details clearly"
+   ],
+   "language": "fr",
+   "email_subject": "Visibilité en ligne pour Salon Hairtime",
+   "message": "Bonjour,\n\nEn consultant la fiche de Salon Hairtime, j'ai remarqué que vous n'avez pas encore de site web pour présenter vos services et permettre à vos clients de réserver en ligne.\n\nJe m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux téléphones pour les entreprises locales d'ici. Avoir votre propre site vous aiderait à capter les clients qui cherchent un salon dans le secteur de Montréal.\n\nSeriez-vous ouvert à un court échange téléphonique cette semaine pour en discuter ?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\n\nNote: Le site n'est pas encore affiché en ligne. Voulez-vous qu'on en discute pour le créer rapidement ?",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJpcPaKQARyUwR9d8o6KjYaMM",
+   "name": "MODEKO friperie",
+   "category": "Clothing Store",
+   "address": "4024 R. Notre Dame O #4020, Montréal, QC H4C 1R1, Canada",
+   "phone": null,
+   "website": null,
+   "rating": 4.5,
+   "reviews": 26,
+   "maps_url": "https://maps.google.com/?cid=14080742454934953973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "clothing stores in Saint-Henri, Montréal",
+   "lead_score": 85,
+   "best_offer": "online_store",
+   "why": "MODEKO friperie has 26 reviews and a 4.5 rating but no website at all, making it a strong candidate for an online store.",
+   "opportunities": [
+    "Build a Shopify online store from scratch",
+    "Set up product catalogue and online payments",
+    "Create a mobile-friendly layout for shoppers"
+   ],
+   "language": "fr",
+   "email_subject": "Boutique en ligne pour MODEKO friperie",
+   "message": "Bonjour,\n\nJe suis tombé sur votre fiche Google pour MODEKO friperie et j'ai vu que vous n'aviez pas encore de site web pour vendre vos vêtements en ligne.\n\nJe propose de créer des boutiques en ligne sur Shopify, comme je l'ai fait pour le projet Cats and Totes (https://catsandtotes.com) où j'ai conçu toute la vitrine et le catalogue de produits.\n\nSeriez-vous ouvert à une courte discussion pour voir comment vous pourriez vendre vos articles directement sur votre propre site?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nawan.hassan@outlook.com",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJ54hUfZcEyUwRkb82-pQ0B1c",
+   "name": "Rénovation Saumur",
+   "category": "Services",
+   "address": "2971 Rue Mandeville, Longueuil, QC J4L 4G8, Canada",
+   "phone": "(450) 332-0506",
+   "website": null,
+   "rating": 4.6,
+   "reviews": 23,
+   "maps_url": "https://maps.google.com/?cid=6271038820594401169&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "contractors in Longueuil",
+   "lead_score": 85,
+   "best_offer": "website",
+   "why": "Rénovation Saumur has 23 reviews with a 4.6 rating indicating an active business, but they have no website at all.",
+   "opportunities": [
+    "Build a professional website to showcase their renovation projects",
+    "Add a contact form to capture quote requests online",
+    "Display customer testimonials to build trust"
+   ],
+   "language": "fr",
+   "email_subject": "Visibilité en ligne pour Rénovation Saumur",
+   "message": "Bonjour, j'ai vu votre fiche Google avec vos 23 avis positifs pour Rénovation Saumur, mais vous n'avez pas de site web pour présenter vos réalisations aux clients de Longueuil. Je m'appelle Hassan Awan et je conçois des sites web rapides et adaptés aux mobiles pour les entreprises locales. Un site simple permettrait à vos futurs clients de voir vos projets passés et de vous demander une soumission directement en ligne. Seriez-vous ouvert à un court échange cette semaine pour en discuter? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [],
+   "issues": [
+    "no website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJY-4Q5ZAbyUwRxN0Hc-pFUoA",
+   "name": "My Canadian Stock",
+   "category": "Discount Store",
+   "address": "3629 R. Notre Dame O, Montréal, QC H4C 1P6, Canada",
+   "phone": null,
+   "website": "https://www.instagram.com/mcs.notre.dame/",
+   "rating": 4.5,
+   "reviews": 95,
+   "maps_url": "https://maps.google.com/?cid=9246529858199608772&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "clothing stores in Saint-Henri, Montréal",
+   "lead_score": 75,
+   "best_offer": "online_store",
+   "why": "My Canadian Stock is an active local discount store with 95 reviews but no official website, relying solely on an Instagram page.",
+   "opportunities": [
+    "Create a dedicated online store to showcase product inventory",
+    "Set up product categories and online payments",
+    "Provide a professional web presence beyond social media"
+   ],
+   "language": "fr",
+   "email_subject": "Boutique en ligne pour My Canadian Stock",
+   "message": "Bonjour, je vois que My Canadian Stock utilise principalement Instagram pour présenter sa boutique sur la rue Notre-Dame. En tant que développeur web basé dans la région de Montréal, je peux vous aider à mettre en place une véritable boutique en ligne pour présenter votre catalogue de produits et faciliter les achats. J'ai récemment conçu et construit la boutique Shopify pour Cats and Totes de zéro, incluant la mise en page, le thème et le catalogue de produits. Seriez-vous disponible pour un court appel afin d'en discuter?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nawan.hassan@outlook.com",
+   "emails": [],
+   "issues": [
+    "only a social media page, no real website"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [],
+   "copyright_year": null,
+   "https": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJd_VjDjAZyUwRL6NKJnGKn6M",
+   "name": "Salon Gamme",
+   "category": "Hair Salon",
+   "address": "6562 Boul. Saint-Laurent, Montréal, QC H2S 3C6, Canada",
+   "phone": "(514) 331-7573",
+   "website": "https://www.gamme.ca/",
+   "rating": 4.8,
+   "reviews": 930,
+   "maps_url": "https://maps.google.com/?cid=11790294568057611055&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "beauty salons in Mile End, Montréal",
+   "lead_score": 65,
+   "best_offer": "website",
+   "why": "The business has a high volume of positive reviews and is clearly established, but their website is outdated with a copyright from 2020.",
+   "opportunities": [
+    "Redesign the outdated website to match current design standards",
+    "Ensure the layout is fully responsive and optimized for mobile users",
+    "Refresh the visual branding and homepage experience"
+   ],
+   "language": "fr",
+   "email_subject": "Refonte du site web pour Salon Gamme",
+   "message": "Bonjour Salon Gamme,\n\nJe suis tombé sur votre site web et j'ai remarqué qu'il date un peu avec le footer affichant 2020, bien que vous ayez d'excellents avis sur Google.\n\nJe m'appelle Hassan et je suis développeur web basé à Châteauguay. Je aide les salons locaux à moderniser leur présence en ligne avec des sites rapides et adaptés aux téléphones mobiles.\n\nSeriez-vous ouverts à un court échange pour discuter d'une refonte de votre site web?\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\n\nawan.hassan@outlook.com",
+   "emails": [
+    "hello@gamme.ca"
+   ],
+   "issues": [
+    "looks outdated (footer says © 2020)"
+   ],
+   "platform": [
+    "WordPress",
+    "Mailchimp"
+   ],
+   "ordering_booking": [
+    "Fresha",
+    "WooCommerce"
+   ],
+   "socials": [
+    "facebook",
+    "instagram",
+    "linkedin"
+   ],
+   "copyright_year": 2020,
+   "https": true
+  },
+  {
+   "date_found": "2026-11-14",
+   "place_id": "ChIJ6brFIRIZyUwRsXP9pTW22_w",
+   "name": "SoumissionRenovation.ca",
+   "category": "General Contractor",
+   "address": "7675 Boul. Saint-Laurent #200, Montréal, QC H2R 1W9, Canada",
+   "phone": "(855) 239-7836",
+   "website": "https://soumissionrenovation.ca/",
+   "rating": 4.6,
+   "reviews": 966,
+   "maps_url": "https://maps.google.com/?cid=18220357058991846321&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "matched_query": "contractors in Longueuil",
+   "lead_score": 25,
+   "best_offer": "website",
+   "why": "SoumissionRenovation.ca is already a large, established multi-sided platform with nearly a thousand reviews and a fully functional site.",
+   "opportunities": [
+    "Already well served by current web infrastructure"
+   ],
+   "language": "fr",
+   "email_subject": "Projet de rénovation",
+   "message": "Bonjour, je vois que vous proposez une mise en relation pour des entrepreneurs en rénovation à Montréal. Votre site actuel est déjà bien structuré pour votre activité. Seriez-vous ouverts à discuter de vos outils internes ou de vos processus de gestion actuels ? Hassan Awan https://itsha24.github.io/Portfolio/",
+   "emails": [
+    "pro@soumissionrenovation.ca"
+   ],
+   "issues": [
+    "no online booking, ordering or store found"
+   ],
+   "platform": [],
+   "ordering_booking": [],
+   "socials": [
+    "facebook",
+    "instagram",
+    "linkedin"
+   ],
+   "copyright_year": null,
+   "https": true
+  },
   {
    "date_found": "2026-11-07",
    "place_id": "ChIJgUQP2msZyUwRt349v7EXesc",
