@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T17:19:30+00:00",
+ "updated": "2026-11-15T00:10:09+00:00",
  "jobs": [
   {
    "date_found": "2026-11-14",
@@ -118,6 +118,66 @@
   },
   {
    "date_found": "2026-11-14",
+   "title": "Software Engineer - SQL / C#",
+   "company": "Mantu",
+   "location": "Markham, York region",
+   "url": "https://www.adzuna.ca/details/5966143855?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:26Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Blazor",
+    "Entity Framework Core",
+    "Advanced or expert-level C# and .NET",
+    "Expert-level SQL and T-SQL"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and SQL match well, but the role asks for mid-to-senior level ownership and expert-level stack knowledge beyond your 2 years.",
+   "description": "Level: Mid to Senior Focus: SQL, C# and .NET application development Language: English, working proficiency required Work Mode: Hybrid About the role Amaris Consulting is looking for a Software Engineer with strong SQL and C# expertise to join a product engineering team working on data-intensive .NE",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Data Engineer Mid",
+   "company": "D8 LooP",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5966144426?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:31Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "SQL",
+    "PostgreSQL"
+   ],
+   "missing_required": [
+    "Airflow",
+    "distributed systems"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a Data Engineer role in a different field (data engineering) and asks for mid-level experience, making it a poor fit for your software development and QA background.",
+   "description": "At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive. Lyft is looking for experienced software engineers from a scope of disciplines. Skills, with evidence Airflow / orchestration Work ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
    "title": "Production Coordinator",
    "company": "Kickstart Entertainment",
    "location": "Vancouver, Greater Vancouver",
@@ -169,6 +229,133 @@
    "dealbreakers_hit": [],
    "reason": "This is a Technical Business Analyst role requiring domain expertise in IAM and security tools rather than a pure software development or QA automation position, matching your avoid_roles category for non-dev/analyst roles.",
    "description": "Technical Business Analyst – Montreal, QC (4 Days WFO) Experience Required Preferred experience working in the IT industry within operations, operational risk as it relates to Identity Access Management (IAM), network topologies, IT security/MFA (multi-factor authentication), IT systems, and/or IT S",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Full-Stack Engineer",
+   "company": "Jobgether",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5966144178?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:29Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "React",
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Node.js",
+    "TypeScript",
+    "Rust"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your React and QA skills match, but this role requires 4 years of experience and Node.js/TypeScript which you do not focus on.",
+   "description": "This position is listed on behalf of a partner company, which manages all applications and next steps. Our partner is looking for a Full-Stack Engineer based in Canada. Join a globally distributed engineering team building advanced software solutions that power delivery logistics and real-time orche",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Oracle Cloud Application Developer (10 years) to enhance and integrate Oracle Fusion Cloud ERP",
+   "company": "S.i. Systems",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5966143897?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:27Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 10,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "machine learning techniques and frameworks",
+    "advanced algorithms"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This role requires 10 years of experience and focuses on AI/ML and robotics research, making it a senior position that conflicts with your background.",
+   "description": "Promise Robotics is pioneering Physical AI for homebuilding — a rapidly growing, venture-backed company bringing together AI, robotics, and manufacturing to help the homebuilding industry meet the growing demand for housing. Our robotic systems, built and operated inside AI-powered factories, give t",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Justice Technology Services",
+   "company": "Softline Technology Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5966143399?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:23Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "8+ years of hands-on Java development",
+    "Angular",
+    "bilingual public-facing web applications (AODA)"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match the tech stack, but it requires 8 years of experience and senior responsibilities like mentoring, capping your score at 30.",
+   "description": "A Note on Assignment Type: This position is listed as Onsite , working 7.25 hours per calendar day, sometime between 8:00 AM and 5:00 PM (excluding breaks) Monday to Friday inclusive, unless otherwise identified. Scope The project will deliver a secure, user-friendly notification platform that provi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "DevOps and Security Engineer",
+   "company": "Altis",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5966144564?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:32Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Python",
+    "AWS"
+   ],
+   "missing_required": [
+    "DevOps",
+    "Kubernetes",
+    "Docker",
+    "Terraform",
+    "CI/CD"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your profile is junior and this role requires 5+ years of DevOps and security experience, and also hits your dealbreaker for 5+ years.",
+   "description": "DevOps & Security Engineer Location: Ottawa, ON (Hybrid, 3 days on-site, Tuesday to Thursday) Language: Strong written and verbal English communication skills Salary: $120,000–$140,000 annually, plus performance-based bonus About the Opportunity Are you a hands-on DevOps professional who enjoys taki",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -342,6 +529,41 @@
   {
    "date_found": "2026-11-14",
    "title": "Développeur logiciel",
+   "company": "Ericsson",
+   "location": "Québec, Canada",
+   "url": "https://www.adzuna.ca/details/5966145410?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:36Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 25,
+   "seniority": "intermediate",
+   "years_required": 5,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Golang",
+    "C/C++",
+    "Kubernetes",
+    "Docker",
+    "Linux/Unix",
+    "Distributed systems"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and testing background matches some automation aspects, but it requires 5 to 6 years of experience and core technologies like Golang and C/C++ that you do not have, triggering your dealbreaker.",
+   "description": "Grandissez avec nous À propos de l'opportunité Cloud Core Resource Controller (CCRC) est la mise en œuvre commerciale des fonctions réseau 3GPP NSSF et NRF, permettant le contrôle automatisé des ressources au sein des réseaux 5G Core (5GC). Basé à Montréal, vous rejoindrez des équipes interfonctionn",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Développeur logiciel",
    "company": "Ericsson AB",
    "location": "Montréal, Québec",
    "url": "https://www.adzuna.ca/details/5964819520?utm_medium=api&utm_source=67a2fd52",
@@ -372,6 +594,50 @@
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Systems Testing/QA Specialist (RQ11880) Government Services Integration Cluster",
+   "company": "Softline Technology Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5966144611?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:32Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Responsibilities Provides advice on the testing strategy, test plans, the selection of testing tools, and the identification of resources required for testing. Plans and organizes testing efforts for large systems in Graphical User Interface (GUI) and non-Graphical User Interface (GUI) environments,",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-14",
+   "title": "Software Engineering Leader",
+   "company": "d1g1t",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5966144070?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-14T12:22:28Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Engineering Leader, Backend (Data & APIs) Back End Services - Toronto, Ontario (Hybrid but will consider remote) About d1g1t d1g1t is an institutional-grade enterprise wealth management platform built for financial advisors, multi-family offices, broker-dealers, and bank advisor networks. The platfo",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
   },
   {
    "date_found": "2026-11-14",
