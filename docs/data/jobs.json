@@ -1,6 +1,681 @@
 {
- "updated": "2026-11-16T00:16:56+00:00",
+ "updated": "2026-11-16T21:19:26+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-16",
+   "title": "Software Engineer, Test",
+   "company": "Providius",
+   "location": "Hamilton, Hamilton region",
+   "url": "https://www.adzuna.ca/details/5966895852?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-15T08:44:39Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 90,
+   "seniority": "junior",
+   "years_required": 1,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "REST APIs",
+    "SQL / PostgreSQL",
+    "Python",
+    "JUnit"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java, QA test automation, and REST API skills match this junior role extremely well with 1-3 years of experience requested.",
+   "description": "Job DescriptionJob Description Providius is looking for a Software Engineer, Test to help build and maintain the automated testing behind our software products. This is a hands-on engineering role for someone who enjoys writing code, building automation, investigating failures, and learning how comp",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the Software Engineer, Test role at Providius. With my background in Java, QA test automation, and REST API testing from my previous roles, I am confident I can hit the ground running. Would love to connect and chat about the team.",
+   "outreach_subject": "Application for Software Engineer, Test - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Software Engineer, Test position at Providius. Given my 2 years of professional experience in software development and strong background in QA test automation, Java, and REST API testing, I believe I would be a great fit for your engineering team.\n\nI have built and maintained automated tests and worked closely with backend systems, which aligns well with the hands-on testing work you are doing for network and media traffic software. I would welcome the opportunity to discuss how my skills can contribute to your regression coverage and CI/CD pipelines.\n\nDo you have a few minutes for a quick chat this week, or is there someone else on the team I should reach out to?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Product Integration Reliability Engineer, Money Management",
+   "company": "Stripe",
+   "location": "Toronto",
+   "url": "https://stripe.com/jobs/search?gh_jid=8358071",
+   "posted": "2026-11-16T17:19:43+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and SQL skills match well for this reliability role, which fits your integration and backend background.",
+   "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "Hi [Name], I recently applied for the Product Integration Reliability Engineer role at Stripe. With my background in Java and API integrations, I am excited about the opportunity to help scale Stripe Issuing's operations. Let's connect.",
+   "outreach_subject": "Application: Product Integration Reliability Engineer - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Product Integration Reliability Engineer position on the Money Management team at Stripe. Given my professional experience with Java and backend integrations, I was immediately drawn to this role supporting Stripe Issuing.\n\nDuring my development experience, I have focused heavily on building robust APIs, working extensively with SQL, and automating workflows to improve reliability. I am confident that my technical problem-solving skills align well with what your team is looking for.\n\nCould we connect for a brief chat, or could you point me to the right person to speak with regarding this role?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Backend Software Developer, Live Content",
+   "company": "Unity",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5968011525?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:15:53Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 65,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Golang",
+    "Kubernetes",
+    "MongoDB"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and testing background matches well, but this intermediate role expects scalable cloud systems experience which is a slight stretch for your 2 years.",
+   "description": "L'opportunité Chez Unity, nous croyons que le monde est meilleur avec plus de créateurs. Pour soutenir cette vision, nous offrons une suite d'outils LiveOps qui permet aux studios de jeux de toutes tailles de créer des jeux en service continu qui résistent à l'épreuve du temps. Nous fournissons de p",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Backend Software Developer, Live Content role in Montreal. With my backend and testing background, I was drawn to your focus on reliable distributed services. I would love to connect.",
+   "outreach_subject": "Application: Backend Software Developer, Live Content",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Backend Software Developer, Live Content position in Montreal. With my background in backend development and test automation, I was particularly interested in your team's focus on reliable and scalable content delivery services.\n\nDuring my previous experience, I have built and tested robust backend services and worked extensively with API integrations and automated testing frameworks, which aligns well with the goals of this role. I am comfortable collaborating in distributed teams and eager to contribute to your platform.\n\nDo you have a few minutes for a quick chat, or could you point me to the right person on the hiring team?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Integration Reliability Engineer, Technical Operations",
+   "company": "Stripe",
+   "location": "Toronto",
+   "url": "https://stripe.com/jobs/search?gh_jid=8360332",
+   "posted": "2026-11-16T18:42:59+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 60,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "AI/LLM tooling production experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your 2 years of experience and API background fit the requirements well, though you have a gap in production AI/LLM tooling.",
+   "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of cmpanies—from the world's largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the ",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "Hi, I just applied for the Integration Reliability Engineer role at Stripe. With my 2 years of software development and API integration experience, I bring a strong background in building automation and troubleshooting systems. Would love to connect.",
+   "outreach_subject": "Application: Integration Reliability Engineer - Hassan Awan",
+   "outreach_email": "Hi [Name], I recently applied for the Integration Reliability Engineer position at Stripe in Toronto. With two years of professional software development experience and a strong background in API integrations, debugging, and SQL data analysis, I am confident in my ability to help eliminate operational toil and support payment integrations on your team. My experience includes hands-on work with backend services and system automation. I would appreciate the chance to discuss how my background aligns with your team's needs. Thank you for your time. Best regards, Hassan Awan https://itsha24.github.io/Portfolio/ https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Software Engineer – Applications and User Interface",
+   "company": "Salience Labs Ltd",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5968012581?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:05Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "JavaScript/TypeScript",
+    "modern web technologies"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Python and API experience match well, but the role asks for frontend web technologies and expects independent ownership at an intermediate level.",
+   "description": "About us: Salience Labs is building an industry-defining approach to optical circuit switching for AI infrastructure, engineered for real latency reduction and cost savings. We're moving towards real-world deployment, and joining at this stage means genuine ownership over that next chapter, working ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Software Engineer role. With my background in Python and backend systems, I am excited about your optical circuit switching technology. Let us connect if you have a moment.",
+   "outreach_subject": "Application: Software Engineer – Salience Labs",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Software Engineer – Applications and User Interface role at Salience Labs. With my experience developing software solutions, including strong Python and API integration skills, I am excited about the opportunity to help build intuitive interfaces for your optical circuit switching platform.\n\nI have worked across backend and full-stack environments and am comfortable collaborating with cross-functional teams to deliver reliable software. I would welcome a brief chat about your product development plans and whether my background aligns with what you need.\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Software Engineer, Web3 Backend Engineering Toronto, Canada 7 Oct 2026",
+   "company": "Hood L2",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012228?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:01Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "Python",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Go",
+    "Web3/Blockchain backend experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Python match the backend requirements and it asks for 2 years of experience, but it is an intermediate Web3 role requiring domain knowledge you are still learning.",
+   "description": "Join us in building the future of finance. Our mission is to democratize finance for all. An estimated $124 trillion of assets will be inherited by younger generations in the next two decades. The largest transfer of wealth in human history. If you’re ready to be at the epicenter of this historic cu",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Software Engineer, Web3 Backend role in Toronto. With my background in Java backend development and REST APIs, I can help build scalable systems. Would love to connect.",
+   "outreach_subject": "Application: Software Engineer, Web3 Backend - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Software Engineer, Web3 Backend Engineering role at Hood L2 in Toronto. With my professional background in Java backend development, building REST APIs, and working with SQL databases, I am well-equipped to contribute to your backend services and infrastructure.\n\nI would appreciate a brief chat about the team's engineering priorities, or if you could let me know who the best person to contact regarding this position is.\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "IT Solutions and Data Designer",
+   "company": "IA Financial Services Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5967040550?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-15T12:16:16Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "Python"
+   ],
+   "missing_required": [
+    "data modeling",
+    "ETL/ELT concepts",
+    "data warehouse/data mart experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your SQL and Python match the data requirements, but this is an intermediate solution and data design role asking for technical leadership and data engineering expertise beyond your 2 years.",
+   "description": "Job Description Build the Future with Us Are you passionate about designing technology solutions and looking to contribute to a company whose purpose is to help clients feel confident and secure about their future? As an IT Solutions and Data Designer within Corporate IT Solution Delivery, Strategy ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Full-Stack IoT Systems Developer",
+   "company": "Able Innovations",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012858?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:08Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "IoT systems development",
+    "Python or JavaScript/TypeScript backend",
+    "physical IoT devices or robotics experience",
+    "cloud platforms experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and API skills match well, but this intermediate role asks for 2 to 4 years of experience and specialized IoT and robotics background.",
+   "description": "Full-Stack IoT Systems Developer (ISD2611) Location: Toronto, ON Type: Full-time, In-office Vacancy Status: New / Existing Start date: Immediate Experience: 2–4 years of relevant industry experience in full-stack development, IoT systems, cloud integration, or related fields. Preference given to can",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Project Engineer – Municipal / Land Development",
+   "company": "CIMA Canada Inc",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012911?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:09Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [],
+   "missing_required": [
+    "Civil Engineering degree",
+    "P.Eng license",
+    "Municipal infrastructure design experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a civil engineering role requiring 5+ years of experience and a P.Eng, which completely mismatches your software development background and triggers your experience dealbreaker.",
+   "description": "Project Engineer – Municipal / Land Development Address: 305–119 Spadina Avenue Location: Toronto, ON Reference number: REF3670V Sector: Infrastructure Salary range: $92,800 - $127,600 Type of opening: New headcount Company Description Welcome to a commitment to sustainable development you can relat",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Engineer, Risk, Risk & Total Fund Management",
+   "company": "CPP Investments | Investissements RPC",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012655?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:06Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "SQL",
+    "REST APIs",
+    "Python",
+    "AWS"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Python match well, but it requires 3+ years of experience which hits your dealbreaker.",
+   "description": "Purpose.Performance. People. Joining CPP Investments means joining one of the world’s most admired and respected institutional investors to drive a single mandate: to deliver strong, sustainable returns for generations of Canadians. With a long-term horizon and global reach, we deploy capital at sca",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Software Developer",
+   "company": "SOTI",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5967625717?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T05:10:53Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Angular",
+    "NodeJS"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and SQL match well, but this role requires 4 years of experience which triggers your dealbreaker.",
+   "description": "SOTI is committed to providing its employees with endless possibilities; learning new things, working with the latest technologies and making a difference in the world. Job Title : Full stack Developer (C#, .NET, Angular) Location : Mississauga, Ontario, Canada Work Model: Hybrid It all started with",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Automation System Programmer",
+   "company": "Tata Steel Minerals Canada Limited",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5968012277?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:02Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 25,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [],
+   "missing_required": [
+    "PLC programming",
+    "Wonderware HMI",
+    "Ladder Logic",
+    "industrial automation",
+    "Schneider / Allen-Bradley / Siemens PLCs"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background is in software and QA automation, but this role requires industrial PLC programming and 4 years of heavy industry experience.",
+   "description": "About us Tata Steel Minerals Canada Limited (TSMC) with its headquarters at 1000 Sherbrooke W., Suite 1120, Montreal (Quebec), operates iron ore mines in the provinces of Newfoundland and Labrador and Quebec. TSMC is a joint venture between Tata Steel Limited and the Government of Quebec. Tata Steel",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "IVR Application Developer – Cisco CVP/ Amazon Connect",
+   "company": "Astra-North Infoteck Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968013069?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:10Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 25,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "Java",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Cisco CVP",
+    "Amazon Connect",
+    "VXML Server",
+    "UCCE / ICM"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java skills match, but it requires 4+ years of experience and specialized Cisco CVP/Amazon Connect expertise, and hits your dealbreaker for experience.",
+   "description": "IVR Application Developer – Cisco CVP/ Amazon Connect IVR Application Developer – Cisco CVP / Amazon Connect Location: Toronto, ON Work Mode: 4 days hybrid Skill Required 4+ years of experience in DTMF IVR application development in CVP (Contact Center). Cisco Call Studio / Cisco CVP, VXML Server, C",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "SQL Server DBA",
+   "company": "Astra-North Infoteck Inc.",
+   "location": "Brampton, Peel region",
+   "url": "https://www.adzuna.ca/details/5968013132?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:11Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 20,
+   "seniority": "senior",
+   "years_required": 7,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "7+ years of SQL Server DBA experience",
+    "Performance Tuning",
+    "HA/DR",
+    "SSIS",
+    "Azure Data Factory"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot skills match well, but this role requires 7+ years of SQL Server DBA experience and triggers your dealbreaker for 5+ years of experience.",
+   "description": "Key Skills: T-SQL +Azure SQL MI, Performance Tuning + Always On + HA/DR + Backup/Recovery + SSIS +ADF Brampton, ON - Hybrid(3 Days WFO) Role Descriptions: Key Responsibilities Administer andsupport Microsoft SQL Server and Azure SQL Managed Instance environments. Monitor databaseperformance, availab",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "EverPro - Software Development Engineer in Test",
+   "company": "Joist Software Inc.",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5968012917?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:09Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "EverPro - Software Development Engineer in Test, Joist – REMOTE (Canada) EverCommerce (Nasdaq: EVCM) is a leading service commerce platform, providing vertically-tailored, integrated SaaS solutions that help more than 745,000 global service-based businesses accelerate growth, streamline operations, ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Développeur logiciel - Analyse d'essai moteur / Software Developer - Engine Test Analysis",
+   "company": "Pratt & Whitney",
+   "location": "Longueuil, Champlain",
+   "url": "https://www.adzuna.ca/details/5968012529?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:05Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Pratt & Whitney Canada (P&WC) est un leader mondial de l’innovation aérospatiale, dont le siège social est situé à Longueuil, au Québec, depuis 1928. Nous concevons et fabriquons des moteurs d’aéronefs de nouvelle génération qui propulsent la plus grande flotte mondiale d’avions et d’hélicoptères da",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Java Software Engineer",
+   "company": "TEKsystems",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012499?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:04Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Senior Software EngineerLocation: Toronto, ONWork Model: Hybrid (2x/week onsite)Industry: Financial ServicesAbout the Opportunity We are seeking a Senior Software Engineer to join a high-profile enterprise modernization initiative within the Canadian financial services sector. The successful candida",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Azure Cloud Application Integration Engineer",
+   "company": "Astra-North Infoteck Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968010744?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:15:43Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 8+ years — filtered without AI.",
+   "description": "Snr. Integration Engineer – Interac e-Transfer ModernizationProject Summary / Objective Vancity is upgrading its Interac e-Transfer Send and Receive capabilities to API version 3.7 to modernize its payments platform and align with evolving Interac standards. The primary objective is to ensure the pl",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Observability Engineer",
+   "company": "Astra-North Infoteck Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012209?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:01Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Kubernetes",
+    "Prometheus",
+    "Grafana",
+    "Observability"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior-level infrastructure and observability role requiring ownership of Kubernetes platforms, which does not align with your software development and QA background.",
+   "description": "Role Overview Experienced Observability Engineer to join an Enterprise Kubernetes Platform team within a leading financial services organization Own and manage the complete observability stack across 50+ production Kubernetes clusters, providing metrics, logging, tracing, and alerting capabilities B",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Business Systems Analyst (BSA) - etransfer Temenos",
+   "company": "Astra-North Infoteck Inc.",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968012264?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:01Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 15,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "SQL",
+    "Python"
+   ],
+   "missing_required": [
+    "Temenos core banking platform",
+    "Temenos Telemetry",
+    "ITIL Framework"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a Business Systems Analyst role focused on Temenos core banking and NFRs, which is outside your target software development and QA roles, and requires specialized banking domain knowledge.",
+   "description": "Business Systems Analyst (BSA) - etransfer Temenos AA Deposits products, Canadian Deposit product, terms, Chequeing registered product Systems Analyst specializing in Non-Functional Requirements (NFRs) responsible for ensuring that systems, applications, and infrastructure meet performance, security",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Product Assurance Specialist",
+   "company": "Thales Alenia Space",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5968012401?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:03Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Product Assurance experience",
+    "ESA/UK MoD quality standards",
+    "Supplier quality management"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "Your QA skills match slightly, but this role requires UK security clearance and focuses on aerospace product assurance rather than software engineering.",
+   "description": "Location: Oxford, United Kingdom Thales is a global technology leader with more than 83,000 employees on five continents. With over 7,500 people in the UK, operating across defence, space, aerospace, and digital security, we help build a future we can all trust. Thales supports the security and stab",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Angular Developer – Angular, TypeScript, REST APIs & Front-End Development",
+   "company": "Astra-North Infoteck Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5968011250?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:15:49Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Angular",
+    "TypeScript",
+    "RxJS",
+    "NgRx"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and REST API skills match the domain, but this senior role requires 5+ years of experience and deep Angular expertise.",
+   "description": "Angular Developer – Angular, TypeScript, REST APIs & Front-End Development Key Responsibilities Develop reusable, modular, and scalable UI components. Integrate front-end applications with RESTful APIs and backend services. Optimize application performance, responsiveness, and user experience. Colla",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Data Scientist II",
+   "company": "SOTICAN SOTI",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5968012956?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:09Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "Machine Learning",
+    "Data Science",
+    "NLP",
+    "Statistical Modeling"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background is in software and QA development, but this is a senior data scientist role requiring 5+ years of machine learning experience, hitting your avoid roles and years-of-experience dealbreakers.",
+   "description": "SOTI is committed to providing its employees with endless possibilities; learning new things, working with the latest technologies and making a difference in the world. Who We Are At SOTI, we are committed to delivering best-in-class mobile and IoT device management solutions. We are looking for unc",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "VP, Quantitative Research - TD Asset Management",
+   "company": "TD",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5967040975?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-15T12:16:19Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Ph.D. in a quantitative discipline"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior quantitative research role requiring a Ph.D. and advanced machine learning research experience, which is outside your field.",
+   "description": "Pay Details 135 000 $/$135,000 - 175 000 $/$175,000 CAD Work Location: Montréal, Quebec, Canada Hours 37.5 Line Of Business TD Wealth Pay Details 135 000 $/$135,000 - 175 000 $/$175,000 CAD This role is eligible for a discretionary variable compensation award that considers business and individual p",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-11-15",
    "title": "Software Developer - Junior - MSON 1",
