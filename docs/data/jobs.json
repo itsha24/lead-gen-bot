@@ -1,6 +1,668 @@
 {
- "updated": "2026-11-17T03:07:16+00:00",
+ "updated": "2026-11-17T20:04:45+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-17",
+   "title": "Java Developer",
+   "company": "Zortech Solutions",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5967788131?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T08:27:18Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and SQL skills match well for this junior-friendly backend role in Montreal with no experience minimum.",
+   "description": "Job DescriptionJob Description Title: Java Developer \\n\\n Location: Montreal Canada - 3 Days Hybrid from Day 1 \\n\\n Mode: Contract \\n\\n Note: Need only Montreal Local candidates \\n\\n \\n\\n We are seeking a talented Java Backend Developer with a strong foundation in Python to join our dynamic developm",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I recently applied for the Java Developer role at Zortech Solutions. With my background in Java and Spring Boot backend development, I would love to connect and chat about how I can contribute to your team. Thanks, Hassan Awan",
+   "outreach_subject": "Java Developer Application - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI am writing to express my interest in the Java Developer position at Zortech Solutions and to let you know that I have submitted my application. With two years of professional software development experience, I have built a strong foundation in Java, Spring Boot, and REST API development.\n\nDuring my recent roles, I have focused on designing and maintaining robust backend systems and working extensively with SQL databases, which directly aligns with the technical requirements for your team in Montreal. I am comfortable with the 3-day hybrid setup and eager to bring my backend skills to Zortech.\n\nDo you have 10 minutes next week for a quick chat, or could you point me to the right person to speak with regarding this opening?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Développeur(euse) logiciel / Software Developer - C#/.NET, WPF and Web",
+   "company": "Genetec",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5967826685?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T08:54:50Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 75,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "React",
+    "REST APIs",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "WPF",
+    "TypeScript",
+    "Angular"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# and React background matches well, and the role is suitable for a junior developer despite some missing web frameworks like Angular.",
+   "description": "Job DescriptionJob Description Aperçu du poste : Nous recherchons un(e) développeur(euse) logiciel pour créer et assurer la maintenance de logiciels de bureau, web et cloud destinés à l’ensemble des produits Genetec dans les domaines des transports et de la sécurité physique. Ce poste couvre le déve",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the Software Developer role. With my background in C# and full-stack development, I am eager to contribute to your transit and security products. Let's connect.",
+   "outreach_subject": "Application: Software Developer (C#/.NET) - Hassan Awan",
+   "outreach_email": "Hi Genetec Team,\n\nI recently applied for the Software Developer position. With my professional experience in C# and backend development, along with my background in REST APIs and test automation, I am confident in my ability to contribute effectively to your desktop, web, and cloud software teams.\n\nI have worked on full-stack projects using technologies like C#/.NET and React, and I am comfortable learning new tools such as WPF and TypeScript as required by the projects.\n\nCould we schedule a brief chat to discuss how my skills align with your team's needs?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Software Engineer",
+   "company": "Thomson Reuters",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5969280060?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T12:18:29Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": 1,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL",
+    "AWS (S3)"
+   ],
+   "missing_required": [
+    "Python",
+    "FastAPI"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your backend and API background fits this early-career role well, though it expects Python and FastAPI which are in your working and learning skill sets rather than your strong ones.",
+   "description": "Job Description As a Software Engineer on the Litigation Drafting team you will be building the next generation of AI agentic product for legal professionals. The team takes early Labs concepts and turns them into scalable, production-ready features. You will be developing a product which is pushing",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the Software Engineer role on the Litigation Drafting team. With my backend and API development background, I am excited about building AI agentic features here. Let's connect.",
+   "outreach_subject": "Application: Software Engineer - Litigation Drafting",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Software Engineer position on the Litigation Drafting team at Thomson Reuters. With two years of professional software development experience focusing on backend services and APIs, I was particularly drawn to your work building production-ready AI agentic features.\n\nMy background includes developing backend systems and working with REST APIs, SQL, and AWS infrastructure. I am comfortable learning new technologies quickly and have been exploring LLM APIs as part of my continuous learning.\n\nWould you be open to a brief chat about the team, or could you point me toward the right person to speak with regarding this role?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "MacOS Developer - Fully Remote | Up to $60/hr",
+   "company": "Default Project",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5969100266?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T09:17:11Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 60,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "Python",
+    "Git"
+   ],
+   "missing_required": [
+    "Swift",
+    "macOS development"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Python match the requirements and you meet the 2-year experience mark, but it is an intermediate-leaning role focused on macOS/Swift development which is outside your main stack.",
+   "description": "Job DescriptionJob Description About the job \\n Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack Dorsey . \\n Position: Softwar",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied for the Software Developer (Mac/AI training) role. With my 2 years of software development experience including Java and Python, I am confident in my technical abilities. I would love to connect.",
+   "outreach_subject": "Application: Software Developer - Hassan Awan",
+   "outreach_email": "Hi Mercor Team,\n\nI recently applied for the Software Developer contract position and wanted to reach out directly. With two years of professional software development experience, including strong proficiency in Java and Python, I am confident in my ability to build, debug, and review code effectively for your AI training initiatives.\n\nMy background includes hands-on backend and automation work, and I am very comfortable working independently with developer tools like Git and VS Code on macOS.\n\nI would appreciate a brief chat to discuss how my background aligns with your needs, or to point me toward the right person on your hiring team.\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "AI Solutions Designer",
+   "company": "National Bank of Canada",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5968011979?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:15:58Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 40,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "React",
+    "Amazon Web Services"
+   ],
+   "missing_required": [
+    "Python",
+    "TypeScript",
+    "Solution Design",
+    "Microservices Development",
+    "AWS Bedrock"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java skills match well, but this is an intermediate solution design and AI role requiring architecture experience and missing several key technologies.",
+   "description": "A career as an AI Solutions Designer within the Wealth Management and Capital Markets team at National Bank means playing a key role in the evolution of my digital platforms by integrating new artificial intelligence capabilities. This role allows you to make a positive impact on our organization th",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Technical Operations Engineer, Revenue",
+   "company": "Stripe",
+   "location": "US",
+   "url": "https://stripe.com/jobs/search?gh_jid=8379544",
+   "posted": "2026-11-17T19:15:07+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 2,
+   "matched_skills": [
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Data or financial analytics experience",
+    "Python or Scala for data engineering"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This technical operations and data analysis role hits your avoid_roles for operations/support and is outside your target software engineering field.",
+   "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+   "description_source": "full posting",
+   "source": "Stripe careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Online Programmer (Online Services - Player Identity)",
+   "company": "Game Companies",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5968010730?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:15:43Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "AWS (S3)",
+    "React / React Native"
+   ],
+   "missing_required": [
+    "distributed systems",
+    "microservices architecture",
+    "Docker",
+    "CI/CD pipelines"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an intermediate role asking for 2-5 years of experience and independent architectural ownership, which exceeds your junior level and triggers your avoid_roles criteria for intermediate/senior scope.",
+   "description": "Company Description Ubisoft is a global leader in gaming, with teams across the world creating original and memorable experiences — from Assassin’s Creed and Rainbow Six to Just Dance and more. We believe that diverse perspectives help both players and teams thrive. If you’re passionate about innova",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Programmer",
+   "company": "AGAT Laboratories",
+   "location": "Bridgeland, Calgary",
+   "url": "https://www.adzuna.ca/details/5968268606?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T17:36:53Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Angular",
+    "Oracle",
+    "Legacy modernization experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and API skills match the stack, but the role requires 5+ years of experience which hits your dealbreaker.",
+   "description": "Your future is bright at AGAT! At AGAT Laboratories, we are the next step in your career! By joining AGAT, you become part of a dynamic, purpose-driven team that fosters innovation, collaboration, and personal growth. Our dedicated professionals come together every day with passion and determination",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "QA Engineer - Browser Test Specialist",
+   "company": "Default Project",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5969100539?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T09:18:22Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "3+ years of experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation skills match well, but this role requires 3+ years of experience and triggers your dealbreaker for experience requirements.",
+   "description": "Job DescriptionJob Description About the job \\n Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack Dorsey . \\n Position: QA / So",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Software Tester - Fully Remote | Upto $60/hr",
+   "company": "Default Project",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5969093382?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T09:07:57Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "3+ years of experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your QA automation skills match, but it requires 3 years of experience which hits your experience dealbreaker threshold.",
+   "description": "Job DescriptionJob Description About the job \\n Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack Dorsey . \\n Position: QA / So",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Développeur Full Stack/ Full Stack Developer",
+   "company": "Actalent",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5969098981?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T09:13:43Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "5+ years of C#/.NET experience",
+    "5+ years of Angular and TypeScript experience",
+    "multithreading and multiprocessing experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# skills match well, but this role requires 5+ years of experience and triggers your dealbreaker for experience requirements.",
+   "description": "Job DescriptionJob DescriptionDéveloppeur Full Stack (C# / Angular)Aperçu\\n Notre client est à la recherche dun Développeur Full Stack expérimenté pour se joindre à une équipe qui développe des solutions logicielles avancées utilisées pour simuler, contrôler et surveiller des réseaux de distribution",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Software Developer - Data Platform",
+   "company": "Squarepoint Capital",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5968012543?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:05Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "REST APIs",
+    "AWS (S3)",
+    "React",
+    "SQL"
+   ],
+   "missing_required": [
+    "Python"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your profile hits the dealbreaker for requiring 4+ years of experience when you have 2, and the role primarily requires Python.",
+   "description": "Position Overview: The Data Development group manages the lifecycle of data used for trading, back-testing, and research at Squarepoint. We work with quantitative researchers and tech teams to integrate, process, and serve data from a huge variety of sources into our data infrastructure. We are curr",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Forward Deployed Engineer, Sovereign AI",
+   "company": "Cohere",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5969279815?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T12:18:27Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "RAG/agentic applications in production",
+    "private cloud/on-prem deployments"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "This role requires security clearance, which triggers your dealbreakers and caps your score.",
+   "description": "Who are we? Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems. We’re training and deploying frontier models for enterprises who are building AI systems. We believe tha",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Intermediate Full-Stack Software Developer (SaaS Healthcare)",
+   "company": "Medfar",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5967820201?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T08:52:52Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "React / React Native",
+    "SQL / PostgreSQL",
+    "QA test automation"
+   ],
+   "missing_required": [
+    "Azure",
+    "CI/CD workflows",
+    "JavaScript or TypeScript"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and React match well, but this role requires 4+ years of experience and triggers your dealbreaker for experience requirements.",
+   "description": "Job DescriptionJob DescriptionCompany Description MEDFAR Clinical Solutions was founded in 2010 by two aeronautical engineers who realized that the healthcare system was not exploiting the full potential of technology. Supported by a large community of medical experts and focused on clinical success",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Azure Cloud Platform Engineer, Deloitte Global Technology",
+   "company": "Deloitte",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5968526911?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T23:00:04Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "5+ years of relevant cloud, platform, infrastructure or DevOps engineering experience",
+    "Azure cloud platform engineering",
+    "Infrastructure as Code (Terraform, Bicep)",
+    "PowerShell",
+    "CI/CD pipelines (Azure DevOps, GitHub Actions)"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background matches C# and APIs, but this senior Azure Cloud Platform Engineer role requires 5+ years of experience and hits your dealbreaker.",
+   "description": "Job Type: Permanent Work Model: Remote Reference code: 135950 Primary Location: Toronto, ON All Available Locations: Calgary, AB; Edmonton, AB; Ottawa, ON; Toronto, ON; Vancouver, BC Our Purpose At Deloitte, our Purpose is to make an impact that matters. We exist to inspire and help our people, orga",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Electrical Engineer",
+   "company": "Actalent",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5969100035?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T09:16:03Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 12+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description Job Title: Electrical Engineer Mining, Mineral Processing, LRT & Heavy Industry \\n Job Description \\n This Electrical Engineer role provides technical and project leadership for complex mining, mineral processing, Infrastructure and heavy industrial projects within an ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Automation QA Engineer",
+   "company": "Quvox Technologies",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5968883136?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T05:05:21Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 6+ years — filtered without AI.",
+   "description": "Responsibilities Designs, develops, and executes automated tests to ensure product quality. As senior engineer in Python Automation handling test script development, framework enhancements and owning system testing of products/applications using Automation. Analyzes design and determines test script",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "QA Engineer (AI Native)",
+   "company": "Affinity",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5968010555?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:15:41Z",
+   "keyword_matched": "QA automation engineer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job Description We are seeking an experienced Senior QA Engineer (AI Native) to join Semios' Engineering team. This position will take ownership of quality throughout the software development lifecycle, from initial requirements and design through testing, deployment, and production monitoring. The ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Nanny Wanted - Hoping To Connect With Fredericton, New Brunswick Babysitting Service Provider",
+   "company": "CanadianNanny.ca",
+   "location": "Fredericton, York region",
+   "url": "https://www.adzuna.ca/details/5969280089?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T12:18:29Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job Description: Programmer Analyst II – Client Service Delivery System (CSDS) Client: Service New Brunswick (SNB) Department: SNB – Health Applications Contract Start Date: December 1, 2026 Contract End Date: November 30, 2027 Contract Duration: 12 months Work Allocation: 100% Work Model: 100% Onsi",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Développeur / C# Developer",
+   "company": "Actalent",
+   "location": "Mercier, Roussillon",
+   "url": "https://www.adzuna.ca/details/5969100081?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T09:16:11Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 5+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description\\n Titre du poste: Développeur Description du poste \\n Notre Client recherche un développeur dévoué pour travailler sur le développement d'applications Windows liées à des produits de détection d'incendie de premier ordre. Le rôle comprend l'intégration de plusieurs asp",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": ".Net Developer",
+   "company": "TEEMA Group",
+   "location": "Regina region, Saskatchewan",
+   "url": "https://www.adzuna.ca/details/5968012683?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T12:16:06Z",
+   "keyword_matched": "C# developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Angular",
+    "Node.js",
+    "TypeScript",
+    "5+ years of experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your C# and API skills match well, but this is a senior role requiring 5 years of experience, hitting one of your dealbreakers.",
+   "description": "Job Title: .Net Developer Job ID: 91570 Location: Regina, Saskatchewan Overview: Our client in Regina, SK is looking for a .Net Developer for an initial 15 month contract till March 31, 2028, reference 8SE, with the option for renewals. This is an onsite role and the successful candidate(s) must be ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Project Engineer - Municipal / Land Development",
+   "company": "Cima2",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5969279876?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T12:18:28Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [],
+   "missing_required": [
+    "Civil Engineering degree",
+    "Municipal infrastructure design",
+    "P.Eng license"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your background is in software engineering, whereas this is a senior civil engineering role requiring 5 years of experience in municipal infrastructure.",
+   "description": "CIMA+'s Infrastructure team combines top-notch skills with an intimate understanding of the local community to deliver customized infrastructure services for municipalities and real-estate developers. We have delivered hundreds of projects across Canada, including innovative solutions for the full s",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "AI Software Engineer - Spanish Required",
+   "company": "Cuso International",
+   "location": "Halton Hills, Halton",
+   "url": "https://www.adzuna.ca/details/5969280091?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T12:18:29Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 8,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "SQL",
+    "C#"
+   ],
+   "missing_required": [
+    "Oracle databases",
+    "PL/SQL",
+    "Unix/Linux",
+    "Bash scripting",
+    "Production application support",
+    "SSIS",
+    "SFTP/FTP",
+    "Apache Tomcat"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and C# skills match some of the tech stack, but this is a senior role requiring 8 years of experience and hits your dealbreaker for experience requirements.",
+   "description": "As a Platform Engineer supporting Transportation Systems, you will be responsible for maintaining, enhancing, supporting, and modernizing business-critical enterprise applications across transportation, logistics, supply chain, and customs. You will be a senior hands‑on technical contributor focused",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-11-16",
    "title": "Software Engineer, Test",
