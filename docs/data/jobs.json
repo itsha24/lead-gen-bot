@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T21:19:26+00:00",
+ "updated": "2026-11-17T03:07:16+00:00",
  "jobs": [
   {
    "date_found": "2026-11-16",
@@ -232,6 +232,38 @@
   },
   {
    "date_found": "2026-11-16",
+   "title": "Engineer III",
+   "company": "GDI",
+   "location": "Mont-Royal, Montréal",
+   "url": "https://www.adzuna.ca/details/5967339352?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-15T23:05:13Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 3,
+   "matched_skills": [
+    "React / React Native",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "TypeScript",
+    "Javascript ES6",
+    "Mobile app development lifecycle"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your profile matches some React Native and REST API elements, but this is an Engineer III role requiring 3+ years of experience and senior responsibilities, hitting your experience dealbreaker.",
+   "description": "Engineer III Overview Groupe Dynamite Inc. (GDI) is a Montréal-based, privately held house of integrated omni-channel brands, designing and distributing accessible, trend-forward fashion for women since 1975. Our mission of \"Empowering YOU to be YOU, one outfit at a time\" is brought to life through ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
    "title": "Project Engineer – Municipal / Land Development",
    "company": "CIMA Canada Inc",
    "location": "Toronto, Ontario",
@@ -412,6 +444,36 @@
    "description": "Key Skills: T-SQL +Azure SQL MI, Performance Tuning + Always On + HA/DR + Backup/Recovery + SSIS +ADF Brampton, ON - Hybrid(3 Days WFO) Role Descriptions: Key Responsibilities Administer andsupport Microsoft SQL Server and Azure SQL Managed Instance environments. Monitor databaseperformance, availab",
    "description_source": "full posting",
    "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Product Security Engineer, Offensive Security",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8394654?gh_jid=8394654",
+   "posted": "2026-11-17T01:13:58+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": 3,
+   "matched_skills": [],
+   "missing_required": [
+    "Application security experience",
+    "Penetration testing",
+    "Offensive security",
+    "AI red teaming",
+    "3+ years of experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 3+ years of experience (close to the 5+ year dealbreaker, but the role is clearly senior scope and requires security specialization which is outside your field)"
+   ],
+   "reason": "This is a senior offensive security role requiring 3+ years of specialized experience in penetration testing and AI red teaming, which does not match your software development and QA background.",
+   "description": "Ready to do the most impactful work of your career? At Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it’s a place to be pushed past your perceived limits. If you'",
+   "description_source": "full posting",
+   "source": "Coinbase careers",
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
@@ -615,6 +677,33 @@
    ],
    "reason": "Your Java and REST API skills match the domain, but this senior role requires 5+ years of experience and deep Angular expertise.",
    "description": "Angular Developer – Angular, TypeScript, REST APIs & Front-End Development Key Responsibilities Develop reusable, modular, and scalable UI components. Integrate front-end applications with RESTful APIs and backend services. Optimize application performance, responsiveness, and user experience. Colla",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-16",
+   "title": "Geophysics Professional",
+   "company": "WSP Canada",
+   "location": "Calgary, Calgary region",
+   "url": "https://www.adzuna.ca/details/5968395708?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-16T20:18:33Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [],
+   "missing_required": [
+    "Geophysics",
+    "Earth Sciences"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This is a senior geophysics professional role requiring 5 to 10 years of experience in earth sciences, which is completely outside your software development field.",
+   "description": "What if you could redefine what's possible? With us, you can. With us, you can. You want Purpose. Growth. Opportunity. People who get it. We are the home of ambitious, passionate, and innovative world shapers. With an unmatched breadth and depth of engineering, advisory and science-based expertise, ",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
