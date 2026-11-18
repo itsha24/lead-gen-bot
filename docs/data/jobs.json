@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T20:04:45+00:00",
+ "updated": "2026-11-18T02:35:11+00:00",
  "jobs": [
   {
    "date_found": "2026-11-17",
@@ -657,6 +657,31 @@
    ],
    "reason": "Your Java and C# skills match some of the tech stack, but this is a senior role requiring 8 years of experience and hits your dealbreaker for experience requirements.",
    "description": "As a Platform Engineer supporting Transportation Systems, you will be responsible for maintaining, enhancing, supporting, and modernizing business-critical enterprise applications across transportation, logistics, supply chain, and customs. You will be a senior hands‑on technical contributor focused",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-17",
+   "title": "Producer - Content | Producteur ou productrice - Contenu",
+   "company": "NBCUniversal",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5969571087?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-17T20:19:03Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 0,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Game Production",
+    "Asset Management"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a content producer role in the gaming industry, which is outside your target software development and QA automation roles.",
+   "description": "Job Description We’re looking for a Producer for an exciting interactive entertainment project to support the creation, tracking, and execution of game assets for a discipline (environment, characters, audio, animation). In this role, you will help teams stay organized by maintaining asset schedules",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
