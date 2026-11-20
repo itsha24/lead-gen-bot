@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T19:41:32+00:00",
+ "updated": "2026-11-20T01:53:38+00:00",
  "jobs": [
   {
    "date_found": "2026-11-19",
@@ -25,6 +25,34 @@
    "outreach_note": "Hi, I just applied for the Junior Fullstack Developer role at AlayaCare. With my background in software development and Python familiarity, I am excited about the opportunity to contribute to your engineering team. Would love to connect!",
    "outreach_subject": "Application for Junior Fullstack Developer - Hassan Awan",
    "outreach_email": "Hi AlayaCare Team,\n\nI recently applied for the Junior Fullstack Developer (Python) position. With my experience in software development and familiarity with Python and backend workflows, I am eager to bring my skills to your product and engineering team.\n\nYour mission at AlayaCare of transforming home healthcare through cloud technology resonates strongly with me. I appreciate your focus on mentorship and modern development practices, and I am confident that my background prepares me to contribute effectively while continuing to grow.\n\nCould we set up a brief chat to discuss how my qualifications align with your team's needs?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-19",
+   "title": "Software Developer - AI Projects",
+   "company": "Mercor",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5971721937?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-19T09:07:10Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 65,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "Python"
+   ],
+   "missing_required": [
+    "macOS 15+",
+    "JavaScript/TypeScript"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and Python match the requirements and you have the 2 years of experience needed, though it is a contract role focusing on AI training data generation.",
+   "description": "Job DescriptionJob Description About the job \\n Mercor connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include Benchmark , General Catalyst , Peter Thiel , Adam D'Angelo , Larry Summers , and Jack Dorsey . \\n Position: Softwar",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I applied for the Software Developer - AI Projects role. With my background in Java and software development, I am confident I can contribute effectively to your AI benchmarking tasks. Let me know if you need any additional details from my end.",
+   "outreach_subject": "Application: Software Developer - AI Projects - Hassan Awan",
+   "outreach_email": "Hi [Name],\\n\\nI recently applied for the Software Developer - AI Projects position at Mercor and wanted to reach out directly. With two years of professional software development experience and strong proficiency in Java and backend development, I am well-prepared to contribute to building, debugging, and refactoring code for your AI training initiatives.\\n\\nMy background includes hands-on delivery across various contract and professional settings, making me comfortable working independently on technical tasks. I would appreciate the opportunity to discuss how my technical skills align with your current requirements.\\n\\nThank you for your time and consideration.\\n\\nBest regards,\\n\\nHassan Awan\\nPortfolio: https://itsha24.github.io/Portfolio/\\nLinkedIn: https://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-19",
@@ -87,6 +115,36 @@
   },
   {
    "date_found": "2026-11-19",
+   "title": "Ingénieur(e) IA en déploiement avancé, Travel Intelligence// Forward Deployed AI Engineer, Travel Intelligence",
+   "company": "Hopper",
+   "location": "Montréal - Remote / Québec - Remote (remote)",
+   "url": "https://jobs.ashbyhq.com/hopper/2dfa4941-c72f-4154-83f4-2fd4354e7259",
+   "posted": "2026-11-19T21:27:43.233000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "PyTorch",
+    "Hugging Face",
+    "Supervised fine-tuning / LoRA",
+    "Enterprise client deployments"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a specialized Forward Deployed AI Engineer role focusing on LLM fine-tuning and PyTorch/Hugging Face, which goes beyond your current backend and QA focus, making it a poor fit.",
+   "description": "À propos du poste\n\nHopper propulse le voyage pour certaines des plus grandes banques, compagnies aériennes et entreprises de voyage au monde, et notre équipe de Recherche conçoit des modèles spécialisés pour le voyage. À titre d’ingénieur(e) IA en déploiement avancé, vous portez ce travail dans l’en",
+   "description_source": "full posting",
+   "source": "Hopper careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-19",
    "title": "Full Stack Application Developer, Intermediate",
    "company": "Buckland",
    "location": "Canada",
@@ -109,6 +167,66 @@
    "dealbreakers_hit": [],
    "reason": "Your C# and React match the tech stack, but this is an intermediate role asking for 3-5 years of experience.",
    "description": "Buckland is looking for a Full Stack Application Developer, Intermediate What you’ll be doing This position suits a capable developer who thrives in collaborative Agile environments, brings strong analytical thinking, and delivers clean, efficient, and scalable solutions across front-end, back-end, ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-19",
+   "title": "Forward Deployed Engineer, AI Trust and Reliability",
+   "company": "Hopper",
+   "location": "US - Remote / Miami - Remote / New York - Remote / New Jersey - Remote / Austin - Remote / Boston - Remote / Dallas - Remote (remote)",
+   "url": "https://jobs.ashbyhq.com/hopper/927864e8-c69a-48c2-a1ff-e627b980fc8f",
+   "posted": "2026-11-19T22:16:02.116000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "security engineering",
+    "application security",
+    "AI safety",
+    "LLM red-teaming"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This senior-level Forward Deployed Engineer role requires 5+ years of experience in security engineering and AI safety, which exceeds your junior background and triggers your experience dealbreaker.",
+   "description": "ABOUT THE ROLE\n\nHopper powers travel for some of the world's largest banks, airlines and travel companies, and our AI agents act on their customers' behalf by looking up accounts, changing and cancelling bookings, and handling payments and loyalty points. As the Forward Deployed Engineer, AI Trust a",
+   "description_source": "full posting",
+   "source": "Hopper careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-19",
+   "title": "Embedded Software Engineer - DO 178",
+   "company": "CS Group",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5972269279?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-19T20:20:58Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [
+    "embedded software",
+    "DO-178",
+    "avionics/aerospace systems"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This role focuses on embedded software and DO-178 verification for avionics and aerospace systems, which is outside your software engineering and backend expertise.",
+   "description": "Job Description Today CS Group Canada is looking for a Software Verification Engineer. Their role will be to test embedded software applications on aircraft and space system such as engine control, flight management systems and display/avionics systems. The role may evolve to perform software develo",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
@@ -269,6 +387,37 @@
    "description": "Job DescriptionJob Description Job Title: Software Engineer - AI Localization & NLP \\n Location: Hybrid (2 days), Vancouver, BC, Canada \\nExperience: 4+ Years \\nContract T4 Contract - (Long-term project) \\nPay Rate: CAD 65 to 75 per hour \\n \\nRole Summary \\nWe are hiring for a Senior Software Engine",
    "description_source": "full posting",
    "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-19",
+   "title": "Forward Deployed AI Engineer, Travel Intelligence",
+   "company": "Hopper",
+   "location": "US - Remote / Miami - Remote / New York - Remote / New Jersey - Remote / Austin - Remote / Boston - Remote / Dallas - Remote (remote)",
+   "url": "https://jobs.ashbyhq.com/hopper/1814729f-bf68-45cb-8710-aa733714a91b",
+   "posted": "2026-11-19T21:27:40.041000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [
+    "Python",
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "PyTorch",
+    "Hugging Face",
+    "LLM fine-tuning",
+    "Enterprise customer deployment experience"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a senior-level applied AI and client-facing engineering role requiring deep machine learning stack expertise (PyTorch, fine-tuning) which does not match your junior backend and QA background.",
+   "description": "About the Role\n\nHopper powers travel for some of the world’s largest banks, airlines and travel companies, and our Research team builds travel-specialized models. As a Forward Deployed AI Engineer you take that work into a partner’s environment and make it theirs: building the evaluation with their ",
+   "description_source": "full posting",
+   "source": "Hopper careers",
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
@@ -500,6 +649,35 @@
    "description": "Your AI strategy is only as strong as the data behind it. Quest Software builds the foundation for enterprise AI with solutions in data governance, cybersecurity, and platform modernization. More than 45,000 companies — including 90% of the Fortune 500 — trust Quest to solve their most critical chal",
    "description_source": "full posting",
    "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-19",
+   "title": "Forward Deployed Engineer, Applied ML and Data",
+   "company": "Hopper",
+   "location": "US - Remote / Miami - Remote / New York - Remote / New Jersey - Remote / Austin - Remote / Boston - Remote / Dallas - Remote (remote)",
+   "url": "https://jobs.ashbyhq.com/hopper/4142a491-9240-4a5c-837a-e5efc5a8ab1c",
+   "posted": "2026-11-19T22:00:17.530000+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 10,
+   "seniority": "senior",
+   "years_required": 5,
+   "matched_skills": [],
+   "missing_required": [
+    "5+ years building and shipping production ML systems",
+    "Data engineering over large datasets",
+    "Enterprise customer embedded deployments",
+    "Travel industry experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "This senior-level Machine Learning and Data role requires 5+ years of experience, direct travel industry background, and advanced production ML deployment capabilities which exceed your junior profile.",
+   "description": "ABOUT THE ROLE\n\nThe Forward Deployed Engineer embeds with Hopper's partners, some of the world's largest banks, airlines and travel companies, to bring our AI into their business end to end: getting the data, building and tuning the models, and taking them to production. You will lead data and model",
+   "description_source": "full posting",
+   "source": "Hopper careers",
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
