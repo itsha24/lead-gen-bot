@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T19:18:20+00:00",
+ "updated": "2026-11-21T01:42:47+00:00",
  "jobs": [
   {
    "date_found": "2026-11-20",
@@ -59,6 +59,37 @@
    "outreach_note": "Hi [Name], I recently applied for the Software Developer role on the Digital Delivery & Product Team. With my backend and full-stack experience in C# and Python, I am confident I can contribute effectively to HART and HIC platforms. Would love a quick chat if you have time.",
    "outreach_subject": "Application: Software Developer - Hassan Awan",
    "outreach_email": "Hi [Name],\n\nI am writing to let you know that I have applied for the Software Developer position on the Digital Delivery & Product Team at HUB International.\n\nWith two years of professional software development experience, my background aligns well with what you are looking for. I have strong experience building backend services and APIs using C# and .NET, alongside working knowledge of Python, React, and SQL databases, which directly supports the development needs for the HART and HIC platforms.\n\nI am adaptable, comfortable moving across different codebases, and excited about the opportunity to support your digital delivery team.\n\nDo you have a few minutes for a quick chat, or could you point me to the right person to speak with regarding this role?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-20",
+   "title": "Python Developer",
+   "company": "neurohire.ai",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5973247651?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-20T15:31:12Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 68,
+   "seniority": "junior",
+   "years_required": 0,
+   "matched_skills": [
+    "Python",
+    "REST APIs",
+    "SQL / PostgreSQL",
+    "QA test automation",
+    "AWS"
+   ],
+   "missing_required": [
+    "Master's degree",
+    "Django / Flask / FastAPI"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an entry-level backend role that fits your experience level and database/API skills, though Python is in your working skills rather than primary stack and they list a Master's degree requirement.",
+   "description": "NeuroHire is seeking a motivated and detail-oriented Python Developer to design, develop, test, and maintain software applications using Python. This entry-level opportunity is ideal for recent graduates with a strong foundation in programming, software development, data structures, and backend tech",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I noticed NeuroHire is hiring a Python Developer and recently applied. With 2 years of software engineering experience building RESTful APIs and working with PostgreSQL databases, I would love to connect and follow your work.",
+   "outreach_subject": "Python Developer application - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Python Developer position at NeuroHire. With 2 years of software development experience building REST APIs, managing PostgreSQL databases, and writing automated tests, I wanted to reach out directly.\n\nMy background includes hands-on backend development and API integration across various contract and client projects. Given your focus on building scalable backend services and APIs, I believe my foundation would allow me to contribute quickly to your team.\n\nWould you be open to a brief conversation about the role, or could you point me to the hiring manager?\n\nBest regards,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
   },
   {
    "date_found": "2026-11-20",
@@ -201,6 +232,37 @@
    "dealbreakers_hit": [],
    "reason": "Your C# and database skills are a decent match, but this intermediate application support role leans heavily into legacy tech and operations rather than standard development.",
    "description": "Position Summary Inizio is seeking a Software Developer to support, maintain and enhance business-critical applications and database systems across its Canadian operations. The role focuses primarily on SQL Server development, client integration, data processing and application support. The successf",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-20",
+   "title": "Java Developer",
+   "company": "ARC Business Solutions",
+   "location": "Edmonton, Edmonton region",
+   "url": "https://www.adzuna.ca/details/5973287520?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-20T18:20:49Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 38,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "Java",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "WildFly application server",
+    "Large batch environments",
+    "Data modelling and architecture",
+    "Business process analysis and design",
+    "AI/ML enterprise integration (Spring AI, LangChain4j)"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This consulting role requires significant Java expertise, data architecture, and batch enterprise system experience that exceed your junior background.",
+   "description": "ARC Business Solutions Inc. is an established, customer-focused information technology consulting firm with proven expertise in combining strategy, innovation, and technical excellence to deliver practical business solutions. ARC operates across Canada and the United States, with offices in Edmonton",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
