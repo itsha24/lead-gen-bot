@@ -1,6 +1,378 @@
 {
- "updated": "2026-11-22T00:37:26+00:00",
+ "updated": "2026-11-22T18:42:59+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Automation Test Developer -I",
+   "company": "Danaher",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5974900000?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T04:59:04Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 90,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "Python",
+    "REST APIs"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and QA test automation background match this junior-level role perfectly.",
+   "description": "Bring more to life. Are you ready to accelerate your potential and make a real difference within life sciences, diagnostics and biotechnology? At SCIEX, one of Danaher’s 15+ operating companies, our work saves lives—and we’re all united by a shared commitment to innovate for tangible impact. You’ll ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I recently applied for the Software Automation Test Developer -1 role at SCIEX. With my background in QA automation and Java, I believe I'd be a great fit for your team. Would love to connect and chat briefly about the position if you have a moment.",
+   "outreach_subject": "Application: Software Automation Test Developer -1 - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI am writing to let you know that I have applied for the Software Automation Test Developer -1 position at SCIEX. With two years of software development experience and a strong background in QA test automation and Java, I am confident in my ability to contribute effectively to your verification team.\n\nDuring my previous roles and contract work, I gained hands-on experience designing and executing automated tests, collaborating with cross-functional teams, and maintaining test frameworks. Your focus on quality delivery and continuous improvement aligns very well with my technical skill set.\n\nDo you have 10 minutes next week for a quick chat, or could you point me to the right person on the engineering team to speak with?\n\nBest regards,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Automation Test Developer -I",
+   "company": "Danaher Corporation",
+   "location": "Concord, York region",
+   "url": "https://www.adzuna.ca/details/5974890712?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T04:36:16Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 85,
+   "seniority": "junior",
+   "years_required": 2,
+   "matched_skills": [
+    "Java",
+    "QA test automation",
+    "Python",
+    "Object-oriented programming"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your Java and QA automation skills match this junior role perfectly, requiring around 2 years of experience.",
+   "description": "Bring more to life. Are you ready to accelerate your potential and make a real difference within life sciences, diagnostics and biotechnology? At SCIEX, one of Danaher's (https://danaher.com/our-businesses) 15+ operating companies, our work saves lives-and we're all united by a shared commitment to ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I recently applied for the Software Automation Test Developer -1 role at SCIEX. With my background in Java and QA test automation, I am confident in my ability to contribute to your team. I would love to connect.",
+   "outreach_subject": "Application for Software Automation Test Developer -1",
+   "outreach_email": "Hi [Name],\\n\\nI recently applied for the Software Automation Test Developer -1 position at SCIEX. Given my professional experience in Java and QA test automation from my previous roles, I am eager to bring my technical skills to your team.\\n\\nMy background includes designing, executing, and maintaining automated tests as well as collaborating with cross-functional teams in agile environments. I believe my hands-on software development and testing experience aligns well with what you are looking for in this role.\\n\\nCould we schedule a brief chat to discuss how I can add value to the SCIEX team, or could you point me to the right person to speak with?\\n\\nBest regards,\\n\\nHassan Awan\\nhttps://itsha24.github.io/Portfolio/\\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "BlackBerry Radar- Software Developer in Test",
+   "company": "BlackBerry",
+   "location": "Ottawa, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5974901984?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T05:01:55Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 68,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "JavaScript",
+    "UI automation testing frameworks"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your QA test automation experience matches well, but it asks for JavaScript proficiency which is a gap for you.",
+   "description": "Worker Sub-Type: Regular Job Description: About Radar BlackBerry Radar is a rapidly growing IoT platform that enables real-time tracking and analytics for thousands of trailers, containers, and high-value assets across North America. Our platform has achieved strong market traction, with a fast-expa",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi,\n\nI applied for the Software Developer in Test role at BlackBerry. With my background in QA automation and building test coverage, I am eager to help scale the Radar platform. I would love to connect.\n\nBest,\nHassan",
+   "outreach_subject": "Application for Software Developer in Test - BlackBerry Radar",
+   "outreach_email": "Hi [Name],\n\nI recently applied for the Software Developer in Test role at BlackBerry Radar. With my professional experience in QA test automation, API testing, and building reliable software systems, I am well-prepared to contribute to the next generation of your IoT platform. I am comfortable collaborating in fast-paced teams and eager to help ensure high test coverage as your device footprint scales.\n\nCould we set up a brief chat to discuss how my background aligns with your testing needs, or who the best person to contact would be?\n\nBest,\n\nHassan Awan\nhttps://itsha24.github.io/Portfolio/\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Developer -Junior",
+   "company": "Zortech Solutions",
+   "location": "Mississauga, Peel region",
+   "url": "https://www.adzuna.ca/details/5974247635?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-21T10:26:57Z",
+   "keyword_matched": "junior software developer",
+   "fit_score": 50,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Oracle 19c and PL/SQL",
+    "Angular",
+    "XML/XSLT",
+    "Azure DevOps"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# background matches, but several specific stack requirements like Oracle PL/SQL, Angular, and XML/XSLT are missing.",
+   "description": "Job DescriptionJob Description Role : Software Developer Junior Submission Last Date 2nd May, 2025, 3.00 PM Office location Ministry of Colleges and Universities, 777 Bay Street, Toronto Rate - $50/HR Description Responsibilities: Required to translate technical systems specifications into working, ",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Junior Sales Executive",
+   "company": "PKM Advertising Group",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5975080639?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T08:18:47Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 35,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "Sales",
+    "Business Development"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a commission-based sales role, which hits your avoid_roles entry for pure sales positions.",
+   "description": "Job DescriptionJob Description Junior Sales Executive Sports Minded Sales and Business Leadership Opportunity Company: PKM Advertising Group Inc. Location: Ontario home-based administration with local merchant visits and required meetings Engagement: Independent sales contractor Compensation: Commis",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Developer – Backend (.NET/C#) (12 Month Term)",
+   "company": "Rival",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5974901832?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T05:01:46Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 4,
+   "matched_skills": [
+    "C# / ASP.NET",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Azure",
+    "CI/CD pipelines",
+    "Unit and integration tests"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "Your C# background matches the tech stack, but this intermediate role asks for 4 years of experience and you have 2.",
+   "description": "About Rival Rival Insurance Technology is a Canadian insurtech company building Canada's next-generation insurance platform. We are modernizing how brokers run their business while building AI-native capabilities that belong in a regulated environment. We are remote-first, move fast, and take techni",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Developer – Research & Development",
+   "company": "Octasic",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5974896372?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T04:53:59Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "C",
+    "C++",
+    "embedded systems",
+    "wireless communications"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "Your background matches some junior aspects, but the role requires eligibility for a Canadian security clearance, which is a dealbreaker.",
+   "description": "Software Developer – Research & Development We’re looking for a curious, adaptable early-career Software Developer to join our Research & Development team. You’ll help develop, integrate, and test software for wireless and embedded systems, working across software, hardware, and cellular communicati",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Developer (Full-Time)",
+   "company": "Vancouver Whitecaps FC",
+   "location": "Greater Vancouver, British Columbia",
+   "url": "https://www.adzuna.ca/details/5974782971?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T01:57:00Z",
+   "keyword_matched": "software developer in test",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 4,
+   "matched_skills": [
+    "SQL / PostgreSQL",
+    "REST APIs"
+   ],
+   "missing_required": [
+    "Python",
+    "Dash",
+    "Streamlit",
+    "Azure",
+    "Tableau"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and C# skills match well, but this role requires 4+ years of experience and is a mid- to senior-level position.",
+   "description": "Vancouver Whitecaps FC is seeking a talented Software Developer to join our Data Science team on a maternity leave contract from January to July 2027, with the possibility of extension. This mid- to senior-level role will be responsible for developing and maintaining the web applications, dashboards",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Java Developer",
+   "company": "Veracity Ventures Inc.",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5975112542?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T08:43:07Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "senior",
+   "years_required": 4,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "4+ years of experience",
+    "Microservices",
+    "Hibernate / JPA",
+    "Kafka or messaging technologies",
+    "Banking / Financial Services domain experience"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match well, but this role requires 4+ years of experience, triggering your dealbreaker for experience requirements.",
+   "description": "Job DescriptionJob Description Hiring: Java Backend Developer – Banking Domain \\n \\n \\nWe are looking for experienced Java Backend Developers with a background in the Banking / Financial Services domain.\\n \\n \\n Location: Ontario, Canada\\n Experience: 4+ Years\\n Domain: Banking / Financial Services\\",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Software Engineer, Platform",
+   "company": "Wintermeyer Ventures",
+   "location": "Canada",
+   "url": "https://www.adzuna.ca/details/5975084732?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T08:20:46Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Python"
+   ],
+   "missing_required": [
+    "distributed systems",
+    "developer tools",
+    "infrastructure"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Python is a match, but this role requires 3 to 10 years of experience and triggers your 5+ years dealbreaker.",
+   "description": "About the Role Join a Series A/B AI company building an internal AI engineering platform and customer-facing software. You will develop the product foundations and workflows that help AI agents take on increasingly complex engineering tasks. What You'll Do Build and improve the core platform that po",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Fullstack developer with Python, .NET & AI experience - Toronto, ON - Fulltime",
+   "company": "Zodiac Solutions",
+   "location": "Toronto, Ontario",
+   "url": "https://www.adzuna.ca/details/5975117048?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T08:48:38Z",
+   "keyword_matched": "backend developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 6+ years — filtered without AI.",
+   "description": "Job DescriptionJob Description Role: Fullstack developer with Python, .NET & AI experience \\n\\n Location: Toronto, ON (Need Onsite day 1, hybrid 4 days from office) \\n\\n Duration: Contract \\n\\n \\n\\n Responsibilities: \\n\\n \\n\\tDesign, develop, and maintain full-stack web applications using Python, .N",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Gis Field Engineer / Supervisor",
+   "company": "GE Vernova",
+   "location": "La Prairie, Roussillon",
+   "url": "https://www.adzuna.ca/details/5974901779?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T05:01:42Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [
+    "GIS Field Engineering",
+    "High Voltage Electrical Systems",
+    "Hardware and Construction Site Supervision"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an electrical engineering field supervisor role in power systems, which is completely outside your software development and QA background.",
+   "description": "Job Description Summary À propos du poste GE VERNOVA recherche un(e) Ingénieur(e) / Superviseur(se) de Chantier GIS pour piloter l'installation, la supervision, les maintenances, les essais et le suivi technique de systèmes d'Appareillage à Isolation Gazeuse (GIS) dans le cadre de projets en Amériqu",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Machines & Facilities Maintenance Coordinator",
+   "company": "GN Corporations",
+   "location": "Airdrie, Calgary region",
+   "url": "https://www.adzuna.ca/details/5974243182?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-21T10:24:23Z",
+   "keyword_matched": "test automation engineer",
+   "fit_score": 0,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [],
+   "missing_required": [
+    "maintenance planning",
+    "CNC equipment maintenance",
+    "CMMS software"
+   ],
+   "dealbreakers_hit": [
+    "Requires security clearance"
+   ],
+   "reason": "This is a facilities maintenance coordinator role in manufacturing rather than software development, and it requires security clearance and 3+ years of specific maintenance experience.",
+   "description": "Job DescriptionJob Description About GN Corporations \\n GN Corporations is a leading advanced manufacturing company serving the aerospace, defense, energy, and emerging technology sectors. With a team of approximately 120 employees operating over 50 CNC machines, we specialize in precision machining",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
   {
    "date_found": "2026-11-21",
    "title": "Junior Software Developer",
