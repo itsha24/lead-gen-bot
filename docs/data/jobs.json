@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T18:42:59+00:00",
+ "updated": "2026-11-23T01:06:08+00:00",
  "jobs": [
   {
    "date_found": "2026-11-22",
@@ -318,6 +318,31 @@
    "outreach_note": null,
    "outreach_subject": null,
    "outreach_email": null
+  },
+  {
+   "date_found": "2026-11-22",
+   "title": "Registered Early Childhood Educator (RECE) - TERM - Castlefrank ES - CORE/PM (10:45am - 6:15pm)",
+   "company": "Ottawa-Carleton District School Board",
+   "location": "Kanata, Ottawa region",
+   "url": "https://www.adzuna.ca/details/5974912322?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-22T05:05:23Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 0,
+   "seniority": "junior",
+   "years_required": 1,
+   "matched_skills": [],
+   "missing_required": [
+    "Early Childhood Education diploma",
+    "Registration with Ontario College of Early Childhood Educators"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is an education role for a Registered Early Childhood Educator, which is entirely outside your field of software development and IT support.",
+   "description": "The Ottawa-Carleton District School Board is the largest school board in Eastern Ontario and offers students and parents a world of choice for learning. Our nearly 150 schools offer a wide range of programs to promote learning excellence and meet the individual needs of students, parents, and the co",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
   },
   {
    "date_found": "2026-11-22",
