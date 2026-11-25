@@ -1,6 +1,56 @@
 {
- "updated": "2026-11-24T21:33:01+00:00",
+ "updated": "2026-11-25T03:44:01+00:00",
  "jobs": [
+  {
+   "date_found": "2026-11-24",
+   "title": "Junior Software QA Developer",
+   "company": "Delta Intelligent Building Technologies  Inc.",
+   "location": "Surrey, Greater Vancouver",
+   "url": "https://www.adzuna.ca/details/5977219671?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-24T09:14:03Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 90,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation",
+    "Java",
+    "C#"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation, Java, and C# skills match this junior role well, and it is a strong fit for your background.",
+   "description": "Job DescriptionJob Description About Delta Intelligent Building Technologies (Canada) Inc.(formerly known as Delta Controls). Delta Intelligent Building Technologies (Canada) Inc. (a subsidiary of Delta Electronics) is a leading building controls manufacturer with over 300 partners in more than 80 c",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi [Name], I applied for the Junior Software QA Developer role. With my background in Java, C#, and QA automation from my experience at UKG and other roles, I am confident I can contribute to your team. Let's connect.",
+   "outreach_subject": "Application: Junior Software QA Developer - Hassan Awan",
+   "outreach_email": "Hi [Name],\\n\\nI recently applied for the Junior Software QA Developer position at Delta Intelligent Building Technologies and wanted to reach out directly. Given my strong background in QA test automation, Java, and C# gained through my professional experience and internships, I feel well-prepared to contribute to your automated testing and CI pipeline goals.\\n\\nWould you be open to a brief chat about the team and the role?\\n\\nBest regards,\\n\\nHassan Awan\\nhttps://itsha24.github.io/Portfolio/\\nhttps://www.linkedin.com/in/hawan24/"
+  },
+  {
+   "date_found": "2026-11-24",
+   "title": "QA Analyst (Supply Chain)",
+   "company": "Tecsys Inc.",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5977378826?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-24T12:35:34Z",
+   "keyword_matched": "QA developer",
+   "fit_score": 68,
+   "seniority": "junior",
+   "years_required": null,
+   "matched_skills": [
+    "QA test automation"
+   ],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Your QA automation skills match well for this junior QA role, though it requires specialized supply chain knowledge which is a minor gap.",
+   "description": "At Tecsys, the software we deliver keeps hospitals, pharmacies and distributors supplied with what they need, when they need it. Every role here connects to that outcome. Why This Role Matters As a QA Analyst you will join our Product and Technology team, a team at the heart of how Tecsys delivers h",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "Hi, I just applied to the QA Analyst role at Tecsys. With my background in QA test automation and software development, I am eager to contribute to your supply chain solutions. I would welcome a brief chat about the team's testing setup.",
+   "outreach_subject": "Application: QA Analyst - Hassan Awan",
+   "outreach_email": "Hi [Name],\n\nI recently applied to the QA Analyst position at Tecsys and wanted to connect directly. With my professional experience in software development and strong foundation in QA test automation, I am well-prepared to contribute to your product and technology team by building and maintaining automated regression tests.\n\nI have followed Tecsys's work in cloud-based supply chain solutions and appreciate your focus on high-quality software delivery. I would love to learn more about the testing frameworks your team currently relies on.\n\nDo you have ten minutes for a quick chat next week, or could you point me to the right person on the QA team to speak with?\n\nBest,\n\nHassan Awan\nPortfolio: https://itsha24.github.io/Portfolio/\nLinkedIn: https://www.linkedin.com/in/hawan24/"
+  },
   {
    "date_found": "2026-11-24",
    "title": "Programmeur.meuse Engin - Online Services",
@@ -179,6 +229,28 @@
    "outreach_note": "",
    "outreach_subject": "",
    "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-24",
+   "title": "C-Construction Coordinator",
+   "company": "Grizzlytrek Group",
+   "location": "Edmonton, Edmonton region",
+   "url": "https://www.adzuna.ca/details/5977600957?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-24T18:29:40Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 15,
+   "seniority": "senior",
+   "years_required": null,
+   "matched_skills": [],
+   "missing_required": [],
+   "dealbreakers_hit": [],
+   "reason": "Full posting requires 15+ years — filtered without AI.",
+   "description": "C-Construction Coordinator Location: Alberta, Canada (Project Site) Position Type: Contract Wage/Salary Range: Not specified Shift Schedule: TBD (project-based schedule) Hours Per Day: TBD Company Overview: GrizzlyTrek invests in our people, relationships, and partners, ensuring motivated and ready-",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": null,
+   "outreach_subject": null,
+   "outreach_email": null
   },
   {
    "date_found": "2026-11-24",
