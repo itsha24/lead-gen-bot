@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T20:33:21+00:00",
+ "updated": "2026-11-27T03:10:43+00:00",
  "jobs": [
   {
    "date_found": "2026-11-26",
@@ -179,6 +179,61 @@
   },
   {
    "date_found": "2026-11-26",
+   "title": "Enterprise Applications Engineer, Zendesk",
+   "company": "GitLab",
+   "location": "Remote, United States",
+   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8961167002",
+   "posted": "2026-11-26T23:18:03+00:00",
+   "keyword_matched": "company board",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": null,
+   "matched_skills": [
+    "REST APIs",
+    "SQL / PostgreSQL"
+   ],
+   "missing_required": [
+    "Ruby",
+    "Zendesk",
+    "Salesforce"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This intermediate enterprise application role requires extensive experience with Ruby, Zendesk, and Salesforce which you lack, making it a poor fit.",
+   "description": "GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, and accelerate digital transformation. More than 50 million registered users and more than 50% of the ",
+   "description_source": "full posting",
+   "source": "GitLab careers",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-26",
+   "title": "Greenhouse Experience Specialist",
+   "company": "Deloitte",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5978947852?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-25T20:21:28Z",
+   "keyword_matched": "junior developer",
+   "fit_score": 35,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [],
+   "missing_required": [
+    "client-facing experience",
+    "workshop facilitation",
+    "business writing"
+   ],
+   "dealbreakers_hit": [],
+   "reason": "This is a non-technical client experience specialist role that hits your avoid_roles criteria for pure sales or business consulting roles, and requires 3-5 years of experience.",
+   "description": "Job Type: Permanent Work Model: Hybrid Reference code: 135688 Primary Location: Montreal, QC All Available Locations: Montreal, QC Our Purpose At Deloitte, our Purpose is to make an impact that matters. We exist to inspire and help our people, organizations, communities, and countries to thrive by b",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-26",
    "title": "Junior Business Development Associate",
    "company": "Recruitment Partners",
    "location": "Edmonton, Edmonton region",
@@ -226,6 +281,39 @@
    "dealbreakers_hit": [],
    "reason": "Your Python is only at a working level and you lack FastAPI, Agentic AI, and vulnerability management expertise for this backend and AI-focused role.",
    "description": "Job DescriptionJob Description Python Developer with strong hands-on expertise in Python programming, Agentic AI, FastAPI, and Vulnerability Management. The ideal candidate should have a strong background in developing scalable backend applications, building AI-powered autonomous agents, and integra",
+   "description_source": "full posting",
+   "source": "Adzuna",
+   "outreach_note": "",
+   "outreach_subject": "",
+   "outreach_email": ""
+  },
+  {
+   "date_found": "2026-11-26",
+   "title": "Java Developer | Montreal, Quebec, Canada H3C 2N6 (Onsite/Hybrid)",
+   "company": "RCG Infosoft",
+   "location": "Montréal, Québec",
+   "url": "https://www.adzuna.ca/details/5978435391?utm_medium=api&utm_source=67a2fd52",
+   "posted": "2026-11-25T09:17:23Z",
+   "keyword_matched": "Java developer",
+   "fit_score": 30,
+   "seniority": "intermediate",
+   "years_required": 3,
+   "matched_skills": [
+    "Java",
+    "Spring Boot",
+    "SQL",
+    "Unit tests"
+   ],
+   "missing_required": [
+    "Multi-threading",
+    "Low-latency systems",
+    "TDD expertise"
+   ],
+   "dealbreakers_hit": [
+    "Requires 5+ years of experience"
+   ],
+   "reason": "Your Java and Spring Boot match well, but it requires 3 to 15 years of experience which hits your dealbreaker for experience requirements.",
+   "description": "Job DescriptionJob Description \\n Java Developer (3 to 15 years) \\n\\n \\n\\n Location: Montreal, Quebec, Canada H3C 2N6 \\n\\n Work Mode: Day 1 onsite, hybrid 3 days in office mandatory. \\n\\n Job Type: Full-Time Permanent \\n\\n \\n\\n Software Development: \\n\\n \\n\\tDevelop, maintain, and enhance enterprise",
    "description_source": "full posting",
    "source": "Adzuna",
    "outreach_note": "",
